@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-md-12 text-justify">
+                    <div id="precios-historicos">
+                        <h3>Precios históricos de la acción (Finn14) en pesos mexicanos</h3>
+                        <br>
+                        <div class="table-responsive">
+                            <table class="table key_value_responsive table-striped table-bordered" id="datatable">
+                                <thead>
+                                <tr>
+                                    <th style="width:80px">Fecha</th>
+                                    <th>Cierre</th>
+                                    <th>Apertura</th>
+                                    <th>Máximo</th>
+                                    <th>Mínimo</th>
+                                    <th>Cierre Ajustado*</th>
+                                    <th>Volumen</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tbody_ph">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <small>* Precios ajustados por distribuciones</small>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/bootstrap-datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datatables/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'js/historicos.js' %}"></script>
+{% endblock %}

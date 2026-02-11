@@ -1,0 +1,101 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>13 de octubre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/octubre/4.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>A la hora de invertir lo más importante siempre es la información. Antes de colocar tu dinero en
+                        el mercado debes tener un conocimiento mínimo indispensable sobre flujos y rendimientos de los
+                        distintos activos financieros como lo son las FIBRAs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Afortunadamente para ti, invertir en fideicomisos de bienes raíces no representa una gran
+                        dificultad operacional. De hecho, en 5 simples pasos puedes comenzar a operar con un instrumento
+                        financiero que tiene un bajo riesgo y buenas proyecciones a futuro.</p>
+                    <h2>Invierte en FIBRAs en solo 5 pasos</h2>
+                    <p><strong>Ahorro de capital</strong></p>
+                    <p>Probablemente sea obvio, pero para empezar a invertir en FIBRAs primero tienes que generar un
+                        excedente que te permita ingresar al sistema financiero con holgura y sin preocupaciones. </p>
+                    <p>Eso lo puedes lograr a través de un ahorro sostenido. Recuerda que cuanto más capital generes
+                        para invertir más altas pueden ser las retribuciones.</p>
+                    <p><strong>Abrir una cuenta</strong></p>
+                    <p>Lo primero que debes hacer es crear tu propia cuenta en una casa de bolsa. Lo más prudente es que
+                        antes realices una comparación entre las diferentes opciones a las que puedes acceder y observes
+                        montos de apertura y comisiones. Así mismo asegúrate de que la Casa de Bolsa esté regulada por
+                        las autoridades pertinentes.</p>
+                    <p>También te recomendamos revisar con qué herramientas cuenta cada casa de bolsa para que puedas
+                        administrar y gestionar tus instrumentos financieros de forma rápida, sencilla y segura.</p>
+                    <p><strong>Deposita tu dinero</strong></p>
+                    <p>Una vez que hayas registrado, verificado y activado tu cuenta, podrás ingresar un monto de dinero
+                        para empezar a operar. En la plataforma de tu casa de bolsa encontrarás los diferentes activos
+                        financieros que puedes comprar o vender, según te apetezca y en la medida de tus
+                        posibilidades.</p>
+                    <p><strong>Encuentra y compra FIBRAs</strong></p>
+                    <p>Cuando tu capital de inversión esté acreditado en tu cuenta significa que ya tienes los recursos
+                        necesarios para comenzar a invertir. En el caso de las FIBRAs, podrás comenzar a invertir de dos
+                        maneras. </p>
+                    <p>La primera es la forma tradicional, a través de tu promotor o agente de bolsa según lo que le
+                        ordenes. La segunda, cuyo uso viene creciendo de manera significativa, es sin intermediarios y a
+                        través de la plataforma virtual que la casa de bolsa pone a disposición de todos sus
+                        clientes. </p>
+                    <p>Esta última requiere un mínimo aprendizaje para asegurarte que estás realizando bien la
+                        transacción. Busca el instrumento financiero, en este caso FIBRAs, elige entre las distintas
+                        alternativas de CBFIs (Certificados Bursátiles Fiduciarios Inmobiliarios) y sigue los pasos
+                        necesarios para realizar la operación.</p>
+                    <p><strong>Recibe distribuciones</strong></p>
+                    <p>Según los CBFIs de los que dispongas, recibirás distribuciones mensuales acordes a los
+                        rendimientos por las ganancias que el fideicomiso genere. Estas distribuciones se acreditan
+                        directamente en tu cuenta de casa de bolsa.</p>
+                    <p>A partir de ahí contarás con más dinero para invertir en este u otro instrumento financiero, si
+                        es lo que deseas, o bien, retirarlo para darle otro uso. </p>
+                    <p>Es importante que tengas a la mano <a
+                            href="https://www.eleconomista.com.mx/mercados/Indice-Fibras-con-ligera-recuperacion-en-el-2021-en-Bolsa-20210902-0144.html"
+                            target="_blank">fuentes de información</a> confiables para saber qué FIBRAs
+                        generan mejores rendimientos. Entre ellas, siempre encontrarás a Fibra MTY.</p>
+                    <p>Si buscas más información sobre inversiones financieras en bienes raíces, te invitamos a explorar
+                        nuestro <a href="{% url 'escuela-fibra-finn' %}#blog">blog</a>.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a
+                            href="https://twitter.com/fibra_mty"
+                            target="_blank">Twitter</a> y <a target="_blank"
+                                                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a>
+                        para estar al tanto de todas las novedades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="FIBRAs-en-Mexico-Invierte-en-propiedades-de-gran-escala"
+                         src="{% static 'images/post/FIBRAs-en-Mexico-Invierte-en-propiedades-de-gran-escala.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Las <strong>FIBRAs</strong> en <strong>México </strong>son prácticamente un nuevo vehículo de
+                        inversión dentro del sector inmobiliario que permite a los inversionistas acceder a propiedades
+                        de gran escala y diversificar sus portafolios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">FIBRAs en México</h2>
+                    <p>El antecedente de las <strong>FIBRAs</strong> en <strong>México </strong>tiene su origen en los
+                        REITs (Real Estate Investment
+                        Trusts) durante la década de los sesenta en Estados Unidos. Estos fueron creados para abrir una
+                        oportunidad de inversión en portafolios de bienes raíces de gran escala comercial e
+                        industrial. </p>
+                    <p>Los REITs captaron el interés de muchos inversionistas en Estados Unidos y en otras partes del
+                        mundo, lo que detonó un gran éxito en el mercado inmobiliario. </p>
+                    <p>Sin embargo, en México no se contó con las estructuras fiscales y comerciales para desarrollar
+                        este tipo de instrumentos financieros hasta marzo de 2011. </p>
+                    <p>A partir de la Reforma Fiscal del 2004, las <strong>FIBRAs</strong> en <strong>México </strong>
+                        tuvieron el impulso que necesitaban
+                        para comenzar a constituirse correctamente. Pero no fue hasta el 2011 que tuvieron su primera
+                        aparición en la <a href="https://www.bmv.com.mx/es/Grupo_BMV" target="_blank">Bolsa Mexicana de
+                            Valores</a> como un instrumento de inversión innovador y
+                        revolucionario dentro del mercado de bienes raíces. </p>
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">Un mercado inmobiliario
+                        ágil</h2>
+                    <p>Al contrario de los fideicomisos especializados que sólo se centran en un solo sector, las
+                        <strong>FIBRAs</strong> en <strong>México </strong> tienen inversiones en múltiples sectores
+                        económicos, por lo que se consideran
+                        portafolios defensivos. </p>
+                    <p>Esto quiere decir que al invertir en una FIBRA se está invirtiendo, a su vez, en diferentes
+                        propiedades a gran escala, con diferentes ubicaciones y distintos giros. Lo que resulta en una
+                        inversión diversificada y de menor riesgo.</p>
+                    <p>Para poder invertir en estos instrumentos es necesario adquirir CBFIs (Certificados Bursátiles
+                        Fiduciarios Inmobiliarios), los cuales son el equivalente a los títulos accionarios y <strong>ofrecen
+                            derechos corporativos y económicos a su tenedor</strong>. </p>
+                    <p>Estos certificados ofrecen liquidez en inversiones inmobiliarias ya que otorgan dividendos
+                        periódicamente y la posibilidad de obtener ganancias de capital. </p>
+
+                    <p>Invierte en propiedades a gran escala con la seguridad y confianza que te ofrece Fibra Mty.
+                        Adquirimos y administramos <strong>FIBRAs</strong> en <strong>México </strong> con un portafolio
+                        de propiedades corporativas de
+                        alta calidad ¿Quieres saber más? ¡<a href="{% url 'nosotros' %}">Clic aquí</a>!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

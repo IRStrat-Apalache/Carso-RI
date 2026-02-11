@@ -1,0 +1,479 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <style>
+        .owl-carousel .owl-dots {
+            flex-grow: 1; /* Los puntos ocupan el espacio central */
+            display: flex;
+            justify-content: center;
+        }
+
+        .owl-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: grey !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background-color: #59A971 !important;
+        }
+
+        
+        .owl-carousel .owl-dot:focus {
+            outline: none;
+        }
+
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+    <section class="s-block component-inv pt-5 pb-4">
+        <div class="container-fluid container-relative">
+            <div class="row m-0 d-flex align-content-stretch">
+                <div class="col-lg-6 p-0 pb-4 mb-0">
+                    <div class="row h-100">
+                        <div class="col-lg-12 h-100">
+                            <div class="div-1 d-flex gradient h-100">
+                                <div class="row m-0 d-flex flex-column align-self-center w-100 h-100 z-index">
+                                    <div class="col-12 invers p-0">
+                                          <div class="owl-carousel owl-theme h-100">
+
+                                          <div class="item d-flex h-100 align-items-center justify-content-center p-5"
+                                            style="background-image: url({% static 'images/inv-car.png' %})">
+                                           <a target="_blank"
+                                           href="https://www.bmv.com.mx/docs-pub/visor/visorXbrl.html?docins=../eventfid/eventfid_1469924_3277_1.zip">
+                                           <h3 class="text-white mb-2">Fibra Educa presenta una solicitud de actualización de la primera inscripción en el RNV derivado de una oferta pública primaria subsecuente de CBFIS en México y oferta primaria privada internacional</h3>
+                                             <div class="mb-2"><span class="label">2025-06-03</span></div>
+                                               <div class="text-center">
+                                                   <button class="btn download">Descargar</button>
+                                               </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="item d-flex h-100 align-items-center justify-content-center p-5"
+                                            style="background-image: url({% static 'images/inv-car2.png' %})">
+                                           <a target="_blank"
+                                           href="https://www.bmv.com.mx/docs-pub/visor/visorXbrl.html?docins=../eventfid/eventfid_1465606_3277_2007-01_1.zip#/visorXbrl">
+                                           <h3 class="text-white mb-2">Anticipo a cuenta de la distribución del resultado fiscal por el ejercicio que terminará el 31 de diciembre de 2025 y reembolso de patrimonio..</h3>
+                                             <div class="mb-2"><span class="label">2025-05-15</span></div>
+                                               <div class="text-center">
+                                                   <button class="btn download">Descargar</button>
+                                               </div>
+                                               </a>
+                                               </div>
+                                            <div class="item d-flex h-100 align-items-center justify-content-center p-5"
+                                            style="background-image: url({% static 'images/inv-car3.png' %})">
+                                           <a target="_blank"
+                                           href="https://bmv.com.mx/docs-pub/visor/visorXbrl.html?docins=../eventfid/eventfid_1464366_3277_2007-01_1.zip#/visorXbrl">
+                                           <h3 class="text-white mb-2">Fibra Educa anuncia el proceso de puesta en circulación de 10,332 Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIS) actualmente en tesorería</h3>
+                                             <div class="mb-2"><span class="label">2024-05-09</span></div>
+                                               <div class="text-center">
+                                                   <button class="btn download">Descargar</button>
+                                               </div>
+                                               </a>
+                                               </div>
+                                            <div class="item d-flex h-100 align-items-center justify-content-center p-5"
+                                            style="background-image: url({% static 'images/inv-1.png' %})">
+                                            <a target="_blank"
+                                            href="https://bmv.com.mx/docs-pub/eventfid/eventfid_1464050_3277_2007-01_1.pdf">
+                                            <h3 class="text-white mb-2">Invitación a la conferencia telefónica de los resultados del primer trimestre del 2025.</h3>
+                                              <div class="mb-2"><span class="label">2025-05-08</span></div>
+                                                <div class="text-center">
+                                                    <button class="btn download">Descargar</button>
+                                                </div>
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="row recuadros">
+                        <div class="col-md-6">
+                            <div class="div-3 bi-person d-flex">
+                                <form class="w-100 d-flex" method="GET" action="{% url 'investor-kit-zip' %}">
+                                    {% csrf_token %}
+                                    <div class="investor-kit d-flex align-self-center flex-column p-4 w-100 z-index">
+                                        <ul class="pl-0">
+                                            <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="2025_1T25.pdf">
+                                                    Quarterly Report
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="Reporte-Anual2024.pdf">
+                                                    Anual Report
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="FIBRA EDUCA_Analyst_Presentation_1Q25.pdf">
+                                                     Analysts Presentation
+                                                </label>
+                                            </li>
+                                              <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="FIBRA_EDUCA_Corporate_Presentation_1Q25-en.pdf">
+                                                     Investors Presentation
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="factsheet-educa-1T25.pdf">
+                                                    Factsheet
+                                                </label>
+                                            </li>   
+                                              <li>
+                                                <label>
+                                                    <input type="checkbox" name="downloadfiles"
+                                                           value="FIBRA_EDUCA_Kit_Inversionistas_1Q25.xlsx">
+                                                    Historical Results
+                                                </label>
+                                            </li>                                            
+                                        </ul>
+                                        <div class="text-center">
+                                            <button id="kit" class="btn download" disabled>Download Investor Kit
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="scroll-to-target"
+                               href="#destacados">
+                                <div class="div-3 bi-person-2 d-flex">
+                                    <div class="d-flex flex-column p-4 align-self-center w-100 z-index text-center">
+                                        <h3 class="text-white mb-2">Financial highlights
+                                            <br>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12">
+                            <a
+                                    href="{% url 'cotizacion' %}#distribuciones">
+                                <div class="div-3 bi-person-3 d-flex">
+                                    <div class="d-flex flex-column p-4 align-self-center w-100 z-index text-center">
+                                        <h3 class="text-white mb-2">Cash distributions</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">{% trans 'Información financiera' %}</h4>
+                    <div class="list-group">
+                        <a href="{% url 'fundamentales' %}"
+                           class="list-group-item list-group-item-action">{% trans 'Fundamentales' %}</a>
+                        <a href="{% url 'eventos-relevantes' %}"
+                           class="list-group-item list-group-item-action">{% trans 'Eventos relevantes' %}</a>
+                        <a href="{% url 'reportes_financieros' %}"
+                           class="list-group-item list-group-item-action">{% trans 'Reportes BMV' %}</a>
+                        <a href="{% url 'reportes_financieros' %}#presentation"
+                           class="list-group-item list-group-item-action">{% trans 'Presentaciones' %}</a>
+
+
+                    </div>
+                </div>                
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">{% trans 'Información Bursátil' %}</h4>
+                    <div class="list-group">
+                        <a href="{% url 'cotizacion' %}?seccion=distribuciones" class="list-group-item list-group-item-action">{% trans 'Distribuciones' %}</a>
+                        <a href="{% url 'cotizacion' %}?seccion=cotizacion" class="list-group-item list-group-item-action">{% trans 'Cotización' %}</a>
+                        <a href="{% url 'cotizacion' %}?seccion=cobertura" class="list-group-item list-group-item-action">{% trans 'Analistas' %}</a>
+                        <a href="{% url 'cotizacion' %}?seccion=calificadoras" class="list-group-item list-group-item-action">Ratings</a>
+                        <a href="{% url 'cotizacion' %}?seccion=prospectos" class="list-group-item list-group-item-action">{% trans 'Prospectos' %}</a>
+                        <a href="{% url 'cotizacion' %}?seccion=certificado" class="list-group-item list-group-item-action">{% trans 'Certificado' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="parallax" style="background-image: url({% static 'images/inv-parallax.png' %})">
+            <div class='container-fluid container-relative text-white paramargin1'>
+                <div class=" d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="d-flex align-items-center justify-content-center flex-wrap mb-lg-4 mb-xl-0 subs-box">
+                        <div class="d-flex align-items-center row">
+                            <h3 class="mb-0 mr-a "><i class="fa fa-2x fa-envelope-o mr-3 suscribir"></i>Sign up for our Newsletter</h3>
+                        </div>
+                        <div class="d-flex align-items-center row news-comp justify-content-center">
+                            <form class="form" method="post" id="newsletter-form-inv">
+                                <div class="form-group mb-0 d-flex align-items-center">
+                                    <input class="form-control mb-2 mb-md-0" id="fieldEmail" name="correo"
+                                           type="email" placeholder="{% trans 'Correo electrónico' %}" required>
+                                    <button id="newsletter-submit" type="submit" class="btn btn-primary">
+                                        {% trans 'Suscribirse' %}
+                                    </button>
+                                </div>
+                                <div class="alert-message"></div>
+                            </form>
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destacados" class="s-block pb-0 mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 pitch1 text-center">
+                    <h1 class="py-2" style="color:#23356B; font-weight:bold;">Indicators</h1>
+                </div>
+                <div class="col-12 text-center">
+                    <!-- start filter navigation -->
+                    <ul class="portfolio-filter grid-filter nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom"
+                        style="display: flex; flex-wrap: wrap; gap: 15px; padding-left: 0; margin: 0;">
+                        <li class="nav selector active" style="transition: all 0.3s ease;"><a data-filter=".Indicadores" href="#">Operating Indicators</a></li>
+                        <li class="nav selector" style="transition: all 0.3s ease;"><a data-filter=".Financiera" href="#">Financial Position</a></li>
+                        <li class="nav selector" style="transition: all 0.3s ease;"><a data-filter=".Resultados" href="#">Income Statement</a></li>
+                        <li class="nav selector" style="transition: all 0.3s ease;"><a data-filter=".Efectividad" href="#">Cash Flow</a></li>
+                        <li class="nav selector" style="transition: all 0.3s ease;"><a data-filter=".Rentabilidad" href="#">Profitability</a></li>
+                        <li class="nav selector" style="transition: all 0.3s ease;"><a data-filter=".Deuda" href="#">Debt Ratios</a></li>
+                    </ul>
+
+
+                    <!-- end filter navigation -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 filter-content images-hover-pr">
+                    <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                        <li class="grid-sizer"></li>
+
+                        <li class="grid-item Indicadores wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Indicadores1.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                        <li class="grid-item Financiera wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Situacion1.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                        <li class="grid-item Resultados wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Resultados1-en.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                        <li class="grid-item Efectividad wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Efectivo1.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                        <li class="grid-item Rentabilidad wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Rentabilidad1.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                        <li class="grid-item Deuda wow animate__fadeIn">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Indices1.png' %}" style="width:1000px;" />
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s-block pt-0">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-lg-12 pitch1 text-center">
+                    <h1 class="py-2" style="color:#23356B; font-weight:bold;">Certificate price</h1>
+                </div>
+                <div class="col-md-12 text-justify">
+                    <div id="cotizacion-table-2" class="table-responsive">
+                        <table class="table table-bordered table-striped bc-lblue"
+                            style="margin-bottom: 10px;">
+                            <thead>
+                            <tr>
+                                <th>Ticker</th>
+                                <th>Price</th>
+                                <th>Change</th>
+                                <th>Day's Range</th>
+                                <th>Volume</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>EDUCA18.MX</td>
+                                <td id="table-price"></td>
+                                <td id="table-change"></td>
+                                <td id="table-range"></td>
+                                <td id="table-volume"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <small id="table-date"></small>
+                        <br>
+                        <small>* Information with at least 20 minutes delay, for reference purposes only
+                        </small>
+                    </div>
+                    <div id="chartdiv3" class="mt-5 mb-3" style="width:100%; min-height:500px;">
+                        <div class="preloader2">
+                            <img class="spinner" src="{% static 'images/educa_preloader.gif' %}">
+                        </div>
+                    </div>
+                    <small>* Prices adjusted by distributions</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <div class="modal" id="newsletter-success" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Thank you for subscribing to the newsletter.</h6>
+                </div>
+                <div class="modal-body">
+                    <button class="" data-dismiss="modal">ACCEPT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    {#    <script src="{% static 'js/amCharts/contenido/inversionistas.min.js' %}{{ css_js_version }}"></script>#}
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    {#    <script src="{% static 'js/theme-vendors.min.js' %}"></script>#}
+    <script src="{% static 'js/tabsinv.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/variables_cotizacion.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel.header').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 7000,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });            
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 1,
+            });
+            var counter = 1;
+
+            $(".selector a")[0].click();
+
+                interval = setInterval(function () {
+                    var elemento = $("#destacados").find(".selector a")[counter];
+                    $(elemento).click();
+                    if (counter === 5) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000);
+            $('.images-hover-pr img').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('.images-hover-pr img').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#destacados").find(".selector a")[counter];
+                    $(elemento).click();
+                    if (counter === 5) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+
+            $('.component-inv .bi-person-2').css('height', $('.component-inv .bi-person').height() + 'px');
+
+
+            var checkboxes = $("input[type='checkbox']"),
+                submitButt = $(".download");
+
+            checkboxes.click(function () {
+                submitButt.attr("disabled", !checkboxes.is(":checked"));
+            });
+
+        });
+
+
+    </script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>5 de Abril del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/abril-02.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Un Fideicomiso de Infraestructura y Bienes Raíces (FIBRA) es un instrumento de inversión que nos
+                        puede ser muy útil para diversificar nuestro portafolio de inversión y obtener excelentes
+                        beneficios. A continuación, te damos 3 motivos para que consideres hacer una inversión en FIBRAs
+                        que te permita construir un futuro rentable y defensivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+
+                    <h2>Inversión en FIBRAs, una opción rentable</h2>
+                    <p>Cuando hablamos de hacer una inversión en FIBRAs nos referimos a una acción similar a comprar
+                        acciones en la Bolsa de Valores. No obstante, a diferencia de las acciones, una FIBRA ofrece
+                        beneficios que la hacen un instrumento no sólo novedoso, sino bastante rentable. </p>
+                    <h2>CBFIs</h2>
+
+                    <p>Al ser un inversionista de una FIBRA, te conviertes en el dueño de múltiples bienes inmuebles de
+                        alta calidad en múltiples ubicaciones geográficas y múltiples inquilinos. Estas propiedades son
+                        administradas por un equipo profesional que cotiza a través de la Bolsa de Valores. </p>
+
+                    <p>Estos certificados llevan el nombre de Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs),
+                        los cuales otorgan el derecho a los inversionistas de recibir los recursos de las rentas del
+                        portafolio de propiedades. </p>
+                    <p>Con las FIBRAs se puede generar rendimiento de dos maneras distintas: </p>
+                    <ul class="ls-disc">
+                        <li>La primera es mediante la apreciación de capital, es decir, que cuando los certificados
+                            suben su valor en el mercado se pueden vender a un precio mayor que la compra. Vale la pena
+                            mencionar que esta operación en las FIBRAs no genera impuestos.
+                        </li>
+                        <li>La segunda, y la más importante, es mediante las distribuciones de efectivo repartidas a
+                            los accionistas de manera recurrente como producto de las rentas de los inmuebles.
+                        </li>
+                    </ul>
+                    <h2>Administración </h2>
+                    <p>La <strong>inversión en FIBRAs</strong> es la más accesible y fácil de gestionar dentro de los
+                        <a href="{% url 'noticia_4' %}">bienes raíces</a> ya
+                        que detrás de los títulos inmobiliarios (CBFIs) se encuentra un grupo de expertos que se
+                        encargan de su administración.</p>
+                    <p>El objetivo de una institución como <a href="{% url 'index' %}">Fibra Mty</a>, que adquiere y
+                        administra propiedades, es realizar
+                        distribuciones de manera recurrente por la renta de los inmuebles. Esto genera un gran beneficio
+                        inmediato a los inversionistas, ya que ese dinero lo pueden reinvertir o retirar para darle un
+                        uso personal. </p>
+                    <h2>Invierte fácil</h2>
+                    <p>Realizar una <strong>inversión en FIBRAs</strong> es muy sencillo. Los CBFIs se pueden adquirir a
+                        través de una
+                        casa de bolsa autorizada. Para ello, primero es necesario abrir una cuenta, después abonar
+                        cierto capital y posteriormente realizar la transacción de compra.</p>
+                    <p>Lo mejor de este formato de inversión es que se pueden adquirir tantos CBFIs como nuestro capital
+                        nos lo permita y desde una cifra bastante accesible, puedes adquirir un CBFI de Fibra Mty desde
+                        12 pesos mexicanos. Además, la inversión en FIBRAs es considerada de menos riesgo</p>
+                    <p>En comparación con otras inversiones, la posibilidad de perder dinero es menor debido a que la
+                        inversión se encuentra respaldada por edificios corporativos, naves industriales, entre otro
+                        tipo de inmuebles. </p>
+                    <p>Con Fibra Mty puedes acceder a un portafolio de alta calidad y realizar la mejor <strong>inversión
+                        en FIBRAs</strong>. ¡<a href="{% url 'escuela-fibra-finn' %}">Conoce más</a>!</p>
+                    <p>Síguenos en <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> - <a
+                            target="_blank" href="https://www.linkedin.com/company/3643014">LinkedIn</a> - <a
+                            target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos%22">YouTube</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,367 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/settings.css?v=1.0' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/propiedades.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-slider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <style>  
+
+        .container2 {
+            max-width: 1000px; /* ajusta según necesidad */
+            margin: 0 auto; /* centra horizontalmente */
+            width: 100%;
+            text-align: right; /* alinea texto internamente a la derecha */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* asegura que el contenido se pegue a la derecha */
+        }  
+        
+        .small-title {
+            font-size: 18px;
+            display: block;
+        }
+        
+        .big-title {
+            font-size: 44px;
+            display: block;
+            font-weight: bold;
+        }
+        
+        .highlight-letter {
+            color: #59A971;
+            font-weight: bold;
+        }
+        
+        .text-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+        .title {
+            text-align: center;
+            color: #4e4f51;
+        }
+
+        .st0 {
+            fill: #3461B2;
+            stroke: #fff;
+            stroke-width: 1;
+            content: "\f041";
+            cursor: pointer;
+
+        }
+
+        .mapa .active {
+            fill: #001548;
+            stroke: #263155;
+            stroke-width: 0.9;
+        }
+
+        .st1 {
+            fill: #E0E0E0;
+            stroke: #4e4f51;
+            stroke-width: 0.5;
+        }
+
+        .st2 {
+            fill: #E2E2E2;
+            stroke: #FFFFFF;
+            stroke-width: 0.75;
+        }
+
+        .st4 {
+            fill: #4e4f51;
+            stroke: #4e4f51;
+            stroke-width: 0.75;
+        }
+
+        .st3 {
+            stroke: #fff;
+            fill: none;
+            cursor: pointer;
+            z-index: 99999;
+        }
+
+        .propiedades-circle {
+            border-style: dashed;
+            border-color: #263155;
+            padding: 0.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #propiedades-circle h4, #propiedades-circle h3 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        #propiedades-circle ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .list-unstyled{
+        padding-left:10%;
+        }
+        .portfolio-image-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .portfolio-img {
+            width: 800px;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .portfolio-image-container {
+            position: relative;
+            width: 600px; /* Asegúrate de que el ancho de la imagen sea el deseado */
+            height: 463px; /* Asegúrate de que la altura de la imagen sea la deseada */
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s ease; /* Transición para el efecto de oscurecimiento */
+        }
+        
+        .portfolio-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1130px; /* Ancho máximo del contenedor */
+            margin: auto;
+        }
+        
+        .portfolio-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2; /* Asegura que el contenido de hover esté por encima de la superposición */
+        }
+        
+        .inside-text{
+            text-align:center;
+        }
+        
+    </style>
+{% endblock %}
+{% block title %}
+<section class="hero-parallax text-white d-flex align-items-center justify-content-center" 
+         style="background-image: url({% static image %});">
+    <div>
+        <div class="container2 d-flex flex-column justify-content-center">
+            <span class="small-title">#Infraestr<span class="highlight-letter">u</span>cturaParaLaEd<span class="highlight-letter">u</span>cación</span>
+            <span class="big-title">N<span class="highlight-letter">u</span>estro portafolio</span>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block content %}
+    {% include 'partials/propiedades.html' %}
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/propiedades.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/jquery.flexslider.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/theme-vendors.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/maps-states-mx.min.js' %}"></script>    
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    {% comment %}<script src="{% static 'js/maps-hotels-mx.min.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/propiedades.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fragment = window.location.hash;
+
+            if (fragment.includes("tab=")) {
+                const tabId = fragment.split("tab=")[1]; 
+
+                $('#myTab a[href="#' + tabId + '"]').tab('show');
+
+                $('html, body').animate({
+                    scrollTop: $("#ppropiedades").offset().top
+                }, 500, function() {
+                    setTimeout(function() {
+                        $('#myTab a[href="#' + tabId + '"]').tab('show');
+                    }, 100);
+                });
+            }
+        });
+
+        function finn_waypoint(elemento) {
+            var waypoint = new Waypoint({
+                element: $(elemento),
+                handler: function (direction) {
+                    $(elemento + ' .count').trigger('on-appear');
+                },
+                offset: '75%',
+                triggerOnce: true
+            })
+        }
+
+        function finn_counto(elemento) {
+            if ($().countTo) {
+                $(elemento + ' .count').on('on-appear', function () {
+                    $(elemento + ' .honeycomb-path.honeycomb-1').addClass('honeycomb-animated');
+
+                    $(this).each(function () {
+                        var to = parseFloat($(this).data('to')),
+                            speed = parseInt($(this).data('speed')),
+                            decimals = parseInt($(this).data('decimals'));
+
+                        $(this).countTo({
+                            to: to,
+                            speen: speed,
+                            decimals: decimals,
+                            formatter: function (value, options) {
+                                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                            },
+                            onComplete: function (value) {
+                                {#if (value === 1.9)#}
+                                {#return this.innerHTML += '%';#}
+                            }
+
+                        });
+                    });
+                }); //counter
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel.index').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+            // AGREGAR ESTO POR DEBAJO Y USAR EL /partials/mapa.html del otro proyecto y tambien copiar su map-states-mx y minificarlo
+            $(window).on('load', function () {
+
+                $('body').css({'overflow': 'scroll'});
+                $(document).off('scroll');
+    
+    
+                $("#propiedades-circle").attr("style", "opacity:0;left:100px");
+    
+                let divText = $("#propiedades-text");
+                divText.empty();
+                let state = mxStates['MEX2706'];
+                $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+                $("#propiedades-state").text(state.name);
+                $("#propiedades-legend").text(state.leyend);
+                let list = state.list;
+                if (list.length) {
+                    for (let i of list) {
+                        divText.append('<h4 class="text-bold">' + i.title + '</h4>');
+                        if (i.items.length) {
+                            let ul = '<ul class="list-group list-unstyled" >';
+                            for (let j of i.items) {
+                                ul += '<li class="list-unstyled">' + j + '</li>';
+                            }
+                            ul += '</ul>';
+                            divText.append(ul);
+                        }
+                    }
+                }
+    
+                $("path.st0, path.st3")
+                    .click(function () {
+                        let id = $(this).attr("id") ?? $(this).data("id");
+    
+                        {#activo css#}
+                        $('path.active').removeClass('active');
+                        $("#" + id).attr("class", "st0 active");
+    
+                        $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+                        {#$("#propiedades-state").text($(this).attr("name"));#}
+                        $("#propiedades-state").text(mxStates[id].name);
+                        $("#propiedades-legend").text(mxStates[id].leyend);
+    
+                        let divText = $("#propiedades-text");
+                        divText.empty();
+                        let list = mxStates[id].list;
+                        if (list.length) {
+                            for (let i of list) {
+                                divText.append('<h4 class="text-bold">' + i.title + '</h4>');
+                                if (i.items.length) {
+                                    let ul = '<ul class="list-group list-unstyled">';
+                                    for (let j of i.items) {
+                                        ul += '<li class="list-unstyled">' + j + '</li>';
+                                    }
+                                    ul += '</ul>';
+                                    divText.append(ul);
+                                }
+                            }
+                        }
+                    })
+                {#.mouseup(function () {#}
+                {#    $("#propiedades-circle").attr("style", "opacity:0;left:100px");#}
+                {# })#}
+                ;
+            });
+            let accordion = $('#accordion');
+            accordion.on('show.bs.collapse', e => {
+                $(e.target).siblings().addClass('show');
+                console.log('click1');
+            })
+            accordion.on('hidden.bs.collapse', e => {
+                $(e.target).siblings().removeClass('show');
+                console.log('click2');
+    
+            })
+        });
+    </script>
+{% endblock %}

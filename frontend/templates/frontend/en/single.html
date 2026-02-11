@@ -1,0 +1,96 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">
+                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>
+                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>
+                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>
+                        </div>
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">Los
+                            beneficios fiscales de invertir en FIBRAs</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por <a href="#">César Rubalcava</a>  <a
+                                href="blog-grid.html">25 de Septiembre del 2019</a></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image border-radius-8px md-no-margin-bottom"
+                         src="{% static 'images/breadcrumbs/12.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Los Fideicomisos de Inversión en Bienes Raíces (FIBRAs) son vehículos de inversión que cotizan en
+                        bolsa que generan valor agregado para sus inversionistas, incluyendo las distribuciones
+                        constantes, mayor liquidez en comparación a otras inversiones tradicionales, diversificación en
+                        portafolios de inversión y beneficios fiscales únicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-0 margin-75px-top lg-no-margin-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 bg-light-gray background-no-repeat background-position-right-bottom padding-90px-lr padding-8-rem-tb lg-padding-5-half-rem-lr wow animate__fadeIn"
+                     data-wow-delay="0.2s"
+                     style="background-image:url('/static/images/blog-post-layout-01-img-11.png');">
+                    <i class="fa fa-quote-left text-fast-blue icon-extra-medium margin-30px-bottom"></i>
+                    <h5 class="alt-font text-extra-dark-gray font-weight-500">una FIBRA está obligada a distribuir
+                        anualmente al menos el 95% de su Resultado Fiscal</h5>
+                    <div class="alt-font">artículos 187 y 188 de la Ley de Impuesto Sobre la Renta (ISR)</div>
+                </div>
+                <div class="col-12 col-md-6 cover-background sm-h-450px xs-h-300px wow animate__fadeIn"
+                     data-wow-delay="0.4s"
+                     style="background-image: url({% static 'images/propiedades/prometeo11.jpg' %})">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="row">
+                        <div class="col-12 margin-9-rem-top sm-margin-50px-top last-paragraph-no-margin wow animate__fadeIn">
+                            <h6 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">
+                                Distribuciones</h6>
+                            <p>Las distribuciones realizadas constantemente por las FIBRAS son originadas por el Flujo
+                                de la Operación, dicho flujo en la mayoría de los casos es mayor que la utilidad fiscal.
+                                Toda aquella distribución que exceda la Utilidad Fiscal es etiquetada como “Reembolso de
+                                Capital” y no esta gravado de impuestos. De igual manera, a diferencia de los dividendos
+                                de empresas tradicionales, las distribuciones de las FIBRAs no están gravadas con 10% de
+                                impuesto adicional por concepto de dividendos. <a href="#"
+                                                                                  class="text-decoration-underline text-extra-dark-gray font-weight-500">Al
+                                    cierre del 2T19, Fibra Mty genera un rendimiento anual por distribución de 10.0% y
+                                    cuenta con un alto potencial de apreciación de capital considerando que el precio se
+                                    encuentra a descuento en comparación a su valor razonable y a su precio de
+                                    colocación. Históricamente Fibra Mty ha distribuido el 100% de su Flujo de
+                                    Operación, siendo el 50% referido como Utilidad Fiscal y 50% como Reembolso de
+                                    Capital.</p>
+                        </div>
+                        <div class="col-12 d-flex last-paragraph-no-margin margin-70px-top sm-margin-50px-top wow animate__fadeIn">
+                            <div class="border-width-1px border-dashed border-color-medium-gray padding-40px-tb padding-50px-lr box-shadow-extra-large border-radius-6px xs-padding-30px-all">
+                                Ahora que sabes que las FIBRAs se consideran vehículos de inversión fiscalmente
+                                eficientes para tu portafolio de inversión, puedes empezar a analizar las FIBRAs para
+                                poder mejorar el rendimiento después de impuestos de tu portafolio.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

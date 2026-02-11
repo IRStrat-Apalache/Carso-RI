@@ -1,0 +1,1246 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+.owl-carousel .item img{
+    width: 200px;
+}
+.owl-carousel .item > div{
+    color: #fff;
+}
+.owl-carousel .item{
+    height:325px;
+}
+.item{
+    background-color: #1D3164;
+    padding: 10px;
+    border-radius: 5px;
+}
+table.bc-blue th{
+    color :#fff;
+    background-color: #1D3164;
+}
+.list-item-justified {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding-left: 0; /* Elimina el padding predeterminado */
+}
+.list-item-justified li {
+    position: relative;
+    padding-left: 1.5em; /* Ajusta el espacio para el pseudo-elemento */
+    margin-bottom: 0.5em; /* Espacio entre los elementos de la lista */
+}
+.list-item-justified li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.6em; 
+    height: 0.6em; 
+    background-color: #1D3164;
+    border-radius: 50%; 
+    transform: translateY(-50%);
+}
+.btn-color{
+    background : #1D3164;
+}
+.portfolio-filter .nav.selector.active a,.portfolio-filter .nav.selector a:hover {
+    background-color: #1D3164; 
+    color: #fff; 
+}
+.container{
+    padding:5%;
+}
+.list-item-justified {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding-left: 0; /* Elimina el padding predeterminado */
+}
+.list-item-justified li {
+    position: relative;
+    padding-left: 1.5em; /* Ajusta el espacio para el pseudo-elemento */
+    margin-bottom: 0.5em; /* Espacio entre los elementos de la lista */
+}
+.list-item-justified li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.6em; 
+    height: 0.6em; 
+    background-color: #1D3164;
+    border-radius: 50%; 
+    transform: translateY(-50%);
+}
+.btn-color{
+    background : #1D3164;
+}
+
+.btn-close i {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    color: #1D3164; /* Ajusta el color del ícono */
+}
+.portfolio-filter .nav.selector.active a,.portfolio-filter .nav.selector a:hover {
+    background-color: #1D3164; 
+    color: #fff; 
+}
+.container{
+    padding:5%;
+}
+
+
+.custom-button {
+    background-color: transparent; /* Elimina el fondo del botón */
+    border: none; /* Opcional: elimina el borde del botón */
+    padding: 0; /* Opcional: ajusta el padding si es necesario */
+}
+
+.custom-button img {
+    width: 300px !important;
+    height: 200px !important;    
+    transition: transform 0.3s ease; /* Suaviza el efecto de hover */
+}
+
+.custom-button img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+.cus-button {
+    display: inline-block;
+    background-color: #59A971; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno para ajustar el texto */
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: Arial, sans-serif; /* Familia tipográfica */
+    transition: background-color 0.3s ease; /* Suaviza la animación del color */
+}
+
+.cus-button:hover {
+    background-color: #4c8b5e; /* Color al hacer hover */
+}
+
+
+.close {
+    color:white;
+    text-shadow: none; 
+    opacity: 1; 
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    outline: none; 
+}
+
+@media only screen and (max-width: 768px) {
+
+    #img-comites{                
+        height: 100px !important;
+    }
+
+    .text-pract{
+        font-size: 21px !important;
+    }
+    
+}
+
+@media only screen and (min-width: 300px) {
+    .text-mov{
+        font-size: 16px !important;
+    }
+
+    .custom-button img{
+        height: 100px !important;
+    }
+    
+    #img-comites{                
+        height: 80px !important;
+        width: 50px !important;
+    }
+}
+   
+</style>
+{% endblock %}
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative py-5"  id="estructura">
+            <div class="text-center" style=" color:#59A971">
+                <h4>At Fibra Educa we have an outstanding Corporate Governance that not only supports our commitment to ethical decision making, but is constantly evaluated by international firms to establish the highest levels of protection for our holders under the best practices in the market.</h4>
+            </div>
+            <h1  class ="text-center mb-5 py-5" style="color:#23356B">Trust Structure</h1>
+            <div class="container text-center mt-3">
+                <img src="{% static 'images/fide-en.png' %}">
+            </div>
+            
+            
+            <div class="container text-center">
+                <img style="width:700px;" src="{% static 'images/muñequitos-en.png' %}">
+            </div>
+            
+            <div id="comites" class="py-5">
+                <h1  class ="text-center mb-5" style="color:#23356B">Comittees</h1>
+            </div>
+            <!-- start filter navigation -->
+            <ul class="portfolio-filter grid-filter nav comite nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom d-flex flex-wrap">
+                <li data-valor="c0" class="nav selector active mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Technical Committee </a></li>
+                <li data-valor="c1" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Nomination Committee </a></li>
+                <li data-valor="c2" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-pract text-mov">Corporate Practices Committee</a></li>
+                <li data-valor="c3" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Compensation Committee</a></li>
+                <li data-valor="c4" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Audit Committee</a></li>
+            </ul>
+
+             <!-- Modales -->
+             <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width:600px;">
+                        <div class="modal-header" style="background-color: #1D3164">
+                        <h5 class="modal-title" style="color:white" id="dynamicModalLabel"></h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-justify" >
+                            <!-- Información adicional -->
+                        </div>                                
+                    </div>
+                </div>
+            </div>
+
+            <!-- end filter navigation -->
+            <div class="row m-0">
+                
+
+                <div class="col-md-12 comite">
+                    <!-- Comite tecnico -->
+                    <div id="c0" class="d-none comite">
+                        <div class="col-12">
+                            <div class ="owl-carousel mb-5">
+                                <!-- Jorge Nacer -->
+                                <div class="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Education: Engineering in cybernetics and computer systems from Universidad La Salle | Doctorate Honoris Causa from the Ibero-American Council in Honor of Educational Quality.</p>" 
+                                                data-bs-title="Jorge Nacer Gobera">                                            
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/gobera.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class="fw-bold"><b>Jorge Nacer Gobera</b></h3>
+                                                <p>Chairman and Non-Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <!-- Blanca Rodríguez-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Blanca Patricia Rodríguez Ortíz is an architect with over 25 years of experience in finance, advisory, and fund management. Throughout her career, she has managed the execution of over USD$7 billion in debt and venture capital across diverse real estate and infrastructure investment vehicles in the United States, Mexico, and Latin America.</p>
+                                                <p>Currently, she is the Chief Capital and Financial Officer at Marhnos, a company with over seventy years of specialization in financing, developing, and operating real estate and infrastructure projects. </p>
+                                                <p>Previously, Blanca held senior roles at Banyan Tree Mexico Hospitality Fund and co-founded Real Capital Investment Management (formerly DTZ Rockwood Mexico), where she contributed for a decade. Her earlier career includes roles as Head of New Business and Capital at GE Real Estate Mexico, and positions with AEW Capital Management and Beacon Properties in Boston, Massachusetts. </p>
+                                                <p>Blanca holds both a Bachelor’s in Architecture and a Master’s in Urban Design with a focus on Finance and Real Estate from Cornell University. She is also an active member of the Corporate Governance Committee at ULI Mexico, an Independent Member of the Technical Committee for FIBRA EDUCA, and serves on the Technical Committee of CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">                                             
+                                        </button>                         
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/blanca.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Marta Vaca Viana has 17 years of expertise in corporate governance and sustainability. For the past decade, she has led Delphi Consulting & Advisory, advising over 160 companies across Mexico, Latin America, the United States, and Europe. Her specialization includes corporate governance and business sustainability, addressing both strategic and operational dimensions as well as communication.</p>
+                                                                                    <p>Marta serves on the boards of CADU and FIBRA EDUCA, both listed on the Mexican Stock Exchange. She is also the Corporate Governance and Sustainability Officer for Latin America at the International Finance Corporation (IFC) of the World Bank. Additionally, Marta conducts research with the Organisation for Economic Co-operation and Development (OECD) and is a member of the Corporate Governance Commission of Mexico’s Business Coordinating Council (CCE), where she chairs the International and Best Practices Subcommittee.</p>
+                                                                                    <p>Her contributions have been recognized by Hermes Fund Management and the International Corporate Governance Network (ICGN). Marta has been a speaker at Yale University, published two corporate governance books with the World Bank, and represented Mexico at OECD-led Latin American corporate governance roundtables since 2008. She has professional experience in New York and co-founded the Network of Corporate Governance Institutes in Latin America, spanning twelve countries.</p>
+                                                                                    <p>Marta holds a Bachelor’s degree in Economics from Anahuac University in Mexico and a Master’s degree from the London School of Economics and Political Science. She also teaches postgraduate courses on sustainability and corporate governance at esteemed business schools in Mexico.</p>" 
+                                            data-bs-title="Marta Vaca Viana">                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/vaca.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class ="fw-bold"><b>Marta Vaca Viana</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar Priego brings over 25 years of experience in financial markets. She holds a Master’s degree in Finance from ITAM and a specialization in Carbon Markets from the International Capital Market Association (ICMA). Currently, she serves as Director of the Mexican Council for Sustainable Finance (CMFS), a body representing the Mexican Financial System that has championed best practices in green and sustainable finance since 2016. Under her leadership, CMFS advances capacity building among market participants and mobilizes capital for environmental and societal benefits.
+                                                <p>Alba is a member of the Sustainable Finance Committee of the Financial System Stability Council, led by Mexico’s Ministry of Finance (SHCP) and the Bank of Mexico. She also sits on the Executive Committee of the UNDP Financial Centres for Sustainability (FC4S) network, representing Mexico City’s Financial Centre within the Americas Hub alongside the financial centers of Montreal and Rio de Janeiro. Her additional roles include serving on the Technical Committee of the TCFD Mexico Consortium, the Sustainability Advisory Technical Committee of the Mexican Financial Reporting and Sustainability Standards Board (CINIF), and the IFRS Sustainability Standards Review Committee.</p>
+                                                <p>Previously, Alba was part of the Mexican Stock Exchange’s Sustainability Committee from 2015 to 2021. She currently serves as a judge for the HSBC & EY Sustainable Innovation Leadership Award and the Contacto Banxico Award, an annual recognition by the Bank of Mexico.</p>
+                                                <p>As a Corporate Sustainability instructor at the Panamerican University, Alba frequently speaks at local and international forums on topics such as green and sustainable finance, regulation, taxonomies, disclosure, and risk, collaborating closely with various financial sector associations.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">                                       
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/alba.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Alba Aguilar Priego</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Diego Laresgoiti-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center ">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>With 17 years in the financial sector, Diego Laresgoiti Matute is a Founding Partner of Sancus Capital Partners, managing USD$3.5 billion in assets across investment vehicles focused on luxury hotels, renewable energy, venture capital, and real estate. Mr. Laresgoiti oversees the firm’s liquid investment strategy.</p>
+        
+                                            <p>He serves on the boards of Ciudad Mayakoba and Encinno Capital, a private equity firm dedicated to acquiring, operating, and growing mid-sized companies. Additionally, he is an independent member of the Investment Committee for Dila Capital, Mexico’s largest venture capital fund, with USD$150 million in assets under management.</p>
+        
+                                            <p>Previously, Mr. Laresgoiti was a Board Member and Head of Investor Relations/Capital Markets at RLH Properties, which he co-founded, initially as a private equity fund and later as a publicly traded company. Over a decade, RLH grew to become the largest publicly traded hotel company on the Mexican Stock Exchange, owning luxury hotels operated by renowned brands, including Four Seasons, Rosewood, One&Only, Fairmont, and Banyan Tree.</p>
+        
+                                            <p>He is an Independent Board Member for FIBRA EDUCA, one of Mexico’s largest publicly traded REITs, with a market capitalization of approximately USD$3.7 billion.</p>
+        
+                                            <p>Mr. Laresgoiti holds a degree in Industrial Engineering from the Ibero-American University.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/diego.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Alejando Creel Cobián holds a Bachelor's degree in Business Administration from Mexico's Autonomous Institute of Technology (ITAM, for its Spanish acronym) and a Diploma in Banking Law from the Ibero-American University, and he completed the Corporate Governance course at The Wharton School, University of Pennsylvania. </p>
+        
+                                            <p>With over 40 years of experience, he has held senior management roles across the financial sector. His public sector contributions include serving as Director of Corporate Assets for the Bank Savings Protection Fund and as a Board Member of the Institute for the Protection of Bank Savings (IPAB) in Mexico. </p>
+        
+                                            <p>In the financial sector, Mr. Creel has held pivotal roles, including Head of Investment Banking at Finamex, CEO of Grupo Fin and Casa de Bolsa Inverlat, and Deputy CEO of Banco Inverlat.</p>
+        
+                                            <p>His extensive board experience with Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, and Grupo Collado, among others underscores his strong foundation in corporate governance. </p>
+        
+                                            <p>Since 2002, he has been Managing Partner of Alcrecob y Asociados, a firm specializing in financial advisory services, primarily in investment banking, corporate finance, and restructuring.</p>
+        
+                                            <p>He also serves as an Independent Member of the Technical Committee for FIBRA EDUCA and various other public investment vehicles.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/creel.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre Mendoza is the Principal of the Anahuac Senior Management Institute (IADA) at the Anahuac University. From 2015 to 2023, he served as Academic Vice-Principal of Anahuac University and was previously the Dean of the Business School at its South Campus from 1996 to 2014.</p>
+        
+                                                <p>Mr. Fabre founded Mexico’s Center of Excellence in Corporate Governance and currently acts as a Senior Advisor at Morrow Sodali, a global leader in strategic advisory and shareholder services, as well as at Fabre Advisors Governance Capital. In these roles, he has advised financial market authorities, senior management institutes, family offices, and over a hundred companies and nonprofit organizations domestically and internationally.</p>
+        
+                                                <p>An expert in corporate governance, he is a professor on the subject and co-authored The Institutionalization of the Company: Success Cases in Corporate Governance, published in 2006 by the Global Corporate Governance Forum and the Center for International Private Enterprise.</p>
+        
+                                                <p>Mr. Fabre developed the ESG Index methodology for the Mexican Stock Exchange and chaired its evaluation committee from 2010 to 2019, overseeing its transition to Standard & Poors. </p>
+        
+                                                <p>He currently serves as an independent board member at Punto Casa de Bolsa and FIBRA EDUCA. </p>
+        
+                                                <p>His nonprofit commitments include roles at Editorial LID Mexico, Casa de la Amistad para Niños con Cáncer IAP, a foundation supporting children with cancer, and Catholic.net.</p>
+        
+                                                <p>He holds an honors degree in Industrial Engineering and an MBA with a Finance specialization from Anahuac University – South Campus, as well as a Master’s in Business Leadership from Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">                                           
+                                            
+                                        </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/mendoza.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>                                        
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <!-- Comite Nomincaciones -->
+                    <div id="c1" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>With 17 years in the financial sector, Diego Laresgoiti Matute is a Founding Partner of Sancus Capital Partners, managing USD$3.5 billion in assets across investment vehicles focused on luxury hotels, renewable energy, venture capital, and real estate. Mr. Laresgoiti oversees the firm’s liquid investment strategy.</p>
+        
+                                            <p>He serves on the boards of Ciudad Mayakoba and Encinno Capital, a private equity firm dedicated to acquiring, operating, and growing mid-sized companies. Additionally, he is an independent member of the Investment Committee for Dila Capital, Mexico’s largest venture capital fund, with USD$150 million in assets under management.</p>
+        
+                                            <p>Previously, Mr. Laresgoiti was a Board Member and Head of Investor Relations/Capital Markets at RLH Properties, which he co-founded, initially as a private equity fund and later as a publicly traded company. Over a decade, RLH grew to become the largest publicly traded hotel company on the Mexican Stock Exchange, owning luxury hotels operated by renowned brands, including Four Seasons, Rosewood, One&Only, Fairmont, and Banyan Tree.</p>
+        
+                                            <p>He is an Independent Board Member for FIBRA EDUCA, one of Mexico’s largest publicly traded REITs, with a market capitalization of approximately USD$3.7 billion.</p>
+        
+                                            <p>Mr. Laresgoiti holds a degree in Industrial Engineering from the Ibero-American University.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/diego.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Blanca Patricia Rodríguez Ortíz is an architect with over 25 years of experience in finance, advisory, and fund management. Throughout her career, she has managed the execution of over USD$7 billion in debt and venture capital across diverse real estate and infrastructure investment vehicles in the United States, Mexico, and Latin America.</p>
+                                                <p>Currently, she is the Chief Capital and Financial Officer at Marhnos, a company with over seventy years of specialization in financing, developing, and operating real estate and infrastructure projects. </p>
+                                                <p>Previously, Blanca held senior roles at Banyan Tree Mexico Hospitality Fund and co-founded Real Capital Investment Management (formerly DTZ Rockwood Mexico), where she contributed for a decade. Her earlier career includes roles as Head of New Business and Capital at GE Real Estate Mexico, and positions with AEW Capital Management and Beacon Properties in Boston, Massachusetts. </p>
+                                                <p>Blanca holds both a Bachelor’s in Architecture and a Master’s in Urban Design with a focus on Finance and Real Estate from Cornell University. She is also an active member of the Corporate Governance Committee at ULI Mexico, an Independent Member of the Technical Committee for FIBRA EDUCA, and serves on the Technical Committee of CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">
+                                            </button>                         
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-center align-items-center">                                                   
+                                                        <img src = "{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important"> 
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h3 class ="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                        <p>Independent Member</p>
+                                                        <p>Tenure: 6 years</p>
+                                                        <a class="cus-button" target="_blank" href="#">
+                                                            View biography
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                                                      
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Alejando Creel Cobián holds a Bachelor's degree in Business Administration from Mexico's Autonomous Institute of Technology (ITAM, for its Spanish acronym) and a Diploma in Banking Law from the Ibero-American University, and he completed the Corporate Governance course at The Wharton School, University of Pennsylvania. </p>
+        
+                                            <p>With over 40 years of experience, he has held senior management roles across the financial sector. His public sector contributions include serving as Director of Corporate Assets for the Bank Savings Protection Fund and as a Board Member of the Institute for the Protection of Bank Savings (IPAB) in Mexico. </p>
+        
+                                            <p>In the financial sector, Mr. Creel has held pivotal roles, including Head of Investment Banking at Finamex, CEO of Grupo Fin and Casa de Bolsa Inverlat, and Deputy CEO of Banco Inverlat.</p>
+        
+                                            <p>His extensive board experience with Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, and Grupo Collado, among others underscores his strong foundation in corporate governance. </p>
+        
+                                            <p>Since 2002, he has been Managing Partner of Alcrecob y Asociados, a firm specializing in financial advisory services, primarily in investment banking, corporate finance, and restructuring.</p>
+        
+                                            <p>He also serves as an Independent Member of the Technical Committee for FIBRA EDUCA and various other public investment vehicles.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography                                           
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>                         
+                            <div class="col-md-6 col-12 text-white">
+                                <div class="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Education: Engineering in cybernetics and computer systems from Universidad La Salle | Doctorate Honoris Causa from the Ibero-American Council in Honor of Educational Quality.</p>" 
+                                                data-bs-title="Jorge Nacer Gobera">
+                                            </button>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                        <img src="{% static 'images/gobera.png' %}" style="width:180px !important; height:160px; !important">
+                                                    </div>
+                                                    <div class="col-md-6">                                            
+                                                        <h3 class="fw-bold"><b>Jorge Nacer Gobera</b></h3>
+                                                        <p>Chairman and Non-Independent Member<br>Tenure: 6 years</p>                                                        
+                                                        <a class="cus-button" target="_blank" href="#">
+                                                            View biography
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">Majority of Independent Members</li>
+                                <li style="font-size:25px">Responsible for the Nomination of Independent Members</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_nominaciones.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comite Prácticas -->
+                    <div id="c2" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Blanca Patricia Rodríguez Ortíz is an architect with over 25 years of experience in finance, advisory, and fund management. Throughout her career, she has managed the execution of over USD$7 billion in debt and venture capital across diverse real estate and infrastructure investment vehicles in the United States, Mexico, and Latin America.</p>
+                                                <p>Currently, she is the Chief Capital and Financial Officer at Marhnos, a company with over seventy years of specialization in financing, developing, and operating real estate and infrastructure projects. </p>
+                                                <p>Previously, Blanca held senior roles at Banyan Tree Mexico Hospitality Fund and co-founded Real Capital Investment Management (formerly DTZ Rockwood Mexico), where she contributed for a decade. Her earlier career includes roles as Head of New Business and Capital at GE Real Estate Mexico, and positions with AEW Capital Management and Beacon Properties in Boston, Massachusetts. </p>
+                                                <p>Blanca holds both a Bachelor’s in Architecture and a Master’s in Urban Design with a focus on Finance and Real Estate from Cornell University. She is also an active member of the Corporate Governance Committee at ULI Mexico, an Independent Member of the Technical Committee for FIBRA EDUCA, and serves on the Technical Committee of CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">                                            
+                                        </button>                         
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h2 class="fw-bold"><b>Blanca Rodríguez Ortiz</b></h2>
+                                                    <p>Independent Member</p>
+                                                    <p>Tenure: 6 years</p>
+                                                    <a class="cus-button" target="_blank" href="#">
+                                                        View biography
+                                                    </a>
+                                                </div>
+                                            </div>                                        
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                            <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar Priego brings over 25 years of experience in financial markets. She holds a Master’s degree in Finance from ITAM and a specialization in Carbon Markets from the International Capital Market Association (ICMA). Currently, she serves as Director of the Mexican Council for Sustainable Finance (CMFS), a body representing the Mexican Financial System that has championed best practices in green and sustainable finance since 2016. Under her leadership, CMFS advances capacity building among market participants and mobilizes capital for environmental and societal benefits.
+                                                <p>Alba is a member of the Sustainable Finance Committee of the Financial System Stability Council, led by Mexico’s Ministry of Finance (SHCP) and the Bank of Mexico. She also sits on the Executive Committee of the UNDP Financial Centres for Sustainability (FC4S) network, representing Mexico City’s Financial Centre within the Americas Hub alongside the financial centers of Montreal and Rio de Janeiro. Her additional roles include serving on the Technical Committee of the TCFD Mexico Consortium, the Sustainability Advisory Technical Committee of the Mexican Financial Reporting and Sustainability Standards Board (CINIF), and the IFRS Sustainability Standards Review Committee.</p>
+                                                <p>Previously, Alba was part of the Mexican Stock Exchange’s Sustainability Committee from 2015 to 2021. She currently serves as a judge for the HSBC & EY Sustainable Innovation Leadership Award and the Contacto Banxico Award, an annual recognition by the Bank of Mexico.</p>
+                                                <p>As a Corporate Sustainability instructor at the Panamerican University, Alba frequently speaks at local and international forums on topics such as green and sustainable finance, regulation, taxonomies, disclosure, and risk, collaborating closely with various financial sector associations.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">
+                                      
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/alba.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class = "fw-bold"><b>Alba Aguilar Priego</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                            <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                             data-bs-info="<p>Marta Vaca Viana has 17 years of expertise in corporate governance and sustainability. For the past decade, she has led Delphi Consulting & Advisory, advising over 160 companies across Mexico, Latin America, the United States, and Europe. Her specialization includes corporate governance and business sustainability, addressing both strategic and operational dimensions as well as communication.</p>
+                                                                                    <p>Marta serves on the boards of CADU and FIBRA EDUCA, both listed on the Mexican Stock Exchange. She is also the Corporate Governance and Sustainability Officer for Latin America at the International Finance Corporation (IFC) of the World Bank. Additionally, Marta conducts research with the Organisation for Economic Co-operation and Development (OECD) and is a member of the Corporate Governance Commission of Mexico’s Business Coordinating Council (CCE), where she chairs the International and Best Practices Subcommittee.</p>
+                                                                                    <p>Her contributions have been recognized by Hermes Fund Management and the International Corporate Governance Network (ICGN). Marta has been a speaker at Yale University, published two corporate governance books with the World Bank, and represented Mexico at OECD-led Latin American corporate governance roundtables since 2008. She has professional experience in New York and co-founded the Network of Corporate Governance Institutes in Latin America, spanning twelve countries.</p>
+                                                                                    <p>Marta holds a Bachelor’s degree in Economics from Anahuac University in Mexico and a Master’s degree from the London School of Economics and Political Science. She also teaches postgraduate courses on sustainability and corporate governance at esteemed business schools in Mexico.</p>" 
+                                            data-bs-title="Marta Vaca Viana">                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/vaca.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class ="fw-bold"><b>Marta Vaca<br> Viana</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                             <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre Mendoza is the Principal of the Anahuac Senior Management Institute (IADA) at the Anahuac University. From 2015 to 2023, he served as Academic Vice-Principal of Anahuac University and was previously the Dean of the Business School at its South Campus from 1996 to 2014.</p>
+        
+                                                <p>Mr. Fabre founded Mexico’s Center of Excellence in Corporate Governance and currently acts as a Senior Advisor at Morrow Sodali, a global leader in strategic advisory and shareholder services, as well as at Fabre Advisors Governance Capital. In these roles, he has advised financial market authorities, senior management institutes, family offices, and over a hundred companies and nonprofit organizations domestically and internationally.</p>
+        
+                                                <p>An expert in corporate governance, he is a professor on the subject and co-authored The Institutionalization of the Company: Success Cases in Corporate Governance, published in 2006 by the Global Corporate Governance Forum and the Center for International Private Enterprise.</p>
+        
+                                                <p>Mr. Fabre developed the ESG Index methodology for the Mexican Stock Exchange and chaired its evaluation committee from 2010 to 2019, overseeing its transition to Standard & Poors. </p>
+        
+                                                <p>He currently serves as an independent board member at Punto Casa de Bolsa and FIBRA EDUCA. </p>
+        
+                                                <p>His nonprofit commitments include roles at Editorial LID Mexico, Casa de la Amistad para Niños con Cáncer IAP, a foundation supporting children with cancer, and Catholic.net.</p>
+        
+                                                <p>He holds an honors degree in Industrial Engineering and an MBA with a Finance specialization from Anahuac University – South Campus, as well as a Master’s in Business Leadership from Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                           
+                                        </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>                                                                                     
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">100% Independent Members  </li>
+                                <li style="font-size:25px">Responsible for resolving conflicts of interest and ensuring the adoption of management policies
+                                </li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_practicas.png' %}">
+                            </div>           
+                        </div>
+                    </div>
+                    <!-- Comite de Compensaciones -->
+                    <div id="c3" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                 <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Alejando Creel Cobián holds a Bachelor's degree in Business Administration from Mexico's Autonomous Institute of Technology (ITAM, for its Spanish acronym) and a Diploma in Banking Law from the Ibero-American University, and he completed the Corporate Governance course at The Wharton School, University of Pennsylvania. </p>
+        
+                                            <p>With over 40 years of experience, he has held senior management roles across the financial sector. His public sector contributions include serving as Director of Corporate Assets for the Bank Savings Protection Fund and as a Board Member of the Institute for the Protection of Bank Savings (IPAB) in Mexico. </p>
+        
+                                            <p>In the financial sector, Mr. Creel has held pivotal roles, including Head of Investment Banking at Finamex, CEO of Grupo Fin and Casa de Bolsa Inverlat, and Deputy CEO of Banco Inverlat.</p>
+        
+                                            <p>His extensive board experience with Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, and Grupo Collado, among others underscores his strong foundation in corporate governance. </p>
+        
+                                            <p>Since 2002, he has been Managing Partner of Alcrecob y Asociados, a firm specializing in financial advisory services, primarily in investment banking, corporate finance, and restructuring.</p>
+        
+                                            <p>He also serves as an Independent Member of the Technical Committee for FIBRA EDUCA and various other public investment vehicles.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography                                           
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                             <!-- Blanca Rodríguez-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Blanca Patricia Rodríguez Ortíz is an architect with over 25 years of experience in finance, advisory, and fund management. Throughout her career, she has managed the execution of over USD$7 billion in debt and venture capital across diverse real estate and infrastructure investment vehicles in the United States, Mexico, and Latin America.</p>
+                                                <p>Currently, she is the Chief Capital and Financial Officer at Marhnos, a company with over seventy years of specialization in financing, developing, and operating real estate and infrastructure projects. </p>
+                                                <p>Previously, Blanca held senior roles at Banyan Tree Mexico Hospitality Fund and co-founded Real Capital Investment Management (formerly DTZ Rockwood Mexico), where she contributed for a decade. Her earlier career includes roles as Head of New Business and Capital at GE Real Estate Mexico, and positions with AEW Capital Management and Beacon Properties in Boston, Massachusetts. </p>
+                                                <p>Blanca holds both a Bachelor’s in Architecture and a Master’s in Urban Design with a focus on Finance and Real Estate from Cornell University. She is also an active member of the Corporate Governance Committee at ULI Mexico, an Independent Member of the Technical Committee for FIBRA EDUCA, and serves on the Technical Committee of CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">                                            
+                                        </button>                         
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h3 class="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                    <p>Independent Member</p>
+                                                    <p>Tenure: 6 years</p>
+                                                    <a class="cus-button" target="_blank" href="#">
+                                                        View biography
+                                                    </a>
+                                                </div>
+                                            </div>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre Mendoza is the Principal of the Anahuac Senior Management Institute (IADA) at the Anahuac University. From 2015 to 2023, he served as Academic Vice-Principal of Anahuac University and was previously the Dean of the Business School at its South Campus from 1996 to 2014.</p>
+        
+                                                <p>Mr. Fabre founded Mexico’s Center of Excellence in Corporate Governance and currently acts as a Senior Advisor at Morrow Sodali, a global leader in strategic advisory and shareholder services, as well as at Fabre Advisors Governance Capital. In these roles, he has advised financial market authorities, senior management institutes, family offices, and over a hundred companies and nonprofit organizations domestically and internationally.</p>
+        
+                                                <p>An expert in corporate governance, he is a professor on the subject and co-authored The Institutionalization of the Company: Success Cases in Corporate Governance, published in 2006 by the Global Corporate Governance Forum and the Center for International Private Enterprise.</p>
+        
+                                                <p>Mr. Fabre developed the ESG Index methodology for the Mexican Stock Exchange and chaired its evaluation committee from 2010 to 2019, overseeing its transition to Standard & Poors. </p>
+        
+                                                <p>He currently serves as an independent board member at Punto Casa de Bolsa and FIBRA EDUCA. </p>
+        
+                                                <p>His nonprofit commitments include roles at Editorial LID Mexico, Casa de la Amistad para Niños con Cáncer IAP, a foundation supporting children with cancer, and Catholic.net.</p>
+        
+                                                <p>He holds an honors degree in Industrial Engineering and an MBA with a Finance specialization from Anahuac University – South Campus, as well as a Master’s in Business Leadership from Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                           
+                                        </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>                                                                                     
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar Priego brings over 25 years of experience in financial markets. She holds a Master’s degree in Finance from ITAM and a specialization in Carbon Markets from the International Capital Market Association (ICMA). Currently, she serves as Director of the Mexican Council for Sustainable Finance (CMFS), a body representing the Mexican Financial System that has championed best practices in green and sustainable finance since 2016. Under her leadership, CMFS advances capacity building among market participants and mobilizes capital for environmental and societal benefits.
+                                                <p>Alba is a member of the Sustainable Finance Committee of the Financial System Stability Council, led by Mexico’s Ministry of Finance (SHCP) and the Bank of Mexico. She also sits on the Executive Committee of the UNDP Financial Centres for Sustainability (FC4S) network, representing Mexico City’s Financial Centre within the Americas Hub alongside the financial centers of Montreal and Rio de Janeiro. Her additional roles include serving on the Technical Committee of the TCFD Mexico Consortium, the Sustainability Advisory Technical Committee of the Mexican Financial Reporting and Sustainability Standards Board (CINIF), and the IFRS Sustainability Standards Review Committee.</p>
+                                                <p>Previously, Alba was part of the Mexican Stock Exchange’s Sustainability Committee from 2015 to 2021. She currently serves as a judge for the HSBC & EY Sustainable Innovation Leadership Award and the Contacto Banxico Award, an annual recognition by the Bank of Mexico.</p>
+                                                <p>As a Corporate Sustainability instructor at the Panamerican University, Alba frequently speaks at local and international forums on topics such as green and sustainable finance, regulation, taxonomies, disclosure, and risk, collaborating closely with various financial sector associations.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">
+                                      
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/alba.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class = "fw-bold"><b>Alba Aguilar Priego</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">100% Independent Members  </li>
+                                <li style="font-size:25px">Recommendations on compensation, human resources development, and executive retention</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_compensaciones.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comite de Auditoría -->
+                    <div id="c4" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white text-white">
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre Mendoza is the Principal of the Anahuac Senior Management Institute (IADA) at the Anahuac University. From 2015 to 2023, he served as Academic Vice-Principal of Anahuac University and was previously the Dean of the Business School at its South Campus from 1996 to 2014.</p>
+        
+                                                <p>Mr. Fabre founded Mexico’s Center of Excellence in Corporate Governance and currently acts as a Senior Advisor at Morrow Sodali, a global leader in strategic advisory and shareholder services, as well as at Fabre Advisors Governance Capital. In these roles, he has advised financial market authorities, senior management institutes, family offices, and over a hundred companies and nonprofit organizations domestically and internationally.</p>
+        
+                                                <p>An expert in corporate governance, he is a professor on the subject and co-authored The Institutionalization of the Company: Success Cases in Corporate Governance, published in 2006 by the Global Corporate Governance Forum and the Center for International Private Enterprise.</p>
+        
+                                                <p>Mr. Fabre developed the ESG Index methodology for the Mexican Stock Exchange and chaired its evaluation committee from 2010 to 2019, overseeing its transition to Standard & Poors. </p>
+        
+                                                <p>He currently serves as an independent board member at Punto Casa de Bolsa and FIBRA EDUCA. </p>
+        
+                                                <p>His nonprofit commitments include roles at Editorial LID Mexico, Casa de la Amistad para Niños con Cáncer IAP, a foundation supporting children with cancer, and Catholic.net.</p>
+        
+                                                <p>He holds an honors degree in Industrial Engineering and an MBA with a Finance specialization from Anahuac University – South Campus, as well as a Master’s in Business Leadership from Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                           
+                                        </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>                                                                                     
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                             data-bs-info="<p>Marta Vaca Viana has 17 years of expertise in corporate governance and sustainability. For the past decade, she has led Delphi Consulting & Advisory, advising over 160 companies across Mexico, Latin America, the United States, and Europe. Her specialization includes corporate governance and business sustainability, addressing both strategic and operational dimensions as well as communication.</p>
+                                                                                    <p>Marta serves on the boards of CADU and FIBRA EDUCA, both listed on the Mexican Stock Exchange. She is also the Corporate Governance and Sustainability Officer for Latin America at the International Finance Corporation (IFC) of the World Bank. Additionally, Marta conducts research with the Organisation for Economic Co-operation and Development (OECD) and is a member of the Corporate Governance Commission of Mexico’s Business Coordinating Council (CCE), where she chairs the International and Best Practices Subcommittee.</p>
+                                                                                    <p>Her contributions have been recognized by Hermes Fund Management and the International Corporate Governance Network (ICGN). Marta has been a speaker at Yale University, published two corporate governance books with the World Bank, and represented Mexico at OECD-led Latin American corporate governance roundtables since 2008. She has professional experience in New York and co-founded the Network of Corporate Governance Institutes in Latin America, spanning twelve countries.</p>
+                                                                                    <p>Marta holds a Bachelor’s degree in Economics from Anahuac University in Mexico and a Master’s degree from the London School of Economics and Political Science. She also teaches postgraduate courses on sustainability and corporate governance at esteemed business schools in Mexico.</p>" 
+                                            data-bs-title="Marta Vaca Viana">                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/vaca.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h2 class ="fw-bold"><b>Marta Vaca<br> Viana</b></h2>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Alejando Creel Cobián holds a Bachelor's degree in Business Administration from Mexico's Autonomous Institute of Technology (ITAM, for its Spanish acronym) and a Diploma in Banking Law from the Ibero-American University, and he completed the Corporate Governance course at The Wharton School, University of Pennsylvania. </p>
+        
+                                            <p>With over 40 years of experience, he has held senior management roles across the financial sector. His public sector contributions include serving as Director of Corporate Assets for the Bank Savings Protection Fund and as a Board Member of the Institute for the Protection of Bank Savings (IPAB) in Mexico. </p>
+        
+                                            <p>In the financial sector, Mr. Creel has held pivotal roles, including Head of Investment Banking at Finamex, CEO of Grupo Fin and Casa de Bolsa Inverlat, and Deputy CEO of Banco Inverlat.</p>
+        
+                                            <p>His extensive board experience with Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, and Grupo Collado, among others underscores his strong foundation in corporate governance. </p>
+        
+                                            <p>Since 2002, he has been Managing Partner of Alcrecob y Asociados, a firm specializing in financial advisory services, primarily in investment banking, corporate finance, and restructuring.</p>
+        
+                                            <p>He also serves as an Independent Member of the Technical Committee for FIBRA EDUCA and various other public investment vehicles.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 6 years</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography                                           
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Diego Laresgoiti-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>With 17 years in the financial sector, Diego Laresgoiti Matute is a Founding Partner of Sancus Capital Partners, managing USD$3.5 billion in assets across investment vehicles focused on luxury hotels, renewable energy, venture capital, and real estate. Mr. Laresgoiti oversees the firm’s liquid investment strategy.</p>
+        
+                                            <p>He serves on the boards of Ciudad Mayakoba and Encinno Capital, a private equity firm dedicated to acquiring, operating, and growing mid-sized companies. Additionally, he is an independent member of the Investment Committee for Dila Capital, Mexico’s largest venture capital fund, with USD$150 million in assets under management.</p>
+        
+                                            <p>Previously, Mr. Laresgoiti was a Board Member and Head of Investor Relations/Capital Markets at RLH Properties, which he co-founded, initially as a private equity fund and later as a publicly traded company. Over a decade, RLH grew to become the largest publicly traded hotel company on the Mexican Stock Exchange, owning luxury hotels operated by renowned brands, including Four Seasons, Rosewood, One&Only, Fairmont, and Banyan Tree.</p>
+        
+                                            <p>He is an Independent Board Member for FIBRA EDUCA, one of Mexico’s largest publicly traded REITs, with a market capitalization of approximately USD$3.7 billion.</p>
+        
+                                            <p>Mr. Laresgoiti holds a degree in Industrial Engineering from the Ibero-American University.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/diego.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Independent Member</p>
+                                                <p>Tenure: 1 year</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    View biography
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">At least 3 Independent Members</li>
+                                <li style="font-size:25px">Review and approval of operational and financial information</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_auditoria.png' %}">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="audiex" class="py-5">
+                <h1  class ="text-center mb-5" style="color:#23356B">External Auditors</h1>
+            </div>
+            <p class="text-justify">Our Technical Committee is responsible for appointing our external auditor, which must be an independent public accounting firm. The auditor's performance will be evaluated by the audit committee, which is empowered to review and express an opinion on the financial information.<p>
+            <p class="text-justify">The Financial Statements for the fiscal year ended December 31, 2024, were audited by Mancera, S.C., (Member of Ernst & Young Global Limited) (“E&Y”), the Company's external auditor.</p>
+
+            <div class="container-fluid p-5 text-center" id ="asambleas">
+                <div >
+                    <h1  class="text-center py-5" style="color: #23356B; margin-bottom:20px;">Meetings</h1>
+                    <div class="row justify-content-center wow fadeInUp">    
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/2025/Informacion-tenedores-2025.pdf">
+                                <img class="mb-3" src="{% static 'images/informacion_tenedores_2025-en.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2025 Information  </button>
+                            </a>
+                        </div>                    
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2025-en.pdf">
+                                <img class="mb-3" src="{% static 'images/convocatoria-2025-en.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2025 Notices of Meeting  </button>
+                            </a>
+                        </div>                        
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2024.pdf">
+                                <img class="mb-3" src="{% static 'images/PortaditasENG-23.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2024 Notices of Meeting  </button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Informacion-tenedores-2024.pdf">
+                                <img class="mb-3" src="{% static 'images/PortaditasENG-24.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">2024 Information</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-Anual-2023.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/resolutions-2023.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2023 Resolutions  </button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2023.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortaditasENG-22.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2023 Notices of Meeting  </button>
+                            </a>
+                        </div>              
+                                  
+                    </div>
+                    <div class="row justify-content-center wow fadeInUp">
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2022.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-36.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">2022 Resolutions  </button>
+                            </a>
+                        </div>    
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Asamblea-Anual-2022.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-33.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2022 Notice of Meeting</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2021.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-35.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">2021 Resolutions</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Anual-2021.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-32.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2021 Notice of Meeting</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2020.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-34.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">2020 Resolutions</button>
+                            </a>
+                        </div>                
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Asamblea-2020.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/PortadasENG-31.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:12px;">2020 Notice of Meeting</button>
+                            </a>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+       $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,                             
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1300: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Estilo para los botones de navegación
+            $('.owl-prev, .owl-next').css({                
+                'color': '#1D3164', // Color del texto
+                'border': 'none',
+                'padding': '10px 15px',                
+                'font-size': '30px', // Tamaño del ícono
+                'cursor': 'pointer',
+                'position': 'absolute',
+                'top': '50%',
+                'transform': 'translateY(-50%)',
+                'z-index': '10',
+                'outline': 'none',
+            });
+
+            $('.owl-prev').css({
+                'left': '-40px' // Posición del botón anterior
+            });
+
+            $('.owl-next').css({
+                'right': '-40px' // Posición del botón siguiente
+            });
+
+            
+
+            // Adjunta eventos tanto al botón como al enlace para abrir el modal
+            $(document).on('click', '[data-bs-toggle="modal"], .cus-button', function(e) {
+                e.preventDefault();  // Prevenir el comportamiento por defecto (especialmente para <a>)
+                
+                // Si se hizo clic en el enlace, obtenemos el botón relacionado
+                var button;
+                if ($(this).hasClass('cus-button')) {
+                    // Encontrar el botón más cercano al enlace
+                    button = $(this).closest('.item').find('.custom-button');
+                } else {
+                    // Si se hizo clic en el botón, lo asignamos directamente
+                    button = $(this);
+                }
+
+                var info = button.data('bs-info');
+                var title = button.data('bs-title');
+                
+                // Rellenar el contenido del modal dinámico
+                $('#dynamicModalLabel').text(title);
+                $('#dynamicModal .modal-body').html(info);
+                
+                // Mostrar el modal
+                var modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+                modal.show();
+            });
+
+        });
+
+
+        $(function () {
+
+            $(".selector").on('click', function (event) {
+                var $this = $(this);
+                var id = $this.data('valor');
+                $('div.comite[id^="c"][class!="d-none"]').addClass('d-none');
+                $('#' + id).removeClass('d-none');
+                $('.selector').removeClass('active');
+                $this.addClass('active');
+            });
+
+            var divP = $('#select_comite').val();
+            $('#c0').removeClass('d-none');
+
+            $('#select_comite').change(function (event) {
+                $('div.comite[id^="c"][class!="d-none"]').addClass('d-none');
+                $('#' + $(this).val()).removeClass('d-none');
+            });
+
+            $(".show-cv").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".diretivo-perfil").addClass('d-none');
+                $('.diretivo-perfil.' + item).removeClass("d-none");
+
+                $("html, body").animate({scrollTop: $('.diretivo-perfil.' + item).offset().top - 200}, 1000);
+            });
+
+            $(".cerrar-info i").on('click', function (event) {
+                $(".diretivo-perfil").addClass('d-none');
+            });
+        });
+    </script>
+{% endblock %}

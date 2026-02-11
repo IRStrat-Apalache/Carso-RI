@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Invertir-en-FIBRAs-Buscas-que-hacer-con-ese-dinero-extra"
+                         src="{% static 'images/post/Invertir-en-FIBRAs-Buscas-que-hacer-con-ese-dinero-extra.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Alcanzar la libertad financiera es una de las mayores preocupaciones de todas las personas una
+                        vez que alcanzan cierta estabilidad. Después de haber conseguido un buen trabajo o haber cerrado
+                        un gran negocio, es lógico preguntarse <strong>¿cómo aprovechar el dinero para que mañana no
+                            falte
+                            nada?</strong>. Por suerte, hoy la respuesta es muy sencilla: <strong>invertir en
+                            FIBRAs</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Un Fideicomiso de Inversión en Bienes Raíces (FIBRA) es un instrumento de inversión que consiste
+                        en adquirir bienes a gran escala para administrarlos y posteriormente generar ganancias para los
+                        tenedores a partir de la renta de cada propiedad. </p>
+                    <h2>Aumenta tu patrimonio</h2>
+                    <p>Una buena manera de incrementar tu patrimonio es con <a
+                            href="{% url 'escuela-fibra-finn' %}#como-invertir">Fibra
+                        Mty</a>. <strong>Invertir en FIBRAs</strong> es muy fácil y
+                        puedes estar tranquilo al saber que tu dinero será parte de uno de los mercados históricamente
+                        más estables en México: <strong>el mercado inmobiliario</strong>.</p>
+                    <p>Invertir con Fibra MTY es muy sencillo:</p>
+                    <ol class="ls-decimal">
+                        <li>Lo primero que debes hacer es abrir una cuenta en una Casa de Bolsa. Considera que cada
+                            entidad maneja distintas comisiones, montos mínimos de apertura y facilidades en la
+                            compra-venta de instrumentos de inversión.
+                        </li>
+                        <li>Una vez que tengas la cuenta, debes depositar cierta cantidad de dinero para poder
+                            iniciar las distintas transacciones.
+                        </li>
+                        <li>Con los recursos en tu cuenta puedes proceder a comprar Certificados Bursátiles
+                            Fiduciarios Inmobiliarios (CBFI) mediante una orden de compra con un promotor o desde una
+                            cuenta en línea.
+                        </li>
+                        <li>Tras adquirir tu certificado de Fibra Mty recibirás periódicamente distribuciones de
+                            efectivo que se depositan directamente en tu cuenta de inversión.
+                        </li>
+                    </ol>
+                    <p>Todas las ganancias que obtengas por tus CBFIs pueden ser utilizadas para nuevas inversiones o
+                        las puedes retirar de tu cuenta según lo desees. </p>
+                    <h2>Es momento de invertir</h2>
+                    <p>Para <strong>invertir en FIBRAs</strong> con nosotros no existe un monto mínimo de inversión, la
+                        transacción se
+                        puede realizar desde 1 CBFI. Además, las distribuciones en efectivo que sean catalogadas como
+                        “reembolso de capital” y la ganancia obtenida por la diferencia entre el precio de compra y de
+                        venta de cada CBFI <strong>están libres de impuestos</strong>.</p>
+                    <p>Si quieres conocer más sobre los beneficios de <strong>invertir en FIBRAs</strong> te invitamos a
+                        explorar nuestro <a href={% url 'index' %}>sitio web</a> y seguirnos en nuestras <a
+                                href="https://twitter.com/fibra_mty" target="_blank">redes sociales</a> para no perderte
+                        de ninguna novedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

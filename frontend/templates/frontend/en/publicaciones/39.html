@@ -1,0 +1,106 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>9 de Agosto del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/agosto/03.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Cuando nos adentramos en el mundo de las inversiones es normal encontrarnos con múltiples
+                        opciones. Desde tener inversiones en instrumentos de renta fija como valores gubernamentales y
+                        bonos corporativos; inversiones de renta variable como la adquisición de títulos accionarios de
+                        distintas empresas; y la inversión en bienes raíces a través de FIBRAs inmobiliarias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Aunque esta variedad de inversiones nos generan rendimientos bastante interesantes, su
+                        funcionamiento es diferente, por lo que debemos tener en claro las características de cada
+                        mercado. A continuación te explicamos cómo funciona el modelo de las FIBRAs Inmobiliarias
+                        separándolo por partes, la inversión en Bienes Raíces, en la bolsa y en conjunto. </p>
+                    <h2>Inversión en Bienes Raíces</h2>
+                    <p>Realizar una inversión en bienes raíces es una gran forma de hacer crecer nuestro dinero.
+                        Normalmente cuando las tasas de interés son bajas y la volatilidad alta, los bienes raíces son
+                        instrumentos de inversión estables y confiables.</p>
+                    <p>El mercado inmobiliario es una de las mejores opciones gracias a la plusvalía, seguridad y alta
+                        rentabilidad que ofrece. Por ello, cuando un inversionista decide apostar por la compra de una
+                        propiedad, está optando por algunos beneficios tales como:</p>
+                    <ul>
+                        <li>● Plusvalía: un inmueble aumenta de valor con el tiempo ya sea por ubicación, accesibilidad
+                            o servicios.
+                        </li>
+                        <li>● Flexibilidad: en caso de una emergencia, una propiedad funciona como una garantía
+                            financiera para obtener un crédito o una hipoteca.
+                        </li>
+                        <li>● Beneficios fiscales: los impuestos generados por las ganancias en un inmueble son menores
+                            que en otros instrumentos de inversión.
+                        </li>
+                    </ul>
+                    <p>Por otro lado, una inversión en bienes raíces no requiere de una amplia experiencia, pero sí es
+                        necesario hacerse cargo de algunos temas legales y administrativos antes, durante y después de
+                        la adquisición de un inmueble. </p>
+                    <h2>Inversión en la Bolsa de Valores</h2>
+                    <p>En cuanto a la <a href="https://www.bmv.com.mx/" target="_blank">Bolsa de Valores</a>, es el mercado mediante el cual se compran o venden diferentes
+                        instrumentos de inversión como acciones, bonos, certificados, títulos, entre otros. </p>
+                    <p>Sin embargo, a diferencia de una inversión en bienes raíces, una inversión bursátil necesita de
+                        conocimientos y experiencia en el mercado de valores para invertir en activos y obtener los
+                        beneficios deseados.</p>
+                    <p>En el caso de ser un inversionista inexperto, es fundamental conocer el funcionamiento de la
+                        Bolsa de Valores y las leyes que la regulan. Asimismo, es indispensable crear un plan de
+                        inversión con objetivos definidos a corto, mediano y largo plazo. </p>
+                    <p>En resumen, hay que dominar ciertos aspectos técnicos y estar atento siempre a las fluctuaciones
+                        del mercado para saber cuándo comprar y cuándo vender. Esto con el objetivo de generar las
+                        mejores oportunidades de ganancias. </p>
+                    <h2>FIBRAs, un modelo de inversión híbrido</h2>
+                    <p>En la actualidad, existen instrumentos de inversión como las FIBRAs que son fideicomisos que
+                        adquieren y administran propiedades a gran escala con el objetivo de generar ganancias por el
+                        arrendamiento.</p>
+                    <p>Su gran virtud es que funcionan con un esquema híbrido para la obtención de ganancias, ya que
+                        reúnen características de instrumentos de renta fija y de renta variable. </p>
+                    <p>Es decir, una FIBRA es un vehículo de inversión que paga dividendos periódicamente como resultado
+                        del arrendamiento de los inmuebles, característica que la asemeja a una inversión en bienes
+                        raíces. Pero, por otro lado, también cotiza en la Bolsa de Valores mediante los CBFIs, los
+                        cuales son el equivalente a los títulos accionarios.</p>
+                    <p>Este modelo de inversión permite acceder a los beneficios tanto del mercado inmobiliario como del
+                        bursátil. Y lo mejor de todo, es que ofrece rendimientos atractivos con bajos niveles de
+                        riesgo. </p>
+                    <p>¿Quieres saber cómo Fibra MTY te ofrece un respaldo tangible y concreto en tu inversión? ¡Ingresa
+                        a nuestro <a href="{% url 'index' %}">sitio web</a>!</p>
+                    <p>O bien, síguenos en <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> –  <a target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a> – <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a> para estar al tanto de lo que sucede con las
+                        FIBRAs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

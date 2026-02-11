@@ -1,0 +1,136 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <style>
+        .bdr {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section id="contenido" class="s-block mt-3">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-12 text-center"><h2>Metrics</h2></div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget text-justify">
+
+                        <select class="form-control" id="select_tabla">
+                            <option value="t5" selected>Operating Indicators</option>
+                            <option value="t2">Financial Position</option>
+                            <option value="t1">Income Statement</option>
+                            <option value="t4">Cash Flow</option>
+                            <option value="t3">Profitability</option>
+                            <option value="t6">Debt ratios</option>
+
+                        </select>
+                        <br>
+                        <div id="t1" class="d-none tablas">
+                           <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Resultados1-en.png' %}" style="width:1000px;" />
+                            </div>
+                        </div>
+
+                        <div id="t2" class="d-none tablas">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Situacion1.png' %}" style="width:1000px;" />
+                            </div>
+                        </div>
+
+                        <div id="t3" class="d-none tablas">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Rentabilidad1.png' %}" style="width:1000px;" />
+                            </div>
+                        </div>
+
+                        <div id="t4" class="d-none tablas">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Efectivo1.png' %}" style="width:1000px;" />
+                            </div>
+                        </div>
+
+                        <div id="t5" class="d-none tablas">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Indicadores1.png' %}" style="width:1000px;" />
+                            </div>
+                            <section class="s-block" id="metrics" style="background-color:#f7f7f7">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h2 class="text-center mb-5">Operating indicators</h2>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div id="chart1" style="width: 100%;height: 515px;"></div>
+                                            <p class="text-center"><small>*Aguascalientes, Guerrero, Yucatán, Guanajuato, Sonora, Baja California, Tamaulipas,
+                                                Coahuila, Sinaloa, Veracruz, Chihuahua, Puebla, Quintana Roo.</small></p>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div id="chart2" style="width: 100%;height: 515px;"></div>
+                                            <p class="text-center"><small>*Yucatán, San Luis Potosí, Guanajuato, Sonora, Baja California, Tamaulipas, Coahuila, Sinaloa,
+                                                Veracruz, Nuevo León, Chihuahua, Puebla, Quintana Roo</small></p>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div id="chart3" style="width: 100%;height: 450px;"></div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div id="chart4" style="width: 100%;height: 450px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div id="t6" class="d-none tablas">
+                            <div class="text-center">
+                                <img src="{% static 'images/fundamentales/Indices1-en.png' %}" style="width:1000px;" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <a rel="noreferrer"
+                       href="https://cdn.investorcloud.net/Educa/Fundamentales/Educa_Fundamentales.xlsx"
+                       class="btn btn-primary btn-lg pull-right" target="_blank"><i class="fa fa-download"></i>
+                       {% trans 'Descargar en formato XLS' %}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/propiedades.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/propiedades.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/jquery.flexslider.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/theme-vendors.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/maps-states-mx.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            var divT = $('#select_tabla').val();
+            $('#' + divT).removeClass('d-none');
+
+            $('#select_tabla').change(function (event) {
+                $('div.tablas[id^="t"][class!="d-none"]').addClass('d-none');
+                $('#' + $(this).val()).removeClass('d-none');
+            });
+        });
+    </script>
+{% endblock %}

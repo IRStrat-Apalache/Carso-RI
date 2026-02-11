@@ -1,0 +1,88 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>7 de Junio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/junio-01.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Invertir en FIBRAs inmobiliarias es una opción muy atractiva para todas las personas que están
+                        empezando en el mundo de las inversiones y no quieren exponer su dinero en algún instrumento de
+                        inversión de alto riesgo..
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>A pesar de los grandes beneficios que trae este tipo de inversión, muchas personas se abstienen
+                        de empezar a aumentar su riqueza debido a que no conocen cuánto dinero obtendrán ni cuándo
+                        podrán recibir sus ganancias. Ante esta necesidad, hoy en Fibras MTY te contamos cómo calcular
+                        el rendimiento de tu inversión.</p>
+
+                    <h2>Dos tipos de rendimientos</h2>
+                    <p>El dinero que obtendrás por hacer una inversión en FIBRAs inmobiliarias proviene principalmente
+                        de dos fuentes. La primera será el resultado de las ganancias obtenidas por el arrendamiento del
+                        inmueble del cual tú recibirás dinero como distribución en efectivo en relación con el tamaño de
+                        tu inversión inicial. </p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_7' %}">Invertir en FIBRAs | ¿Buscas qué hacer con ese dinero
+                                extra?</a>
+                        </li>
+                    </ul>
+                    <p>La segunda fuente de <a href="https://dle.rae.es/rendimiento?m=form"
+                                               target="_blank">rendimiento</a> será a partir de la apreciación de
+                        capital que obtenga tu CBFI
+                        desde el momento de compra hasta que decidas venderlo. Cabe destacar que las FIBRAs
+                        inmobiliarias son un instrumento de inversión diseñado para el largo plazo por lo que comprar y
+                        vender de manera frecuente no es algo recomendable.</p>
+                    <p>Por ejemplo, si el día de hoy realizas una inversión de MX$500,000 y no haces ningún depósito
+                        anual, en un plazo de 30 años tu riqueza habría aumentado aproximadamente hasta los MX$5,031,328
+                        por el efecto combinado del rendimiento por distribuciones de efectivo y apreciación de capital.
+                        En un banco y con esta misma inversión tendrías MX$905,681 al cabo del mismo periodo del tiempo.
+                        ¡Más claro imposible!</p>
+                    <h2>¿Cuándo puedo sacar el dinero?</h2>
+                    <p>Las FIBRAs inmobiliarias son un instrumento que ofrece una inmensa cantidad de beneficios para
+                        los inversionistas. Uno de los más destacables es que los CBFI se pueden comprar y vender en
+                        cualquier momento, permitiendo que el propietario pueda tener liquidez financiera en caso de una
+                        urgencia.</p>
+                    <p>Si quieres conocer todas las ventajas de invertir tu dinero en las FIBRAs inmobiliarias te
+                        invitamos a que visites el blog de <a href="{% url 'index' %}">Fibra MTY</a> y conozcas cómo es
+                        posible empezar a aumentar tu
+                        capital gracias al mercado de los bienes raíces.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>18 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/07.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Conseguir que una inversión en bienes raíces, de cualquier escala, sea exitosa depende en su
+                        mayor parte de escoger una propiedad que sea rentable y tenga potencial a futuro. Al invertir en
+                        FIBRAs inmobiliarias con Finn tendrás la seguridad de que tu dinero estará respaldado por un
+                        portafolio de alta calidad constituido por inmuebles 100% estabilizados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Portafolio de alta calidad y diversificado</h2>
+                    <p>Fibra MTY cuenta con un portafolio de 59 propiedades en México que abarcan más de 749.000 m<sup>2</sup> de
+                        área bruta rentable. De todos estos inmuebles, el 50% es parte del sector industrial, el 47,1%
+                        son oficinas y el 2,9% restante son destinados al comercio automotriz.</p>
+                    <p>Cuando realizas una inversión en fibras inmobiliarias tienes la tranquilidad de saber que tu
+                        dinero irá a parar en una propiedad que ha sido escogida según 4 conceptos clave:</p>
+                    <ul>
+                        <li>● Ubicación</li>
+                        <li>● Tipo de inmueble</li>
+                        <li>● Clientes</li>
+                        <li>● Contratos de renta</li>
+                    </ul>
+                    <p>Siguiendo estos criterios hemos construido un portafolio que cuenta con más del 90% de ocupación
+                        en el segundo trimestre del 2021 y con proyección a que la mitad de los contratos caduquen
+                        después del 2025, el plazo más largo de la industria.</p>
+                    <p>Cabe recordar que Fibra MTY llevará a cabo las negociaciones necesarias para garantizar que la
+                        tasa de ocupación se mantenga estable.</p>
+                    <h2>Fibras Inmobiliarias: un mercado en crecimiento</h2>
+                    <p>Como mencionamos anteriormente, contamos con más de 749.000 m<sup>2</sup> de área bruta rentable. Durante el
+                        segundo trimestre de 2021 estas propiedades generaron ingresos totales de 299.732 mdp,
+                        significando un crecimiento del 16.5% en comparación con el mismo periodo de 2020.</p>
+                    <p>De estos ingresos, la mayor parte proviene de inmuebles ubicados en Nuevo León y le siguen los
+                        ubicados en San Luís Potosí, Coahuila y Jalisco. En cuanto a la actividad económica, los que
+                        pertenecen al sector de duraderos de consumo y vestido generan el 22,8% de los ingresos,
+                        seguidos por los sectores de bienes de capital (17,0%), automóviles y componentes (12,8%) y
+                        software y servicio (12,1%).</p>
+                    <p>Si quieres conocer más a detalle los principales indicadores de la inversión en fibras
+                        inmobiliarias te invitamos a que conozcas nuestro <a
+                                href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-2T21-Reporte-vf.pdf"
+                                target="_blank">Reporte de resultados 2T21</a>. También puedes
+                        visitar <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro blog</a> para mantenerte al tanto
+                        de todas las novedades relacionadas con las
+                        inversiones en bienes raíces.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty"
+                                                                    target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                     href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

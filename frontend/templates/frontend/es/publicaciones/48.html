@@ -1,0 +1,88 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>5 de octubre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/octubre/2.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Cuando se trata de hacer inversiones en el mediano y largo plazo hay ciertos factores externos
+                        que podrían afectar el retorno de nuestro capital. Esta situación no es ajena a la inversión en
+                        FIBRAs inmobiliarias, pero, al invertir a través de una compañía como Fibra MTY, tú no tendrás
+                        que preocuparte por eso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Entendamos la inflación</h2>
+                    <p>La inflación puede parecer un concepto complicado para las personas que apenas están planeando su
+                        primera inversión. Sin embargo, con la correcta asesoría se pueden dar cuenta de que en realidad
+                        es algo muy fácil de entender.</p>
+                    <p>La inflación hace referencia al fenómeno económico por el cual el precio de los bienes aumenta
+                        durante una cantidad de tiempo específico. Esto se ve reflejado en la moneda local: a mayor
+                        inflación, menor es la cantidad de bienes que se pueden adquirir.</p>
+                    <p>Según las proyecciones de la Secretaría de Hacienda y Crédito Público, se estima que el 2022
+                        cierre con una tasa de <a
+                                href="https://www.elfinanciero.com.mx/economia/2021/09/08/gobierno-preve-que-inflacion-llegue-a-34-al-cierre-de-2022/"
+                                target="_blank">inflación del 3.4%</a> anual y un cambio de 20.3 pesos por dólar.</p>
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_38' %}">¿Hacia dónde va la inversión de Fibra MTY?</a>
+                        </li>
+                    </ul>
+                    <h2>¿Cómo afecta la inflación a mi inversión en FIBRAs Inmobiliarias?</h2>
+                    <p>Puesto que tu inversión inicial se hace con determinado valor, podría darse el escenario de que
+                        la inflación haga valer menos ese capital invertido, pero no con <a href="{% url 'index' %}">Fibra
+                            MTY</a>. Al hacer tu
+                        inversión en FIBRAs inmobiliarias con nosotros tienes una menor exposición a la inflación.</p>
+                    <p>En los contratos de las FIBRAs se estipulan cláusulas de incremento en las rentas según la
+                        inflación anual para que las distribuciones incrementen en línea con este indicador. </p>
+                    <p>Cabe destacar que Fibra MTY tiene más del 70% de sus ingresos pactados en dólares. De esta manera
+                        se evita que las variaciones en la moneda mexicana disminuyan el atractivo de sus
+                        inversiones.</p>
+                    <p>Si quieres saber cómo otros factores como la tasa de apalancamiento, emisiones de capital y tasas
+                        de interés u ocupación pueden afectar tu capital, te invitamos a que visites nuestro <a
+                                href="{% url 'escuela-fibra-finn' %}#blog">blog</a> y te
+                        informes sobre todo lo que necesitas para empezar a aumentar tu riqueza desde ya.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a
+                            href="https://twitter.com/fibra_mty"
+                            target="_blank">Twitter</a> y <a target="_blank"
+                                                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

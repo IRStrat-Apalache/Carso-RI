@@ -1,0 +1,90 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>1 de septiembre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/septiembre/1.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p> Cuando se realiza una inversión en Fibras, así como en cualquier otro tipo instrumento
+                        financiero, se debe gestionar con sumo cuidado el nivel de endeudamiento en relación con el
+                        capital que se tiene actualmente y el que se tendrá en el futuro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Equivocarse en estos cálculos puede hacer que las compañías y los inversionistas pierdan su
+                        independencia financiera.</p>
+                    <h2>¿Qué es el nivel de endeudamiento?</h2>
+                    <p>El nivel de endeudamiento hace referencia a la cantidad de activos que han sido adquiridos a
+                        través del uso de la deuda. Por ejemplo, si una organización tiene un nivel de endeudamiento del
+                        60%, quiere decir que la mayor parte de sus activos han sido financiados a través de la deuda y
+                        por ende presenta el riesgo de que en caso de incumplir con el pago de la deuda, los acreditados
+                        pudieran reclamar los activos.</p>
+                    <p>La deuda utilizada de manera correcta puede atraer rendimientos adicionales a los inversionistas,
+                        esto debido a que permite un crecimiento con recursos ajenos a los propios. </p>
+                    <p>El nivel de endeudamiento ideal debe representar entre el 25 y 35% de los activos de una
+                        compañía.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_38' %}">Conceptos clave para entender la inversión en Fibras</a>
+                        </li>
+                    </ul>
+                    <h2>Inversión en FIBRAS con garantías</h2>
+                    <p>Al realizar tu inversión con <a href="{% url 'index' %}">Fibra MTY</a> tienes la seguridad de
+                        estar respaldado por una compañía
+                        con indicadores de liquidez y solvencia positivos. Desde 2019 hemos tenido niveles de
+                        endeudamiento inferiores al 28% y, para el tercer trimestre del 2021, el índice se ubicó en el
+                        26.4%.</p>
+                    <p>Cabe mencionar que contamos con una tasa de interés promedio para nuestra deuda del 4.13% y
+                        plazos con un promedio de 6.1 años. Además, tenemos la certificación crediticia AA de las
+                        consultoras <a
+                                href="https://www.fitchratings.com/research/es/corporate-finance/fitch-affirms-fibra-mty-at-aa-mex-outlook-stable-08-10-2021"
+                                target="_blank">Fitch Ratings</a> y <a target="_blank"
+                                                                       href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjUi8zpq8b0AhViSzABHc1zAGEQFnoECBYQAQ&url=https%3A%2F%2Fwww.hrratings.com%2Fpdf%2FFibraMTY_Reporte_Sep2020_1.0%2520sin%2520links.pdf&usg=AOvVaw0dQyrBu8rgG3_15k11TVy4">HR
+                            Ratings</a>.</p>
+                    <p>Si quieres conocer más sobre nosotros y nuestros indicadores de activos totales, capitalización
+                        del mercado, ingresos totales, rentabilidad y las propiedades que componen nuestro portafolio,
+                        te invitamos a que visites <a href="{% url 'inversionistas' %}">Fibra MTY</a>. </p>
+                    <p>En nuestro sitio web puedes obtener toda la información que necesitas para realizar una inversión
+                        en FIBRAS desde cero.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty"
+                                                                    target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                     href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

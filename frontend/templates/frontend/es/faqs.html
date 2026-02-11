@@ -1,0 +1,217 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+        
+       #panel-head {
+            transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+        }
+
+        /* Cambia el fondo del panel-heading al hacer hover */
+        #panel-head:hover {
+            background-color: #23356B !important; /* Color de fondo deseado al hacer hover */
+            color: white !important;
+        }
+
+        /* Cambia el color del texto del enlace en estado normal */
+        #panel-head > h4 > a {
+            color: #23356B; /* Color del texto normal del enlace */
+            text-decoration: none; /* Opcional: elimina el subrayado */
+        }
+
+        /* Cambia el color del texto del enlace al hacer hover */
+        #panel-head > h4 > a:hover {
+            color: white !important; /* Color del texto al hacer hover en el enlace */
+        }
+
+        /* Mantiene el texto blanco al hacer hover en el panel-heading */
+        #panel-head:hover > h4 > a {
+            color: white !important; /* Mantiene el texto blanco al hacer hover */
+        }
+
+        .panel-headingA.active {
+            background-color: #23356B !important; /* Color de fondo del panel activo */
+            color: white !important; /* Color del texto del panel activo */
+        }
+        .panel-headingA {
+           cursor:pointer;
+           padding: 8px 20px;
+        }
+        .panel-headingA.active > h4 > a {
+            
+            color: white !important; /* Color del texto del panel activo */
+        }
+
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+<section id="preguntas" class="container-fluid  " style="margin-bottom:60px; margin-top:60px;">
+    <h2 class="wow slideInLeft text-center " style="color: #23356B; padding-top:0px !important; margin-bottom:40px;">
+        Preguntas Frecuentes
+    </h2>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#1">
+                        ¿Qué es un Fideicomiso de Inversión en Bienes Raíces (FIBRA)?
+                        </a>
+                    </h4>
+                </div>
+                <div id="1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>FIBRA por sus siglas, se refiere al Fideicomiso de Inversión en Bienes Raíces y por sus similitudes a los REITs en EU. De acuerdo a la legislación mexicana, una FIBRA deberá establecerse como un fideicomiso por contrato. La Ley del Impuesto sobre la Renta en México establece que una FIBRA debe distribuir anualmente por lo menos el 95% de su Utilidad antes de Impuestos.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#2">
+                        ¿A qué se dedica Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Fibra Educa es un Fideicomiso que invierte en oportunidades inmobiliarias que potencializan el sector educativo. Su esencia es brindar, estabilizar y mantener espacios dedicados, primordialmente, a la operación de instituciones educativas de nivel superior de los estratos de ingreso bajo y medio bajo del mercado. Es la primera y única Fibra, en México y el mundo, enfocada en adquirir y operar esta clase de inmuebles.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#3">
+                        ¿Quiénes son los principales directivos de Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <ul>
+                            <li>Raúl Patricio Martínez Solares Piña - Director General</li>
+                            <li>Juan Galindo Valadez - Director de Administración y Finanzas</li>
+                            <li>Tomás Moctezuma Delgado - Director de Auditoría Interna</li>
+                            <li>Laura Montes Bracchini - Directora Jurídica</li>
+                            <li>José Luis Juárez Olvera - Director de Operaciones</li>
+                            <li>Angie Ramos Garduño - Relación con Inversionistas</li>
+                        </ul>                     
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#4">
+                        ¿Qué son los Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs)?
+                        </a>
+                    </h4>
+                </div>
+                <div id="4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Los CBFIs son el equivalente a los títulos accionarios, por lo que quien tenga en su posesión un CBFI es considerado un inversionista o tenedor de la FIBRA.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#5">
+                        ¿Dónde cotizan los CBFIs de Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Desde 2018, los CBFIs de Fibra Educa cotizan en la Bolsa Mexicana de Valores (BMV), bajo la clave de pizarra “EDUCA18”.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#6">
+                        ¿Cómo invertir en Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Para invertir en Fibra Educa, abra una cuenta en una casa de bolsa autorizada en México y adquiera sus Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs) bajo la clave “EDUCA18".</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#7">
+                        ¿Existe un monto mínimo de inversión?
+                        </a>
+                    </h4>
+                </div>
+                <div id="7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>No, usted puede invertir en Fibra Educa comprando desde 1 CBFI. No obstante, cada casa de bolsa tiene sus requisitos para poder abrir una cuenta de inversión.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#8">
+                        ¿Cómo recibo las distribuciones que realiza Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Cuando Fibra Educa lleva a cabo una distribución de efectivo, se hace un depósito directamente a tu cuenta de inversión en tu casa de bolsa. El efectivo recibido puede destinarse a la compra de más CBFIs, para adquirir otro instrumento o retirarlo.</p>                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block otherscripts %}
+<script>
+    $(document).ready(function () {
+       // Al hacer clic en el encabezado del panel
+       $('.panel-headingA').on('click', function () {
+           // Alternar la clase 'active' al encabezado
+           $(this).toggleClass('active');
+       });
+
+       $('.panel-collapse').on('shown.bs.collapse', function () {
+           var $panelHead = $(this).prev('.panel-headingA');
+           $panelHead.addClass('active'); // Agrega la clase active al panel-heading
+       });
+
+       $('.panel-collapse').on('hidden.bs.collapse', function () {
+           var $panelHead = $(this).prev('.panel-headingA');
+           $panelHead.removeClass('active'); // Quita la clase active al panel-heading
+       });
+   });
+
+
+   </script>
+{% endblock %}

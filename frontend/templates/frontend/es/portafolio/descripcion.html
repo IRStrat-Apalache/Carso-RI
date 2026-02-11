@@ -1,0 +1,720 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-md-12">
+                    <h2>{{ title }}</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="widget text-justify">
+                    <p>Fibra MTY ha invertido y continuará invirtiendo en propiedades con alta rentabilidad y alto
+                        potencial de
+                        reposicionamiento en relación con un mejor y mayor uso al que pudiera tener actualmente, es
+                        decir,
+                        propiedades con capacidad de re-desarrollo a corto y mediano plazo con posibilidad de
+                        integración de
+                        proyectos y propiedades cuyo valor podrá incrementarse con un proyecto corporativo o comercial.
+                        Lo anterior,
+                        estando de la mano con un enfoque en aquellos mercados que han presentado un crecimiento
+                        económico superior
+                        en los últimos años y ofrezcan oportunidades de negocio atractivas.</p>
+                    <br>
+
+                    <p>A continuación, presentamos información destacada sobre los activos que integran el portafolio de
+                        inmuebles
+                        de Fibra MTY:</p>
+                    <br>
+                    <div class="table table-responsive tabla-completa d-none d-md-block">
+                        <table class="table table-bordered text-center bc-black table-hover">
+                            <thead>
+                            <tr class="th-center">
+                                <th></th>
+                                <th>Portafolio/Propiedad</th>
+                                <th>Ubicación</th>
+                                <th>ABR (m<sup>2</sup>)</th>
+                                <th>3T20 <br> Ingresos <br> Totales</th>
+                                <th>3T19 <br> Ingresos <br>Totales</th>
+                                <th> Δ% <br>3T20 vs 3T19</th>
+                                <th>2T20<br>Ingresos <br> Totales</th>
+                                <th> Δ% <br>3T20 vs 2T20</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>1‐3</th>
+                                <td><a href="{% url 'sub_portafolio' id=0 %}">Portafolio
+                                    OEP<sup><strong>1)</strong></sup></a></td>
+                                <td>Nuevo León</td>
+                                <td>45,633<sup>5)</sup></td>
+                                <td>50,128</td>
+                                <td>51,283</td>
+                                <td>(2.3%)</td>
+                                <td>51,339</td>
+                                <td>(2.4%)</td>
+                            </tr>
+                            <tr>
+                                <th>4‐6</th>
+                                <td><a href="{% url 'sub_portafolio' id=1 %}">Portafolio CEN 333<sup><strong>2)</strong></sup></a>
+                                </td>
+                                <td>Nuevo León</td>
+                                <td>36,752</td>
+                                <td>31,970</td>
+                                <td>28,161</td>
+                                <td>13.5%</td>
+                                <td>33,246</td>
+                                <td>(3.8%)</td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td><a href="{% url 'propiedades_detalles' id=7 %}">Danfoss</a></td>
+                                <td>Nuevo León</td>
+                                <td>30,580</td>
+                                <td>9,149</td>
+                                <td>7,787</td>
+                                <td>17.5%</td>
+                                <td>9,753</td>
+                                <td>(6.2%)</td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td><a href="{% url 'propiedades_detalles' id=8 %}">Cuadrante</a></td>
+                                <td>Chihuahua</td>
+                                <td>4,520</td>
+                                <td>4,150</td>
+                                <td>3,480</td>
+                                <td>19.3%</td>
+                                <td>4,293</td>
+                                <td>(3.3%)</td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td><a href="{% url 'propiedades_detalles' id=9 %}">Cuprum</a></td>
+                                <td>Nuevo León</td>
+                                <td><sup>6)</sup></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>10-14</th>
+                                <td><a href="{% url 'sub_portafolio' id=2 %}">Portafolio Casona</a></td>
+                                <td>Múltiple<sup><strong>3)</strong></sup></td>
+                                <td>38,684</td>
+                                <td>9,269</td>
+                                <td>8,123</td>
+                                <td>14.1%</td>
+                                <td>9,386</td>
+                                <td>(1.2%)</td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td><a href="{% url 'propiedades_detalles' id=15 %}">Catacha</a></td>
+                                <td>Nuevo León</td>
+                                <td>5,431</td>
+                                <td>1,285</td>
+                                <td>1,202</td>
+                                <td>6.9%</td>
+                                <td>1,200</td>
+                                <td>7.1%</td>
+                            </tr>
+                            <tr>
+                                <th>16-19</th>
+                                <td><a href="{% url 'sub_portafolio' id=3 %}">Portafolio Monza</a></td>
+                                <td>Chihuahua</td>
+                                <td>13,679</td>
+                                <td>5,656</td>
+                                <td>5,483</td>
+                                <td>3.2%</td>
+                                <td>5,656</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <td><a href="{% url 'propiedades_detalles' id=20 %}">Santiago</a></td>
+                                <td>Querétaro</td>
+                                <td>16,497</td>
+                                <td>5,357</td>
+                                <td>4,697</td>
+                                <td>14.1%</td>
+                                <td>5,611</td>
+                                <td>(4.5%)</td>
+                            </tr>
+                            <tr>
+                                <th>21</th>
+                                <td><a href="{% url 'propiedades_detalles' id=21 %}">Monza 2</a></td>
+                                <td>Chihuahua</td>
+                                <td>4,611</td>
+                                <td>1,999</td>
+                                <td>1,941</td>
+                                <td>3.0%</td>
+                                <td>1,999</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>22</th>
+                                <td><a href="{% url 'propiedades_detalles' id=22 %}">Prometeo</a></td>
+                                <td>Nuevo León</td>
+                                <td>8,135</td>
+                                <td>12,987</td>
+                                <td>13,482</td>
+                                <td>(3.7%)</td>
+                                <td>14,663</td>
+                                <td>(11.4%)</td>
+                            </tr>
+                            <tr>
+                                <th>23</th>
+                                <td><a href="{% url 'propiedades_detalles' id=23 %}">Nico 1</a></td>
+                                <td>Nuevo León</td>
+                                <td>43,272</td>
+                                <td>13,997</td>
+                                <td>12,200</td>
+                                <td>14.7%</td>
+                                <td>14,678</td>
+                                <td>(4.6%)</td>
+                            </tr>
+                            <tr>
+                                <th>24-31</th>
+                                <td><a href="{% url 'sub_portafolio' id=4 %}">Portafolio Providencia</a></td>
+                                <td>Coahuila</td>
+                                <td>82,622</td>
+                                <td>26,108</td>
+                                <td>21,736</td>
+                                <td>20.1%</td>
+                                <td>27,302</td>
+                                <td>(4.4%)</td>
+                            </tr>
+                            <tr>
+                                <th>32</th>
+                                <td><a href="{% url 'propiedades_detalles' id=32 %}">Fortaleza</a></td>
+                                <td>ZMVM<sup><strong>4)</strong></sup></td>
+                                <td>15,259<sup>7)</sup></td>
+                                <td>11,641</td>
+                                <td>13,325</td>
+                                <td>(12.6%)</td>
+                                <td>12,239</td>
+                                <td>(4.9%)</td>
+                            </tr>
+                            <tr>
+                                <th>33</th>
+                                <td><a href="{% url 'propiedades_detalles' id=33 %}">Ciénega</a></td>
+                                <td>Nuevo León</td>
+                                <td>25,223</td>
+                                <td>5,859</td>
+                                <td>5,670</td>
+                                <td>3.3%</td>
+                                <td>5,670</td>
+                                <td>3.3%</td>
+                            </tr>
+                            <tr>
+                                <th>34</th>
+                                <td><a href="{% url 'propiedades_detalles' id=34 %}">Redwood</a></td>
+                                <td>Jalisco</td>
+                                <td>11,605</td>
+                                <td>21,122</td>
+                                <td>18,720</td>
+                                <td>12.8%</td>
+                                <td>21,197</td>
+                                <td>(0.4%)</td>
+                            </tr>
+                            <tr>
+                                <th>35</th>
+                                <td><a href="{% url 'propiedades_detalles' id=35 %}">Catacha 2</a></td>
+                                <td>Querétaro</td>
+                                <td>5,400</td>
+                                <td>1,534</td>
+                                <td>1,438</td>
+                                <td>6.7%</td>
+                                <td>1,534</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>36-42</th>
+                                <td><a href="{% url 'sub_portafolio' id=5 %}">Huasteco</a></td>
+                                <td>San Luis Potosí</td>
+                                <td>89,951</td>
+                                <td>29,053</td>
+                                <td>28,196</td>
+                                <td>3.0%</td>
+                                <td>31,208</td>
+                                <td>(6.9%)</td>
+                            </tr>
+                            <tr>
+                                <th>43</th>
+                                <td><a href="{% url 'propiedades_detalles' id=43 %}">Cuauhtémoc</a></td>
+                                <td>Nuevo León</td>
+                                <td>10,294</td>
+                                <td>6,201</td>
+                                <td>8,597</td>
+                                <td>(27.9%)</td>
+                                <td>8,866</td>
+                                <td>(30.1%)</td>
+                            </tr>
+                            <tr>
+                                <th>44</th>
+                                <td><a href="{% url 'propiedades_detalles' id=45 %}">Zinc</a></td>
+                                <td>Nuevo León</td>
+                                <td>19,623</td>
+                                <td>4,788</td>
+                                <td>4,079</td>
+                                <td>17.4%</td>
+                                <td>4,852</td>
+                                <td>(1.3%)</td>
+                            </tr>
+                            <tr>
+                                <th>45</th>
+                                <td><a href="{% url 'propiedades_detalles' id=44 %}">Patria</a></td>
+                                <td>Jalisco</td>
+                                <td>7,970</td>
+                                <td>9,546</td>
+                                <td>8,425</td>
+                                <td>13.3%</td>
+                                <td>9,518</td>
+                                <td>0.3%</td>
+                            </tr>
+                            <tr>
+                                <th>46-55</th>
+                                <td><a href="{% url 'sub_portafolio' id=6 %}">Portafolio Filios</a></td>
+                                <td>Nuevo León</td>
+                                <td>148,580</td>
+                                <td>64,800</td>
+                                <td>54,429</td>
+                                <td>19.1%</td>
+                                <td>68,079</td>
+                                <td>(4.8%)</td>
+                            </tr>
+                            {#                  <tr>#}
+                            {#                    <th>56-59</th>#}
+                            {#                    <td><a href="/es/portafolio-garibaldi">Portafolio Garibaldi</a></td>#}
+                            {#                    <td>Nuevo León</td>#}
+                            {#                    <td>44,199</td>#}
+                            {#                    <td>16,542</td>#}
+                            {#                    <td>-</td>#}
+                            {#                    <td>-</td>#}
+                            {#                    <td>16,585</td>#}
+                            {#                    <td>(0.3%)</td>#}
+                            {#                  </tr>#}
+
+                            <tr>
+                                <th></th>
+                                <th>Total / Promedio</th>
+                                <td></td>
+                                <td>708,520</td>
+                                <td>343,141</td>
+                                <td>302,454</td>
+                                <td>13.5%</td>
+                                <td>358,874</td>
+                                <td>(4.4%)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tabla-reducida col-md-4 d-md-none d-sm-block">
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center bc-black table-hover">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Datos</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th>1‐3</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=0 %}">Portafolio
+                                            OEP<sup><strong>1)</strong></sup></a></p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 45,633<sup>5)</sup></p>
+                                        <p><b>3T20 Ingresos Totales:</b> 50,128</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 51,283</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> (2.3%)</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 51,339 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (2.4%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>4‐6</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=1 %}">Portafolio
+                                            CEN 333<sup><strong>2)</strong></sup></a></p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 36,752</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 31,970</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 28,161</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 13.5%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 33,246 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (3.8%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>7</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'propiedades_detalles' id=7 %}">Danfoss</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 30,580</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 9,149</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 7,787</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 17.5%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 9,753 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (6.2%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>8</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'propiedades_detalles' id=8 %}">Cuadrante</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Chihuahua</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 4,520</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 4,150</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 3,480</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 19.3%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 4,293 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (3.3%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>9</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'propiedades_detalles' id=9 %}">Cuprum</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> <sup>6)</sup></p>
+                                        <p><b>3T20 Ingresos Totales:</b> -</p>
+                                        <p><b>3T19 Ingresos Totales:</b> -</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> -</p>
+                                        <p><b>2T20 Ingresos Totales:</b> - </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> -</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10-14</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=2 %}">Portafolio
+                                            Casona</a></p>
+                                        <p><b>Ubicación:</b> Múltiple<sup><strong>3)</strong></sup></p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 38,684</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 9,269</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 8,123</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 14.1%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 9,386 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (1.2%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>15</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=15 %}">Catacha</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 5,431</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 1,285</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 1,202</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 6.9%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 1,200 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> 7.1%</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>16-19</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=3 %}">Portafolio
+                                            Monza</a></p>
+                                        <p><b>Ubicación:</b> Chihuahua</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 13,679</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 5,656</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 5,483</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 3.2%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 5,656 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> -</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>20</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=20 %}">Santiago</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Querétaro</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 16,497</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 5,357</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 4,697</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 14.1%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 5,611 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.5%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>21</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=21 %}">Monza
+                                            2</a></p>
+                                        <p><b>Ubicación:</b> Chihuahua</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 4,611</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 1,999</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 1,941</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 3.0%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 1,999 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> -</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>22</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=22 %}">Prometeo</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 8,135</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 12,987</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 13,482</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> (3.7%)</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 14,663 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (11.4%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>23</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=22 %}">Nico
+                                            1</a></p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 43,272</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 13,997</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 12,200</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 14.7%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 14,678 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.6%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>24-31</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=4 %}">Portafolio
+                                            Providencia</a></p>
+                                        <p><b>Ubicación:</b> Coahuila</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 82,622</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 26,108</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 21,736</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 20.1%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 27,302 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.4%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>32</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=32 %}">Fortaleza</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> ZMVM<sup><strong>4)</strong></sup></p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 15,259<sup>7)</sup></p>
+                                        <p><b>3T20 Ingresos Totales:</b> 11,641</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 13,325</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> (12.6%)</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 12,239 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.9%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>33</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=33 %}">Ciénega</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 25,223</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 5,859</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 5,670</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 3.3%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 5,670 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> 3.3%</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>34</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=34 %}">Redwood</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Jalisco</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 11,605</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 21,122</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 18,720</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 12.8%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 21,197 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (0.4%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>35</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=35 %}">Catacha
+                                            2</a></p>
+                                        <p><b>Ubicación:</b> Querétaro</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 5,400</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 1,534</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 1,438</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 6.7%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 1,534 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> -</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>36-42</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'sub_portafolio' id=5 %}">Huasteco</a></p>
+                                        <p><b>Ubicación:</b> San Luis Potosí</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 89,951</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 29,053</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 28,196</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 3.0%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 31,208 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (6.9%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>43</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=43 %}">Cuauhtémoc</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 10,294</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 6,201</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 8,597</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> (27.9%)</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 8,866 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (30.1%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>44</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=45 %}">Zinc</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 19,623</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 4,788</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 4,079</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 17.4%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 4,852 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (1.3%)</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>45</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a
+                                                href="{% url 'propiedades_detalles' id=44 %}">Patria</a>
+                                        </p>
+                                        <p><b>Ubicación:</b> Jalisco</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 7,970</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 9,546</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 8,425</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 13.3%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 9,518 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> 0.3%</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>46-55</th>
+                                    <td>
+                                        <p><b>Portafolio/Propiedad:</b> <a href="{% url 'sub_portafolio' id=6 %}">Portafolio
+                                            Filios</a></p>
+                                        <p><b>Ubicación:</b> Nuevo León</p>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 148,580</p>
+                                        <p><b>3T20 Ingresos Totales:</b> 64,800</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 54,429</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 19.1%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 68,079 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.8%)</p>
+                                    </td>
+                                </tr>
+                                {#                  <tr>#}
+                                {#                    <th>56-59</th>#}
+                                {#                    <td>#}
+                                {#                      <p><b>Portafolio/Propiedad:</b> <a href="/es/garibaldi">Portafolio Garibaldi</a></p>#}
+                                {#                      <p><b>Ubicación:</b> Nuevo León</p>#}
+                                {#                      <p><b>ABR (m<sup>2</sup>):</b> 44,199</p>#}
+                                {#                      <p><b>3T20 Ingresos Totales:</b> 16,542</p>#}
+                                {#                      <p><b>3T19 Ingresos Totales:</b> -</p>#}
+                                {#                      <p><b>Δ% 3T20 vs 3T19:</b> -</p>#}
+                                {#                      <p><b>2T20 Ingresos Totales:</b> 16,585 </p>#}
+                                {#                      <p><b>Δ% 3T20 vs 2T20:</b> (0.3%)</p>#}
+                                {#                  </td></tr>#}
+
+                                <tr>
+                                    <th>Total/<br>Promedio</th>
+                                    <td>
+                                        <p><b>ABR (m<sup>2</sup>):</b> 708,520<sup>
+                                            <small>(1)</small>
+                                        </sup></p>
+                                        <p><b>3T20 Ingresos Totales:</b> 343,141</p>
+                                        <p><b>3T19 Ingresos Totales:</b> 302,454</p>
+                                        <p><b>Δ% 3T20 vs 3T19:</b> 13.5%</p>
+                                        <p><b>2T20 Ingresos Totales:</b> 358,874 </p>
+                                        <p><b>Δ% 3T20 vs 2T20:</b> (4.4%) </p>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12"><a
+                                class="mb-4 btn pull-right btn-primary btn-lg"
+                                href="{% url 'propiedades' %}">
+                            Propiedades a detalle</a></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="pl-0 sin_puntos">
+                                <small>
+                                    <li>1) Incluye los inmuebles OEP Torre 1, OEP Torre 2 y OEP Plaza Central</li>
+                                    <li>2) Incluye los inmuebles Neoris/GE, Axtel y Atento</li>
+                                    <li>3) Propiedades ubicadas en Chihuahua, Sinaloa y Guanajuato</li>
+                                    <li>4) Zona Metropolitana del Valle de México</li>
+                                </small>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="pl-0 sin_puntos">
+                                <small>
+                                    <li>5) Actualización de ABR por 662 m<sup>2</sup> en Plaza Central derivado de
+                                        estudio
+                                        BOMA
+                                        (<i>Building
+                                            Owners and Managers Association</i>)
+                                    </li>
+                                    <li>6) Excluye 17,261 m<sup>2</sup> de la propiedad Cuprum</li>
+                                    <li>7) Actualización de ABR por 122 m<sup>2</sup> en Fortaleza derivado de estudio
+                                        BOMA
+                                        (<i>Building
+                                            Owners and Managers Association</i>)
+                                    </li>
+                                </small>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

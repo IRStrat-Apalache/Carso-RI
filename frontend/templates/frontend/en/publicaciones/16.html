@@ -1,0 +1,110 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>3 de Mayo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/mayo-01.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Si estás interesado en hacer una inversión para aumentar tu capital, seguramente habrás escuchado
+                        hablar sobre la Bolsa Mexicana de Valores y la posibilidad que ofrece para comprar acciones de
+                        las compañías más importantes de México.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>La Bolsa Mexicana de Valores (<a target="_blank" href="https://www.bmv.com.mx/">BMV</a>) es una
+                        entidad financiera regulada por la <a target="_blank"
+                                                              href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LMV_090119.pdf">Ley
+                            del Mercado de
+                            Valores</a> que actúa como el gestor intermediario entre inversionistas y empresas con el
+                        fin de que
+                        ambas partes obtengan beneficios económicos.</p>
+
+                    <h2>Un gestor indispensable</h2>
+                    <p>La Bolsa Mexicana de Valores es una institución que administra la operación y transacción de
+                        títulos accionarios de compañías que cotizan en el mercado de valores. Asimismo, es el lugar de
+                        encuentro donde los inversionistas depositan parte de su capital en diferentes instrumentos de
+                        inversión para la generación de rendimientos.</p>
+                    <p>El objetivo de la BMV es crear el espacio idóneo para que se realicen transacciones de
+                        intercambio de títulos de manera segura. No obstante, además de la BMV, hay un tercer actor
+                        fundamental para su funcionamiento. Entre las empresas y las personas naturales no se realiza
+                        ningún intercambio directo de capital, por lo que es necesario que actúen como intermediarios
+                        bursátiles, las casas de bolsa.</p>
+                    <p>Estas entidades ofrecen herramientas para facilitarle a los inversionistas comprar y vender
+                        acciones de empresas. Los inversionistas pueden dirigirse con las casas de bolsa para abrir un
+                        contrato de inversión y poder operar a través de sus plataformas virtuales, o bien mediante un
+                        ejecutivo de cuenta de la propia casa de bolsa. </p>
+                    <p>Las acciones que se compran en la BMV son uno de los instrumentos de inversión más populares en
+                        el mercado financiero. Sin embargo, es recomendable que los más novatos en el mundo de las
+                        inversiones pasen por un arduo proceso de preparación en el que puedan entender correctamente
+                        cómo invertir y en qué.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_11' %}">¿Qué son los Certificados Bursátiles Fiduciarios
+                                Inmobiliarios?</a>
+                        </li>
+                    </ul>
+                    <h2>Invertir en bienes raíces con la bolsa</h2>
+                    <p>Las FIBRAs (Fideicomisos de inversión en Bienes Raíces) son instrumentos de inversión que
+                        permiten que el mundo bursátil y el inmobiliario se junten para democratizar el acceso a los
+                        bienes raíces y permitirle a los mexicanos obtener ganancias con uno de los mercados
+                        históricamente más estables del país.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Te recomendamos: </strong>
+                            <a href="{% url 'noticia_7' %}">Invertir en FIBRAs ¿Buscas qué hacer con ese dinero
+                                extra?</a>
+                        </li>
+                    </ul>
+                    <p>Algunas de los principales beneficios de invertir en FIBRAs mediante la Bolsa Mexicana de Valores
+                        son:</p>
+                    <ul class="ls-disc">
+                        <li>No se requiere un monto elevado de dinero</li>
+                        <li>Permite diversificar la inversión</li>
+                        <li>Existe una administración profesional administrado el portafolio de propiedades</li>
+                        <li>Hay liquidez inmediata y flexibilidad en la compra y venta</li>
+                        <li>Las distribuciones de efectivo generan rendimientos constantes</li>
+                        <li>Es un vehículo regulado por múltiples autoridades</li>
+                        <li>No se pagan impuestos por la ganancia del capital</li>
+                    </ul>
+                    <p>¡No esperes más! Visita ya mismo <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro blog</a>
+                        y conoce más sobre <a href="{% url 'index' %}">Fibra MTY</a> y cómo puedes aumentar
+                        tu capital mediante inversiones en Bolsa Mexicana de Valores con el respaldo del mercado de los
+                        bienes raíces.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

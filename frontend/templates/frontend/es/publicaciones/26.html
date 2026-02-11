@@ -1,0 +1,110 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>2 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/01.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>El 2020 fue un año de transformaciones, y la pandemia dio un golpe en el sector financiero del
+                        que todavía no se ha logrado salir del todo. La rebaja de tasas junto con la inyección impulsada
+                        por distintos gobiernos, dio lugar a un panorama de liquidez con oportunidades para instrumentos
+                        de inversión de tasa variable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>La proyección de crecimiento de otras inversiones históricas a tasa fija es baja de cara a 2021 y
+                        por lo menos por los próximos 3 años. En ese contexto, entraron más en juego distintas opciones
+                        de volatilidad variable y se conformó un escenario segmentado según el apetito de riesgo de los
+                        inversionistas. </p>
+                    <p>Algunas de estas opciones son:</p>
+                    <h2>Criptomonedas</h2>
+                    <p>Bitcoin, la más capitalizada de todas las criptomonedas, ha defraudado a varias personas a lo
+                        largo de sus 12 años de trayectoria. Esto tiene que ver con que muchos se introdujeron en estos
+                        instrumentos de inversión para obtener ganancias rápidas sin ningún tipo de conocimiento sobre
+                        el mercado en el que se mueve.</p>
+                    <p>Este es un mercado de alta volatilidad, no por la falta de respaldo material de las
+                        criptomonedas, sino porque sus precios son inestables. De tal manera se ven influenciados por
+                        voluntades manifestadas a través de Twitter, noticias que ponen en duda la seguridad o
+                        sustentabilidad de las criptomonedas y los movimientos de grandes flujos de capital. Pero
+                        también es un mercado que está claramente en alza si se observa su evolución histórica.</p>
+                    <p>Además, las criptomonedas de mayor volumen, no han alcanzado importantes niveles de
+                        capitalización porque no están legalizadas como medio de pago en la mayoría de los países. Esta
+                        tendencia parece empezar a revertirse, con cada vez más empresas aceptándolas como valor de
+                        intercambio. A pesar de la reciente corrección de Bitcoin a fines de septiembre, Honduras, país
+                        que la tiene como moneda de curso legal, <a
+                                href="https://www.xataka.com/criptomonedas/bitcoin-pierde-10-su-valor-gobierno-salvador-ha-comprado-150-para-pais"
+                                target="_blank">anunció la compra de 150 unidades</a> para engrosar su
+                        patrimonio.</p>
+
+                    <h2>Acciones de empresas</h2>
+                    <p>Los crecimientos observados en las bolsas de valores estadounidenses han demostrado que las
+                        acciones de empresas son uno de los instrumentos de inversión elegidos por los inversionistas
+                        para la recuperación financiera. Eso sí, junto con la crisis llegaron nuevos parámetros
+                        sanitarios que generaron hábitos de consumo y pusieron a determinados rubros en el eje
+                        central.</p>
+                    <p>Empresas dedicadas a la logística, por ejemplo, o a las soluciones informáticas, vieron crecer su
+                        capital social con creces por las necesidades que surgieron a raíz de la pandemia, haciendo que
+                        sus acciones se disparen. Se trata de instrumentos de inversión volátiles pero que pueden dejar
+                        importantes rendimientos en el corto y mediano plazo.</p>
+                    <p>Un párrafo aparte merecen las fintech, o empresas de financial technology, dedicadas a todo tipos
+                        de servicios financieros tecnológicos. Estas innovaciones por lo general son observadas con
+                        buenos ojos por los grandes grupos de dinero que las eligen como destino de inversión. También
+                        hay que señalar que se requiere un estudio de cada mercado para entender cuál es el impacto y la
+                        proyección de cada una de ellas en su entorno.</p>
+
+                    <h2>FIBRAs</h2>
+                    <p>Las FIBRAs, o Fideicomiso de Bienes Raíces son instrumentos de inversión de renta variable que
+                        <a target="_blank" href="https://www.fibramty.com/articulo/el-mercado-emergente-de-las-fibras-en-mexico">están ligados a la solidez del mercado inmobiliario</a>. Es importante remarcar que el sector
+                        inmobiliario ha sido uno de los propulsores de la recomposición en México, gracias a los bajos
+                        precios de créditos hipotecarios y su proyección de estabilidad.</p>
+                    <p>Las FIBRAs cotizan en la Bolsa de Valores mexicana. Su crecimiento sostenido tiene que ver con
+                        que sus rendimientos dependen de las rentas de propiedades estratégicas como oficinas, naves
+                        industriales y otros inmuebles Premium.</p>
+                    <p>Las FIBRAs mejor administradas han demostrado ser instrumentos de inversión confiables, que
+                        ofrecen mejores rendimientos que otras alternativas más clásicas. Además, su credibilidad se
+                        apalanca en el flujo de dinero de las grandes empresas a través de los alquileres. Además, esta
+                        herramienta permite mantener niveles de transparencia y previsibilidad que brindan todavía mayor
+                        confianza a los inversionistas. </p>
+                    <p>En Fibra MTY administramos algunos de los inmuebles de más alto valor estratégico de México. Nos
+                        enfocamos en las propiedades de más alta calidad en el sector de oficinas e industrial. Lo
+                        hacemos de manera transparente, con un modelo de negocios consistente para poder ofrecerles a
+                        quienes apuestan por nosotros réditos constantes.</p>
+                    <p>Conoce cómo trabajamos en nuestro <a href="{% url 'index' %}">sitio</a>. Contáctanos. Se parte de Fibra MTY.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

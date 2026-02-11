@@ -1,0 +1,305 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">   
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">
+    
+    <style>
+
+        .panel-group.accordion-style-03 .panel {
+            padding-left: 32px;
+            padding-right: 32px;
+            margin-bottom: 22px !important;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .panel-group.accordion-style-03 .panel .panel-heading {
+            padding: 10px 10px 10px 0;
+            position: relative;
+        }
+
+        .accordion-style-03 .panel .panel-heading i {
+            position: absolute;
+            top: 33%;
+            right: 0;
+            font-size: 19px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .estra-link.active span {
+            color: #232323;
+            font-weight: 700;
+        }
+
+        .estra-info {
+            position: absolute !important;
+            top: 30% !important;
+            padding: 40px !important;
+            color: white !important;
+        }
+
+
+        #over-effect-group h4 {
+            margin-bottom: 0;
+        }
+
+        #ciberseguridad.parallax {
+            position: relative;
+            padding: 50px 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+            will-change: auto;
+        }
+
+        .bc-gray{
+            background-color: #E7E7E7;
+        }
+
+        .shadow{
+            box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
+        .nav-tabs .nav-link.active {
+            box-shadow:0 -10px #fff;
+            border:none;
+            
+        }
+
+        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+            border:none;
+        }
+
+        @media (max-width: 576px) {
+            .estra-info {
+                position: absolute !important;
+                top: 10% !important;
+                padding: 20px !important;
+                color: white !important;
+            }
+        }
+
+        
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <ul class="nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="asamblea-tab" data-toggle="tab" href="#asamblea" role="tab" aria-controls="asamblea" aria-selected="true">{% trans 'Asamblea de Tenedores' %}</a>
+                </li>
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="comite-tab" data-toggle="tab" href="#comite" role="tab" aria-controls="comite" aria-selected="false">{% trans 'Comité Técnico' %}</a>
+                </li>                    
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="comites-tab" data-toggle="tab" href="#comites" role="tab" aria-controls="comites" aria-selected="false">{% trans 'Comités Intermedios' %}</a>
+                </li>                                                   
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="ciber-tab" data-toggle="tab" href="#ciber" role="tab" aria-controls="ciber" aria-selected="false">{% trans 'Ciberseguridad' %}</a>
+                </li>                    
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="ppropiedades" class="">    
+    <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="asamblea" role="tabpanel" aria-labelledby="asamblea-tab">                 
+                <section id= "asamblea_tenedores">
+                    <div class="container py-5">
+                        <h1 class="text-center tc-blue">Shareholder’s meeting</h1>
+                        <p class="text-justify">This is the main corporate governance board of the Trust, where decisions are made on behalf of all the Shareholders of the Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs by its acronym in Spanish).</p>
+                        <div class="text-center">
+                            <img class="img-fluid" src="{% static 'images/educa_asamblea_de_tenedores.png' %}" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="tab-pane fade" id="comite" role="tabpanel" aria-labelledby="comite-tab">
+                <section id= "comite_tecnico" >
+                    <div class="container py-5">
+                        <h1 class="text-center tc-blue">Technical Committee</h1>
+                        <p class="text-justify">
+                            The Technical Committee is responsible for the management and coordination of the Trust's operations. Each year, its composition is approved and ratified by the Shareholders' Meeting, based on the recommendation of the Nominating Committee. This Committee is composed of qualified members with vast experience and knowledge in sectors related to the market and sustainability. In their selection, it is ensured that there are no conflicts of interest and that their responsibilities are exercised without being subject to personal or financial interests.
+                        </p>
+                        <div class="text-center">
+                            <img class="img-fluid" src="{% static 'images/educa_comite_tecnico.png' %}" alt="">
+                        </div>
+                    </div>
+                </section>               
+            </div>
+
+            <div class="tab-pane fade" id="comites" role="tabpanel" aria-labelledby="comites-tab">
+                <section class="container" style="margin-bottom:60px; margin-top:60px;">
+                    <div class="row">
+                        <div class="col-md-6 col-12 mt-2">
+                            <div class="panel-group accordion-event accordion-style-03 margin-4-rem-bottom lg-margin-2-rem-bottom">
+                                <div data-item="primero" class="estra-link active panel bg-white box-shadow-small border-radius-5px" data-wow-delay="0.4s">
+                                    <div class="panel-heading">
+                                        <div class="boton-info1">
+                                            <span>Audit Committee</span>
+                                            <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-item="segundo" class="estra-link panel bg-white box-shadow-small border-radius-5px" data-wow-delay="0.4s">
+                                    <div class="panel-heading">
+                                        <div class="boton-info1">
+                                            <span>Nominating Committee</span>
+                                            <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-item="cuarto" class="estra-link panel bg-white box-shadow-small border-radius-5px" data-wow-delay="0.6s">
+                                    <div class="panel-heading">
+                                        <div class="boton-info1">
+                                            <span>Compensation Committee</span>
+                                            <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div data-item="practicas" class="estra-link panel bg-white box-shadow-small border-radius-5px " data-wow-delay="0.6s">
+                                    <div class="panel-heading">
+                                        <div class="boton-info1">
+                                            <span>Practices Committee and sustainability</span>
+                                            <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="primero estra-content">
+                                <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                                <div class="estra-info">
+                                    <p class="text-justify">Responsible, among other tasks, for the review and evaluation of financial information and the performance of the external auditor. In addition, this committee reviews on a quarterly basis any matter that could represent a conflict of interest.</p>
+                                </div>
+                            </div>
+                            <div class="segundo estra-content" style="display: none;">
+                                <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                                <div class="estra-info">
+                                    <p class="text-justify">In charge of nominating the proprietary and independent members of the Technical Committee. It also suggests to the Assembly the recommended remuneration for the members of the Technical Committee.</p>
+                                </div>
+                            </div>
+                            <div class="cuarto estra-content" style="display: none;">
+                                <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                                <div class="estra-info">
+                                    <p class="text-justify">Responsible for making suggestions on compensation packages, human resource development and executive retention.</p>
+                                </div>
+                            </div>                            
+                            <div class="practicas estra-content" style="display: none;">
+                                <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                                <div class="estra-info">
+                                    <p class="text-justify">Responsible for managing conflicts of interest, providing opinions on related party transactions, and overseeing financial risk and ESG matters, as designated by the Technical Committee. Has direct communication with executives, and reviews and recommends ESG strategies, verifying their implementation and compliance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    
+            </div>
+
+            
+
+            <div class="tab-pane fade" id="ciber" role="tabpanel" aria-labelledby="ciber-tab">
+                 <section id= "ciberseguridad"class="content-wrap s-block parallax"
+                    style="background-image: url({% static 'images/educa_ciberseguridad.png' %})">
+                    <div class="container">
+                        <h1 class="text-center tc-blue">Cybersecurity</h1>
+                        <p class="text-justify">
+                            Regarding information security, the corporate governance bodies perform their functions mainly digitally, so we evaluate the location of the servers where Fibra's information is stored to ensure that they are in jurisdictions aligned with the country's legislation, and with the corresponding data protection law regulations.
+                        </p>
+                        <p class="text-justify">Committed to the privacy of personal data, we recently upgraded our firewall equipment, which has strengthened security and protection against threats, malware and guarantees the confidentiality of Fibra's personal data and information.</p>
+                    </div>
+                </section>        
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script>
+        $(document).ready(function () {
+            var counter = 1,
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000);
+            $('#n-estrategia .outside-box-right').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('#n-estrategia .outside-box-right').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+            $(".estra-link").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".estra-item").addClass('d-none');
+                $(".estra-link").removeClass('active');
+                $this.addClass('active');
+                $('.estra-item.' + item).removeClass("d-none");
+            });
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const panels = document.querySelectorAll('.estra-link');
+        const contents = document.querySelectorAll('.estra-content');
+
+        panels.forEach(panel => {
+            panel.addEventListener('click', function() {
+                const selectedItem = this.getAttribute('data-item');
+
+                // Ocultar todos los contenidos
+                contents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // Mostrar el contenido correspondiente al panel seleccionado
+                const activeContent = document.querySelector('.' + selectedItem);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

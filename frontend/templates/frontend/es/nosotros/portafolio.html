@@ -1,0 +1,1004 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+
+.item-list {
+  display: none;
+  margin-top: 10px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+
+        .link-subrayado {
+            text-decoration: none; /* Quita el subrayado por defecto */
+            color: white; /* Color del enlace, puedes cambiarlo */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .link-subrayado:hover {
+            text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+            color: white; /* Cambia de color al hacer hover */
+        }
+
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .pregunta::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .columna {
+            color: white;
+            padding: 20px;
+            text-align: left;
+
+        }
+
+        .image-container2 {
+            width: 100%; /* Ajusta según el tamaño necesario */
+            overflow: hidden; /* Evita que la imagen crezca fuera del contenedor */
+            position: relative;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease-in-out;
+        }
+
+        .image-container2:hover .main-image {
+            transform: scale(1.1); /* Hace zoom en la imagen principal */
+        }
+
+        .image-container2.animate-on-scroll .main-image {
+            transform: scale(1.1); /* Hace zoom en la imagen principal */
+        }
+
+        .position-relative {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .overlay-image {
+            position: absolute;
+            top: 78%; /* Ajusta la posición en la imagen principal */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra la imagen superpuesta */
+
+            height: auto;
+
+        }
+
+        .custom-card {
+            background: white;
+            border-radius: 0 0 20px 20px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .custom-card img {
+            width: 150px; /* Ajusta el tamaño del icono */
+            margin-bottom: 10px;
+        }
+
+        .custom-card p {
+            color: #23356B;
+            font-size: 25px;
+            text-align: left;
+        }
+
+        .background-container {
+            background-image: url('{% static "images/Educafeb-03.png" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh; /* Hace que el div tenga al menos la altura de la pantalla */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
+            justify-content: center; /* Centra el contenido horizontalmente */
+        }
+
+        .background-container2 {
+            background-image: url('{% static "images/Educafeb-02.png" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh; /* Hace que el div tenga al menos la altura de la pantalla */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
+            justify-content: center; /* Centra el contenido horizontalmente */
+        }
+
+        .title {
+            color: #59A971;
+            font-weight: bold;
+
+        }
+
+        .subtitle {
+            color: white;
+            width: 50%;
+        }
+
+
+        .owl-carousel .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        .nav-tabs {
+            display: flex;
+            justify-content: space-between; /* Espaciado uniforme */
+            flex-wrap: nowrap; /* Evita que los elementos se vayan a otra línea */
+        }
+
+        .nav-tabs li {
+            flex-grow: 1; /* Hace que los elementos ocupen el mismo ancho */
+            text-align: center; /* Centra el texto */
+        }
+
+
+        #directivos_section {
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+
+        .d_cargo {
+            color: #fff;
+        }
+
+        .consejo-administracion img {
+            border-radius: 50%;
+        }
+
+        .consejo-administracion .linkedin {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #005598;
+            border-radius: 50%;
+            display: none;
+            transition: all .5s;
+        }
+
+        .consejo-administracion .linkedin i {
+            font-size: 20px;
+        }
+
+
+        .consejo-administracion .miembro:hover .linkedin {
+            display: block;
+        }
+
+        .consejo-administracion .mas {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background-color: #005598;
+            transition: all .2s;
+        }
+
+        .consejo-administracion .miembro:hover .mas {
+            top: 0;
+        }
+
+        .modal-header {
+            background-color: #005598;
+        }
+
+        .modal-title {
+            color: white;
+        }
+
+        .containclass {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mb-0.mr-2.text-center {
+            color: #005598;
+        }
+
+        .s-block {
+            padding: 10px 0px !important;
+        }
+
+        .team-member-details img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+        }
+
+        .panel-group.accordion-style-03 .panel {
+            padding-left: 32px;
+            padding-right: 32px;
+            margin-bottom: 22px !important;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .panel-group.accordion-style-03 .panel .panel-heading {
+            padding: 10px 10px 10px 0;
+            position: relative;
+        }
+
+        .accordion-style-03 .panel .panel-heading i {
+            position: absolute;
+            top: 33%;
+            right: 0;
+            font-size: 19px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .estra-link.active span {
+            color: #232323;
+            font-weight: 700;
+        }
+
+        .estra-info {
+            position: absolute !important;
+            top: 30% !important;
+            padding: 40px !important;
+            color: white !important;
+        }
+
+
+        #panel-head {
+            transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+        }
+
+        /* Cambia el fondo del panel-heading al hacer hover */
+        #panel-head:hover {
+            background-color: #23356B !important; /* Color de fondo deseado al hacer hover */
+            color: white !important;
+        }
+
+        /* Cambia el color del texto del enlace en estado normal */
+        #panel-head > h4 > a {
+            color: #23356B; /* Color del texto normal del enlace */
+            text-decoration: none; /* Opcional: elimina el subrayado */
+        }
+
+        /* Cambia el color del texto del enlace al hacer hover */
+        #panel-head > h4 > a:hover {
+            color: white !important; /* Color del texto al hacer hover en el enlace */
+        }
+
+        /* Mantiene el texto blanco al hacer hover en el panel-heading */
+        #panel-head:hover > h4 > a {
+            color: white !important; /* Mantiene el texto blanco al hacer hover */
+        }
+
+        .panel-headingA.active {
+            background-color: #23356B !important; /* Color de fondo del panel activo */
+            color: white !important; /* Color del texto del panel activo */
+        }
+
+        .panel-headingA {
+            cursor: pointer;
+            padding: 8px 20px;
+        }
+
+        .panel-headingA.active > h4 > a {
+
+            color: white !important; /* Color del texto del panel activo */
+        }
+
+
+        .team h6, .team p {
+            transition: transform 1s ease-in-out;
+        }
+
+
+        .team:hover h6, .team:hover p {
+            transform: scale(1.1); /* Aumenta el tamaño del texto al 110% */
+            color: #23356B;
+        }
+
+        .directivo-perfil {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinear contenido en la parte superior */
+            padding-top: 150px; /* Desplazamiento desde la parte superior para evitar cortar el header */
+            z-index: 9999;
+            overflow: auto;
+        }
+
+        .directivo-perfil .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cerrar-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .d_nombre {
+            color: #23356B; /* Color personalizado para el nombre */
+        }
+
+        .d-none {
+            display: none;
+        }
+
+
+        .directivo-perfil {
+            z-index: 1000; /* Mayor que el header */
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 999; /* Asegura que la imagen esté sobre otros elementos */
+        }
+
+        .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .owl-nav .owl-prev, .owl-nav .owl-next {
+            background-color: #28a745; /* Color verde para los botones */
+            color: #fff;
+            padding: 30px 40px;
+            font-size: 40px !important;
+            text-align: center;
+            outline: none;
+        }
+
+        .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover {
+            background-color: #218838; /* Color verde oscuro al hacer hover */
+        }
+
+        .owl-nav .owl-prev {
+            left: 0;
+            position: absolute;
+        }
+
+        .owl-nav .owl-next {
+            right: 0;
+            position: absolute;
+        }
+
+
+        /* Carusel valores */
+        .owl-carousel1 .owl-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .item-inner {
+            padding: 10px;
+            background-color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 20px;
+            width: 220px !important;
+            text-align: center;
+            transition: .5s ease;
+        }
+
+        .owl-carousel1 .owl-item h3 {
+            padding: 10px;
+            font-size: 1.3em;
+        }
+
+        .item-inner:hover {
+            transform: translateY(-7px);
+        }
+
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .column:hover {
+            transform: translateY(-5px);
+        }
+
+        .column-header {
+            padding: 20px;
+            color: black;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-icon {
+            transition: transform 0.3s ease;
+            color: #07c879;
+        }
+
+        .dropdown-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        .item-list {
+          /*  max-height: 0;*/
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background-color: #f8f9fa;
+        }
+
+       /* .item-list.show {
+            max-height: 500px;
+        }*/
+
+        .list-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 1.1rem;
+            color: #495057;
+            transition: background-color 0.2s;
+        }
+
+        .list-item:hover {
+            background-color: #e9ecef;
+        }
+
+        .percentage {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .category {
+            color: #6c757d;
+        }
+
+        @media (max-width: 768px) {
+            .columns {
+                flex-direction: column;
+            }
+
+            .column {
+                min-width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <section id="sobre">
+        <div class="container">
+            <br>
+            <div class="row mt-5">
+                <br>
+                <div class="col-md-6">
+                    <br>
+                    <h2 style="color:#62D482; font-weight:bold;">En 2024 formalizamos <br>9 fondos nuevos lo que<br>representa un monto<br> comprometido de 64.5 MDD.</h2>
+
+                </div>
+                <div class="col-md-6">
+                    <p style="color:#23356B; font-weight:bold; font-size:18px;">  Ofrecemos a nuestros inversionistas una<br>oportunidad exclusiva para participar en<br> proyectos y empresas comprometidas con la<br>  generación de un impacto positivo en la región. 
+                    </p>
+
+                    <p style="color:#23356B; font-size:18px;">Fondo de Fondos dispone de un portafolio de inversión <br>del
+                        Sistema Financiero de Fomento, destinando recursos<br>en continuo crecimiento y diversificación. La flexibilidad  de<br>nuestro portafolio abarca una amplia gama de sectores clave,<br>nuestro portafolio abarca una amplia gama de sectores clave, <br>estrategias de impacto, ubicaciones geográficas estratégicas y <br>perfiles de riesgo, adaptándose a las necesidades de nuestros grupos de interés.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="mision">
+        <div class="background-container">
+            <div class="container">
+                <h4 class="subtitle wow fadeInUp">Priorizamos la construcción de un portafolio <br>que equilibre rentabilidad y reducción de riesgos. <br>Para lograrlo, realizamos análisis meticulosos <br> y evaluaciones detalladas, enfocándonos en proyectos que integren principios de inversión responsable y garanticen una administración financiera sólida y transparente.
+                </h4>
+            </div>
+        </div>
+        <div class="background-container2">
+            <div class="container">
+
+                <div class="d-flex justify-content-end">
+                    <h4 class="subtitle wow fadeInUp text-right">
+                        Nuestro propósito va más allá de generar rendimientos: buscamos brindar a nuestros inversionistas la oportunidad de impulsar un impacto positivo en la sociedad y el medio ambiente. Con este enfoque, reafirmamos <br>nuestro liderazgo en la industria de capital de riesgo, adoptando las mejores prácticas en<br> materia ambiental, social y de gobernanza.
+
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% comment %}
+    <section id="valores">
+        <div style="background-color: #23356B">
+            <div class="container">
+                <br>
+                <h2 style="color:#62D482; font-weight:bold;">Proporcionando capital productivo<br>para México y la región <br>Panamericana desde 2006</h2>
+
+        
+
+    <section class="pb-5">
+        <div style="position: relative;">
+            {% comment %}
+            <!-- Imagen de fondo transparente -->
+            <div style="position: absolute; top: 60%; left: 0; width: 100%; height:40%;
+                background-image: url('{% static "images/Transparencia.png" %}');
+                background-size: cover; background-position: bottom; background-repeat: no-repeat; z-index: 2;">
+            </div>
+
+            <!-- Imagen principal -->
+            <div style="position: relative; display: inline-block; width: 100%;">
+                <img src="{% static 'images/img-noso.jpg' %}" style="width: 100%; display: block;">
+                <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 3;">
+                    <h2 class="text-white font-weight-bold">Para más información</h2>
+                    <h2 class="text-white">escríbenos.</h2>
+                </div>
+            </div>
+            {% endcomment %}
+ <div class="fluid-container pt-5 pb-5" style="background-color: hsl(207.27deg 55.93% 11.57%)">
+        <div class="content-wrap2">
+            <div class="clearfix">
+                <h1 class="pl-5 pb-5 pt-3" style="color: #62D482; font-weight: bold">Capital Privado</h1>
+                <div class="owl-carousel owl-carousel1 owl-theme" style="height: 130px;">
+                    <img src="{% static 'images/carrousel/equity1.png' %}" alt=""
+                         style="width: 50%; object-fit: cover;">
+                    <img src="{% static 'images/carrousel/equity2.png' %}" alt=""
+                         style="width: 40%;object-fit: contain;">
+                    <img src="{% static 'images/carrousel/equity3.png' %}" alt=""
+                         style="width: 50%;object-fit: contain;">
+                    <img src="{% static 'images/carrousel/equity4.png' %}" alt=""
+                         style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/carrousel/equity5.png' %}" alt=""
+                         style="width: 50%;object-fit: contain;">
+                    <img src="{% static 'images/carrousel/equity6.png' %}" alt=""
+                         style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/carrousel/equity7.png' %}" alt=""
+                         style="width: 70%;object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+        </div>
+    </section>
+    <section id="sobre">
+        <div class="container">
+            <br>
+            <div class="row mt-10">
+                <br>
+                <div class="col-md-12">
+                    <br>
+                    <h2 style="color:#62D482; font-weight:bold;"> Presencia e Inversiones</h2>
+                    <p style="color:#23356B; font-size:18px;">Al 31 de diciembre de 2024, nuestro portafolio de
+                        inversiones estaba conformado por 118 fondos y 40 co-inversiones, distribuidos a través de nueve
+                        vehículos de inversión:
+                    </p>
+                    <img src="{% static 'images/presencia_inversiones.png' %}" alt="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+   <div class="container pt-5 pb-5">
+  <div class="row">
+    <!-- Columna 1 -->
+    <div class="col-md-6 mb-3">
+      <div class="column-header" onclick="toggleList(1)">
+        <span style="color:#23356B; font-weight:bold; font-size:24px;">
+          Distribución del portafolio activo por monto invertido por sector (a nivel regional)
+        </span>
+        <span class="dropdown-icon" id="icon1">▼</span>
+      </div>
+      <div class="item-list" id="list1">
+        <div class="list-item"><span class="percentage">17.90%</span> <span class="category">Software y Servicios de Cómputo</span></div>
+        <div class="list-item"><span class="percentage">9.90%</span> <span class="category">Servicios de Soporte Industrial</span></div>
+        <div class="list-item"><span class="percentage">8.80%</span> <span class="category">Comercio</span></div>
+        <div class="list-item"><span class="percentage">8.60%</span> <span class="category">Productores de Comida</span></div>
+        <div class="list-item"><span class="percentage">8.50%</span> <span class="category">Servicios de Consumo</span></div>
+        <div class="list-item"><span class="percentage">5.70%</span> <span class="category">Proveedores de Servicios de Salud</span></div>
+        <div class="list-item"><span class="percentage">4.80%</span> <span class="category">Viajes y Ocio</span></div>
+        <div class="list-item"><span class="percentage">4.10%</span> <span class="category">Inversión Inmobiliaria y Desarrollo de Servicios</span></div>
+        <div class="list-item"><span class="percentage">4.10%</span> <span class="category">Transporte</span></div>
+        <div class="list-item"><span class="percentage">4.00%</span> <span class="category">Energía no Renovables</span></div>
+        <div class="list-item"><span class="percentage">22.80%</span> <span class="category">Otros</span></div>
+      </div>
+    </div>
+
+    <!-- Columna 2 -->
+    <div class="col-md-6 mb-3">
+      <div class="column-header" onclick="toggleList(2)">
+        <span style="color:#23356B; font-weight:bold; font-size:24px;">
+          Distribución del portafolio activo <br/>por monto invertido por sector <br/>(México)
+        </span>
+        <span class="dropdown-icon" id="icon2">▼</span>
+      </div>
+      <div class="item-list" id="list2">
+        <div class="list-item"><span class="percentage">13.50%</span> <span class="category">Software y Servicios de Cómputo</span></div>
+        <div class="list-item"><span class="percentage">12.20%</span> <span class="category">Servicios de Consumo</span></div>
+        <div class="list-item"><span class="percentage">10.70%</span> <span class="category">Servicios de Soporte Industrial</span></div>
+        <div class="list-item"><span class="percentage">8.80%</span> <span class="category">Productores de Comida</span></div>
+        <div class="list-item"><span class="percentage">7.30%</span> <span class="category">Proveedores de Servicios de Salud</span></div>
+        <div class="list-item"><span class="percentage">6.70%</span> <span class="category">Gas, Agua y Servicios Múltiples</span></div>
+        <div class="list-item"><span class="percentage">6.50%</span> <span class="category">Viajes y Ocio</span></div>
+        <div class="list-item"><span class="percentage">5.80%</span> <span class="category">Comercio</span></div>
+        <div class="list-item"><span class="percentage">4.50%</span> <span class="category">Inversión Inmobiliaria y Desarrollo de Servicios</span></div>
+        <div class="list-item"><span class="percentage">3.60%</span> <span class="category">Hardware y Equipos Tecnológicos</span></div>
+        <div class="list-item"><span class="percentage">20.40%</span> <span class="category">Otros</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+
+    <div id="contacto">
+    </div>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}&trustedtypes=true"></script>
+    <script>
+        let site_key = "{{ site_key }}";
+        let url_alert_email = "{% url 'send-alerta-email' %}";
+    </script>
+    <script src="{% static 'js/nosotros.min.js' %}"></script>
+    <script>
+
+        // Carousel
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1700,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                700: {
+                    items: 3
+                },
+                900: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                },
+                1400: {
+                    items: 6
+                }
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const containers = document.querySelectorAll(".image-container2");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-on-scroll");
+                    } else {
+                        entry.target.classList.remove("animate-on-scroll"); // Si quieres que se quite al salir
+                    }
+                });
+            }, {threshold: 0.5}); // Detecta cuando el 50% del contenedor es visible
+
+            containers.forEach(container => {
+                observer.observe(container);
+            });
+        });
+
+    </script>
+    <script>
+
+        $(".team").click(function (e) {
+            e.preventDefault();
+            /*
+            let target = $(e.currentTarget);
+
+            // Ocultar el modal antes de actualizarlo
+            $("#directivo-perfil").hide();
+
+            // Actualizar el contenido del modal
+            $("#directivo-perfil .d_cargo").text(target.data('cargo'));
+            $("#directivo-perfil .d_nombre").text(target.data('nombre'));
+
+            // Formatear el resumen
+            let resumenFormatted = target.data('resumen').replace(/\n/g, '<br>');
+            $("#directivo-perfil .d_resumen").html(resumenFormatted);
+
+            // Actualizar la imagen
+            $("#directivo-perfil .d-imagen").attr("src", target.data('imagen'));
+
+            // Actualizar el enlace al perfil
+            let profileUrl = target.data('url'); // Supone que el dato 'url' contiene el enlace
+
+            // Verificar si profileUrl es válido
+            if (profileUrl) {
+                // Aquí es donde debes actualizar el href de la clase .image-link
+                $("#directivo-perfil .image-link").attr("href", profileUrl).show();
+            } else {
+                $("#directivo-perfil .icono-img").hide();  // Ocultar el enlace si no hay URL
+            }
+
+            // Mostrar el modal con una animación
+            $("#directivo-perfil").fadeIn().removeClass("d-none");
+
+            // Hacer scroll hacia el modal
+            $("html, body").animate({
+                scrollTop: $("#directivo-perfil").offset().top - 80
+            }, 1000);
+            */
+        });
+
+        /*
+        // Cerrar el modal al hacer clic en el icono de cierre
+        $(".cerrar-info i").on("click", function () {
+            $("#directivo-perfil").fadeOut().addClass("d-none");
+        });
+
+        */
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var counter = 1,
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000);
+            $('#n-estrategia .outside-box-right').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('#n-estrategia .outside-box-right').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+            $(".estra-link").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".estra-item").addClass('d-none');
+                $(".estra-link").removeClass('active');
+                $this.addClass('active');
+                $('.estra-item.' + item).removeClass("d-none");
+
+            });
+
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const panels = document.querySelectorAll('.estra-link');
+            const contents = document.querySelectorAll('.estra-content');
+
+            panels.forEach(panel => {
+                panel.addEventListener('click', function () {
+                    const selectedItem = this.getAttribute('data-item');
+
+                    // Ocultar todos los contenidos
+                    contents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Mostrar el contenido correspondiente al panel seleccionado
+                    const activeContent = document.querySelector('.' + selectedItem);
+                    if (activeContent) {
+                        activeContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Al hacer clic en el encabezado del panel
+            $('.panel-headingA').on('click', function () {
+                // Alternar la clase 'active' al encabezado
+                $(this).toggleClass('active');
+            });
+
+            $('.panel-collapse').on('shown.bs.collapse', function () {
+                var $panelHead = $(this).prev('.panel-headingA');
+                $panelHead.addClass('active'); // Agrega la clase active al panel-heading
+            });
+
+            $('.panel-collapse').on('hidden.bs.collapse', function () {
+                var $panelHead = $(this).prev('.panel-headingA');
+                $panelHead.removeClass('active'); // Quita la clase active al panel-heading
+            });
+        });
+    </script>
+    <script>
+        function toggleList(columnNumber) {
+            const list = document.getElementById(`list${columnNumber}`);
+            const icon = document.querySelector(`#list${columnNumber}`).previousElementSibling.querySelector('.dropdown-icon');
+
+            list.classList.toggle('show');
+            icon.classList.toggle('rotated');
+        }
+
+        let currentIndex = 0;
+        const totalSlides = 7;
+        let autoSlideInterval;
+
+        const carousel = document.querySelector('.carousel');
+        const indicators = document.querySelectorAll('.indicator');
+
+        startAutoSlide();
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+        }
+
+        function moveSlide(direction) {
+            clearInterval(autoSlideInterval);
+
+            currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+            updateCarousel();
+
+            startAutoSlide();
+        }
+
+        function goToSlide(index) {
+            clearInterval(autoSlideInterval);
+            currentIndex = index;
+            updateCarousel();
+            startAutoSlide();
+        }
+
+        function updateCarousel() {
+            const offset = -currentIndex * (100 / totalSlides);
+            carousel.style.transform = `translateX(${offset}%)`;
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.item-list').forEach(el => el.classList.remove('is-open'));
+    document.querySelectorAll('.dropdown-icon').forEach(el => el.classList.remove('rotated'));
+  });
+function toggleList(num) {
+  const list = document.getElementById(`list${num}`);
+  const icon = document.getElementById(`icon${num}`);
+
+  const isOpen = list.style.display === "block"; // verificar estado actual
+
+  // cerrar todos
+  document.querySelectorAll('.item-list').forEach(el => el.style.display = 'none');
+  document.querySelectorAll('.dropdown-icon').forEach(el => el.classList.remove('rotate'));
+
+  // si NO estaba abierto, lo abrimos; si ya estaba, se queda cerrado
+  if (!isOpen) {
+    list.style.display = "block";
+    icon.classList.add('rotate');
+  }
+}
+
+</script>
+
+{% endblock %}

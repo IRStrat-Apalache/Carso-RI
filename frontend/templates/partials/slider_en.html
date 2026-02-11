@@ -1,0 +1,120 @@
+{% load static i18n %}
+
+{% block otherstyles %}
+
+<style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 600px; /* Puedes ajustar la altura como desees */
+        overflow: hidden;
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que el video cubra todo el área */
+    }
+</style>
+
+{% endblock %}
+
+<div class="video-container">
+    <video autoplay loop muted>
+        <source src="https://investorcloud.s3.us-east-1.amazonaws.com/FibraEDUCA/Video_home-en.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
+</div>
+
+
+{% comment %}  {% load static i18n%}
+
+ {% block otherstyles%}
+ 
+ <style>
+     .carousel-item {
+         background-size: cover;
+         background-position: center;
+         height: 700px; /* Altura predeterminada */
+     }
+ 
+     .carousel-text {
+         max-width: 600px; /* Limita el ancho del texto */
+         padding: 20px;
+         color: white;
+         border-radius: 10px;
+         text-align: justify; /* Justifica el texto */
+     }
+ 
+     /* Ajustes para dispositivos móviles */
+     @media (max-width: 768px) {
+         .txt-car{
+             font-size:20px !important;
+             
+         }
+ 
+         .carousel-item {
+             height: auto; /* Ajusta la altura automáticamente en móviles */
+         }
+     }
+ 
+     @media (max-width: 576px) {
+         .carousel-text {
+             font-size: 16px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+             padding: 10px; /* Reduce el padding */
+         }
+     }
+ </style>
+ 
+ 
+ 
+ {% endblock %}
+ 
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     <div class="carousel-inner">
+         <div class="carousel-item active" style="background-image: url('{% static 'images/background/Homeheader-03.png' %}'); height: 700px;">
+             <div class="carousel-caption d-flex align-items-center justify-content-start" style="height: 100%;">
+                 <div class="carousel-text" style="color: white; padding: 20px; border-radius: 10px; max-width:1200px;">
+                     <p class="text-left txt-car" style="font-size:25px;">
+                         Modelo de negocio centrado en la adquisición estratégica de inmuebles predominantemente educativos.<br>
+                         Nuestra experiencia y conocimiento nos permiten identificar y adquirir propiedades con alto potencial
+                         de apreciación, buscando en cada inversión maximizar retornos financieros.
+                     </p>
+                     <div class="text-left">
+                         <a href="{% url 'nosotros' %}" class="btn btn-finn1 btn-slider" style="background-color:#59A971">Ver más</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="carousel-item" style="background-image: url('{% static 'images/background/Home2.png' %}'); height: 700px;">
+             <div class="carousel-caption d-flex align-items-center justify-content-start" style="height: 100%;">
+                 <div class="carousel-text" style="color: white; padding: 20px; border-radius: 10px; max-width: 1200px;">
+                     <p class="text-left txt-car" style="font-size:25px;">
+                         Contamos con un Gobierno Corporativo de excelencia que otorga la confianza y protección a nuestros tenedores, respaldando nuestro compromiso con la gestión ética en la toma de decisiones.
+                     </p>
+                     <div class="text-left" >                    
+                         <a href="{% url 'nosotros' %}" class="btn btn-finn1 btn-slider" style="background-color:#59A971">Ver más</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Controles -->
+     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Anterior</span>
+     </a>
+     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Siguiente</span>
+     </a>
+ </div>
+  {% endcomment %}
+ 
+ 
+ 
+ 

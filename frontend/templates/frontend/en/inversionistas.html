@@ -1,0 +1,169 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <style>
+        /* Estilos para el carrusel y los elementos */
+        .owl-carousel {
+            background: rgba(0, 0, 0, 0.8);; /* Fondo negro */
+        }
+
+        .item, .texto-invertir {
+            color: #fff; /* Color del texto */
+            padding: 20px; /* Espaciado interior */
+        }
+
+        .content h3 {
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 800;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .invers .owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            bottom: 0 !important;
+            left: 0;
+            right: 0;
+        }
+
+        .invers .owl-theme .owl-nav {
+            position: absolute;
+            bottom: 1%;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block title %}
+    <section class="hero-parallax text-white d-flex align-items-center justify-content-center position-relative"
+             style="background-image: url({% static image %})">
+        <div class="container-fluid container-relative text-title headerint">
+            <h1>{{ title }}</h1>
+            {#            <div class="row">#}
+            {#                <div class="col-lg-7">#}
+            {#                    <div class="owl-carousel header owl-theme headerint-sub ">#}
+            {#                        <div class="item">#}
+            {#                            <h3>Fibra Mty ha crecido de manera continua la distribución por CBFI desde su oferta pública#}
+            {#                                inicial.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha realizado múltiples emisiones de capital en el mercado de valores.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha cumplido con su guía de resultados consistentemente a lo largo de su#}
+            {#                                historia.</h3>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section class="s-block pt-5 pb-4">
+        <div class="container ">
+            <h1 class ="mb-3 text-center">Reportes Recientes</h1>
+            <div class="row d-flex justify-content-center">
+                <div class = "col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <a target ="_blank" href = "{% static "miniKit/Comunicado_prensa.pdf" %}">
+                        <div class="investor-card">
+                            <img src="{% static 'images/minikit_comunicado_prensa.png' %}" alt="Corporate Presentation">
+                            <div class="overlay">
+                                <div class="text">Descargar</div>
+                            </div>
+                            <div class = "card-text">Comunicado de Prensa</div>
+                        </div>
+                    </a>
+                </div>
+                <div class = "col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <a target ="_blank" href = "{% static "miniKit/Aviso_tenedores.pdf" %}">
+                        <div class="investor-card">
+                            <img src="{% static 'images/minikit_aviso_tenedores.png' %}" alt="Corporate Presentation">
+                            <div class="overlay">
+                                <div class="text">Descargar</div>
+                            </div>
+                            <div class = "card-text">Aviso a Tenedores</div>
+                        </div>
+                    </a>
+                </div>
+                <div class = "col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <a target ="_blank" href = "{% static "miniKit/Reporte_anual.pdf" %}">
+                        <div class="investor-card">
+                            <img src="{% static 'images/minikit_reporte_anual.png' %}" alt="Corporate Presentation">
+                            <div class="overlay">
+                                <div class="text">Descargar</div>
+                            </div>
+                            <div class = "card-text">Reporte Anual</div>
+                        </div>
+                    </a>
+                </div>
+                <div class = "col-lg-3 col-md-6 col-sm-12 mb-3">
+                    <a target ="_blank" href = "{% static "miniKit/Reporte_resultados.pdf" %}">
+                        <div class="investor-card">
+                            <img src="{% static 'images/minikit_reporte_resultados.png' %}" alt="Corporate Presentation">
+                            <div class="overlay">
+                                <div class="text">Descargar</div>
+                            </div>
+                            <div class = "card-text">Reporte de Resultados</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/tabsinv.js' %}{{ css_js_version }}"></script>
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 1,
+                animateOut: 'fadeOut',
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"]
+            });
+        });
+
+
+    </script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.js' %}"></script>
+{% endblock %}

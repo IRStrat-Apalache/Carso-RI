@@ -1,0 +1,95 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>21 de Junio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/junio-03.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Cuando nos adentramos en el mercado bursátil podemos ver que hay muchos instrumentos de inversión
+                        como acciones, bonos o fondos que permiten a los inversionistas contar con un gran abanico de
+                        opciones. En este sentido, las Fibras en México son un vehículo relativamente nuevo que ha
+                        destacado por su buen desempeño en los últimos años.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Un vehículo de inversión atractivo</h2>
+                    <p>Siendo un instrumento poco conocido y que parece complejo en su articulación, las FIBRAs en
+                        México han representado una oportunidad de crecimiento y diversificación para muchos
+                        inversionistas. </p>
+                    <p>Una FIBRA es un fideicomiso que compra propiedades de distintos sectores como edificios de
+                        oficinas, centros comerciales, hoteles, naves industriales, entre otros, para su arrendamiento.
+                        Posteriormente, el producto de estas rentas (una vez pagado los gastos operativos y
+                        administrativos) es distribuido de manera recurrente a los inversionistas.</p>
+                    <p>La gran ventaja que ofrecen estos vehículos de inversión es la obtención de ganancias mediante
+                        distribuciones de efectivo y apreciación de capital. Por un lado, cada FIBRA genera un
+                        rendimiento anual que se distribuye entre los tenedores de los certificados. Por otro lado, el
+                        valor de estos activos en la bolsa de valores se ve motivado por la oferta y demanda, entre
+                        otros factores. </p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar:</strong>
+                            <a href="{% url 'noticia_2' %}">FIBRA, un nuevo modelo de Inversión en Bienes Raíces</a>
+                        </li>
+                    </ul>
+                    <h2>Situación de las Fibras en México</h2>
+                    <p>A pesar de que en 2020 el desempeño de las FIBRAs en México dentro de la Bolsa Mexicana de
+                        Valores (<a href="https://www.bmv.com.mx/" target="_blank">BMV</a>) sufrió un golpe debido a la
+                        pandemia del coronavirus, la apertura gradual de
+                        centros comerciales, oficinas y hoteles han permitido que los rendimientos de las FIBRAs en el
+                        mercado de valores alcancen el mismo nivel que tenían antes de la crisis sanitaria.</p>
+                    <p>Cabe aclarar que las FIBRAs en México son un instrumento mixto de inversión, es decir, que otorga
+                        beneficios por dos vías: utilidades obtenidas del arrendamiento y venta de certificados a través
+                        de la Bolsa de Valores. </p>
+                    <p>Con esto en mente, los inversionistas han tenido la garantía de seguir percibiendo ganancias
+                        continuamente gracias a los arrendamientos de mediano y largo plazo con los que cuenta cada
+                        FIBRA. Es así como el flujo de dinero se ha mantenido constante durante la pandemia, lo cual no
+                        ha supuesto un alto riesgo en este modelo de inversión. </p>
+                    <p>Si eres un inversionista que busca diversificar su portafolio mediante un instrumento defensivo y
+                        con rendimientos atractivos ajustados al riesgo, las FIBRAs son un excelente mecanismo de
+                        inversión. </p>
+                    <p>En Fibra Mty contamos con un portafolio de propiedades de alta calidad que proporcionan
+                        distribuciones mensuales a nuestros inversionistas y los ayudan a construir un futuro sólido y
+                        confiable ante los vaivenes del mercado bursátil. </p>
+                    <p>Conoce más sobre nosotros en nuestro <a href="{% url 'nosotros' %}">sitio web</a>. </p>
+                    <p>No olvides seguirnos en <a
+                            href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> – <a
+                            href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos" target="_blank">YouTube</a>
+                        – <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

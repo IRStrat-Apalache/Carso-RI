@@ -1,0 +1,92 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>22 de octubre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/octubre/6.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>El éxito de una compañía que se proyecta a futuro depende 100% de las estrategias que tenga para
+                        incrementar sus ingresos. Es fundamental que cada organización le dé importancia a la
+                        utilización de sus recursos para su crecimiento. Por esta razón, destinar los dividendos en
+                        inversión es una de las principales prioridades para Fibra MTY.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>¿Qué son los dividendos?</h2>
+                    <p>El concepto de dividendos hace referencia a los beneficios monetarios que obtienen los
+                        accionistas de una compañía a partir de las distintas operaciones que se ejecutan en la
+                        organización.</p>
+                    <p>Sin embargo, la mesa directiva es la encargada de decidir si estos recursos se destinarán a
+                        inversiones para el crecimiento del negocio o se repartirán entre los accionistas.</p>
+                    <p>Cabe destacar que una compañía como Fibra MTY está obligada, por la <a
+                            href="http://www.diputados.gob.mx/LeyesBiblio/ref/lisr.htm" target="_blank">Ley del Impuesto
+                        Sobre la
+                        Renta</a>, a distribuir por año el 95% de su resultado fiscal neto a los dueños de los CBFIs e
+                        invertir el 70% de sus activos en bienes destinados al arrendamiento. Asimismo, es importante
+                        remarcar que Fibra Mty ha tenido la disciplina de repartir el 100% de su flujo de utilidad. </p>
+                    <h2>¿Cómo se distribuyen los dividendos en inversión?</h2>
+                    <p>Fibra MTY distribuye los dividendos en inversión en la ampliación de su portafolio de propiedades
+                        para ofrecer mejores condiciones a sus inversionistas. Por ejemplo, en el segundo semestre del
+                        2021 anunciamos 3 adquisiciones que ayudarán al incremento de las distribuciones:</p>
+                    <ul>
+                        <li>● Complejo de oficinas “La Perla”: ubicado en el municipio de Zapopan, Jalisco fue adquirido
+                            por un monto de 1,822.7 millones de pesos y se proyecta que genere un ingreso operativo neto
+                            de aproximadamente 133.3 millones de pesos durante los siguientes doce meses.
+                        </li>
+                        <li>● Inmueble Industrial Ciénega 2 por un monto de 20.4 millones de dólares con un estimado de
+                            ingreso operativo de 1.63 millones de dólares. Este inmueble tiene un contrato de
+                            arrendamiento de 15 años con una empresa líder en muros móviles.
+                        </li>
+                        <li>● Inmueble Industrial Ciénega 3 por un monto de 22.4 millones de dólares con un estimado de
+                            ingreso operativo de 1.54 millones de dólares. Este inmueble esta ocupado en su totalidad
+                            por DHL.
+                        </li>
+                    </ul>
+                    <p>Todas estas transacciones se hacen con el fin de incrementar las distribuciones que reciben los
+                        inversionistas de <a target="{% url 'index' %}">Fibra MTY</a>.</p>
+                    <p>Si quieres conocer más sobre nuestro portafolio y las distintas acciones que tomamos para su
+                        crecimiento te invitamos a que visites <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro
+                            blog</a>.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a
+                            href="https://twitter.com/fibra_mty"
+                            target="_blank">Twitter</a> y <a target="_blank"
+                                                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

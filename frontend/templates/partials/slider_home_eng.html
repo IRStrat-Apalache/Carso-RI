@@ -1,0 +1,220 @@
+{% load static i18n%}
+
+{% block otherstyles%}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+    .btn-sliderHome{
+        color:white;
+        border-radius:5px;
+        margin:10px;
+        padding:15px;
+       
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        display: none !important; /* Oculta los iconos predeterminados de Bootstrap */
+    }
+    
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 700px; /* Altura predeterminada */
+    }
+
+    .carousel-text {          
+        color: white;        
+        text-align: justify; /* Justifica el texto */
+    }
+
+    /* Ajustes para dispositivos móviles */
+    @media (max-width: 768px) {
+        .txt-car{
+            font-size:20px !important;
+            
+        }
+
+        .carousel-item {
+            height: auto; /* Ajusta la altura automáticamente en móviles */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-text {
+            font-size: 16px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+            padding: 10px; /* Reduce el padding */
+        }
+    }
+</style>
+
+
+
+{% endblock %}
+
+<div id="myCarousel2" class="carousel slide" data-ride="carousel"  data-interval="5000" data-pause="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('{% static 'images/fondo1.png' %}'); height: 700px;">
+            <div class="carousel-caption d-flex align-items-center justify-content-end" style="height: 100%;">
+                <div class="carousel-text" style="color:white;">
+                    <p class="text-right txt-car" style="font-size:32px; font-weight:bold;">
+                        Our experience and <br>knowledge allow us<br>to identify and acquire <br>properties with high <br>appreciation potential, seeking to<br>maximize financial <br>returns on each investment.
+                    </p>
+                    <div class="text-right">
+                        <a href="{% url 'nosotros' %}" class="btn-sliderHome" style="background-color:#59A971;font-weight:bold;">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('{% static 'images/Cifras.jpg' %}'); height: 700px;">
+            <div class="container-fluid" style="color:white;">
+                <div id="consumo" class="finn-counto">
+                    <div class="container">
+                        <div class="section-title text-center pt-5 pb-5">
+                            <h1 class="my-5"><b>Relevant accumulated <br>
+                                <span ><b style="color:#59A971;">figures as</b> of 1Q25</b></span>
+                            </h1>
+                        </div>
+                        <br>
+                        <div class="row honeycomb-wrapper justify-content-center">
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1500" data-to="590405" data-in-viewport="yes" data-decimals="0"><b>590405</b></h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center" style="font-size:20px; font-weight:bold;">Total GLA<br>(m<sup>2</sup>)</p>
+                            </div>
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1000" data-to="72" data-in-viewport="yes" data-decimals="0">72</h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center" style="font-size:20px; font-weight:bold;">Total<br>Properties</p>
+                            </div>
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1000" data-to="801" data-in-viewport="yes" data-decimals="0" data-currency="usd">801</h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center" style="font-size:20px; font-weight:bold;">FFO<br> (MXN Million)</p>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row honeycomb-wrapper justify-content-center pb-5">
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1000" data-to="917" data-in-viewport="yes" data-decimals="0" data-currency="usd">917</h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center"  style="font-size:20px; font-weight:bold;">NOI<br> (MXN Million)</p>
+                            </div>
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1000" data-to="1058" data-in-viewport="yes" data-decimals="0" data-currency="usd">1058</h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center" style="font-size:20px; font-weight:bold;">Revenue <br>(MXN Million)</p>
+                            </div>
+                            <div class="col-md-4 tile">
+                                <div class="honeycomb">
+                                    <div class="content">
+                                        <h1 style="font-weight:bold; transform: translate(-50%, -50%) !important;" class="count" data-speed="1000" data-to="788" data-in-viewport="yes" data-decimals="0" data-currency="usd">778</h1><span class="title-effect "></span>
+                                    </div>
+                                </div>
+                                <p class="text-center" style="font-size:20px; font-weight:bold;">AFFO<br> (MXN Million)</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Controles -->
+   
+    {% comment %} <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev">
+        <span class="d-flex align-items-center justify-content-center" aria-hidden="true" style="width: 50px; height: 50px; background-color: transparent; border-radius: 50%; border: 4px solid #59A971; display: inline-flex; align-items: center; justify-content: center;">
+            <i class="fa-solid fa-arrow-left" style="color: #59A971; font-size: 24px;"></i>
+        </span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next">
+        <span class="d-flex align-items-center justify-content-center" aria-hidden="true" style="width: 50px; height: 50px; background-color: transparent; border-radius: 50%; border: 4px solid #59A971; display: inline-flex; align-items: center; justify-content: center;">
+            <i class="fa-solid fa-arrow-right" style="color: #59A971; font-size: 24px;"></i>
+        </span>
+        <span class="sr-only">Siguiente</span>
+    </a> {% endcomment %}
+
+
+
+
+</div>
+
+{% block otherscripts %}
+<script src="{% static 'js/countTo.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        // Función para verificar si un elemento está visible en el viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Función para activar el contador solo en la slide activa
+        function activateCounter() {
+            // Seleccionamos la slide activa
+            var activeSlide = $('#myCarousel2 .carousel-item.active');
+    
+            // Solo activamos el contador en la slide activa
+            activeSlide.find('.finn-counto .count').each(function () {
+                var $this = $(this);
+                if (isElementInViewport(this)) {
+                    $this.countTo({
+                        to: $this.data('to'),
+                        speed: $this.data('speed'),
+                        decimals: $this.data('decimals'),
+                        formatter: function (value, options) {
+                            let formattedValue = value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                            if ($this.data('currency') === 'usd') {
+                                formattedValue = '$' + formattedValue;
+                            }
+                            return formattedValue;
+                        }
+                    });
+                }
+            });
+        }
+    
+        // Activar el contador cuando el carrusel se mueva
+        $('#myCarousel2').on('slid.bs.carousel', function () {
+            activateCounter();  // Llamamos a la función para la nueva slide activa
+        });
+    
+        // Activar el contador al hacer scroll
+        $(window).on('scroll', function () {
+            activateCounter();
+        });
+    
+        // Inicializar el contador para la slide activa al cargar la página
+        activateCounter();
+    });
+    
+</script>
+{% endblock %}
+
+
+
+
+

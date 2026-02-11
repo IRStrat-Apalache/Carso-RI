@@ -1,0 +1,1185 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block otherstyles %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% endblock %}
+
+
+{% block content %}
+
+    <section id="reportes">
+        <div class="content-wrap" style="padding: 50px 0 80px;">
+            <div class="container clearfix">
+                
+                <div id="trimestral">
+                    <div class="row">
+                        <h2>
+                            Reportes Trimestrales
+                        </h2>
+                    </div>
+                    <div id="Reportes-Trimestrales" class="content p-4">
+                        <div class="row2">
+                            <div class="col-12 offset-1">
+                                <ul class="reportes nav nav-pills">
+                                    <li><a class="active" data-toggle="pill" href="#trime2025">2025</a></li>
+                                    <li><a data-toggle="pill" href="#trime2024">2024</a></li>
+                                    <li><a data-toggle="pill" href="#trime2023">2023</a></li>
+                                    <li><a data-toggle="pill" href="#trime2022">2022</a></li>
+                                    <li><a data-toggle="pill" href="#trime2021">2021</a></li>
+                                    <li><a data-toggle="pill" href="#trime2020">2020</a></li>
+                                    <li><a data-toggle="pill" href="#trime2019">2019</a></li>
+                                    <li><a data-toggle="pill" href="#trime2018">2018</a></li>                                    
+                                </ul>
+                            </div>
+                            <div class="tab-content" >
+                                <div id="trime2025" class="tab-pane fade in active show">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row" >                                       
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Cuarto trimestre</b>
+                                                        </a>
+                                                        <br>                                                    
+                                                        <!--<a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_4T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>-->
+                                                        <br>
+                                                        <!--<a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_4T24_XBRL_.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/GobiernoCorporativo/2025/Estados_Financieros.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                        </a>-->
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Tercer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                       <!--<a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>-->
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Segundo trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <!--<a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_2T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_2T24_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>-->
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Primer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2025_1T25.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2025_1T25_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                          <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Estados_Financieros_Consolidados-1T25.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados Revisión limitada</span>
+                                                        </a>
+                                                  
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2024" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row" >                                       
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Cuarto trimestre</b>
+                                                        </a>
+                                                        <br>                                                    
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_4T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_4T24_XBRL_.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/GobiernoCorporativo/2025/Estados_Financieros.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                        </a>
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Tercer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Segundo trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_2T24.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_2T24_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Primer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_1T24_.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_1T24_XBRL_.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                  
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2023" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row" >                                       
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Cuarto trimestre</b>
+                                                        </a>
+                                                        <br>                                                    
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_4T23.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_4T23_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Audited-Consolidated-Financial-Statements-2023.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                        </a>
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Tercer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_3T23.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_3T23_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                   
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Segundo trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_2T23.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_2T23_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Primer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_1T23.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2023_1T23_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2"><i
+                                                                    class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                        </a>
+                                                  
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2022" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Cuarto trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_4T22.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_4T22_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br>
+                                               
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Audited-Consolidated-Financial-Statements-2022.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i
+                                                            class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                </a>
+                                                    
+                                            </div>
+                                            <div class="col-3">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Tercer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_3T22.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_3T22_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Segundo trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_2T22.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_2T22_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a>
+                                            </div>
+                                            <div class="col-3">
+
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Primer trimestre</b>
+                                                </a> <br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_1T22.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2022_1T22_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2021" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Cuarto trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_4T21-.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                               
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Audited-Consolidated-Financial-Statements-2021.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i
+                                                            class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                </a><br>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_4T21_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i
+                                                            class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a>
+                                                    
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4 ">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Tercer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_3T21.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>                                              
+                                                
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_3T21_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>
+                                               
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Segundo trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_2T21.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_2T21_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Primer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_1T21.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text3"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2021_1T21_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text3"><i class="fa fa-file-pdf-o"></i>  Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2020" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                     <div class="row">
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Cuarto trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_4T20.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Audited-Consolidated-Financial-Statements-2020.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i
+                                                            class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                </a><br>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_4T20_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>    
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4 ">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Tercer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_3T20.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_3T20_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Segundo trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_2T20.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_2T20_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i>  Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4">
+
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Primer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_1T20.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text3"><i class="fa fa-file-pdf-o"></i>  Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2020_1T20_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text3"><i class="fa fa-file-pdf-o"></i>  Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="trime2019" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                
+                                            </div>
+                                        </div>
+                                         <div class="row">
+                                            <div class="col-md-6 col-lg-3 mb-4">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Cuarto trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_4T19.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                
+                                                <a class="reporte-trimestral-text"
+                                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/Audited-Consolidated-Financial-Statements-2019.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i
+                                                            class="fa fa-file-pdf-o"></i> Estados Financieros Consolidados</span>
+                                                </a>
+                                                <br>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_4T19_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>    
+                                                
+                                            </div>
+                                            <div class="col-md-6 col-lg-3 mb-4 ">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Tercer trimestre</b>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_3T19.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte Trimestral</span>
+                                                </a><br/>
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_3T19_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>                                            
+                                            <div class="col-md-6 col-lg-3 mb-4 ">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Segundo trimestre</b>
+                                                </a><br/>                                                
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_2T19_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>                                            
+                                            <div class="col-md-6 col-lg-3 mb-4 ">
+                                                <a style="pointer-events: none;"
+                                                href="#"
+                                                target="_blank">
+                                                    <b>Primer trimestre</b>
+                                                </a><br/>                                            
+                                                <a class="reporte-trimestral-text"
+                                                 href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2019_1T19_XBRL.pdf"
+                                                target="_blank">
+                                                    <span class="reporte-trimestral-text2"><i class="fa fa-file-pdf-o"></i> Reporte XBRL</span>
+                                                </a><br/>
+                                                
+                                            </div>                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="trime2018" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                                <br/>
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-lg-4 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Cuarto trimestre</b><br/>
+                                                        </a>
+                                                        
+                                                        <a class="reporte-trimestral-text"
+                                                         href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_4T18.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                         href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_4T18_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte XBRL
+                                                            </span>
+                                                        </a>
+                                                   
+                                            </div>
+                                            <div class="col-md-6 col-lg-4 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Tercer trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_3T18.pdf"
+                                                        target="_blank"
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_3T18_XBRL.pdf"
+                                                        target="_blank"
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte XBRL
+                                                            </span>
+                                                        </a>
+                                                    
+                                            </div>
+                                            <div class="col-md-6 col-lg-4 mb-4">
+                                                
+                                                        <a style="pointer-events: none;"
+                                                        href="#"
+                                                        target="_blank">
+                                                            <b>Segundo trimestre</b>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                         href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_2T18.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte Trimestral
+                                                            </span>
+                                                        </a>
+                                                        <br>
+                                                        <a class="reporte-trimestral-text"
+                                                         href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2018_2T18_XBRL.pdf"
+                                                        target="_blank">
+                                                            <span class="reporte-trimestral-text2">
+                                                                <i class="fa fa-file-pdf-o"></i>  Reporte XBRL
+                                                            </span>
+                                                        </a>
+                                                    
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="anuales" class="Reportes-Anuales">
+                    <div class="row">
+                        <h2>
+                            Reportes Anuales
+                        </h2>
+                    </div>
+                    <div id="Reportes-Anuales2" class="content p-4">
+                        <div class="row2">
+                            <div class="col-11 offset-1">
+                                <ul class="reportes nav nav-pills">
+                                    <li><a class="active" data-toggle="pill" href="#anual2024">2024</a></li>
+                                    <li><a data-toggle="pill" href="#anual2023">2023</a></li>
+                                    <li><a data-toggle="pill" href="#anual2022">2022</a></li>
+                                    <li><a data-toggle="pill" href="#anual2021">2021</a></li>
+                                    <li><a data-toggle="pill" href="#anual2020">2020</a></li>
+                                    <li><a data-toggle="pill" href="#anual2019">2019</a></li>
+                                    <li><a data-toggle="pill" href="#anual2018">2018</a></li>                                    
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div id="anual2024" class="tab-pane fade in active show">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2024.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2023" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2023.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2022" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                <!--<li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                       href="https://s3.amazonaws.com/investorcloud/VivaAerobus/InformacionFinanciera/ReportesTrimestrales/2021-4T21.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual Ejecutivo
+                                                        </span>
+                                                    </a>
+                                                </li>-->
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2022.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2021" class="tab-pane fade ">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                         href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2021.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2020" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2020.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2019" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2019.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="anual2018" class="tab-pane fade">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2018.pdf"
+                                                       target="_blank">
+                                                        <span class="reporte-trimestral-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Reporte Anual 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div id="presentation" class="py-5"></div>
+                <div class="Corporate-Presentation">
+                    <div class="row">
+                        <h2>
+                            Presentación para Inversionistas
+                        </h2>
+                    </div>
+                    <div id="Corporate-Presentation" class="content p-4">
+                        <div class="row2">
+                            <div class="col-11 offset-1">
+                                <ul class="reportes nav nav-pills">
+                                    <li><a class="active" data-toggle="pill" href="#presentation2024">1T2025</a></li>                                                                     
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div id="presentation2024" class="tab-pane fade in active show">
+                                    <div class="row pt-4">
+                                        <div class="col-md-none col-lg-2 p-0 ">
+                                            <div class="border-right">
+                                                &nbsp;
+                                                <br/>&nbsp;
+                                                <br/>&nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 mb-4">
+                                            <ul class="list-unstyled">
+                                                <li class="">
+                                                    <a class="reporte-trimestral-text"
+                                                       href="https://investorcloud.s3.us-east-1.amazonaws.com/FibraEDUCA/InformacionFinanciera/Presentaciones/FIBRA_EDUCA_CORPORATE_PRESENTATION_1Q25-junio.pdf"
+                                                       target="_blank">
+                                                        <span class="corporate-presentationl-text2">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                            Presentación para Inversionistas 
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script !src="">
+        $('a.button-rounded').click(function (e) {
+            e.preventDefault();
+            var id = $(this).attr('href');
+            $('a.button-rounded').removeClass('active');
+            $(this).addClass('active');
+            $('.content').addClass('d-none');
+            $(id).removeClass('d-none');
+        });
+
+        $('ul.reportes li').on('click', (e) => {
+            let y = e.target.dataset.year;
+            if (y)
+                showReports(y);
+        });
+
+        const showReports = y => {
+            let reports = $('ul.list-report li');
+            if (reports.length) {
+                reports.removeClass('show-event')
+                    .addClass('hide-event');
+
+                reports.filter("[data-date^='" + y + "']")
+                    .removeClass('hide-event')
+                    .addClass('show-event');
+            }
+        }
+
+        let activeYear = $('ul.reportes li a.active').data('year');
+        showReports(activeYear);
+    </script>
+{% endblock %}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>mobile-menu</title>
+    <desc>Created with Sketch.</desc>
+    <g id="R4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lenders-nav-320px-R3-scroll" transform="translate(-280.000000, -37.000000)" fill="#FFFFFF">
+            <g id="menu" transform="translate(280.000000, 37.000000)">
+                <path d="M1.5,0 L18.5,0 C19.3284271,-1.52179594e-16 20,0.671572875 20,1.5 C20,2.32842712 19.3284271,3 18.5,3 L1.5,3 C0.671572875,3 1.01453063e-16,2.32842712 0,1.5 C-1.01453063e-16,0.671572875 0.671572875,1.52179594e-16 1.5,0 Z M1.5,7 L9.5,7 C10.3284271,7 11,7.67157288 11,8.5 C11,9.32842712 10.3284271,10 9.5,10 L1.5,10 C0.671572875,10 1.01453063e-16,9.32842712 0,8.5 C-1.01453063e-16,7.67157288 0.671572875,7 1.5,7 Z M1.5,14 L18.5,14 C19.3284271,14 20,14.6715729 20,15.5 C20,16.3284271 19.3284271,17 18.5,17 L1.5,17 C0.671572875,17 1.01453063e-16,16.3284271 0,15.5 C-1.01453063e-16,14.6715729 0.671572875,14 1.5,14 Z" id="mobile-menu"></path>
+            </g>
+        </g>
+    </g>
+</svg>

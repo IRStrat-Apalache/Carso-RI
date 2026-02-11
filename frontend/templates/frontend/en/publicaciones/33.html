@@ -1,0 +1,93 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>21 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/09.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>En el mundo de las inversiones, cuando muchas personas retiran sus posiciones de un determinado
+                        activo financiero, probablemente significa que hay otros instrumentos de inversión que están por
+                        capitalizarse. Esto significa que siempre que un activo cae hay otro que sube. También quiere
+                        decir que manteniendo tu capital dividido entre distintos instrumentos cuidas tu patrimonio de
+                        las fluctuaciones del mercado. Entre las posibilidades de tu diversificación, se encuentran las
+                        FIBRAS inmobiliarias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>¿Cómo es el portafolio de las FIBRAs inmobiliarias?</h2>
+                    <p>La mayoría de las FIBRAs están conformados por derechos de renta sobre bienes inmuebles de
+                        distintos fines y utilidades, dedicados generalmente al sector corporativo y productivo.</p>
+                    <p>A su vez, estos inmuebles se encuentran diversificados a lo largo y ancho del país, por lo que se
+                        ven influenciados por cuestiones geográficas particulares, economías locales y distintos
+                        ordenamientos jurídicos. Incluso por la potencia productiva de algunas de las más grandes
+                        empresas de México que pagan por sus alquileres.</p>
+                    <p>También es posible construir un propio portafolio de FIBRAs, teniendo en cuenta su rentabilidad,
+                        cómo están gestionadas, y su posible apreciación con el tiempo. Además, las FIBRAs inmobiliarias
+                        pagan dividendos periódicamente, por lo que <a
+                                href="https://www.fibramty.com/articulo/como-saber-cuanto-ganare-al-invertir-en-fibras-inmobiliarias"
+                                target="_blank">siempre se puede monitorear sus rendimientos</a>.</p>
+                    <h2>Conoce el portafolio de inmuebles de Fibra MTY</h2>
+                    <p>Fibra MTY es una de las opciones más populares entre todas las alternativas que hay para invertir
+                        en FIBRAs inmobiliarias en México. Esto se debe a los dividendos mensuales y a su excelente
+                        posición financiera año con año (especialmente de cara a la segunda mitad del 2021).</p>
+                    <p>En el <a href="https://www.fibramty.com/propiedades#pmapa">portafolio de Fibra MTY</a> se
+                        encuentran propiedades distribuidas en Chihuahua, Sinaloa,
+                        Coahuila, Nuevo León, San Luis Potosí, Jalisco, Guanajuato, Querétaro y la ZMVM. </p>
+                    <p>En junio de 2021, la compañía <a
+                            href="https://obras.expansion.mx/inmobiliario/2021/07/07/la-perla-fibra-monterrey-inclina-balanza-a-oficinas"
+                            target="_blank">anunció</a> la compra del complejo de oficinas Distrito La Perla, en
+                        Guadalajara. Esta adquisición fue realizada en condiciones bastante provechosas para Fibra Mty
+                        al generar un rendimiento de 9.3% en dicha propiedad. La Perla es un inmueble de reciente
+                        creación con inquilinos enfocados en el sector tecnológico, y ubicado en un corredor nuevo de la
+                        ciudad de Guadalajara, lo que le otorga muchas ventajas competitivas en materia de
+                        absorción. </p>
+                    <h2>Invierte en Fibra MTY y accede a una diversificación inmediata</h2>
+                    <p>Solo con la compra de un CBFI de Fibra MTY, el inversionista está adquiriendo derechos de renta y
+                        apreciación no sobre una propiedad, sino sobre varias propiedades con distintos usos y
+                        localizaciones. Así es cómo invertir en Fibra MTY es el equivalente a una diversificación
+                        inmediata. Al fin y al cabo, la diversificación de un portafolio también es la adaptación a los
+                        tiempos que corren. </p>
+                    <p>Con Fibra MTY, puedes empezar a invertir en FIBRAs inmobiliarias hoy mismo.</p>
+                    <p>Visita nuestro <a href="{% url 'index' %}">sitio</a> y síguenos en nuestras redes de <a target="_blank"
+                                                                               href="https://www.facebook.com/pages/category/Real-Estate-Investment-Firm/Fibra-Mty-109512967914336/">Facebook</a>,
+                        <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                 href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

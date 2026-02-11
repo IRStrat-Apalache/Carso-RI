@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Murano RI - Alerta</title>
+</head>
+<body>
+
+<p>Email: {{ email }}</p>
+<p>Alertas:</p>
+<ul>
+    {% for tipo in tipos %}
+        <li>{{ tipo }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

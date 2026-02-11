@@ -1,0 +1,96 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/Inversion-en-bienes-raices-a-montos-accesibles.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Para hacer una <strong>inversión en bienes raíces</strong> no siempre tenemos el dinero
+                        suficiente para comprar el
+                        inmueble que deseamos. Las FIBRAs son instrumentos financieros que permiten a los inversionistas
+                        tener participación en inmuebles de gran escala como edificios de oficinas y naves industriales
+                        por montos más accesibles. Tener un propósito claro y examinar con cuidado la forma en que
+                        utilizaremos nuestro capital para lograr el máximo de rentabilidad es la clave para un retorno
+                        de inversión exitoso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>¿Endeudarse y arriesgar? o ¿Aportar para algo estable?</h2>
+                    <p>Cuando decidimos invertir en bienes raíces para hacer crecer nuestro dinero existen algunas
+                        opciones tentadoras que tienen mayor o menor riesgo, como las siguientes: </p>
+                    <ol class="ls-decimal">
+                        <li>Comprar un inmueble sin el uso de crédito y utilizando una parte importante de nuestro
+                            patrimonio para hacerlo, asumiendo el riesgo de descapitalización.
+                        </li>
+                        <li>Buscar algún plan bancario que nos permita adquirir el inmueble, teniendo un costo adicional
+                            por los intereses a pagar de dicho crédito.
+                        </li>
+                        <li>Formar parte de un <strong>Fideicomiso de Inversión en Bienes Raíces</strong>, también
+                            conocido como FIBRA.
+                        </li>
+                    </ol>
+                    <p>Las dos primeras opciones requieren una inversión monetaria significativa, así como costos
+                        relevantes y en algunos casos especializados, como lo son los honorarios de notarios públicos,
+                        valuadores, etc. Aunque puede ser una operación económica estable, tiene riesgos como la
+                        concentración del patrimonio en una sola propiedad y tiene ciertas responsabilidades como el de
+                        estar llevando a cabo mantenimiento e inversiones de forma constante. </p>
+
+                    <p>Por otra parte, invertir en una <a href={% url 'nosotros' %}>FIBRA</a> puede resultar
+                        atractivo para quienes quieran invertir en
+                        bienes raíces por montos más accesibles y deseen correr menos riesgo con su capital al invertir
+                        en varias propiedades e inquilinos. </p>
+                    <h2>Ventajas de invertir en FIBRAS</h2>
+                    <p>Las FIBRAS dan la posibilidad al público en general de hacer una <strong>inversión en bienes
+                        raíces</strong> de
+                        grandes superficies como naves industriales o complejos de oficinas. Pueden generar altos
+                        márgenes de ganancia frente al arrendamiento tradicional de una vivienda o un local comercial.
+                        Además, ofrecen a los inversionistas mayor flexibilidad de entrada y salida por ser instrumentos
+                        que cotizan en el mercado de valores. </p>
+                    <p>Si quieres animarte a invertir en FIBRAs con una empresa que cotiza en la <a
+                            href="https://www.bmv.com.mx/es/Grupo_BMV?bandera=1" target="_blank">Bolsa Mexicana de
+                        Valores</a>, te invitamos a que conozcas <a href="{% url 'nosotros' %}">Fibra MTY</a>, un
+                        instrumento de inversión en bienes raíces que
+                        te permitirá construir un futuro rentable, sólido y confiable. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

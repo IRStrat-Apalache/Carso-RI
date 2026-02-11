@@ -1,0 +1,95 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table  table-bordered bc-black">
+                            <thead>
+                            <tr>
+                                <th>Fecha de Asamblea</th>
+                                <th>Tipo de Asamblea</th>
+                                <th>Documentos</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for asambleas in asambleas_tenedores %}
+                                <tr>
+                                    <td>{{ asambleas.fecha }}</td>
+                                    <td>{{ asambleas.titulo }}</td>
+                                    <td>
+                                        {% if asambleas.convocatoria != '' %}
+                                            <i class="fa fa-download"> </i>
+                                            <a href="{{ asambleas.convocatoria }}" target="_blank">Convocatoria</a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.presentacion != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.presentacion }}" target="_blank">
+                                                Presentacion </a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.dictamen != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.dictamen }}" target="_blank">
+                                                Dictamen </a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.contenido != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.contenido }}" target="_blank">
+                                                Contenido </a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.ef != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.ef }}" target="_blank">
+                                                Estados Financieros Anuales </a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.er != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.er }}" target="_blank">
+                                                Información Soporte </a>
+                                            </br>
+                                        {% endif %}
+
+                                        {% if asambleas.resolucion != '' %}
+                                            <i class="fa fa-download"></i>
+                                            <a href="{{ asambleas.resolucion }}" target="_blank">
+                                                Resumen de acuerdos </a>
+                                            </br>
+                                        {% endif %}
+                                        {% if asambleas.folleto and asambleas.folleto != '' %}
+                                            <i class="fa fa-download"> </i>
+                                            <a href="{{ asambleas.folleto }}" target="_blank">Folleto Informativo</a>
+                                            </br>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/bootstrap-datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datatables/dataTables.bootstrap4.min.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>13 de Agosto del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/agosto/05.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Una de las grandes ventajas que llegaron con la opción de Invertir en FIBRAs, es la
+                        <a href="https://www.fibramty.com/articulo/fibras-en-mexico-democratizando-las-inversiones-en-bienes-raices"
+                           target="_blank">democratización de la inversión en bienes raíces</a>. Es decir que cualquier
+                        persona con un capital
+                        inicial puede invertir en este modelo de negocio y obtener todos los beneficios del mismo:
+                        hacerlo de forma rápida y segura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>¿Cómo invertir en FIBRAs?</h2>
+                    <p>Realmente este modelo de inversión está hecho para facilitar la vida de los inversionistas. Solo
+                        debes hacer tu registro, depositar, invertir, y dar seguimiento al uso de tu capital. El proceso
+                        que detallamos para lograrlo en Fibra MTY se resume en lo siguiente: </p>
+                    <ol>
+                        <li>1. Primero escoges una casa de bolsa que esté autorizada por la Comisión Nacional de Banca y
+                            de Valores y crea una cuenta en aquella que se ajuste mejor a tus necesidades, comisiones,
+                            monto mínimo de apertura, entre otros.
+                        </li>
+                        <li>2. Luego ingresas tu depósito en la cuenta creada, para comenzar a invertir en FIBRAs lo
+                            antes posible.
+                        </li>
+                        <li>3. Con tu capital ya disponible en la cuenta, podrás comenzar a adquirir certificados de
+                            Fibra Mty. Esto podrás hacerlo directamente o por medio de un promotor o agente de tu casa
+                            de bolsa, según las disposiciones de cada una de estas.
+                        </li>
+                        <li>4. Y finalmente, comenzarás a ser beneficiario de las distribuciones que dan los diferentes
+                            certificados que adquieres.
+                        </li>
+                    </ol>
+                    <h2>Una opción de inversión perfecta para cualquier usuario </h2>
+                    <p>El modelo de FIBRAs es, en definitiva, uno de los instrumentos de inversión más populares en
+                        México, y su éxito se debe, entre muchas cosas, a la facilidad que tienen personas de todos los
+                        perfiles para acceder a este. No importa si eres un gran inversionista, o si estás comenzando la
+                        construcción de tu capital, invertir en FIBRAs es una gran opción. </p>
+                    <p>Los principales beneficios que como inversionista tienes, son: </p>
+                    <ul>
+                        <li>● Distribución de efectivo de manera periódica</li>
+                        <li>● Un <a href="https://www.fibramty.com/propiedades" target="_blank">portafolio de inversión</a> diversificado</li>
+                        <li>● Facilidad de compra y venta</li>
+                        <li>● Menos costos administrativos</li>
+                        <li>● <a href="https://www.fibramty.com/articulo/como-saber-cuanto-ganare-al-invertir-en-fibras-inmobiliarias" target="_blank">Retornos</a> altamente competitivos</li>
+                    </ul>
+                    <p>Adicionalmente, recuerda que con Fibra Mty, obtienes cada uno de estos beneficios, además de
+                        tener ingresos mayormente dolarizados, lo cual se traduce en una inversión más defensiva en
+                        comparación con otros instrumentos. </p>
+                    <h2>¿Cuánto capital necesitas? </h2>
+                    <p>La ventaja de las FIBRAs es que puedes comenzar a invertir en ellas independientemente de tus
+                        capacidades financieras. Hoy en día existen pocos requerimientos por las casas de bolsa para
+                        abrir un contrato de inversión y con ello se abren las posibilidades para todo el público
+                        inversionista para poder invertir en bienes raíces. </p>
+                    <p>Lo que debes tener siempre presente, es que entre más inviertas, más se incrementa el rendimiento
+                        que recibes. </p>
+                    <p>¿Listo para invertir? </p>
+                    <p>Ingresa a <a href="{% url 'index' %}">nuestro sitio</a> y conoce todos los detalles, costos, beneficios y ganancias que puedes
+                        tener invirtiendo con Fibra MTY. </p>
+                    <p>Y no olvides seguirnos en <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a>, <a
+                            target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a>
+                        y <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a>, para
+                        mantenerte siempre informado sobre
+                        las novedades del sector. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

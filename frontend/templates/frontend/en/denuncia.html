@@ -1,0 +1,76 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col">
+                    <form id="contact-form" class="contact-form" action="" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                <label class="required">{% trans 'Nombre' %}</label>
+                                <input type="text" value="" data-msg-required="Por favor, escriba su nombre."
+                                       class="form-control" name="nombre" required>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label class="required">{% trans 'Apellidos' %}</label>
+                                <input type="text" value="" data-msg-required="Por favor, escriba sus apellidos."
+                                       class="form-control" name="apellidos" required>
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="required">{% trans 'Teléfono' %}</label>
+                                <input type="number" value="" data-msg-required="Por favor, ingrese un teléfono."
+                                       class="form-control" name="phone" required >
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label class="required">{% trans 'Email' %}</label>
+                                <input type="email" value="{{ email }}"
+                                       data-msg-required="Por favor, introduzca su dirección de correo electrónico."
+                                       data-msg-email="Por favor, introduce una dirección de correo electrónico válida."
+                                       class="form-control" name="correo" required>
+                            </div>
+                        </div>                        
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="required">{% trans 'Mensaje' %}</label>
+                                <textarea data-msg-required="Por favor, ingrese un mensaje." rows="8"
+                                class="form-control" name="mensaje" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="fileUpload">{% trans 'Subir archivo' %}</label>
+                                <input type="file" class="form-control" id="fileUpload" name="fileUpload">
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="contact_recaptcha_response" name="contact_recaptcha_response">
+                        <div class="alert-message"></div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <button style="font-size: 14px !important;" id="contact-submit" type="submit" value=""
+                                        class="btn-black btn loading" disabled="disabled">
+                                    <i class="fa fa-spinner fa-spin mr-2"></i>
+                                    {% trans 'Enviar mensaje' %}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert-message-footer"></div>
+                </div>                
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}&trustedtypes=true"></script>
+    <script>
+        let site_key = "{{ site_key }}";
+    </script>
+{% endblock %}

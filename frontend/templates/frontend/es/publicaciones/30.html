@@ -1,0 +1,90 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>17 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/05.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Con más de 10 años de trayectoría ascendente en el mercado financiero, <a
+                            href="https://www.forbes.com.mx/los-retos-del-financiamiento-bursatil-despues-de-la-crisis/"
+                            target="_blank">las FIBRAs se posicionaron
+                        como una excelente alternativa</a> para obtener rendimientos con aceptable previsibilidad. Aún
+                        con
+                        el crecimiento que ha demostrado este instrumento financiero, todavía hay mucha gente
+                        preguntándose cómo obtener dividendos en bienes raíces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Adquirir títulos sobre los inmuebles que administran las FIBRAs no es para nada difícil. Solo
+                        requiere de una serie de pasos que debe tomar cada inversionista para empezar a ver
+                        bonificaciones en su cartera financiera.</p>
+                    <h2>Como obtener rendimientos en bienes raíces, paso a paso</h2>
+
+
+                    <p>Lo primero que debes hacer para operar con FIBRAs es crear una cuenta en una casa de bolsa como
+                        la Bolsa Mexicana de Valores. Para esto es recomendable que compares comisiones, montos de
+                        apertura y las herramientas tecnológicas que emplean para facilitar la transacción de tus
+                        activos financieros.</p>
+                    <p>El segundo paso es realizar un depósito en dicha cuenta, según los montos especificados por tu
+                        casa de bolsa y según cuánto quieras invertir. Así podrás empezar a operar con ella.</p>
+                    <p>Aquí ya podrás empezar a comprar CBFIs, es decir los títulos que otorgan las FIBRAs para poder
+                        participar de la renta generada por las propiedades inmobiliarias. De esta manera podrás empezar
+                        a ver tus dividendos en bienes raíces.</p>
+                    <p>Se puede obtener CBFI de dos maneras: a través de una orden de compra emitida por un promotor o
+                        agente de bolsa, o desde una cuenta en línea, siempre y cuando la casa de bolsa disponga de una
+                        plataforma para ello.</p>
+                    <h2>¿Cómo se componen los dividendos en bienes raíces y cómo los recibo?</h2>
+                    <p>Es importante que sepas que los dividendos en bienes raíces se componen de dos elementos. Por un
+                        lado, los rendimientos que se distribuyen a todos los tenedores de CBFI a partir del pago de los
+                        alquileres y arrendamientos. Por otro lado está el rendimiento por la apreciación de los
+                        inmuebles, que se genera únicamente cuando se hace la venta de los títulos. Ambos conforman el
+                        rendimiento total que otorgan las FIBRAs.</p>
+                    <p>También debes saber que mientras poseas certificados de Fibra MTY, recibirás distribuciones
+                        mensuales en efectivo, que serán depositadas directamente en tu cuenta de inversión sin mediar
+                        otros trámites. Estas distribuciones conforman cerca del 80% del rendimiento total que obtendrás
+                        a través de las FIBRAs inmobiliarias.</p>
+                    <p>Con Fibra MTY, hoy mismo puedes empezar a generar dividendos en bienes raíces. Invertir en el
+                        mercado inmobiliario nunca fue tan fácil, solo es cuestión de tomar la decisión. </p>
+                    <p><a href="{% url 'index' %}">Consulta con nuestros expertos</a> para que te guíen en el proceso.
+                        También puedes consultar los
+                        indicadores de nuestras operaciones al día <a
+                                href="https://www.fibramty.com/propiedades#pindicadores">aquí</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

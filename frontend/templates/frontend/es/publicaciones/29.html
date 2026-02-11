@@ -1,0 +1,92 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>14 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/04.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Después de su lanzamiento en 2011, las FIBRAs en México impulsaron positivamente al mercado de
+                        los bienes raíces. Con un nuevo modelo de inversión, dieron la oportunidad de ofrecer mayor
+                        rentabilidad a los inversionistas con instrumentos de bajo riesgo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>La gran cualidad de las Fibras recae en que permitieron una gran inyección de dinero en
+                        diferentes segmentos inmobiliarios, tales como el industrial, comercial, hotelero y de
+                        oficinas. </p>
+                    <p>Esto significó, además, una profesionalización en la industria, subiendo los estándares de
+                        construcción y permitiendo una administración de los activos más competente. Para los
+                        inversionistas, la democratización de estos instrumentos de inversión amplió los márgenes de
+                        capitalización del sector y dio un paso más hacia la inclusión financiera.</p>
+                    <h2>10 años de FIBRAs en México</h2>
+                    <p>De acuerdo con el <a target="_blank" href="https://www.spglobal.com/spdji/es/indices/equity/sp-bmv-fibras-index/#overview">S&P/BMV FIBRAS Index</a>, las FIBRAs en México han tenido un rendimiento anualizado
+                        del 6.82% en los últimos diez años desde su lanzamiento en el mercado bursátil.</p>
+                    <p>En comparación con el S&P/BMV IPC (Índice de Precios y Cotizaciones) que mide el desempeño de las
+                        acciones de mayor tamaño y liquidez, y que registra un rendimiento anualizado en diez años de
+                        sólo 4.72%, las Fibras ofrecen una rentabilidad superior. </p>
+                    <p>Pero no sólo eso, actualmente las FIBRAs en México se posicionan como uno de los instrumentos de
+                        inversión más estables dentro del mercado bursátil. Esto se debe a la particularidad que tienen
+                        de recibir flujos constantes de dinero por sus compromisos de arrendamiento a mediano y largo
+                        plazo. </p>
+                    <p>A su vez, su esquema híbrido de ganancias ha permitido a los inversionistas generar ganancias en
+                        dos vías. La primera es mediante los dividendos generados por las rentas mensuales de los
+                        inmuebles, y la segunda por la compraventa de los CBFIs. </p>
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar:</strong>
+                            <a href="{% url 'noticia_9' %}">Invierte en propiedades a gran escala</a>
+                        </li>
+                    </ul>
+                    <h2>Un instrumento de inversión defensivo </h2>
+                    <p>En este punto, es fundamental mencionar a la contraparte norteamericana de las Fibras, los REITs
+                        (<a href="https://www.investopedia.com/terms/r/reit.asp" target="_blank">Real Estate Investment Trust</a>), los cuales durante la crisis del 2008 en EE. UU. fueron capaces
+                        de nadar contra marea en la caída de los precios de los títulos inmobiliarios. </p>
+                    <p>Con este antecedente, se puede asegurar que las FIBRAs en México tienen la cualidad de poder
+                        revertir la tendencia negativa que llegue a existir para el precio de los títulos dentro del
+                        mercado. </p>
+                    <p>Aunado a esto, la <a href="https://amefibra.com/conoce-las-fibras/porque-invertir-en-amefibra/" target="_blank">Asociación Mexicana de FIBRAs Inmobiliarias</a> (AMEFIBRA) indica que las FIBRAs
+                        apuntan a seguir siendo una de las estrategias de inversión con menor riesgo y mayor
+                        rentabilidad en el mercado bursátil.</p>
+                    <p>¿Quieres saber cómo Fibra MTY te ofrece un respaldo tangible y concreto en tu inversión? ¡Ingresa
+                        a nuestro <a href="{% url 'index' %}">sitio web</a>!</p>
+                    <p>O bien, síguenos en <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> – <a target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a> – <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a> para estar al tanto de lo que sucede con las
+                        FIBRAs. </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

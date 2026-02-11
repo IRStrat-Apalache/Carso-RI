@@ -1,0 +1,422 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">
+    <style>
+        
+    .bc-gray{
+        background-color: #E7E7E7;
+    }
+
+    .shadow{
+        box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .nav-tabs .nav-link.active {
+        box-shadow:0 -10px #fff;
+        border:none;
+        
+    }
+
+    .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+        border:none;
+    }
+
+    text{
+        font-size:15px !important;
+    }
+
+    /* Ajustar tamaño de imágenes y SVG para pantallas pequeñas */
+    .custom-img {
+        max-width: 80px; /* Ajustar el tamaño de la imagen */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Centrar el número de conteo dentro del círculo */
+    .count {
+        position: absolute;
+        top: 35%; /* Ajustar el posicionamiento vertical */
+        left: 5%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+        color: #000;
+    }
+
+    /* Responsive para dispositivos móviles */
+    @media (max-width: 576px) {
+        .honeycomb-path {
+            width: 120px; /* Reduce el tamaño del SVG para móviles */
+        }
+
+        .count {
+            font-size: 1rem; /* Ajusta el tamaño del conteo en móviles */
+            top: 40%; /* Asegura que no se solapen en pantallas pequeñas */
+            left: 20%;
+        }
+
+        .custom-img {
+            max-width: 60px; /* Reducir más el tamaño de la imagen en móviles */
+        }
+
+       
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <ul class="nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="trabajo-tab" data-toggle="tab" href="#trabajo" role="tab" aria-controls="trabajo" aria-selected="true">{% trans 'Equipo de trabajo' %}</a>
+                </li>
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="promocion-tab" data-toggle="tab" href="#promocion" role="tab" aria-controls="promocion" aria-selected="false">{% trans 'Promoción de la diversidad y equidad de oportunidades' %}</a>
+                </li>                    
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="capacitacion-tab" data-toggle="tab" href="#capacitacion" role="tab" aria-controls="capacitacion" aria-selected="false">{% trans 'Capacitación y desarrollo' %}</a>
+                </li>                    
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="salud-tab" data-toggle="tab" href="#salud" role="tab" aria-controls="salud" aria-selected="false">{% trans 'Salud y seguridad ocupacional' %}</a>
+                </li>                    
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="ppropiedades" class="">    
+    <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="trabajo" role="tabpanel" aria-labelledby="trabajo-tab">                 
+                <section id="equipo_trabajo" class="intro py-5">
+                    <article class="intro py-2 container">
+                        <h1 class="text-center tc-blue">
+                            Equipo de trabajo
+                        </h1>
+                        <p class="text-justify">
+                            En Fibra Educa, tenemos la convicción de generar valor a través de nuestros colaboradores, que son un pilar fundamental en nuestras operaciones, por lo que nos aseguramos de que cuenten con las condiciones necesarias para potenciar su rendimiento, en un entorno de trabajo colaborativo, inclusivo y profesional.
+                        </p>
+                        <div class="row mb-5">
+                            <div class="col-md-6 col-12" style="height:400px">
+                                <div id="chartdiv"></div>
+                            </div>
+                            <div class="col-md-6 col-12 text-center d-flex justify-content-center align-items-center" >
+                                <img src="{% static 'images/responsabilidad/resp.png' %}" style="width:600px;" />
+                            </div>
+                        </div>
+                        <h3 class="text-center tc-blue" style="margin-top:150px;">
+                            Encuesta de satisfacción laboral
+                        </h3>
+                        <p class="text-justify">
+                            Los resultados obtenidos por Fibra Educa indican que el 86.2% de sus colaboradores son promotores de la entidad y están satisfechos con la experiencia que han tenido en la entidad. 
+                        </p>
+                    </article>
+                </section>
+            </div>
+            
+            <div class="tab-pane fade" id="promocion" role="tabpanel" aria-labelledby="promocion-tab">
+                <section id="diversidad" class="intro py-5">
+                    <article class="intro py-2 container">
+                        <h1 class="text-center tc-blue">
+                            Promoción de la diversidad y equidad de oportunidades
+                        </h1>
+                        <p class="text-justify">
+                            En nuestra cultura corporativa, valoramos y respetamos la diversidad profesional, cultural y de
+                            género. Nos oponemos firmemente a toda forma de discriminación y nos enfocamos en fomentar el
+                            desarrollo personal basado en el talento, el carácter, la educación, el conocimiento, la disciplina
+                            y el esfuerzo, sin importar el género, la raza, la religión, la etnia o la orientación sexual.
+                        </p>
+                        <h3 class="text-center tc-blue mt-5" style="font-weight:bold;">
+                            Evaluación de colaboradores por género 
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chartGenero" style="width: 100%; height:500px;"></div>
+                            </div>
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chartGenero2" style="width: 100%; height:500px;"></div>
+                            </div>
+                        </div>   
+                    </article>
+                </section>                
+            </div>
+
+            <div class="tab-pane fade" id="capacitacion" role="tabpanel" aria-labelledby="capacitacion-tab">
+                     <section id="capacitacion" class="intro py-5">
+                        <article class="intro py-2 container">
+                            <h1 class="text-center tc-blue">
+                                Capacitación y desarrollo
+                            </h1>
+                            <p class="text-justify">
+                                Como reflejo de nuestro compromiso con los colaboradores, no solo nos dedicamos a promover su
+                                crecimiento profesional, sino también el personal de manera continua. Es por eso que ofrecemos
+                                capacitaciones adaptadas a las necesidades de sus roles para que siempre estén actualizados y puedan
+                                desempeñar sus funciones de manera óptima.
+                            </p>
+                            <p class="text-justify">
+                                Las capacitaciones impartidas durante este año estuvieron enfocadas en:
+                            </p>
+                        </article>
+                        <div class="container-fluid px-0">
+                            <div id="carousel" class="owl-carousel owl-theme h-100 py-5 px-0" style="background-color: #3461B2">
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/reestructuras.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Reestructuras corporativas
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/idiomas.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Idiomas
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/notarial.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Derecho notarial
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/fiscal.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Derecho fiscal
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/fideicomiso.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Cursos especializados en fideicomisos
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/cienciadatos.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Talleres en ciencia de datos
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/analisis.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Análisis de información financiera
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/asg.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Temas relacionados con ASG
+                                    </h5>
+                                </div>
+                                <div class="item">
+                                    <img class="mb-3 mx-auto" src="{% static 'images/responsabilidad/excel.png' %}"
+                                        style="width: 140px !important;" alt="">
+                                    <h5 class="text-center text-white">
+                                        Cursos de Excel
+                                    </h5>
+                                </div>
+
+                            </div>
+                        </div>
+                        <article>
+                            <div id="colaboradores_genero" class="wow fadeInRight pt-3 pb-3 finn-counto"
+                                style="visibility: visible;">
+                                <div class="container">
+                                    <h3 class="text-center font-weight-bold text-uppercase" style="color: #555; font-weight: 700">
+                                        Horas de capacitación por género
+                                    </h3>
+                                    <div class="row honeycomb-wrapper justify-content-center">
+                                        <div id="circ-wom" class="col-md-3 col-lg-2 col-12 m-4 tile">
+                                            <div class="honeycomb women">
+                                                <svg class="honeycomb-path honeycomb-1 honeycomb-animated" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 160 160">
+                                                    <circle cx="80" cy="80" r="66" stroke-width="10" fill="none"></circle>
+                                                </svg>
+                                                <h2 class="count" data-speed="1500" data-to="210" data-in-viewport="yes" data-decimals="0" data-porcent="1">0</h2>
+                                                <div class="content">
+                                                    <span class="title-effect ">
+                                                        <img class="img-fluid custom-img" src="{% static 'images/responsabilidad/ara_women.png' %}">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-lg-2 col-12 m-4 tile">
+                                            <div class="honeycomb men">
+                                                <svg class="honeycomb-path honeycomb-1 honeycomb-animated" xmlns="http://www.w3.org/2000/svg" width="150" viewBox="0 0 160 160">
+                                                    <circle cx="80" cy="80" r="66" stroke-width="10" fill="none" class="circle-custom"></circle>
+                                                </svg>
+                                                <h3 class="count" data-speed="1500" data-to="372" data-in-viewport="yes" data-decimals="0">0</h3>
+                                                <div class="content">
+                                                    <span class="title-effect ">
+                                                        <img class="img-fluid custom-img" src="{% static 'images/responsabilidad/ara_men.png' %}">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </article>
+                    </section>         
+            </div>
+
+            <div class="tab-pane fade" id="salud" role="tabpanel" aria-labelledby="salud-tab">
+                <section id="salud_seguridad2" class="content-wrap s-block parallax"
+                        style="background-image: url({% static 'images/responsabilidad/murano_header4.png' %})">
+                    <div class="container">
+                        <h1 class="text-center text-white">
+                            Salud y seguridad ocupacional
+                        </h1>
+                        <p class="text-justify text-white">
+                            Como parte de nuestro compromiso con el bienestar de nuestros colaboradores, ofrecemos espacios
+                            laborales caracterizados por su seguridad, que van más allá de los reglamentos oficiales en materia
+                            de salud y seguridad.
+                        </p>
+                        <p class="text-justify text-white">
+                            Además de cubrir al 100% de los colaboradores a través de nuestro sistema de gestión en salud y
+                            seguridad ocupacional, hemos establecido procedimientos estandarizados para identificar riesgos y
+                            peligros asociados con las labores realizadas.
+                        </p>
+                        <h3 class="text-center font-weight-bold text-white">
+                            Ruta del bienestar
+                        </h3>
+                        <p class="text-justify text-white">
+                            Es una herramienta en la plataforma digital “Cuéntame” destinada a estimular la salud emocional de
+                            todos nuestros colaboradores, y a mitigar el agotamiento laboral a través de webinars, foros,
+                            artículos, sesiones de meditación y terapia en línea. Asimismo, incluye una evaluación inicial del
+                            nivel de estrés y ofrece diversas estrategias para reducirlo o manejarlo eficazmente en el entorno
+                            laboral
+                    </div>
+                </section>              
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/genero.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/social.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+
+
+    <script>
+        // Llamar a la función para crear la gráfica
+        createCollaboratorsChart("chartdiv");
+    </script>
+
+    <script>
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // Recorre los elementos con la clase .finn-counto y los inicializa de nuevo
+            $('.finn-counto').each(function () {
+                finn_waypoint('#' + $(this).attr('id'));
+                finn_counto('#' + $(this).attr('id'));
+            });
+
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            items: 4,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 15,
+                    autoplay: true,
+                },
+                768: {
+                    items: 4,
+                    margin: 15,
+                },
+                1024: {
+                    items: 4,
+                    margin: 15,
+                }
+            }
+
+        });
+
+        
+
+        function finn_waypoint(elemento) {
+            var waypoint = new Waypoint({
+                element: $(elemento),
+                handler: function (direction) {
+                    $(elemento + ' .count').trigger('on-appear');
+                },
+                offset: '75%',
+                triggerOnce: true
+            });
+        }
+        
+        function finn_counto(elemento) {
+            if ($().countTo) {
+                $(elemento + ' .count').on('on-appear', function () {
+                    $(elemento + ' .honeycomb-path.honeycomb-1').addClass('honeycomb-animated');
+        
+                    $(this).each(function () {
+                        var to = parseFloat($(this).data('to')),
+                            speed = parseInt($(this).data('speed')),
+                            decimals = parseInt($(this).data('decimals'));
+        
+                        $(this).countTo({
+                            to: to,
+                            speed: speed, // Corregido de "speen" a "speed"
+                            decimals: decimals,
+                            formatter: function (value, options) {
+                                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                            },
+                            onComplete: function (value) {
+                                if (value === 1.9)
+                                    return this.innerHTML += '%';
+                            }
+                        });
+                    });
+                });
+            }
+        }
+        
+        // Inicializar Waypoints y conteos para cada elemento
+        $(document).ready(function () {
+            // Aplica la funcionalidad a los elementos que contienen los contadores
+            finn_waypoint('.honeycomb.women');
+            finn_counto('.honeycomb.women');
+        
+            finn_waypoint('.honeycomb.men');
+            finn_counto('.honeycomb.men');
+        });
+    </script>
+    
+{% endblock %}

@@ -1,0 +1,210 @@
+{% load static i18n change_languaje %}
+
+{% block otherstyles %}
+    <style>
+/* 1) Bloquea la herencia de subrayado en todo el menú */
+#main-nav li,
+#main-nav li * {
+  text-decoration: none !important;
+}
+/* Subrayar solo el link activo */
+#main-nav a.sub-active {
+  text-decoration: none !important;
+}
+
+/* 2) Comportamiento deseado: solo el link interactuado se subraya */
+#main-nav a:hover,
+#main-nav a:focus-visible {
+  text-decoration: underline;
+}
+
+
+
+/* Opcional: accesibilidad sin subrayar todo */
+#main-nav a:focus-visible {
+  outline: 2px solid #62D482;
+  outline-offset: 2px;
+}
+
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0) !important; /* fondo normal */
+        }
+
+        /* Clase para hacerlo transparente al hacer scroll */
+        #header.sticky {
+            background-color: rgba(255, 255, 255, 0.047) !important; /* blanco semitransparente */
+            backdrop-filter: blur(8px); /* difumina el fondo detrás si se quiere efecto glass */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sutil sombra */
+        }
+
+
+        .lang-switcher a,
+        .lang-switcher span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            background-color: #23356B;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .lang-switcher a:hover {
+            background-color: #23356B;
+        }
+
+        .lang-switcher .active-lang {
+            opacity: 0.4; /* Más transparente */
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) and (max-width: 1500px) {
+            #scroll-logo,
+            #light-logo {
+                max-width: none !important;
+                width: 120px !important; /* Ajusta según el tamaño deseado */
+                height: 60px !important; /* Ajusta según el tamaño deseado */
+                font-size:
+            }
+
+            #main-nav > ul > li {
+                margin: 0px 0px 0px 20px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #scroll-logo,
+            #light-logo {
+                padding-top: 30px;
+                height: 80px !important;
+
+            }
+
+            #open-menu {
+                padding-top: 30px !important;
+            }
+
+
+        }
+
+        @media (min-width: 768px) and (max-width: 1280px) {
+            #lenguage-ops {
+                padding: 0 10px;
+                margin-left: 5px;
+                flex-shrink: 0; /* No dejar que se colapse */
+            }
+
+            .lang-switcher a,
+            .lang-switcher span {
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                font-size: 13px;
+            }
+
+            #all-menu {
+                flex-grow: 1;
+                min-width: 0; /* Permitir que el menú se ajuste */
+            }
+
+            .lang-switcher {
+                gap: 4px;
+            }
+        }
+
+
+        .sub-active {
+            text-shadow: black 1px 1px 10px !important;
+        }
+    </style>
+{% endblock %}
+
+<header id="header">
+    <div class="header-inner d-flex justify-content-between">
+        <div id="logo" class="left-float d-flex align-items-center">
+            <a href="{% url 'index' %}" style="display: flex; height: 70px;">
+                <img id="scroll-logo" src="{% static 'images/fDF/logo-verde.png' %}"
+                     alt="Logo Scroll" style="width: 100%;"/>
+                <img id="light-logo" src="{% static 'images/fDF/logo-verde.png' %}"
+                     alt="Logo Light" style="width: 100%; "/>
+            </a>
+        </div>
+        <div id="all-menu" class="d-flex align-items-center">
+            <div id="menu" style="width:10%">
+                <div class="menu-inner">
+                    <nav id="main-nav">
+                        <ul class="d-flex justify-content-between align-items-center">
+                            <li class="dropbtn">
+                                <a class="sub-active" href="{% url 'nosotros' %}"
+                                data-target=".portafolio" style="color: white !important;">
+                                {% trans 'Portafolio' %}
+                                </a>
+                            </li>
+                            
+
+                            <li class="dropbtn">
+                                <a class="sub-active" href="javascript:void(0)"
+                                   style="color: white !important;">{% trans 'Inversionistas' %}</a>
+                                <ul class="dropup-content pl-0">
+                                    <li>
+                                        <a href="{% url 'cdks' %}"
+                                           class="list-group-item-action2">{% trans 'CKDs Administrados' %}</a></li>
+
+                                    <li>
+                                        <a href="{% url 'fundamentales' %}"
+                                           class="list-group-item-action2">{% trans 'Fundamentales' %}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropbtn">
+                                <a class="sub-active " href="{% url 'gobierno-corporativo' %}"
+                                   data-target=".gobierno" style="color: white !important;">{% trans 'Gobierno Corporativo' %}</a>
+                            </li>
+                            <li class="dropbtn">
+                                <a class="sub-active " href="https://fondodefondos-esg.investorcloud3.net/es/"
+                                   data-target=".gobierno" style="color: white !important;">{% trans 'ASG' %}</a>
+                            </li>
+
+
+                            <li class="dropbtn">
+                                <a class="sub-active" href="{% url 'contacto' %}"
+                                   data-target=".contacto" style="color: white !important;">{% trans 'Contacto' %}</a>
+
+                            </li>
+
+                               <li class="dropbtn">
+                                <a class="sub-active" href="{% url 'noticias' %}"
+                                   data-target=".noticias" style="color: white !important;">{% trans 'Noticias' %}</a>
+
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div id="open-menu" class="p-3 d-none align-items-center">
+            <button type="button" class="menu-btn">
+            </button>
+        </div>
+    </div>
+ 
+</header>

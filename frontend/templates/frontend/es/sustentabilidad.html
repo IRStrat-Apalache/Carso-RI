@@ -1,0 +1,813 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section>
+        <div class="parallax" style="background-image: none;">
+            <div class='container paramargin1'>
+                <div class="calloutbox row m-0 d-flex align-items-center justify-content-between">
+                    <div class="">
+                        <div class="d-flex align-items-center"><i class="fa fa-2x fa-file-pdf-o mr-3"></i>
+                            <h4 class="mb-0">Informe de Sustentabilidad 2022</h4></div>
+                    </div>
+                    <div class="mx-auto mt-4 mx-xl-0 mt-xl-0">
+                        <a href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/2023-10-13-ESG-2022-ES.pdf"
+                           class="pull-right btn bg-black pl-4 pr-4 text-white" target="_blank"><i
+                                class="fa fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s-block bg-gray-finn">
+        <div class="container-fluid container-relative text-dark">
+
+            <div class="row d-flex align-items-center">
+                <div class="col-md-5">
+                    <div class="wow fadeInLeft mb-5 mb-md-0 shine" data-wow-duration="1.5s">
+                        <figure><img src="{% static 'images/portada/asg.jpg' %}"></figure>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 sustentable">
+                    <h1 class="wow fadeInUp texto-cenizo" data-wow-duration="2s" data-wow-delay="0.2s">
+                        Las mejores prácticas
+                    </h1>
+                    <br>
+                    <h2>Como propósito, Fibra Mty busca trascender como una empresa que constantemente busca implementar
+                        las mejores prácticas en gestión sustentable, generando un impacto positivo en el entorno
+                        socioeconómico en el que opera, así como en sus diferentes grupos de interés a través de
+                        relaciones confiables. </h2>
+                    <br>
+                    <h2>La sustentabilidad y responsabilidad en aspectos ambientales, sociales y de gobernanza son
+                        inherentes a nuestra filosofía, nuestro ADN y nuestra visión de largo plazo.</h2>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#    <section class="s-block">#}
+    {#        <div class="container-fluid container-relative text-dark">#}
+    {#            <div class="row d-flex align-items-center">#}
+    {#                <div class="col-md-6 sustentable">#}
+    {#                    <h1 class="wow fadeInUp texto-cenizo" data-wow-duration="2s" data-wow-delay="0.2s">#}
+    {#                        Una estrategia permanente#}
+    {#                    </h1>#}
+    {#                    <br>#}
+    {#                    <h2>Fibra Mty ha adoptado la sustentabilidad como una estrategia permanente, buscando identificar#}
+    {#                        los temas#}
+    {#                        materiales del negocio para impactar positivamente no solamente a sus colaboradores sino a#}
+    {#                        toda su cadena de#}
+    {#                        valor y grupos de interés, lo cual tendrá como efecto, entre otros, el fortalecimiento de la#}
+    {#                        resiliencia de#}
+    {#                        la organización y la maximización de la rentabilidad para sus inversionistas en el largo#}
+    {#                        plazo. </h2>#}
+    {#                    <br>#}
+    {#                    <h2>Con el#}
+    {#                        tiempo, continuaremos demostrando nuestro compromiso y capacidad para llevar a cabo nuestro#}
+    {#                        negocio de forma#}
+    {#                        consistente con estos principios, contribuyendo además a mejorar los resultados del negocio#}
+    {#                        en beneficio de#}
+    {#                        nuestros colaboradores, inversionistas, clientes y grupos de interés.</h2>#}
+    {#                </div>#}
+    {#                <div class="col-md-1"></div>#}
+    {#                <div class="col-md-5">#}
+    {#                    <div class="wow fadeInRight shine mb-0 mt-3 mt-md-0" data-wow-duration="1.5s">#}
+    {#                        <figure class="mb-0"><img src="{% static 'images/sustentabilidad/esg2.jpg' %}"></figure>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+
+    <section class="s-block bg-gray-finn" id="politica-sustentabilidad">
+        <div class="container-fluid container-relative text-dark">
+
+            <div class="row d-flex align-items-center">
+                <div class="col-md-12 sustentable">
+                    <h1 class="wow fadeInUp texto-cenizo text-center" data-wow-duration="2s" data-wow-delay="0.2s">
+                        Política de Sustentabilidad
+                    </h1>
+                    <br>
+                    <p class="mb-5">Contribuir continuamente al bienestar y satisfacción de nuestros colaboradores y sus
+                        familias,
+                        inquilinos, inversionistas, socios económicos y comunidades de las regiones donde tenemos
+                        presencia, mediante el arrendamiento de bienes inmuebles fiables, sustentables, resilientes y de
+                        calidad, basados en: el respeto a la dignidad humana, el desarrollo profesional y personal de
+                        nuestros asociados, la mejora continua en el desempeño de nuestras actividades, la mitigación
+                        del impacto ambiental de nuestros activos y el equilibrio en el uso de los recursos económicos,
+                        sociales y medioambientales, preservándolos para las futuras generaciones.</p>
+                    <div class="btns-wrap">
+                        <a href="#" class="btn" data-toggle="modal" data-target="#modalPoliticaSustentabilidad">Conozca
+                            nuestros compromisos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalPoliticaSustentabilidad" tabindex="-1"
+         aria-labelledby="modalPoliticaSustentabilidadLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nuestros compromisos son:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Dimensión Económica.</p>
+                    <p class="pl-3 underline">Gobierno Corporativo.</p>
+                    <ol>
+                        <li>a. Asegurar que el Fideicomiso es administrado en el interés de todos los Tenedores.</li>
+                        <li>b. Establecer controles y vigilancia para consolidar el desempeño corporativo, económico,
+                            ambiental y social acorde con el Código de Ética, la adopción de las mejores prácticas y el
+                            cumplimiento con la normatividad aplicable.
+                        </li>
+                        <li>c. Gestionar efectivamente los riesgos y oportunidades en el contexto en el que operamos.
+                        </li>
+                        <li>d. Promover una cultura en contra de la corrupción en todas sus formas, incluidas la
+                            extorsión, el soborno y el lavado de dinero.
+                        </li>
+                        <li>e. Rendir cuentas a las partes interesadas en una base regular y transparente.</li>
+                    </ol>
+                    <p class="pl-3 underline">Inversión Responsable.</p>
+                    <ol>
+                        <li>a. Incorporar asuntos ambientales, sociales y de gobierno corporativo (ASG) en los análisis
+                            de inversión y en los procesos de toma de decisiones.
+                        </li>
+                        <li>b. Ser propietarios activos e incorporar asuntos ASG en nuestras prácticas y políticas de
+                            propiedad.
+                        </li>
+                        <li>c. Procurar una divulgación adecuada de los asuntos ASG de nuestras inversiones.</li>
+                        <li>d. Promover la aceptación e implementación de los Principios de Inversión Responsable.</li>
+                        <li>e. Trabajar en conjunto para mejorar la eficacia en la aplicación de los Principios de
+                            Inversión Responsable
+                        </li>
+                        <li>f. Emitir informes sobre nuestras actividades y progreso con respecto a la aplicación de los
+                            Principios de Inversión
+                            Responsable.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Clientes.</p>
+                    <ol>
+                        <li>a. Satisfacer las necesidades de nuestros inquilinos con calidad, oportunidad y
+                            eficiencia.
+                        </li>
+                        <li>b. Mejorar continuamente la eficiencia y la eficacia de nuestros procesos.</li>
+                        <li>c. Generar valor con nuevos servicios y procesos, a través del cambio, la innovación y la
+                            gestión del conocimiento.
+                        </li>
+                        <li>d. Usar herramientas de mercadotecnia responsable observando los principios éticos de
+                            respeto a los consumidores, comunidad y al medio ambiente.
+                        </li>
+                        <li>e. Colaborar con nuestros inquilinos para impulsar prácticas de ahorro de energía y agua,
+                            reducir costos y potencializar el cumplimiento a nuestras metas de sustentabilidad
+                            corporativa.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Cadena de Suministro.</p>
+                    <ol>
+                        <li>a. Gestionar relaciones comerciales mutuamente beneficiosas con proveedores.</li>
+                        <li>b. Aplicar el Código de Conducta para Proveedores y asegurar su cumplimiento.</li>
+                        <li>c. Involucrar a la cadena de valor en el cumplimiento de los estándares de ética, calidad,
+                            gobierno corporativo, ciberseguridad, ambientales y sociales.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Ciberseguridad.</p>
+                    <ol>
+                        <li>a. Garantizar los mecanismos para sistemáticamente identificar amenazas y proteger la
+                            información del Fideicomiso, respondiendo por su integridad, confidencialidad y
+                            disponibilidad.
+                        </li>
+                        <li>b. Proteger la privacidad en la gestión de datos personales.</li>
+                        <li>c. Garantizar la continuidad del negocio mediante la mitigación de los impactos a los
+                            activos por potenciales incidentes relacionados a la seguridad de la información y
+                            privacidad de datos personales.
+                        </li>
+                    </ol>
+
+                    <p>Dimensión Ambiental.</p>
+                    <ol>
+                        <li>a. Establecer un sistema de gestión con enfoque preventivo para favorecer el cuidado del
+                            medio ambiente en la realización de nuestras actividades.
+                        </li>
+                        <li>b. Promover los valores y difundir las mejores prácticas ambientales a las partes
+                            interesadas.
+                        </li>
+                        <li>c. Establecer objetivos para prevenir la contaminación al medio ambiente.</li>
+                        <li>d. Favorecer la reutilización, recuperación y reciclaje de materiales, así como el
+                            desarrollo y la difusión de las tecnologías respetuosas con el medio ambiente.
+                        </li>
+                        <li>e. Mitigar el impacto ambiental de nuestras propiedades en materia de agua, aire, suelo,
+                            biodiversidad, ruido, residuos, energía y emisiones.
+                        </li>
+                        <li>f. Mejorar el desempeño energético, incluyendo la eficiencia energética, uso y consumo.</li>
+                        <li>g. Fortalecer la resiliencia y la capacidad de adaptación de nuestros activos a los riesgos
+                            relacionados con el cambio climático y los desastres naturales.
+                        </li>
+                        <li>h. Capacitar a nuestros colaboradores acerca del impacto que sus actividades laborales
+                            tienen sobre el medio ambiente.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Biodiversidad.</p>
+                    <ol>
+                        <li>a. Prevenir los impactos a la biodiversidad derivados de nuestras operaciones.</li>
+                        <li>b. Informar a los colaboradores sobre la importancia y beneficios de la protección y
+                            conservación de la biodiversidad en las propiedades y áreas de influencia.
+                        </li>
+                        <li>c. Colaborar con organizaciones externas y dependencias gubernamentales para la
+                            conservación, restablecimiento y el uso sostenible de áreas de importancia ecológica.
+                        </li>
+                        <li>d. Integrar los valores de los ecosistemas y la diversidad biológica en la planificación de
+                            nuestro portafolio de activos.
+                        </li>
+                    </ol>
+
+                    <p>Dimensión Social.</p>
+                    <ol>
+                        <li>a. Operar en un marco de responsabilidad social y ciudadanía corporativa.</li>
+                        <li>b. Colaborar en la generación de dinámicas sociales positivas entre nuestros grupos de
+                            interés.
+                        </li>
+                        <li>c. Apoyar a causas que tengan un impacto positivo en las comunidades en donde tenemos
+                            presencia.
+                        </li>
+                        <li>d. Implementar las medidas pertinentes para asegurar el acceso de las personas con
+                            discapacidad, en igualdad de condiciones con las demás, a nuestras propiedades y servicios.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Derechos Humanos.</p>
+                    <ol>
+                        <li>a. Apoyar y respetar los derechos humanos fundamentales reconocidos internacionalmente y
+                            evitar ser cómplices en la vulneración de estos.
+                        </li>
+                        <li>b. Respetar la diversidad y promover la igualdad de oportunidades.</li>
+                    </ol>
+                    <p class="pl-3 underline">Prácticas Laborales.</p>
+                    <ol>
+                        <li>a. Fomentar un clima laboral que contribuya a mejorar la calidad de vida de los
+                            colaboradores.
+                        </li>
+                        <li>b. Apoyar la eliminación de toda forma de trabajo forzoso y la erradicación del trabajo
+                            infantil.
+                        </li>
+                        <li>c. Promover la inclusión laboral de personas con discapacidad.</li>
+                        <li>d. Desarrollar las competencias de los colaboradores para impulsar la eficacia individual y
+                            grupal.
+                        </li>
+                        <li>e. Capacitar a nuestros colaboradores en los principios de calidad, seguridad y salud en el
+                            trabajo, ciberseguridad, medio ambiente, cambio climático y responsabilidad social, para
+                            incentivar nuestro desarrollo sustentable.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Seguridad y Salud en el Trabajo.</p>
+                    <ol>
+                        <li>a. Proporcionar condiciones de trabajo seguras y saludables para la prevención de lesiones y
+                            deterioro de la salud relacionados con el trabajo.
+                        </li>
+                        <li>b. Establecer objetivos para prevenir los riesgos laborales que nos permitan alcanzar la
+                            meta de cero accidentes de trabajo y cero enfermedades profesionales.
+                        </li>
+                        <li>c. Eliminar los peligros y reducir los riesgos para la seguridad y salud en el trabajo.</li>
+                        <li>d. Fomentar la consulta y participación de los colaboradores en los temas relacionados a la
+                            seguridad y salud en el trabajo.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Comunidad Aledaña.</p>
+                    <ol>
+                        <li>a. Colaborar para el desarrollo socioeconómico de las comunidades aledañas a nuestras
+                            operaciones.
+                        </li>
+                    </ol>
+                    <p class="pl-3 underline">Vinculación con Partes Interesadas:</p>
+                    <ol>
+                        <li>a. Adoptar un enfoque sistemático de participación con las partes interesadas.</li>
+                        <li>b. Fortalecer las relaciones, prevenir riesgos reputacionales y favorecer la colaboración
+                            fluida con los individuos y organismos pertinentes.
+                        </li>
+                        <li>c. Establecer alianzas que propicien el intercambio de conocimientos con nuestros pares y
+                            otros actores del sector, así como la coordinación de capacidades, medios y recursos para
+                            robustecer el desempeño económico, social y ambiental de los involucrados.
+                        </li>
+                        <li>d. Participar activamente en la difusión de los principios y mejores prácticas sustentables,
+                            para impulsar acciones que propicien el cuidado del medio ambiente, el compromiso social y
+                            la generación de prosperidad.
+                        </li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">{% trans 'Cerrar' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="s-block" id="pacto-mundial">
+        <div class="container-fluid container-relative text-dark">
+
+            <div class="row d-flex align-items-center">
+                <div class="col-md-5">
+                    <div class="wow fadeInLeft mb-5 mb-md-0 shine" data-wow-duration="1.5s">
+                        <figure><img src="{% static 'images/sustentabilidad/un-global-compact-esp.png' %}"></figure>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 sustentable">
+                    <h1 class="wow fadeInUp texto-cenizo" data-wow-duration="2s" data-wow-delay="0.2s">
+                        Pacto Mundial de las Naciones Unidas
+                    </h1>
+                    <br>
+                    <h2>Fibra MTY es participante del Pacto Mundial que promueve la Organización de las Naciones Unidas
+                        (O.N.U.). </h2>
+                    <br>
+                    <h2>El Pacto Mundial es una alianza internacional voluntaria de empresas y organizaciones que
+                        promueve la adopción de sus Diez Principios en cuatro áreas: <br> <br>
+                        • Derechos humanos <br>
+                        • Condiciones laborales <br>
+                        • Medio ambiente <br>
+                        • Transparencia y lucha anticorrupción
+                    </h2>
+
+                    <div class="">
+                        <h2>Consulta nuestra Comunicación del Progreso <a class="btn bg-black" target="_blank"
+                                                                          href="https://cop.unglobalcompact.org/view/9292">aquí</a>
+                        </h2>
+
+                        {#                        <figure><img src="{% static 'images/sustentabilidad/finnqr.png' %}"></figure>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="informes"></div>
+    </section>
+
+    <section class="s-block bg-gray-finn" id="estrategia-cambio-climatico">
+        <div class="container-fluid container-relative text-dark">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 sustentable text-center">
+                    <h1 class="wow fadeInUp texto-cenizo" data-wow-duration="2s" data-wow-delay="0.2s">
+                        Estrategia ante el Cambio Climático
+                    </h1></div>
+                <div class="col-md-6 sustentable">
+                    <br>
+                    <h2>El cambio climático y la estrategia para enfrentarlo son aspectos relevantes para asegurar la
+                        continuidad en la operación de Fibra Mty a largo plazo.
+                    </h2>
+                    <br>
+                    <h2>El incremento en la severidad e intensidad de los efectos del cambio climático representan un
+                        riesgo potencial en diversos grados para la mayoría de las industrias, por lo que en Fibra Mty
+                        nos enfrentamos a la necesidad de diseñar estrategias acordes con la escala del desafío para el
+                        sector de bienes raíces.
+                    </h2>
+                    <br>
+                    <h2>Nuestra estrategia ante el cambio climático se centra en tres líneas de acción:</h2>
+                    <ul class="pl-3">
+                        <li>Acelerar la reducción de las emisiones de GEI derivadas de nuestra operación.</li>
+                        <li>Promover prácticas de arrendamiento verde para impulsar el ahorro de energía y agua con
+                            nuestros inquilinos.
+                        </li>
+                        <li>Desarrollar un plan de acción para mitigar los riesgos relacionados con el cambio climático
+                            que integre:
+                            <ul>
+                                <li>La identificación de los riesgos físicos, sociales y de transición.</li>
+                                <li>La evaluación del nivel de vulnerabilidad de nuestros inmuebles ante riesgos
+                                    derivados del cambio climático tales como:
+                                    <ul>
+                                        <li>Sequía</li>
+                                        <li>Calor extremo</li>
+                                        <li>Lluvias extremas e inundaciones</li>
+                                        <li>Incendios</li>
+                                    </ul>
+                                </li>
+                                <li>La propuesta de acciones para la prevención, mitigación y respuesta a cada uno de
+                                    los riesgos identificados.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="wow fadeInRight shine mb-0 mt-3 mt-md-0" data-wow-duration="1.5s">
+                        <figure class="mb-0"><img src="{% static 'images/sustentabilidad/cambio-climatico.jpg' %}">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="parallax" style="background-image: url({% static 'images/portada/wh2parallax.jpg' %})">
+            <div class='container text-white paramargin1'>
+                <div class="calloutbox row m-0 d-flex align-items-center justify-content-between mb-5">
+                    <div class="">
+                        <div class="d-flex align-items-center"><i class="fa fa-2x fa-file-pdf-o mr-3"></i>
+                            <h4 class="mb-0">Descarga nuestro Informe de Sustentabilidad 2020 </h4></div>
+                    </div>
+                    <div class="mx-auto mt-4 mx-xl-0 mt-xl-0">
+                        <a href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/2021-07-12-ESG-2020.pdf"
+                           class="pull-right btn btn-transparent" target="_blank"><i class="fa fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+                <div class="calloutbox row m-0 d-flex align-items-center justify-content-between mb-5">
+                    <div class="">
+                        <div class="d-flex align-items-center"><i class="fa fa-2x fa-file-pdf-o mr-3"></i>
+                            <h4 class="mb-0">Descarga nuestro Informe de Sustentabilidad 2021 </h4></div>
+                    </div>
+                    <div class="mx-auto mt-4 mx-xl-0 mt-xl-0">
+                        <a href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/2022-11-11-ESG-2021-ES.pdf?v=1"
+                           class="pull-right btn btn-transparent" target="_blank"><i class="fa fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+                <div class="calloutbox row m-0 d-flex align-items-center justify-content-between">
+                    <div class="">
+                        <div class="d-flex align-items-center"><i class="fa fa-2x fa-file-pdf-o mr-3"></i>
+                            <h4 class="mb-0">Descarga nuestro Informe de Sustentabilidad 2022 </h4></div>
+                    </div>
+                    <div class="mx-auto mt-4 mx-xl-0 mt-xl-0">
+                        <a href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/2023-10-13-ESG-2022-ES.pdf"
+                           class="pull-right btn btn-transparent" target="_blank"><i class="fa fa-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5 sustentabilidad-hover s-block" id="reconocimientos">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-lg-12 mb-30 mt-5 pitch1">
+                    <h1 class="text-center mb-4">Certificaciones y Reconocimientos</h1>
+                    <br></br>
+                </div>
+
+                {#                <div class="col-12">#}
+                {#                    <p class="underline">Certificación LEED:</p>#}
+                {#                </div>#}
+            </div>
+            <div class="row m-0 d-flex align-items-center mb-5">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="{% static 'images/sustentabilidad/LEED_2017_SILVER.png' %}" alt="">
+                </div>
+                <div class="col-md-7">
+                    <p>El edificio PATRIA 888 es un espacio de oficinas de 7,750 m2. Obtuvo la Certificación LEED BD+C
+                        Core and Shell en Noviembre 2017. Su certificado está disponible en <a target="_blank"
+                                                                                               href="https://www.usgbc.org/projects/patria-888">Patria
+                            888 | U.S. Green Building
+                            Council (usgbc.org)</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row m-0 d-flex align-items-center mb-5 pt-5">
+                <div class="col-md-7">
+                    <p>Al obtener exitosamente esta certificación ecológica emitida por el <i>Green Business
+                        Certification
+                        Inc.</i> (GBCI) y promovida por la Corporación Financiera Internacional (IFC por sus siglas en
+                        inglés), miembro del Grupo Banco Mundial, Fibra Mty se convierte en la primera FIBRA en México
+                        en alcanzar dicha certificación para la sede corporativa de la empresa.
+                    </p>
+                    <p>El certificado está disponible en <a
+                            href="https://edgebuildings.com/project-studies/fibra-mty-offices/" target="_blank">Fibra
+                        MTY Oficinas - Edificios EDGE
+                        (edgebuildings.com)</a>
+                    </p>
+                </div>
+                <div class="col-md-4 offset-md-1 text-center mt-4 mt-md-0">
+                    <img src="{% static 'images/sustentabilidad/edge.jpeg' %}" alt="">
+                </div>
+            </div>
+            <div class="row m-0 d-flex align-items-center pt-5">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <img src="{% static 'images/sustentabilidad/GreenLease-silver-CMYKgreen.png' %}" alt="">
+                </div>
+                <div class="col-md-7">
+
+                    <p>En mayo 2022 recibimos el reconocimiento Green Lease Leaders nivel plata
+                        otorgado por el Instituto para la Transformación del Mercado (Institute for Market
+                        Transformation) y la Alianza para Mejores Edificios (Better Buildings Alliance), del
+                        Departamento de Energía de Estados Unidos.
+                    </p>
+                    <p>El certificado está disponible en <a
+                            href="https://www.greenleaseleaders.com/2022-green-lease-leader-recipients/"
+                            target="_blank">2022 Green Lease Leader Recipients - Green Lease Leaders
+                        (greenleaseleaders.com)</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-5 sustentabilidad-hover s-block" id="politicas-lineamientos">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-lg-12 mb-30 mt-5  pitch1">
+                    <h1 class="text-center mb-4">Políticas y Lineamientos</h1>
+                    <br></br>
+                </div>
+
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/1_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/codigo-de-etica-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece las normas básicas y estándares éticos que guían las
+                                acciones
+                                y el comportamiento de los colaboradores de Fibra Mty y de las personas que interactúen
+                                con
+                                éstos.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/2_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/codigo-de-conducta-proveedores-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece las normas básicas y estándares éticos que guían las
+                                acciones y el
+                                comportamiento de los proveedores con los que Fibra Mty establezca relaciones
+                                comerciales o de negocio.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/3_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-anticorrupcion-y-antisoborno-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece los principios bajo los cuales Fibra Mty asegura el
+                                cumplimiento de la legislación y normatividad aplicables en materia de anticorrupción y
+                                antisoborno tanto en México como en cualquier otro país en la que tengamos actividad.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/4_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-DDHH-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece el compromiso de Fibra Mty de procurar y respetar los
+                                principios universales en materia de derechos humanos reconocidos bajo estándares
+                                internacionales.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/5-es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-diversidad-CT-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece las bases para promover la diversidad y la no
+                                discriminación
+                                dentro del Comité Técnico de Fibra Mty.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/6_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-de-filantropia-corporativa-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece los lineamientos y procedimientos para apoyar a distintas
+                                causas que promuevan y/o tengan un impacto positivo en las comunidades en donde tenemos
+                                presencia.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+												<span class="thumb-info-wrapper h-100">
+													<img src="{% static 'images/sustentabilidad/7_es.jpg' %}"
+                                                         class="img-fluid h-100"
+                                                         alt="">
+
+												</span>
+											</span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-medio-ambiente-y-biodiversidad-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece el compromiso de Fibra Mty de procurar y respetar el medio
+                                ambiente, los recursos naturales y la biodiversidad en el entorno en el que opera.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+                        <span class="thumb-info-wrapper h-100">
+                          <img src="{% static 'images/sustentabilidad/8_es.jpg' %}"
+                               class="img-fluid h-100"
+                               alt="">
+
+                        </span>
+                      </span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-contra-acoso-jul-2021.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Establece los lineamientos para identificar,
+                                analizar, atender y prevenir los casos de acoso, hostigamiento,
+                                discriminación y violencia laboral con el fin de promover un ambiente
+                                de trabajo digno.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3 mb-4 overflow-hidden team-member">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg h-100">
+                        <span class="thumb-info-wrapper h-100">
+                          <img src="{% static 'images/sustentabilidad/8_es-02.png' %}"
+                               class="img-fluid h-100"
+                               alt="">
+                        </span>
+                      </span>
+                    <a target="_blank"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/politica-de-inversion-responsable-sept-2023.pdf">
+                        <div data-item="2"
+                             class="team-member-details ajustar bg-black-opacity  justify-content-center d-flex flex-column">
+                            <div class="text-white">Detalla los lineamientos y compromisos en materia de inversión
+                                responsable inmersos en la Política de Sustentabilidad de Fibra Mty.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-finn">
+        <div class="container-fluid container-relative">
+            <div class="row align-items-center justify-content-center preguntas-finales index">
+                <div class="col-12 col-xl-5 col-lg-6 col-md-10 padding-6-rem-tb lg-padding-5-rem-tb lg-padding-2-half-rem-right md-padding-15px-right md-no-padding-tb md-margin-5-rem-bottom">
+                    <h1 class="mt-5 mt-lg-0 alt-font font-weight-500 letter-spacing-minus-1px margin-4-half-rem-bottom md-margin-4-rem-bottom lg-margin-2-half-rem-bottom md-w-100 texto-cenizo">
+                        ¿Más información?
+                    </h1>
+                    <div class="panel-group accordion-event accordion-style-03 margin-4-rem-bottom lg-margin-2-rem-bottom">
+                        <!-- start accordion item -->
+                        <div class="panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp"
+                             data-wow-delay="0.4s">
+                            <div class="panel-heading">
+                                <a class="accordion-toggle" href="{% url 'nosotros' %}" aria-expanded="false">
+                                    <div class="boton-info1">
+                                        <span>Quiero saber más de Fibra Mty </span>
+                                        <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- start accordion item -->
+                        <div class="panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp"
+                             data-wow-delay="0.4s">
+                            <div class="panel-heading">
+                                <a class="accordion-toggle" href="{% url 'propiedades' %}#ppropiedades"
+                                   aria-expanded="false">
+                                    <div class="boton-info1">
+                                        <span>Quiero saber más del Portafolio</span>
+                                        <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp"
+                             data-wow-delay="0.6s">
+                            <div class="panel-heading">
+                                <a class="accordion-toggle collapsed" href="{% url 'inversionistas' %}"
+                                   aria-expanded="false">
+                                    <div class="boton-info1">
+                                        <span>Quiero ver la Información Financiera </span>
+                                        <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp"
+                             data-wow-delay="0.6s">
+                            <div class="panel-heading">
+                                <a class="accordion-toggle collapsed" href="/escuela-fibra-finn#como-invertir"
+                                   aria-expanded="false">
+                                    <div class="boton-info1">
+                                        <span>Quiero saber cómo invertir</span>
+                                        <i class="indicator fa fa-angle-right text-tussock icon-extra-small"></i>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- end accordion item -->
+                    </div>
+                    <br>
+                    <p class="m-0 wow animate__fadeInUp mb-4 mb-lg-0" data-wow-delay="0.8s">
+                        <a href="{% url 'escuela-fibra-finn' %}#ifaqs"
+                           class="btn-black btn ">Quiero ver las preguntas frecuentes</a>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6 offset-xl-1 col-md-10 wow animate__fadeInRight position-relative"
+                     style="visibility: visible; animation-name: fadeInRight;">
+                    <div class="outside-box-right position-relative index-box">
+                        <img src="{% static 'images/distribution.jpg' %}" class="overflow-hidden"
+                             data-no-retina="">
+                        <div class="texto-redes">
+                            <h2>Síguenos en nuestras redes sociales </h2>
+                            <a target="_blank" class="index-social-link" href="https://twitter.com/fibra_mty">
+                                <i class="fa fa-twitter fa-5x"></i>
+                            </a>
+                            <a target="_blank" class="index-social-link"
+                               href="https://www.linkedin.com/company/3643014">
+                                <i class="fa fa-linkedin fa-5x"></i>
+                            </a>
+                            <a target="_blank" class="index-social-link"
+                               href=https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">
+                                <i class="fa fa-youtube-play fa-5x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

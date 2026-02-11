@@ -1,0 +1,171 @@
+{% load static i18n change_languaje  %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/svg" sizes="16x16" href="{% static 'images/isotipo.svg' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/theme-elements.min.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/general.min.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/header.min.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/footer.min.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/antonio.css' %}{{ css_js_version }}">
+
+    <script>var locale = '{{ request.LANGUAGE_CODE }}'</script>
+
+    {% block otherstyles %}
+
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/tania.min.css' %}{{ css_js_version }}">
+
+    <title>Finn - {% trans "Página no encontrada" %}</title>
+</head>
+<body data-spy="scroll" data-target="#nosotros-list">
+<div class="preloader">
+    <img class="spinner" src="{% static 'images/isotipo.svg' %}">
+</div>
+
+{% include 'partials/header.html' %}
+
+<main>
+    <section
+            class="hero-parallax perfil text-white d-flex align-items-center justify-content-center position-relative"
+            style="background-image: url({% static 'images/breadcrumbs/1.jpg' %})">
+        <div class="text-center text-title">
+            <h1 class="mb-0"><strong>{{ title }}</strong></h1>
+        </div>
+    </section>
+
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+{% include 'partials/footer.html' %}
+
+<div id="modalSearch" class="modal fadeOut" tabIndex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <form  action="{% url 'search' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="q"
+                                   class="form-style search" placeholder="{% trans 'Buscar' %}..."
+                                   autoComplete="off"/>
+                        </div>
+                        <p class="mb-0 mt-4 text-center tc-gray font-weight-500">{% trans 'Empiece a escribir y presione "Enter" o "ESC" para cerrar' %}</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="menu-sidebar" class="">
+    <!--
+    <div id="option-menu" class="d-flex align-items-center justify-content-center">
+        <div class="position-relative change-languages mr-4">
+            <div class="select-language">
+                {% if request.LANGUAGE_CODE == 'es' %}
+                    <a class="text-white" href="{% change_lang 'en' %}">EN</a>
+                {% else %}
+                    <a class="text-white" href="{% change_lang 'es' %}">ES</a>
+                {% endif %}
+            </div>
+        </div>
+        <div data-toggle="modal" data-target="#modalSearch">
+            <a href="#"><i class="fa fa-search search text-white"></i></a>
+        </div>
+    </div>
+    -->
+    <div id="close-menu" class="">
+        <i class="fa fa-close fa-2x font-weight-normal"></i>
+    </div>
+    <ul>
+        <li data-toggle="collapse" href="#nosotros" aria-expanded="false" aria-controls="nosotros"><a
+                href="#">{% trans 'Nosotros' %}</a></li>
+        <div class="collapse" id="nosotros">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'nosotros' %}">{% trans 'Perfil' %}</a></li>
+                    <li><a href="{% url 'nosotros' %}#idirectivos">{% trans 'Equipo directivo' %}</a></li>
+                    <li><a href="{% url 'nosotros' %}#alertas-e-mail">{% trans 'Alertas e-mail' %}</a></li>
+                </ul>
+            </div>
+        </div>
+        <li data-toggle="collapse" href="#portafolio" aria-expanded="false" aria-controls="portafolio"><a
+                href="#">{% trans 'Portafolio' %}</a>
+        </li>
+        <div class="collapse" id="portafolio">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'propiedades' %}#ppropiedades">{% trans 'Propiedades' %}</a></li>
+                    <li><a href="{% url 'propiedades' %}#pgeografica">{% trans 'Presencia geográfica' %}</a></li>
+                    <li><a href="{% url 'propiedades' %}#metrics">{% trans 'Métricas operativas' %}</a></li>
+
+                </ul>
+            </div>
+        </div>
+        {#        <li><a href="{% url 'inversionistas' %}">{% trans 'Inversionistas' %}</a></li>#}
+        <li data-toggle="collapse" href="#inversionistas" aria-expanded="false" aria-controls="inversionistas"><a
+                href="#">{% trans 'Inversionistas' %}</a>
+        </li>
+        <div class="collapse" id="inversionistas">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'inversionistas' %}" class="">{% trans 'Información financiera' %}</a></li>
+                    <li><a href="{% url 'fundamentales' %}" class="">{% trans 'Fundamentales' %}</a></li>
+                    <li><a href="{% url 'reportes_financieros' %}" class="">{% trans 'Centro de reportes' %}</a></li>
+                    <li><a href="{% url 'como-invertir' %}" class="">{% trans 'Cómo invertir en Fibra Inn' %}</a></li>
+                    <li><a href="{% url 'faqs' %}" class="">{% trans 'Preguntas frecuentes' %}</a></li>
+                    <li><a href="{% url 'glosario' %}" class="">{% trans 'Glosario' %}</a></li>
+                    <li><a href="{% url 'cobertura-analistas' %}" class="">{% trans 'Cobertura de analistas' %}</a></li>
+                    <li><a href="{% url 'comites' %}" class="">{% trans 'Gobierno corporativo' %}</a></li>
+                    <li><a href="{% url 'cotizacion' %}" class="">{% trans 'Información bursátil' %}</a></li>
+                </ul>
+            </div>
+        </div>
+        <li><a target="_blank" href="https://finn-esg.investorcloud5.net/es/">{% trans 'Sustentabilidad' %}</a></li>
+        <li data-toggle="collapse" href="#noticias" aria-expanded="false" aria-controls="noticias"><a
+                href="#">{% trans 'Eventos y Noticias' %}</a>
+        </li>
+        <div class="collapse" id="noticias">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'reportes_financieros' %}">{% trans 'Eventos relevantes' %}</a></li>
+                    <li><a href="{% url 'calendario' %}">{% trans 'Calendario' %}</a></li>
+                </ul>
+            </div>
+        </div>
+        <li><a href="{% url 'contacto' %}">{% trans 'Contacto' %}</a></li>
+    </ul>
+</div>
+<div id="menu-overlay"></div>
+
+<script src="{% static 'js/jquery.min.js' %}{{ css_js_version }}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/js.cookie.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.js' %}"></script>
+<script src="{% static 'js/jquery.timelinr-0.9.7.js' %}"></script>
+
+{% block otherscripts %}
+{% endblock %}
+
+<script src="{% static 'js/js.min.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Ya-conoces-las-ventajas-de-hacer-una-Inversion-en-FIBRAs"
+                         src="{% static 'images/post/Ya-conoces-las-ventajas-de-hacer-una-Inversion-en-FIBRAs.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Uno de los grandes sueños de Alberto, un joven universitario, era poder vivir algún día del
+                        arrendamiento. Con la situación actual, sabía muy bien que tenía que hacer rendir su dinero para
+                        cuando llegara a una edad adulta. Por lo que se dio a la tarea de investigar en internet sobre
+                        diferentes instrumentos de inversión y se encontró con nuestro sitio web <a
+                                href={% url 'index' %}>Fibra Mty</a>. Aquí, él
+                        comprendió cómo una <strong>inversión en fibras</strong> podía hacer su sueño realidad y a la
+                        vez convertirlo en
+                        todo un inversionista.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>El caso de Alberto no es uno en un millón. Afortunadamente, muchos más inversionistas ya se han
+                        dado cuenta de todas las ventajas que obtienen al comenzar a invertir en fideicomisos,
+                        instrumentos de inversión que cada día se vuelven más estables y rentables. </p>
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">
+                        Ventajas de las fibras </h2>
+                    <ol class="ls-decimal">
+                        <li>Al tratarse de un instrumento bursátil, la <strong>inversión en fibras</strong> permite que
+                            todos sus
+                            inversionistas participen de manera activa en el mercado de bienes raíces a través de la
+                            <a href="https://www.bmv.com.mx/" target="_blank">Bolsa Mexicana de Valores</a>. Teniendo
+                            una entrada y salida flexible; es decir, puedes comprar
+                            y vender los títulos de una manera ágil y eficiente, sin necesidad de intermediarios,
+                            notarios o valuadores.
+                        </li>
+                        <li>De acuerdo con su enfoque de inversión, al menos un 70% de los activos de las FIBRAs
+                            deben estar invertidos en bienes raíces destinados a su arrendamiento. Lo que traduce en
+                            rendimientos constantes a causa de las distribuciones de efectivo provenientes del cobro de
+                            rentas.
+                        </li>
+                        <li>Todo aquel que cuente con un CBFI (Certificado Bursátil Fiduciario Inmobiliario) tendrá
+                            beneficios en la distribución de ganancias equivalentes a por lo menos el 95% de resultado
+                            fiscal.
+                        </li>
+                        <li>Los precios de los CBFIs se encuentran a la vista, permitiendo a los inversionistas
+                            revisar su rendimiento de manera transparente.
+                        </li>
+                        <li>La <strong>inversión en FIBRAs</strong> facilita los procesos de inversión en bienes raíces
+                            de escala,
+                            ubicaciones privilegiadas, inquilinos de alta calidad y con contratos de arrendamiento
+                            especializados. Vale aclarar que antes de la existencia de estos instrumentos de inversión,
+                            se requería una gran cantidad de dinero.
+                        </li>
+                        <li>Las propiedades son administradas por profesionales con amplia experiencia. Esto quiere
+                            decir que, el inversionista no se tendrá que hacer cargo de los costos y tiempos empleados
+                            para el arrendamiento y operación de las propiedades.
+                        </li>
+                        <li>La inversión en FIBRAs es altamente regulada por múltiples organismos, como por ejemplo:
+                            la Comisión Nacional Bancaria y de Valores (CNBV), Bolsa Mexicana de Valores (BMV), la
+                            Comisión Federal de Competencia Económica (COFECE) y el Servicio de Administración
+                            Tributaria (SAT), todos cuidando los intereses de los inversionistas.
+                        </li>
+                        <li>Los CBFIs, son fácilmente transferibles y al tener un precio bajo por cada unidad, mejora
+                            la administración del patrimonio y en su caso la herencia del mismo.
+                        </li>
+                    </ol>
+                    <p>Como te das cuenta, tienes una gran oportunidad para comenzar a invertir en un mercado que ha
+                        crecido constantemente y generar estabilidad financiera. </p>
+                    <p>Benefíciate de las ganancias de rentas de manera constante y del incremento del precio en los
+                        inmuebles.</p>
+
+                    <p>¡Anímate y haz realidad todos tus sueños! Contáctanos a través de nuestro <a
+                            href="{% url 'contacto' %}">sitio web</a>. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

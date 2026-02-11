@@ -1,0 +1,470 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">
+    <style>
+        
+    .bc-gray{
+        background-color: #E7E7E7;
+    }
+
+    .shadow{
+        box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .nav-tabs .nav-link.active {
+        box-shadow:0 -10px #fff;
+        border:none;
+        
+    }
+
+    .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+        border:none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        
+        .card-group{
+            margin-left:40px !important;
+        }
+        
+    }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <ul class="nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="grupos-tab" data-toggle="tab" href="#grupos" role="tab" aria-controls="grupos" aria-selected="true">{% trans 'Grupos de Interés' %}</a>
+                </li>
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="materialidad-tab" data-toggle="tab" href="#materialidad" role="tab" aria-controls="materialidad" aria-selected="false">{% trans 'Materialidad y Estrategia Sostenible' %}</a>
+                </li> 
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="ods-tab" data-toggle="tab" href="#ods" role="tab" aria-controls="ods" aria-selected="false">{% trans 'Contribución a los ODS' %}</a>
+                </li>                    
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="ppropiedades" class="">    
+    <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="grupos" role="tabpanel" aria-labelledby="grupos-tab">
+                 <section id="grupos_interes">
+                    <div class=" py-5 container">
+                        <h1 class="text-center" style="color: #23356B;">
+                            Grupos de Interés
+                        </h1>
+                        <p class="text-justify">
+                            Nos comunicamos de manera continua con nuestros grupos de interés para asegurar la transparencia de
+                            nuestras acciones y cumplir con sus expectativas en todo momento.
+                        </p>
+                        <p class="text-justify">
+                            A continuación, se desglosan nuestros grupos de interés, con los que interactuamos permanentemente:
+                        </p>
+                        <article id="carousell_book">
+                            <div class="content-wrap2">
+                                <div class="container clearfix">
+                                    <div class="gtco-testimonials">
+                                        <div class="owl-carousel owl-carousel1 owl-theme">
+                                            <div class="card text-center ">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_inversionistas.png' %}">
+                                                    <h5>
+                                                        Inversionistas
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Informe anual
+                                                        </li>
+                                                        <li>
+                                                            Informes trimestrales
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_gobierno.png' %}">
+                                                    <h5>
+                                                        Gobierno
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Páginas de internet oficiales
+                                                        </li>
+                                                        <li>
+                                                            Oficinas de atención ciudadana
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_colaboradores.png' %}">
+                                                    <h5>
+                                                        Colaboradores
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Código de ética
+                                                        </li>
+                                                        <li>
+                                                            Boletines internos
+                                                        </li>
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Evaluaciones
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_bancos.png' %}">
+                                                    <h5>
+                                                        Bancos
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Juntas presenciales
+                                                        </li>
+                                                        <li>
+                                                            Eventos y congresos
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_inquilinos.png' %}">
+                                                    <h5>
+                                                        Inquilinos
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Juntas presenciales
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_comunidad.png' %}">
+                                                    <h5>
+                                                        Comunidad
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Página de internet
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_cadena_de_suministro.png' %}">
+                                                    <h5>
+                                                        Cadena de suministro
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Código de ética
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_estudiantes.png' %}">
+                                                    <h5>
+                                                        Estudiantes / becarios
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Fundación Fibra Educa
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_ejecutivos.png' %}">
+                                                    <h5>
+                                                        Ejecutivos
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Código de ética
+                                                        </li>
+                                                        <li>
+                                                            Boletines internos
+                                                        </li>
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Comités internos
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center">
+                                                <div class="card-body shadow d-flex flex-column justify-content-around align-items-center">
+                                                    <img class="img-circle"
+                                                        src="{% static 'images/modelo_asg/educa_asesores.png' %}">
+                                                    <h5>
+                                                        Asesores / consultores
+                                                    </h5>
+                                                    <p class="card-text font-weight-bold">
+                                                        Medios de comunicación:
+                                                    </p>
+                                                    <ul class="">
+                                                        <li>
+                                                            Código de ética
+                                                        </li>
+                                                        <li>
+                                                            Correo electrónico
+                                                        </li>
+                                                        <li>
+                                                            Reuniones presenciales
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+            
+            <div class="tab-pane fade" id="materialidad" role="tabpanel" aria-labelledby="materialidad-tab">
+
+                <section id="materialidad" class=" py-5">
+                    <div class="container">
+                        <h1 class="text-center" style="color: #23356B;">
+                            Materialidad
+                        </h1>
+                        <p class="text-justify">
+                            La sostenibilidad es uno de los ejes centrales de nuestro modelo de negocio. Somos conscientes de que las decisiones que tomamos hoy impactan el futuro, afectándonos no solo a nosotros, sino también a la sociedad actual y a las generaciones futuras.  
+                        </p>
+                        <p class="text-justify">
+                            Como la única Fibra en el país enfocada en inmuebles educativos, entiende que su estrategia permite que miles de jóvenes estudien en infraestructura de calidad, formándose como líderes del mañana. Esto, a su vez, contribuye al crecimiento y desarrollo económico de México, mejorando la gobernabilidad, cerrando brechas de desigualdad y promoviendo la equidad.
+                        </p>                       
+                        <p class="text-justify">
+                            Nuestra matriz de materialidad identifica los temas más importantes tanto para nuestro negocio como para nuestros grupos de interés. Este análisis nos permitió definir 12 temas prioritarios en los que concentramos nuestros esfuerzos, asegurando así un crecimiento sostenible que responde a las expectativas de todos nuestros stakeholders. </p>
+                        <div class="d-flex flex-row justify-content-center align-content-center">
+                            <img class="img-fluid my-3" src="{% static 'images/modelo_asg/Matriz-01.png' %}">
+                        </div>
+                        <p class="text-justify">
+                            Nuestra estrategia de sostenibilidad se basa en los 12 temas materiales que identificamos en nuestra matriz de materialidad. Estos temas son clave para asegurar que nuestras operaciones sean responsables y estén alineadas con las expectativas de nuestros grupos de interés. Nuestra meta es implementar acciones concretas y medibles en cada uno de estos temas: </p>
+                        <div class="d-flex flex-row justify-content-center align-content-center">
+                            <img class="img-fluid my-3" src="{% static 'images/modelo_asg/Graficas nuevas-14.png' %}" style="width:800px">
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+            
+            <div class="tab-pane fade" id="ods" role="tabpanel" aria-labelledby="ods-tab">
+                <section id="contribucion_ods">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-center tc-blue">Contribución a los ODS</h1>
+                                <p class="text-justify">
+                                    En Fibra Educa, reiteramos nuestro compromiso con la Agenda 2030 y los Objetivos de Desarrollo Sostenible. Para maximizar el impacto de nuestras iniciativas, y de acuerdo con nuestra estrategia, identificamos los ODS más influenciados por nuestras operaciones, y las metas a las que contribuimos mediante la gestión de nuestros temas materiales. En este sentido, nuestras acciones se enfocan en 6 ODS específicos, tal y como se muestra a continuación:
+                                </p>
+                                <article id="boxes" class="mb-5">
+                                    <div class="card-group">                                        
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/ODS1.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #c7202f !important;">
+                                                <p>
+                                                    Facilitar el acceso a la educación para los sectores más vulnerables. A través de su programa de becas, genera un impacto positivo al promover la movilidad social, garantizando que personas en situación de pobreza tengan igualdad de acceso a recursos económicos y servicios básicos, como la educación, lo que refuerza sus oportunidades de desarrollo y bienestar.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/educa_ODS1-4.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #c7202f !important;">
+                                                <p>
+                                                    Nuestros colaboradores se capacitan de acuerdo con las necesidades de la
+                                                    posición que ocupan para asegurar su desarrollo profesional.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/educa_ODS1-5.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #e7412e !important;">
+                                                <p>
+                                                    Ofrecemos igualdad de oportunidades en todos nuestros procesos laborales,
+                                                    desde la contratación hasta el desarrollo, crecimiento y compensación,
+                                                    evitando cualquier tipo de discriminación.
+                                                </p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/educa_ODS1-7.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #fbc109 !important;">
+                                                <p>
+                                                    Implementamos diversas iniciativas de ecoeficiencia energética, como
+                                                    luminarias LED y la gestión de energía renovable en los inmuebles.
+                                                </p>
+                                            </div>
+                                        </div>                                 
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/educa_ODS1-12.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #be8d2c !important;">
+                                                <p>Comprometidos con la transparencia, publicamos el informe anual de
+                                                    sostenibilidad 2023, en el cual mostramos nuestro desempeño ASG.</p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="card">
+                                            <img class="card-img-top"
+                                                src="{% static "images/ambiental/educa_ODS1-16.png" %}"
+                                                alt="Card image cap">
+                                            <div class="card-body" style="background-color: #00699e !important;">
+                                                <p>Desarrollamos e implementamos una estructura de gobernanza sólida, cumpliendo
+                                                    con las mejores prácticas de gobierno corporativo.</p>
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fragment = window.location.hash;
+
+            if (fragment.includes("tab=")) {
+                const tabId = fragment.split("tab=")[1]; 
+
+                $('#myTab a[href="#' + tabId + '"]').tab('show');
+
+                $('html, body').animate({
+                    scrollTop: $("#ppropiedades").offset().top
+                }, 500, function() {
+                    setTimeout(function() {
+                        $('#myTab a[href="#' + tabId + '"]').tab('show');
+                    }, 100);
+                });
+            }
+        });
+
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: true,
+            navText: ['<i class="icon-arrow-left" aria-hidden="true"></i>', '<i class="icon-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                680: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                },
+                1000: {
+                    items: 3,
+                    nav: true
+                }
+            }
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,217 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+        
+       #panel-head {
+            transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+        }
+
+        /* Cambia el fondo del panel-heading al hacer hover */
+        #panel-head:hover {
+            background-color: #23356B !important; /* Color de fondo deseado al hacer hover */
+            color: white !important;
+        }
+
+        /* Cambia el color del texto del enlace en estado normal */
+        #panel-head > h4 > a {
+            color: #23356B; /* Color del texto normal del enlace */
+            text-decoration: none; /* Opcional: elimina el subrayado */
+        }
+
+        /* Cambia el color del texto del enlace al hacer hover */
+        #panel-head > h4 > a:hover {
+            color: white !important; /* Color del texto al hacer hover en el enlace */
+        }
+
+        /* Mantiene el texto blanco al hacer hover en el panel-heading */
+        #panel-head:hover > h4 > a {
+            color: white !important; /* Mantiene el texto blanco al hacer hover */
+        }
+
+        .panel-headingA.active {
+            background-color: #23356B !important; /* Color de fondo del panel activo */
+            color: white !important; /* Color del texto del panel activo */
+        }
+        .panel-headingA {
+           cursor:pointer;
+           padding: 8px 20px;
+        }
+        .panel-headingA.active > h4 > a {
+            
+            color: white !important; /* Color del texto del panel activo */
+        }
+
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+<section id="preguntas" class="container-fluid  " style="margin-bottom:60px; margin-top:60px;">
+    <h2 class="wow slideInLeft text-center " style="color: #23356B; padding-top:0px !important; margin-bottom:40px;">
+        Frequently Asked Questions (FAQs)
+    </h2>
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#1">
+                            What is a Real Estate Investment Trust (REIT)?
+                        </a>
+                    </h4>
+                </div>
+                <div id="1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>“FIBRA” for its acronym in Spanish, refers to a Real Estate Investment Trust. According to Mexican law, a REIT must be established as a trust by contract. The Income Tax Law in Mexico establishes that a REIT must annually distribute at least 95% of its Profit before Taxes.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#2">
+                            What does Fibra Educa do?
+                        </a>
+                    </h4>
+                </div>
+                <div id="2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Fibra Educa is a trust that invests in real estate opportunities that enhance the educational sector. Its essence is to provide, stabilize and maintain spaces dedicated primarily to the operation of higher education institutions in the lower and lower-middle income strata of the market. It is the first and only Fibra in Mexico and the world focused on acquiring and operating this type of real estate.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#3">
+                            Who are the main managers of Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <ul>
+                            <li>Raúl Patricio Martínez Solares Piña - CEO </li>
+                            <li>Juan Galindo Valadez - CFO</li>
+                            <li>Tomás Moctezuma Delgado - Internal Audit Officer</li>
+                            <li>Laura Montes Bracchini - Chief Legal Officer</li>
+                            <li>José Luis Juárez Olvera - Chief Operating Officer</li>
+                            <li>Angie Ramos Garduño - Investor Relations</li>
+                        </ul>                     
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#4">
+                            What are Real Estate Trust Stock Certificates (CBFIs for its Spanish acronym)?
+                        </a>
+                    </h4>
+                </div>
+                <div id="4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>“CBFIs” are the equivalent of stock securities, so whoever has a “CBFI” in their possession is considered an investor or holder of the REIT.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#5">
+                            Where are Fibra Educa's “CBFIs” listed?
+                        </a>
+                    </h4>
+                </div>
+                <div id="5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>Since 2018, Fibra Educa's “CBFIs” have been listed on the Mexican Stock Exchange (BMV), under the ticker symbol "EDUCA18".</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#6">
+                            How to invest in Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>To invest in Fibra Educa, open an account with an authorized brokerage house in Mexico and purchase your "CBFIs" under the ticker “EDUCA18”.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#7">
+                            Is there a minimum investment amount?
+                        </a>
+                    </h4>
+                </div>
+                <div id="7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>No, you can invest in Fibra Educa starting from 1 CBFI. However, each brokerage firm has its own requirements to open an investment account.</p>                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div id="panel-head" class="panel-headingA" >
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#8">
+                            How do I receive distributions made by Fibra Educa?
+                        </a>
+                    </h4>
+                </div>
+                <div id="8" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <br>
+                        <p>When Fibra Educa conducts a cash distribution, a deposit is made directly into your investment account held at your brokerage firm. The cash received can be used to purchase more shares of Fibra Educa, to acquire another instrument, or to withdraw it.</p>                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block otherscripts %}
+<script>
+    $(document).ready(function () {
+       // Al hacer clic en el encabezado del panel
+       $('.panel-headingA').on('click', function () {
+           // Alternar la clase 'active' al encabezado
+           $(this).toggleClass('active');
+       });
+
+       $('.panel-collapse').on('shown.bs.collapse', function () {
+           var $panelHead = $(this).prev('.panel-headingA');
+           $panelHead.addClass('active'); // Agrega la clase active al panel-heading
+       });
+
+       $('.panel-collapse').on('hidden.bs.collapse', function () {
+           var $panelHead = $(this).prev('.panel-headingA');
+           $panelHead.removeClass('active'); // Quita la clase active al panel-heading
+       });
+   });
+
+
+   </script>
+{% endblock %}

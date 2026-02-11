@@ -1,0 +1,85 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>10 de mayo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/mayo-02.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Una cabeza financiera siempre estará pensando en diferentes maneras para que el dinero excedente
+                        no se quede quieto. Todo inversionista sabe que el capital ocioso es capital que podría estar
+                        generando ganancias, claro, si se eligen los instrumentos de inversión adecuados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>El mercado de capitales ofrece la posibilidad de acceder a múltiples alternativas de inversión.
+                        Estas se dividen según su rendimiento, los distintos niveles de riesgo que suponen y el
+                        <a href="https://es.wiktionary.org/wiki/horizonte_de_inversi%C3%B3n"
+                           target="_blank">horizonte</a>, o el tiempo que permanecerá el dinero invertido.</p>
+                    <h2>Instrumentos de inversión según su riesgo</h2>
+                    <p>De esta manera, entre los instrumentos de inversión a los que se puede acceder, se encuentran los
+                        cetes (Certificados de la Tesorería de la Federación) y bonos gubernamentales, como opciones de
+                        bajo riesgo.</p>
+                    <p>Adicionalmente, se encuentran inversiones de mayor riesgo, como acciones de empresas, cuya
+                        cotización puede sufrir importantes variaciones en el corto plazo, sin embargo, dependiendo del
+                        desempeño de la compañía, pueden generar rendimientos relevantes en el largo plazo.</p>
+                    <p>Otras opciones como los fondos de inversión y los instrumentos del mercado inmobiliario son
+                        consideradas de riesgo medio, aunque entre estos últimos se distinguen algunas opciones que
+                        destacan por su <a href="{% url 'noticia_6' %}">bajo riesgo</a> y su alto potencial de retorno
+                        de inversión.</p>
+                    <h2>Fibras</h2>
+                    <p>Las <a href="{% url 'noticia_2' %}">FIBRAs</a> (Fideicomisos de Inversión en Bienes Raíces)
+                        ofrecen la posibilidad de invertir dinero
+                        en propiedades inmobiliarias, como oficinas y edificios industriales, a través de un fideicomiso
+                        que se encarga de administrar los bienes, arrendarlos y darles mantenimiento. De esta manera, la
+                        renta generada por estos inmuebles vuelve al inversor como un rendimiento mensual.</p>
+                    <h2>Amplía tus horizontes</h2>
+                    <p>Uno de los mejores consejos para una persona que se está iniciando en el mercado financiero es
+                        diversificar. No en vano los más experimentados inversores recomiendan siempre contar con
+                        distintos instrumentos financieros para repartir el dinero entre varias opciones y reducir el
+                        riesgo lo máximo posible.</p>
+                    <p>Una de las claves de las FIBRAs es que están a cargo de personal profesional comprometido con
+                        reducir el riesgo de quienes depositan su confianza y dinero a través de una inversión. Esto se
+                        logra con la gestión de un portafolio de propiedades diversificado, con inmuebles ubicados en
+                        distintos puntos geográficos del país.</p>
+                    <p>Si estás buscando instrumentos de inversión para poner a trabajar tu dinero, te recomendamos
+                        invertir en FIBRAs. Con Fibra MTY, tu dinero estará respaldado en inmuebles de altísima calidad
+                        que puedes ver y tocar. </p>
+                    <p>Visita nuestro <a href="{% url 'index' %}">sitio</a> para conocer más sobre esta excelente herramienta financiera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

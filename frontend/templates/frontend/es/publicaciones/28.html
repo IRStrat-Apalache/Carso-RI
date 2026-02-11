@@ -1,0 +1,95 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>12 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/03.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Tomar la decisión de hacer una inversión en bienes raíces es un momento determinante para las
+                        personas que están pensando en aumentar su capital y tener estabilidad financiera en el futuro.
+                        Sin embargo, dentro del sector inmobiliario hay gran variedad de opciones y puede ser realmente
+                        difícil encontrar la inversión que pueda otorgar el máximo rédito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Si quieres aclarar todas tus dudas, sigue leyendo porque te traemos la respuesta a la pregunta de
+                        cómo obtener la máxima ganancia con tu inversión.</p>
+                    <h2>Los frutos de la paciencia</h2>
+                    <p>Puede sonar un poco repetitiva la frase: “la paciencia es amarga, pero su fruto es dulce”. Sin
+                        embargo, es una enseñanza que aplica especialmente para las inversiones en bienes raíces.</p>
+                    <p>A diferencia de otros instrumentos de inversión que tienen tasas de riesgo mayores, las ganancias
+                        en el mercado inmobiliario se incrementan conforme pasa el tiempo. Bien sea un pequeño
+                        departamento o una propiedad de gran escala, la renta generada por su uso o arrendamiento
+                        representará una cantidad de ingresos que con el tiempo superará con creces el precio de
+                        compra.</p>
+                    <p>Además, gracias al fenómeno de la <a href="https://dle.rae.es/plusval%C3%ADa?m=form"
+                                                            target="_blank">plusvalía</a>, la propiedad incrementará su
+                        valor y se obtendrán
+                        ganancias al momento de venderla.</p>
+                    <p>¿No cuentas con el dinero necesario para hacer una inversión de este tamaño? Aquí es donde juegan
+                        un papel fundamental las FIBRAs inmobiliarias. Gracias a este mecanismo puedes invertir en el
+                        mercado de bienes raíces con la garantía de que contarás con un portafolio diversificado y
+                        estabilizado. Y, lo mejor de todo, lo podrás hacer desde la cantidad de capital que tu
+                        escojas.</p>
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar:</strong>
+                            <a href="{% url 'noticia_24' %}">¿Cómo se originó la Inversión en FIBRAs inmobiliarias?
+                                </a>
+                        </li>
+                    </ul>
+                    <h2>Fibra MTY: la llave que abre la puerta de la Inversión en Bienes Raíces</h2>
+
+                    <p>Presta especial atención porque te vamos a explicar a grandes rasgos qué intervalos de tiempo
+                        debes tener en el radar si quieres hacer una inversión en bienes raíces.</p>
+                    <p>Supongamos que haces una inversión de un monto inicial de $1.000.000 con depósitos anuales de
+                        $50.000. Al cabo de un año, tu capital total será de $1.130.000; Tan solo $80.000 más.</p>
+                    <p>Sin embargo, si eres paciente te darás cuenta de que, a mayor cantidad de tiempo, aumentan los
+                        beneficios. Al cabo de 5 años tu capital será de $1.762.658, en 10 años de $2.883.253, en 20 de
+                        $6.949.055 y en 30 de $15.726.817. Lo anterior fue calculado utilizando el rendimiento histórico
+                        de Fibra Mty, el cual ha tenido un rendimiento del 8% anual. </p>
+                    <p>Obtener el máximo rédito de tu Inversión en Bienes Raíces es muy fácil si inviertes en Fibra MTY.
+                        Visita ya mismo <a href="{% url 'index' %}">nuestra página web</a> y conoce todo lo que necesitas para empezar a aumentar tu
+                        riqueza desde el día de hoy.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty"
+                                                                    target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                     href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

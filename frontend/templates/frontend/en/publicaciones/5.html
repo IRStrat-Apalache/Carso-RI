@@ -1,0 +1,104 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Invierte-en-grandes-propiedades-Fibras-Inmobiliarias"
+                         src="{% static 'images/post/Invierte-en-grandes-propiedades-Fibras-Inmobiliarias.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Hoy por hoy los fideicomisos de inversión en bienes raíces, mejor conocidos como <strong>fibras
+                        inmobiliarias</strong>, son muy atractivos entre los inversionistas. Esto se debe a que sus
+                        utilidades,
+                        el incremento del precio de los inmuebles y su facilidad de inversión, logran excelentes
+                        rentabilidades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Comenzar a invertir con este instrumento bursátil te puede blindar ante factores de volatilidad
+                        del mercado ¿por qué? Al generar ganancias a través de arrendamientos en mediano y largo plazo,
+                        siempre se tendrán dividendos que se repartirán entre los inversionistas.</p>
+                    <h2>¿Cuáles son los tipos de bienes raíces que se manejan en fibras?</h2>
+                    <p>Entre las grandes propiedades que poseen y administran las <strong>fibras inmobiliarias</strong>, puedes encontrar
+                        desde:</p>
+                    <ul class="ls-disc">
+                        <li>Edificios de oficinas</li>
+                        <li>Centros Comerciales</li>
+                        <li>Edificios residenciales</li>
+                        <li>Hoteles
+                        </li>
+                        <li>Hospitales, entre otros</li>
+                    </ul>
+                    <p>En <a href={% url 'index' %}>Fibra MYT</a> nos hemos basado en una administración
+                        óptima de cada uno de los activos que
+                        manejamos. Este proceso lo hacemos para maximizar el valor entregado a todo aquel que cuente con
+                        una participación de capital dentro del portafolio. </p>
+                    <p>Uno de los pilares por los que nos regimos es la estructura ordenada de crecimiento. Consideramos
+                        que una inversión con un potencial de crecimiento solamente es rentable si añade rentabilidad
+                        adicional por CBFI o fortalece la posición de nuestro portafolio. Por eso, todas nuestras
+                        propiedades cuentan con una relación riesgo-rendimiento que genera más ventajas en rentabilidad
+                        a cada uno de los inversionistas</p>
+                    <h2>Nuestras propiedades</h2>
+                    <p>A lo largo de nuestra historia, hemos adquirido varias propiedades y portafolios de gran renombre
+                        en el país. Hasta el momento, llevamos 59 propiedades administradas con un 96.5% de
+                        ocupación. </p>
+                    <p>Al invertir en Fibra MYT tu inversión estará segura, en un ambiente regulado y auditado para
+                        garantizar total transparencia y un retorno superior de tu dinero.</p>
+                    <p>Entre las propiedades que más destacamos se encuentran: </p>
+
+                    <ul class="ls-disc">
+                        <li>Edificio Prometeo</li>
+                        <li>Edificio Patria</li>
+                        <li>Portafolio Casona y Providencia</li>
+                    </ul>
+                    <p>Te invitamos a consultar todo nuestro portafolio de propiedades dando <a
+                            href="{% url 'propiedades' %}#ppropiedades">clic aquí</a>. </p>
+                    <p>Como ves, las <strong>fibras inmobiliarias</strong> te ofrecen una alternativa estable de
+                        inversión. El hecho de
+                        poder participar en el mercado de bienes raíces en la BMV y acceder a una diversificación de
+                        inmuebles, ubicaciones y un gran número de inquilinos, hacen de este instrumento una opción muy
+                        rentable.</p>
+                    <p>¡Invierte con Fibra MYT y haz crecer tu dinero! Contáctanos a través de nuestro <a
+                            href="{% url 'index' %}">sitio web</a>. </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

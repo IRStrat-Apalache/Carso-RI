@@ -1,0 +1,1140 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <style>
+
+        .investor-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .investor-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .investor-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .owl-carousel .owl-dots {
+            flex-grow: 1; /* Los puntos ocupan el espacio central */
+            display: flex;
+            justify-content: center;
+        }
+
+        .owl-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: grey !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background-color: #59A971 !important;
+        }
+
+
+        .owl-carousel .owl-dot:focus {
+            outline: none;
+        }
+
+        .owl-carousel1 {
+            overflow: visible !important;
+            margin: 10px 0;
+        }
+
+        /* Estilos para el efecto hover de las imágenes */
+        .image-hover-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .image-hover-container img {
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: auto;
+        }
+
+        .hover-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(35, 53, 107, 0.95);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            font-weight: 500;
+            font-size: 13px;
+            max-width: 90%;
+            min-width: 80%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .hover-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #59A971;
+            border-bottom: 2px solid #59A971;
+            padding-bottom: 8px;
+        }
+
+        .hover-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+
+        .hover-list li {
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 15px;
+        }
+
+        .hover-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hover-download-btn {
+            background-color: #59A971;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 12px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hover-download-btn:hover {
+            background-color: #4a8a5f;
+        }
+
+        .image-hover-container:hover img {
+            opacity: 0.2;
+        }
+
+         .image-hover-container:hover .hover-content {
+             opacity: 1;
+         }
+
+         /* Estilos para las métricas interactivas */
+         .metric-card {
+             background: white;
+             border-radius: 15px;
+             padding: 30px 25px;
+             text-align: center;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+             transition: all 0.3s ease;
+             cursor: pointer;
+             position: relative;
+             overflow: hidden;
+             border: 2px solid transparent;
+         }
+
+         .metric-card:hover {
+             transform: translateY(-10px);
+             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+             border-color: #59A971;
+         }
+
+         .metric-card::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: -100%;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(90deg, transparent, rgba(89, 169, 113, 0.1), transparent);
+             transition: left 0.5s;
+         }
+
+         .metric-card:hover::before {
+             left: 100%;
+         }
+
+         .metric-icon {
+             font-size: 48px;
+             color: #59A971;
+             margin-bottom: 20px;
+             transition: all 0.3s ease;
+         }
+
+         .metric-card:hover .metric-icon {
+             transform: scale(1.1);
+             color: #4a8a5f;
+         }
+
+         .metric-content {
+             margin-bottom: 20px;
+         }
+
+         .metric-number {
+             font-size: 48px;
+             font-weight: bold;
+             color: #23356B;
+             margin: 0;
+             transition: all 0.3s ease;
+         }
+
+         .metric-card:hover .metric-number {
+             color: #59A971;
+             transform: scale(1.05);
+         }
+
+         .metric-label {
+             font-size: 18px;
+             font-weight: 600;
+             color: #333;
+             margin: 10px 0 5px 0;
+         }
+
+         .metric-unit {
+             font-size: 14px;
+             color: #666;
+             font-weight: 500;
+             margin: 0;
+         }
+
+         .metric-description {
+             opacity: 0;
+             max-height: 0;
+             overflow: hidden;
+             transition: all 0.3s ease;
+             background: #f8f9fa;
+             border-radius: 8px;
+             padding: 0;
+             margin-top: 15px;
+         }
+
+         .metric-card:hover .metric-description {
+             opacity: 1;
+             max-height: 100px;
+             padding: 15px;
+         }
+
+         .metric-description p {
+             margin: 0;
+             font-size: 14px;
+             color: #555;
+             line-height: 1.4;
+         }
+
+         /* Animación de contador */
+         @keyframes countUp {
+             from { opacity: 0; transform: translateY(20px); }
+             to { opacity: 1; transform: translateY(0); }
+         }
+
+         .metric-number.animating {
+             animation: countUp 0.6s ease-out;
+         }
+
+        .owl-carousel1 .owl-item {
+            /* border: 2px green solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            /* width: 350px !important; */
+            height: 100% !important;
+            transition: .5s ease;
+        }
+
+        .owl-carousel1 .owl-item:hover {
+            transform: translateY(-7px);
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+    <div id="contenido" class="py-5" style="background-color: #EDEDED;">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Columna IZQUIERDA: Contenido descargable -->
+                <div class="col-lg-12 col-md-12">
+                    <h1 class="py-4 px-2" style="color: #23356B; font-size: 48px;">
+                        Programas de <b>CKDs</b>
+                    </h1>
+                    <div class="row d-flex justify-content-start wow fadeInUp">
+                        <!-- Aquí tus elementos de descarga -->
+                        <div class="col-md-4 mb-4">
+                            <a href="https://investorcloud.s3.amazonaws.com/Fondodefondos/SitioRI/CKDs/FFLA1CK.pdf"
+                               target="_blank">
+                                <div class="image-hover-container">
+                                    <img class="img-fluid mb-2" src="{% static 'images/FFLA1CK.png' %}" alt="">
+                                    <div class="hover-content">
+                                        <div class="hover-title">FFLA1CK</div>
+                                        <ul class="hover-list">
+                                            <li>Vintage 2015</li>
+                                            <li>Máximo 3,282 MDP</li>
+                                            <li>Emitido 2,449 MDP</li>
+                                            <li>Distribuido 553.1 MDP</li>
+                                            <li>13 Fondos</li>
+                                            <li>3 Co-inversiones</li>
+                                            <li>1 Co-inversión desinvertida</li>
+                                        </ul>
+                                        <button class="hover-download-btn">DESCARGAR</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <a href="https://investorcloud.s3.amazonaws.com/Fondodefondos/SitioRI/CKDs/FFLA2CK.pdf"
+                               target="_blank">
+                                <div class="image-hover-container">
+                                    <img class="img-fluid mb-2" src="{% static 'images/FFLA2CK.png' %}" alt="">
+                                    <div class="hover-content">
+                                        <div class="hover-title">FFLA2CK</div>
+                                        <ul class="hover-list">
+                                            <li> Vintage 2015</li>
+                                            <li> Máximo 4,550 MDP</li>
+                                            <li> Emitido 4,550 MDP</li>
+                                            <li> Distribuido 782.3 MDP</li>
+                                            <li> 5 Co-inversiones y 2 Co-inversiones desinvertidas</li>
+                                        </ul>
+                                        <button class="hover-download-btn">DESCARGAR</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <a href="https://investorcloud.s3.amazonaws.com/Fondodefondos/SitioRI/CKDs/FFLA3CK.pdf"
+                               target="_blank">
+                                <div class="image-hover-container">
+                                    <img class="img-fluid mb-2" src="{% static 'images/FFLA3CK.png' %}" alt="">
+                                    <div class="hover-content">
+                                        <div class="hover-title">FFLA3CK</div>
+                                        <ul class="hover-list">
+                                            <li> Vintage 2015</li>
+                                            <li> Máximo 3,900 MDP</li>
+                                            <li> Emitido 1,107 MDP</li>
+                                            <li> Distribuido 544.3 MDP</li>
+                                            <li> 1 Fondo</li>
+                                            <li> 1 Co-inversión</li>
+                                            <li> 1 Co-inversión desinvertida</li>
+                                        </ul>
+                                        <button class="hover-download-btn">DESCARGAR</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <a href="https://investorcloud.s3.amazonaws.com/Fondodefondos/SitioRI/CKDs/FFLA4CK.pdf"
+                               target="_blank">
+                                <div class="image-hover-container">
+                                    <img class="img-fluid mb-2" src="{% static 'images/FFLA4CK.png' %}" alt="">
+                                    <div class="hover-content">
+                                        <div class="hover-title">FFLA4CK</div>
+                                        <ul class="hover-list">
+                                            <li> Vintage 2015</li>
+                                            <li> Máximo 4,704 MDP</li>
+                                            <li> Emitido 3,973 MDP</li>
+                                            <li> Distribuido 26.4 MDP</li>
+                                            <li> 3 Co-inversiones</li>
+                                        </ul>
+                                        <button class="hover-download-btn">DESCARGAR</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <a href="https://investorcloud.s3.amazonaws.com/Fondodefondos/SitioRI/CKDs/FFBANCK.pdf"
+                               target="_blank">
+                                <div class="image-hover-container">
+                                    <img class="img-fluid mb-2" src="{% static 'images/FFLBANCK.png' %}" alt="">
+                                    <div class="hover-content">
+                                        <div class="hover-title">FFBANCK</div>
+                                        <ul class="hover-list">
+                                             <li> Vintage 2018 </li>
+                                             <li> Máximo 4,000 MDP </li>
+                                             <li> Emitido 1,510 MDP</li>
+                                             <li> Distribuido 397.5 MDP</li>
+                                             <li> 2 Co-inversiones</li>
+                                        </ul>
+                                        <button class="hover-download-btn">DESCARGAR</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Columna DERECHA: Contenido destacado -->
+                {% comment %}
+      <div class="col-lg-4 col-md-12">
+        {% include "frontend/componentes/destacados.html" %}
+      </div>
+      {% endcomment %}
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Métricas Interactivas -->
+    <section id="metricas_section" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 style="color: #23356B; font-size: 36px; font-weight: bold;">Resumen Ejecutivo</h2>
+                    <p style="color: #666; font-size: 18px;">Métricas consolidadas de nuestros programas CKD</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Métrica 1: Total Máximo Emisión -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="metric-card" data-metric="max-emision">
+                        <div class="metric-icon">
+                            <i class="fa fa-chart-line"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 class="metric-number" data-target="20435.6">0</h3>
+                            <p class="metric-label">Total Máximo Emisión</p>
+                            <p class="metric-unit">MDP</p>
+                        </div>
+                        <div class="metric-description">
+                            <p>Capacidad máxima de emisión consolidada de todos los programas CKD</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métrica 2: Total Emitido -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="metric-card" data-metric="emitido">
+                        <div class="metric-icon">
+                            <i class="fa fa-coins"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 class="metric-number" data-target="13589.4">0</h3>
+                            <p class="metric-label">Total Emitido</p>
+                            <p class="metric-unit">MDP</p>
+                        </div>
+                        <div class="metric-description">
+                            <p>Monto total efectivamente emitido en todos los programas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métrica 3: Total Distribuido -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="metric-card" data-metric="distribuido">
+                        <div class="metric-icon">
+                            <i class="fa fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 class="metric-number" data-target="2303.6">0</h3>
+                            <p class="metric-label">Total Distribuido</p>
+                            <p class="metric-unit">MDP</p>
+                        </div>
+                        <div class="metric-description">
+                            <p>Distribuciones totales realizadas a los inversionistas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="directivos_section" class="py-5">
+        <div class="container directivos">
+            <div class=" my-5">
+                <h1 class="wow slideInLeft" style="color: #23356B; padding-top:0px !important; font-weight:bold;">
+                    Conoce a nuestro equipo.
+                </h1>
+                <h2 style="color:#62D482" class="wow slideInUp">
+                    Una historia de trabajo, confianza y crecimiento.
+                </h2>
+                <div class="container text-right wow slideInRight">
+                </div>
+            </div>
+            <!-- Directivos Principales -->
+            <div class="row">
+                {% for directivo in directivos_principales %}
+                    <div class="col-sm-12 col-md-4 col-lg-4 mb-4 d-flex justify-content-center" style="height: 600px;">
+                        <a href="#"
+                           class="team d-flex flex-column justify-content-center align-items-center text-center"
+                           data-item="{{ forloop.counter }}"
+                           data-imagen="{{ directivo.imagen }}"
+                           data-nombre="{{ directivo.nombre }}"
+                           data-cargo="{{ directivo.cargo }}"
+                           data-resumen="{{ directivo.resumen }}"
+                           data-url="{{ directivo.url }}">
+                            <div class="position-relative image-container2">
+                                <!-- Imagen principal -->
+                                <img class="img-fluid d-flex main-image" src="{% static directivo.imagen %}"
+                                     alt="{{ directivo.nombre }}">
+                                {% comment %}
+                                <!-- Imagen superpuesta -->
+                                <img class="overlay-image" src="{% static directivo.puesto %}" alt="Imagen superpuesta">
+                                {% endcomment %}
+                            </div>
+
+                            <h6 class="mb-0 mt-3 text-black font-weight-bold">{{ directivo.nombre }}</h6>
+                            <p class="mb-0">{{ directivo.cargo | safe }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- Perfil de Directivo -->
+            <article id="directivo-perfil" class="d-none directivo-perfil pt-5 pb-5 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="cerrar-info">
+                                <i class="fa fa-times fa-2x"></i>
+                            </div>
+                            <h3 class="mt-2 mb-0 d_nombre"></h3>
+                            <div class="mb-4">
+                                <em class="d_cargo"></em>
+                            </div>
+                            <p class="d_resumen text-justify"></p>
+                            <div class="icono-img image-container position-relative">
+                                <a href="#" class="image-link position-absolute d-imagen" target="_blank"
+                                   style="bottom:0px; right:0px;"><img src="{% static 'images/Linkedin-08.png' %}"
+                                                                       alt="" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="contenido" class="s-block pt-0">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="text-center pb-4" style="font-weight: 600; color: #000;">Fundamentales</h2>
+                    <div class="widget text-justify">
+                        <select class="form-control" id="select_tabla">
+                            <option value="t1" selected>Indicadores Operativos</option>
+                            <option value="t2">Situación Financiera</option>
+                            <option value="t3">Estado de Resultados</option>
+                            <option value="t4">Flujo de Efectivo</option>
+
+                        </select>
+                        <br>
+                        <div id="t1" class="d-none tablas">
+                            <div class="table-responsive">
+                                <table class="table key_value_responsive table-bordered table-striped bc-blue val-toRight">
+                                    <thead>
+                                    <tr>
+                                        <th class="">Indicadores Operativos</th>
+                                        <th style="width: 125px;">2024</th>
+                                        <th style="width: 125px;">2023</th>
+                                        <th style="width: 125px;">2022</th>
+                                        <!--<th style="width: 125px;">2017</th>-->
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-content="Categoria">Venta de productos (Millones de pesos)</td>
+                                        <td data-content="2024">$10,273,943</td>
+                                        <td data-content="2023">$11,534,166</td>
+                                        <td data-content="2022">$12,258,349</td>
+
+                                        <!--<td data-content="2017">832,071</td>-->
+                                        <!---<td>352,482</td>--->
+                                    </tr>
+                                    <tr>
+                                        <td data-content="Categoria">Ingresos por servicios y mantenimiento</td>
+                                        <td data-content="2024">$871,817</td>
+                                        <td data-content="2023">$461,786</td>
+                                        <td data-content="2022">$430,422</td>
+                                        <!--<td data-content="2017">718,325</td>-->
+                                        <!---<td>305,039</td>--->
+                                    </tr>
+                                    <tr>
+                                        <td data-content="Categoria">Ingreso por arrendamientos operativos</td>
+                                        <td data-content="2024">$54,967</td>
+                                        <td data-content="2023">$150,257</td>
+                                        <td data-content="2022">$85,508</td>
+                                        <!--<td data-content="2017">725,138</td>-->
+                                        <!---<td>307,870</td>--->
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="t2" class="d-none tablas">
+                            <div class="table-responsive">
+                                <table class="table key_value_responsive table-bordered table-striped bc-blue val-toRight">
+                                    <thead>
+                                    <tr>
+                                        <th class="">Situación Financiera (Miles de
+                                            pesos)
+                                        </th>
+                                        <th style="width: 125px;">2024</th>
+                                        <th style="width: 125px;">2023</th>
+                                        <th style="width: 125px;">2022</th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-content="Categoria">Efectivo y equivalentes de efectivo</td>
+                                        <td data-content="2024">$732,009</td>
+                                        <td data-content="2023">$565,692</td>
+                                        <td data-content="2022">$672,638</td>
+                                        <!--<td data-content="2017">11,306,957</td>-->
+                                        <!---<td>4,918,734</td>--->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Propiedades, planta y equipo</td>
+                                        <td data-content="2024">$4,087,539</td>
+                                        <td data-content="2023">$4,063,493</td>
+                                        <td data-content="2022">$3,271,583</td>
+                                        <!--<td data-content="2017">1,568,703</td>-->
+                                        <!---<td>278,632</td>--->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Total del activo</td>
+                                        <td data-content="2024">$14,952,179</td>
+                                        <td data-content="2023">$12,551,683</td>
+                                        <td data-content="2022">$12,551,683</td>
+                                        <!--<td data-content="2017">2,731,028</td>-->
+                                        <!---<td>758,877</td>--->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Total del pasivo</td>
+                                        <td data-content="2024">$8,242,229</td>
+                                        <td data-content="2023">$6,500,828</td>
+                                        <td data-content="2022">$6,107,833</td>
+                                        <!--<td data-content="2017">2,836,290</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Total del capital contable</td>
+                                        <td data-content="2024">$6,709,950</td>
+                                        <td data-content="2023">$6,050,855</td>
+                                        <td data-content="2022">$6,459,161</td>
+                                        <!--<td data-content="2017">8,470,667</td>-->
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="t3" class="d-none tablas">
+                            <div class="table-responsive">
+                                <table class="table key_value_responsive table-bordered table-striped bc-blue val-toRight">
+                                    <thead>
+                                    <tr>
+                                        <th data-content="Categoria">Estado de Resultados (Miles de pesos)</th>
+                                        <th style="width: 125px;">2024</th>
+                                        <th style="width: 125px;">2023</th>
+                                        <th style="width: 125px;">2022</th>
+                                        <!--<th style="width: 125px;">2017</th>-->
+                                        <!---<th class="col-md-2 col-lg-2 col-sm-2 col-xs-2">2015</th>--->
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-content="Categoria">Utilidad antes de impuestos a la utilidad</td>
+                                        <td data-content="2024">$120,215</td>
+                                        <td data-content="2023">$339,242</td>
+                                        <td data-content="2022">$817,136</td>
+                                        <!--<td data-content="2017">87.15%</td>--->
+                                        <!---<td>87.34%</td>--->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Utilidad neta</td>
+                                        <td data-content="2024">$53,502</td>
+                                        <td data-content="2023">$312,409</td>
+                                        <td data-content="2022">$790,822</td>
+                                        <!--<td data-content="2017">78.10%</td>-->
+                                        <!---<td>72.33%</td>--->
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="t4" class="d-none tablas">
+                            <table class="table key_value_responsive table-bordered table-striped bc-blue val-toRight">
+                                <thead>
+                                <tr>
+                                    <th>Flujo de Efectivo (Miles de pesos)</th>
+                                    <th style="width: 125px;">2024</th>
+                                    <th style="width: 125px;">2023</th>
+                                    <th style="width: 125px;">2022</th>
+                                    <!--<th style="width: 125px;">2017</th>-->
+
+                                    <!---<th class="col-md-2 col-lg-2 col-sm-2 col-xs-2">2015</th>--->
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td data-content="Categoria">Flujos de efectivo netos procedentes de (utilizados en)
+                                        actividades de operación
+                                    </td>
+                                    <td data-content="2024">$806,315</td>
+                                    <td data-content="2023">$1,289,753</td>
+                                    <td data-content="2022">$998,010</td>
+                                    <!--<td data-content="2017">8.17</td>-->
+                                    <!---<td>2.96</td>--->
+                                </tr>
+
+                                <tr>
+                                    <td data-content="Categoria">Flujos de efectivo generados por (utilizados en)
+                                        actividades de inversión
+                                    </td>
+                                    <td data-content="2024">-$697,117</td>
+                                    <td data-content="2023">-$475,698</td>
+                                    <td data-content="2022">-$601,266</td>
+                                    <!--<td data-content="2017">0.55</td>-->
+                                    <!---<td>0.46</td>--->
+                                </tr>
+
+                                <tr>
+                                    <td data-content="Categoria">Flujos de efectivo utilizados en actividades de
+                                        financiamiento
+                                    </td>
+                                    <td data-content="2024">-$125,387</td>
+                                    <td data-content="2023">-$841,407</td>
+                                    <td data-content="2022">-$1,073,435</td>
+                                    <!--<td data-content="2017">0.33</td>-->
+                                    <!---<td>0.20</td>--->
+                                </tr>
+                                <tr>
+                                    <td data-content="Categoria">Efectivo y equivalentes<sup>(1)</sup></td>
+                                    <td data-content="2024">$732,009</td>
+                                    <td data-content="2023">$565,692</td>
+                                    <td data-content="2022">$672,638</td>
+                                    <!--<td data-content="2017">0.24</td>-->
+                                    <!---<td>0.15</td>--->
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <div id="t5" class="d-none tablas">
+                            <div class="table-responsive">
+                                <table class="table key_value_responsive table-bordered table-striped bc-blue val-toRight">
+                                    <thead>
+                                    <tr>
+                                        <th>Indicadores Operativos</th>
+                                        <th style="width: 125px;">2024</th>
+                                        <th style="width: 125px;">2023</th>
+                                        <th style="width: 125px;">2022</th>
+
+
+                                        <!---<th class="col-md-2 col-lg-2 col-sm-2 col-xs-2">2015</th>--->
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td data-content="Categoria">Número de propiedades</td>
+                                        <td data-content="2024">117</td>
+                                        <td data-content="2023">106</td>
+                                        <td data-content="2022">60</td>
+                                        <!--<td data-content="2017">43</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Área Bruta Rentable (ABR) m<sup>2</sup></td>
+                                        <td data-content="2024">1,871,530</td>
+                                        <td data-content="2023">1,652,673</td>
+                                        <td data-content="2022">818,864</td>
+                                        <!--<td data-content="2017">504,534</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Tasa de ocupación</td>
+                                        <td data-content="2024">96.20%</td>
+                                        <td data-content="2023">96.30%</td>
+                                        <td data-content="2022">90.90%</td>
+                                        <!--<td data-content="2017">96.60%</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Renta promedio / m<sup>2</sup> Oficinas
+                                            corporativas (USD$)
+                                        </td>
+                                        <td data-content="2024">19.4</td>
+                                        <td data-content="2023">20.8</td>
+                                        <td data-content="2022">20.3</td>
+                                        <!--<td data-content="2017">18.5</td>-->
+
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Renta promedio / m<sup>2</sup> Oficinas operativas
+                                            (USD$)
+                                        </td>
+                                        <td data-content="2024">16.1</td>
+                                        <td data-content="2023">16.0</td>
+                                        <td data-content="2022">15.1</td>
+                                        <!--<td data-content="2017">12.9</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Renta promedio / m<sup>2</sup> Oficinas industrial
+                                            (USD$)
+                                        </td>
+                                        <td data-content="2024">5.9</td>
+                                        <td data-content="2022">5.5</td>
+                                        <td data-content="2022">5.0</td>
+                                        <!--<td data-content="2017">4.2</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria">Renta promedio / m<sup>2</sup> Oficinas comercial
+                                            (USD$)
+                                        </td>
+                                        <td data-content="2024">7.7</td>
+                                        <td data-content="2023">8.9</td>
+                                        <td data-content="2022">7.3</td>
+                                        <!--<td data-content="2017">6.9</td>-->
+                                    </tr>
+
+                                    <tr>
+                                        <td data-content="Categoria"> Inversiones de capital (miles de pesos)</td>
+                                        <td data-content="2024">130,000</td>
+                                        <td data-content="2023">57,600</td>
+                                        <td data-content="2022">41,993</td>
+                                        <!--<td data-content="2018">&nbsp;</td>-->
+                                        <!--<td data-content="2017">&nbsp;</td>-->
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row s-block pt-3">
+                <div class="col-12">
+                    <a rel="noreferrer"
+                       href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Descargables/Excel/Tablas-comparativas-de-resultados-2T25.xlsx"
+                       class="btn btn-primary btn-lg pull-right" target="_blank"><i class="fa fa-download"></i>
+                        Descargar en formato XLS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<div class="fluid-container">
+        <div class="content-wrap2">
+            <div class="clearfix">
+                <div class="owl-carousel owl-carousel1 owl-theme" style="height: 100px;">
+                    <img src="{% static 'images/logo-Alta-Growth-Private-Equity.png' %}" alt="" style="width: 50%; object-fit: cover;">
+                    <img src="{% static 'images/logo-bocel.png' %}" alt="" style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/logo-cybolt.png' %}" alt="" style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/logo-discovery.png' %}" alt="" style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/logo-EMX.png' %}" alt="" style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/logo-inter.jpg' %}" alt="" style="width: 100%;object-fit: contain;">
+                    <img src="{% static 'images/logo-searchlight.png' %}" alt="" style="width: 70%;object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="parallax" style="background-image: url({% static 'images/inv-parallax.png' %})">
+            <div class='container-fluid container-relative text-white paramargin1'>
+                <div class=" d-flex align-items-center justify-content-center flex-wrap">
+                    <div class="d-flex align-items-center justify-content-center flex-wrap mb-lg-4 mb-xl-0 subs-box">
+                        <div class="d-flex align-items-center row">
+                            <h3 class="mb-0 mr-a "><i class="fa fa-2x fa-envelope-o mr-3 suscribir"></i>Regístrate a
+                                nuestro Newsletter</h3>
+                        </div>
+                        <div class="d-flex align-items-center row news-comp justify-content-center">
+                            <form class="form" method="post" id="newsletter-form-inv">
+                                <div class="form-group mb-0 d-flex align-items-center">
+                                    <input class="form-control mb-2 mb-md-0" id="fieldEmail" name="correo"
+                                           type="email" placeholder="{% trans 'Correo electrónico' %}" required>
+                                    <button id="newsletter-submit" type="submit" class="btn btn-primary">
+                                        {% trans 'Suscribirse' %}
+                                    </button>
+                                </div>
+                                <div class="alert-message"></div>
+                            </form>
+                            
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <div class="marquee">
+        <div class="marq_cont">
+            <div class="marq_item">
+                <img src="{% static 'images/logo-Alta-Growth-Private-Equity.png' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-bocel.png' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-cybolt.png' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-discovery.png' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-EMX.png' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-inter.jpg' %}">
+            </div>
+            <div class="marq_item">
+                <img src="{% static 'images/logo-searchlight.png' %}">
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="modal" id="newsletter-success" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Muchas gracias por suscribirse al boletín de noticias.</h6>
+                </div>
+                <div class="modal-body">
+                    <button class="" data-dismiss="modal">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    {#    <script src="{% static 'js/amCharts/contenido/inversionistas.min.js' %}{{ css_js_version }}"></script>#}
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    {#    <script src="{% static 'js/theme-vendors.min.js' %}"></script>#}
+    <script src="{% static 'js/tabsinv.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/variables_cotizacion.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 1500,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            responsive: {
+                0: {items: 1, margin: 15},
+                600: {items: 3, margin: 25},
+                1000: {items: 6, margin: 40}
+            }
+        });
+
+
+        $(document).ready(function () {
+            $('.owl-carousel.header').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 7000,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 1,
+            });
+            var counter = 1;
+
+            $(".selector a")[0].click();
+
+            interval = setInterval(function () {
+                var elemento = $("#destacados").find(".selector a")[counter];
+                $(elemento).click();
+                if (counter === 5) {
+                    counter = 0;
+                } else {
+                    counter++;
+                }
+            }, 5000);
+            $('.images-hover-pr img').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('.images-hover-pr img').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#destacados").find(".selector a")[counter];
+                    $(elemento).click();
+                    if (counter === 5) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+
+            $('.component-inv .bi-person-2').css('height', $('.component-inv .bi-person').height() + 'px');
+
+
+            var checkboxes = $("input[type='checkbox']"),
+                submitButt = $(".download");
+
+            checkboxes.click(function () {
+                submitButt.attr("disabled", !checkboxes.is(":checked"));
+            });
+
+        });
+
+        // JavaScript para métricas interactivas
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                // Formatear número con separación de miles
+                element.textContent = current.toFixed(1).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }, 16);
+        }
+
+        // Función para detectar cuando las métricas están en el viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Animar métricas cuando aparecen en pantalla
+        let metricsAnimated = false;
+        $(window).scroll(function() {
+            if (!metricsAnimated && $('#metricas_section').length) {
+                if (isInViewport(document.getElementById('metricas_section'))) {
+                    metricsAnimated = true;
+                    
+                    $('.metric-number').each(function() {
+                        const target = parseFloat($(this).data('target'));
+                        const element = this;
+                        
+                        $(this).addClass('animating');
+                        animateCounter(element, target, 2000);
+                    });
+                }
+            }
+        });
+
+        // Efectos hover adicionales para las métricas
+        $('.metric-card').hover(
+            function() {
+                $(this).find('.metric-number').addClass('animating');
+            },
+            function() {
+                $(this).find('.metric-number').removeClass('animating');
+            }
+        );
+
+        // Click en métricas para mostrar información adicional
+        $('.metric-card').click(function() {
+            const metric = $(this).data('metric');
+            const number = $(this).find('.metric-number').text();
+            const label = $(this).find('.metric-label').text();
+            
+            // Crear modal o alert con información detallada
+            alert(`${label}: ${number} MDP\n\nInformación detallada disponible en nuestros reportes financieros.`);
+        });
+
+        // Función auxiliar para formatear números con separación de miles
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            var divT = $('#select_tabla').val();
+            $('#' + divT).removeClass('d-none');
+
+            $('#select_tabla').change(function (event) {
+                $('div.tablas[id^="t"][class!="d-none"]').addClass('d-none');
+                $('#' + $(this).val()).removeClass('d-none');
+            });
+        });
+    </script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.js' %}"></script>
+{% endblock %}

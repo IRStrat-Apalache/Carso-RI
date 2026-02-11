@@ -1,0 +1,251 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <style>
+       .panel-group.accordion-style-03 .panel {
+            padding-left: 32px;
+            padding-right: 32px;
+            margin-bottom: 22px !important;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .panel-group.accordion-style-03 .panel .panel-heading {
+            padding: 10px 10px 10px 0;
+            position: relative;
+        }
+
+        .accordion-style-03 .panel .panel-heading i {
+            position: absolute;
+            top: 33%;
+            right: 0;
+            font-size: 19px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .estra-link.active span {
+            color: #232323;
+            font-weight: 700;
+        }
+
+        .estra-info {
+            position: absolute !important;
+            top: 30% !important;
+            padding: 40px !important;
+            color: white !important;
+        }
+
+
+        #over-effect-group h4 {
+            margin-bottom: 0;
+        }
+
+        
+        .bc-gray{
+            background-color: #E7E7E7;
+        }
+
+        .shadow{
+            box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
+        .nav-tabs .nav-link.active {
+            box-shadow:0 -10px #fff;
+            border:none;
+            
+        }
+
+        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+            border:none;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="container-fluid" style="margin-bottom:60px; margin-top:60px;">
+        <div class="row">
+            <div class="col-6">
+                <div class="primero estra-content">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">FIBRA por sus siglas, se refiere al Fideicomiso de Inversión en Bienes Raíces y por sus similitudes a los REITs en EU. De acuerdo a la legislación mexicana, una FIBRA deberá establecerse como un fideicomiso por contrato. La Ley del Impuesto sobre la Renta en México establece que una FIBRA debe distribuir anualmente por lo menos el 95% de su Utilidad antes de Impuestos.</p>
+                    </div>
+                </div>
+                <div class="segundo estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">Fibra Educa invierte en oportunidades inmobiliarias que potencializan el sector educativo. Su esencia es brindar, estabilizar y mantener espacios dedicados, primordialmente, a la operación de instituciones educativas de nivel medio superior y superior. Es la primera y única Fibra enfocada en adquirir y operar esta clase de inmuebles en México.</p>
+                    </div>
+                </div>
+                <div class="tercero estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <ul class="text-white">
+                            <li>Raúl Patricio Martínez Solares Piña - CEO and Investor Relations Officer</li>
+                            <li>Juan Galindo Valadez - CFO</li>
+                            <li>Tomás Moctezuma Delgado - Internal Audit Officer</li>
+                            <li>Laure Montes Bracchini - Chief Legal Officer</li>
+                            <li>José Luis Juárez Olvera - Chief Operating Officer</li>
+                            <li>Angie Ramos Garduño - Investor Relations</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="cuarto estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">Los CBFIs son el equivalente a los títulos accionarios, por lo que quien tenga en su posesión un CBFI es considerado un inversionista o tenedor de la FIBRA.</p>
+                    </div>
+                </div>
+                <div class="cinco estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">Desde 2013, los CBFIs de Fibra Educa cotizan en la Bolsa Mexicana de Valores (BMV), bajo la clave de pizarra “EDUCA18”.</p>
+                    </div>
+                </div>
+                <div class="seis estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">No, usted puede invertir en Fibra Educa comprando desde 1 CBFI. No obstante, cada casa de bolsa tiene sus requisitos para poder abrir una cuenta de inversión.</p>
+                    </div>
+                </div>
+                <div class="siete estra-content" style="display: none;">
+                    <img src="{% static 'images/Img propiedad-01.png' %}" class="overflow-hidden">
+                    <div class="estra-info">
+                        <p class="text-justify">Cuando Fibra Educa lleva a cabo una distribución de efectivo, se hace un depósito directamente a tu cuenta de inversión en tu casa de bolsa. El efectivo recibido puede destinarse a la compra de más CBFIs de Fibra Inn, para adquirir otro instrumento o retirarlo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="panel-group accordion-event accordion-style-03 margin-4-rem-bottom lg-margin-2-rem-bottom">
+                    <div data-item="primero" class="estra-link active panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Qué es un Fideicomiso de Inversión en Bienes Raíces (FIBRA)?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="segundo" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿A qué se dedica Fibra Educa?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="tercero" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Quiénes son los principales directivos de Fibra Educa?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="cuarto" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Qué son los Certificados Bursátiles  Fiduciarios Inmobiliarios (CBFIs)?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="cinco" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Dónde cotizan los CBFIs de Fibra Educa?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="seis" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Existe un monto mínimo de inversión?</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-item="siete" class="estra-link panel bg-white box-shadow-small border-radius-5px wow animate__fadeInUp" data-wow-delay="0.6s">
+                        <div class="panel-heading">
+                            <div class="boton-info1">
+                                <i class="indicator fa fa-angle-left text-tussock icon-extra-small"></i>
+                                <span>¿Cómo recibo las distribuciones que realiza Fibra Educa?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script>
+        $(document).ready(function () {
+            var counter = 1,
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000);
+            $('#n-estrategia .outside-box-right').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('#n-estrategia .outside-box-right').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+            $(".estra-link").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".estra-item").addClass('d-none');
+                $(".estra-link").removeClass('active');
+                $this.addClass('active');
+                $('.estra-item.' + item).removeClass("d-none");
+
+            });
+
+        });
+    </script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const panels = document.querySelectorAll('.estra-link');
+            const contents = document.querySelectorAll('.estra-content');
+
+            panels.forEach(panel => {
+                panel.addEventListener('click', function() {
+                    const selectedItem = this.getAttribute('data-item');
+
+                    // Ocultar todos los contenidos
+                    contents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Mostrar el contenido correspondiente al panel seleccionado
+                    const activeContent = document.querySelector('.' + selectedItem);
+                    if (activeContent) {
+                        activeContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

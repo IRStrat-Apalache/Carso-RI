@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <style>
+        h3{
+            color: #005598;
+        }
+        .linegray{
+            height: 1px;
+            width: 100%;
+            background-color: gray;
+        }
+    </style>
+{% endblock %}
+
+
+{% block title %}
+    <section class="hero-parallax text-white d-flex align-items-center justify-content-center position-relative"
+             style="background-image: url({% static image %})">
+        <div class="container-fluid container-relative text-title headerint">
+            <h1>{{ title }}</h1>
+            {#            <div class="row">#}
+            {#                <div class="col-lg-7">#}
+            {#                    <div class="owl-carousel header owl-theme headerint-sub ">#}
+            {#                        <div class="item">#}
+            {#                            <h3>Fibra Mty ha crecido de manera continua la distribución por CBFI desde su oferta pública#}
+            {#                                inicial.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha realizado múltiples emisiones de capital en el mercado de valores.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha cumplido con su guía de resultados consistentemente a lo largo de su#}
+            {#                                historia.</h3>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section class="s-block pt-5 pb-4">
+        <div class="container ">
+            <div class="row d-flex">
+                <div class = "col-lg-4 col-md-6 col-sm-12">
+                    <h3>Vector Casa de Bolsa</h3>
+                    <div class ="linegray mb-2"></div>
+                    <p>Martin Lara</p>
+                    <p>martin.lara@miranda-gr.com</p>
+                    <p>52 (55) 6413 8563</p>
+                </div>
+                <div class = "col-lg-3 col-md-6 col-sm-12">
+                    <h3>CI Casa de Bolsa</h3>
+                    <div class ="linegray mb-2"></div>
+                    <p>Carlos Alcaraz</p>
+                    <p>carlos.alcaraz@apalache.mx</p>
+                    <p>52 (55) 6609 5984</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+{% endblock %}
+
+{% block otherscripts %}
+
+{% endblock %}

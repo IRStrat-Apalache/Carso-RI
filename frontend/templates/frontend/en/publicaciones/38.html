@@ -1,0 +1,102 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>5 de Agosto del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/agosto/02.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>La llegada de las FIBRAs al mercado financiero mexicano en 2011 fue la puerta de entrada para
+                        miles de personas que no tenían experiencia en finanzas ni conocían de cerca el sector
+                        inmobiliario.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Gracias a que se puede invertir en FIBRAs, se desarrollaron segmentos como el hotelero,
+                        comercial, industrial y corporativo, al tiempo que se mejoró el acceso a financiamiento para
+                        miles de proyectos.</p>
+                    <h2>El atractivo de las FIBRAs en México</h2>
+                    <p>En sus primeros 10 años de vida, estos instrumentos de inversión <a
+                            href="https://www.elfinanciero.com.mx/mercados/fibras-una-decada-de-ser-alternativa-de-inversion/"
+                            target="_blank">otorgaron rendimientos</a>
+                        anualizados de 8,54%. Esto explica por qué se convirtieron en una interesante alternativa para
+                        muchos inversionistas con poca experiencia, en comparación con otros instrumentos de inversión
+                        comparable.</p>
+                    <p>Con expectativas de tasas de interés bajas por lo menos en los siguientes años, invertir en
+                        FIBRAs es una excelente alternativa. Estas se proyectan como instrumentos que seguirán creciendo
+                        y capitalizándose.</p>
+                    <h2>Conceptos que debes entender para Invertir en FIBRAs</h2>
+                    <p>Sabemos que la jerga financiera tiene términos y conceptos que no siempre son del todo claros.
+                        Menos si son confrontados por personas con poca experiencia en el mundo de las finanzas, o
+                        inversionistas ajenos a los contratos que se celebran en el mercado inmobiliario.</p>
+                    <p>Aquí seleccionamos algunos de los conceptos más importantes que hay que entender para poder
+                        invertir en FIBRAs inmobiliarias con éxito.</p>
+                    <h2>CBFI</h2>
+                    <p>Los Certificados Bursátiles Fiduciarios Inmobiliarios son el equivalente a los titulos
+                        accionarios y le otorgan al inversionista el derecho sobre una porción de los rendimientos
+                        generados por el alquiler de los inmuebles de la FIBRA en la se realiza la inversión. También le
+                        permiten tener una ganancia resultado de su cotización en el Mercado de Valores.</p>
+                    <p>Son emitidos por el fiduciario o institución financiera que tiene a cargo la vigilancia de las
+                        rentas generadas por las propiedades. Los CBFIs están regulados por la Ley del Mercado de
+                        Valores y son custodiados en el INDEVAL quienes se encargan de llevar el control de quién es el
+                        dueño de cada certificado.</p>
+                    <h2>Distribuciones</h2>
+                    <p>Son los pagos periódicos que realiza el fiduciario a los tenedores de los CBFIs. Estos deben ser
+                        de al menos el 95% del último resultado fiscal generado por la FIBRA durante un año
+                        calendario.</p>
+                    <h2>Renta Base Anualizada</h2>
+                    <p>Es el monto de la renta que el arrendatario paga por contrato en el lapso de doce meses. A esa
+                        cantidad se le debe restar los pagos por gasto de operación de las propiedades(como lo es el
+                        seguro, el predial y los gastos de mantenimiento) para obtener el Ingreso Operativo Neto (ION o
+                        NOI por sus iniciales en inglés).</p>
+                    <h2>Área Bruta Rentable</h2>
+                    <p>Representa el total de la superficie rentable medida en m2 de los inmuebles administrados,
+                        restando las áreas comunes como los espacios de estacionamiento, lobbies, y otras amenidades
+                        dependiendo de la naturaleza del inmueble. </p>
+                    <h2>Valuador independiente</h2>
+                    <p>Se trata de una entidad independiente con amplia experiencia en la valuación de propiedades, que
+                        lleva a cabo múltiples metodologías para determinar el valor de un inmueble. Algunas de
+                        estas metodologías son: flujos descontados, transacciones comparables, valor de reposición
+                        nuevo, entre otros. </p>
+                    <p>Si estás buscando más información antes de comenzar a invertir en FIBRAs te invitamos a que
+                        visites <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro blog</a>. O ingresa a <a
+                                href="https://www.fibramty.com/nosotros">nuestro sitio</a> para ponerte en contacto con
+                        un experto de Fibra
+                        MTY.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

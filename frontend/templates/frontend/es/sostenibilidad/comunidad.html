@@ -1,0 +1,363 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">
+    <style>
+        
+    .bc-gray{
+        background-color: #E7E7E7;
+    }
+
+    .shadow{
+        box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .nav-tabs .nav-link.active {
+        box-shadow:0 -10px #fff;
+        border:none;
+        
+    }
+
+    .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+        border:none;
+    }
+
+    .video-thumbnail {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+        transform: scale(1.1);
+        filter: brightness(0.6);
+    }
+
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .video-thumbnail:hover .play-icon {
+        opacity: 1;
+    }
+
+    .btn-conoce {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border: 2px solid white;
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-conoce:hover {
+        transform: scale(1.1);
+        color:white;
+    }
+
+
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section id="becas" class="my-5">
+        <div class="container">
+            <div class="text-center">
+                <h4 style="color:#59A971">La Fundación Fibra Educa A.C. fue establecida como el componente social del Fideicomiso, con la
+                    finalidad de generar un impacto plausible en los miembros que conforman la sociedad. A partir de ello,
+                    nos enfocamos en proporcionar más y mejores oportunidades educativas a los sectores social y
+                    económicamente desfavorecidos, que no tienen acceso a la educación preparatoria y/o universitaria, por
+                    lo que garantizamos una mejora sustancial en el nivel académico de los beneficiarios y sus comunidades.</h4>
+            </div>            
+            <br>
+            <p class="text-justify">
+                Establecimos los siguientes criterios para la asignación de becas, con el fin de beneficiar a la
+                población más vulnerable:
+            </p>
+            <br>
+            {% comment %} <div id="card-becas" class="row m-t-40 justify-content-between my-4">
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/70becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    Establecida en 2021, la Fundación Fibra Educa es una parte fundamental de las iniciativas de impacto social de Fibra Educa En colaboración con algunos de sus inquilinos, que son operadores de servicios educativos, la Fundación ofrece a jóvenes becas educativas para el nivel medio superior y superior.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/35becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    Estas becas se orientan preferentemente a mujeres y a aquellos en situación de vulnerabilidad económica, así como a jóvenes interesados en una variedad de carreras, con un enfoque particular en las áreas STEM (Ciencia, Tecnología, Ingeniería y Matemáticas) y Ciencias de la Salud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/15becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">                                    
+                                Las becas académicas se complementan con una beca para estudiar inglés en modalidad online. Esto no solo mejora las habilidades lingüísticas de los becarios, sino que también amplía sus oportunidades en el mundo laboral globalizado y mejora sus perspectivas de ingresos.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/45becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    Desde su creación, la Fundación Fibra Educa ha ayudado a muchos jóvenes a prosperar y desarrollar su máximo potencial. La Fundación busca que los jóvenes logren el éxito académico y profesional. Al invertir en la educación de las nuevas generaciones, se está construyendo un futuro más equitativo para todos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  {% endcomment %}         
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu.jpg' %}" alt="Inversion">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        Establecida en 2021, la <b style="color:#23356B">Fundación Fibra Educa</b> es una parte fundamental de las <b style="color:#23356B">iniciativas de impacto social</b> de Fibra Educa en colaboración con algunos de sus inquilinos, que son operadores de servicios educativos, la Fundación ofrece a jóvenes <b style="color:#23356B">becas educativas</b> para el nivel medio superior y superior.
+                    </h3>
+                </div>
+            </div>
+            <br>      
+            <div class="row">                
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        Estas becas se orientan preferentemente a <b style="color:#23356B">mujeres</b> y a aquellos en <b style="color:#23356B">situación de vulnerabilidad económica</b>, así como a jóvenes interesados en una variedad de carreras, con un enfoque particular en las áreas <b style="color:#23356B">STEM (Ciencia, Tecnología, Ingeniería y Matemáticas) y Ciencias de la Salud.</b>
+                    </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu2.jpg' %}" alt="Inversion">
+                </div>
+            </div>
+            <br>      
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu3.jpg' %}" alt="Inversion">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        Las becas académicas se complementan con una <b style="color:#23356B">beca para estudiar inglés en modalidad online</b>. Esto no solo <b style="color:#23356B">mejora las habilidades lingüísticas</b> de los becarios, sino que también <b style="color:#23356B">amplía sus oportunidades en el mundo laboral globalizado</b> y <b style="color:#23356B">mejora sus perspectivas de ingresos</b>.
+                    </h3>
+                </div>
+            </div>
+            <br>    
+            <div class="row">                
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        Desde su creación, la <b style="color:#23356B">Fundación Fibra Educa</b> ha <b style="color:#23356B">ayudado a muchos jóvenes a prosperar</b> y desarrollar su máximo potencial. La Fundación busca que los jóvenes <b style="color:#23356B">logren el éxito académico y profesional</b>. Al <b style="color:#23356B">invertir en la educación de las nuevas generaciones</b>, se está construyendo un <b style="color:#23356B">futuro más equitativo para todos</b>.
+                    </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu4.jpg' %}" alt="Inversion">
+                </div>
+            </div>      
+        </div>
+        <br>
+        <div style="background-color:#23356B; color:white;">
+            <div class="container pt-1">
+                <h1 class="text-center mt-5" >Conoce a los becarios de Fundación Fibra Educa</h1>
+                <div class="text-center m-3">
+                    <a href="https://fundacionfibraeduca.com/" class="btn-conoce" target="_blank">Visita el sitio web de la Fundación Fibra Educa</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/y4Y9ivj6aUQ?si=lxfOpLHiTTU2XNMB" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/becario1.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Melanie Vega</b>
+                            <p class="text-justify"> Melanie estudió la carrera de Psicología y se convirtió en un modelo a seguir en su comunidad. Su dedicación inspiró a sus padres a retomar sus estudios de preparatoria, y ahora están próximos a ingresar a la universidad, siguiendo el ejemplo de su hija.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/HxLw3nl2LU8?si=0Jn_UppjOZvmPfZB" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/YulianaAparicio.png' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Yuliana Aparicio</b>
+                            <p class="text-justify"> Yuliana estudió la licenciatura en Administración de Empresas con el objetivo de apoyar el negocio familiar de sus abuelos. Con esfuerzo y dedicación, obtuvo el mejor promedio de su generación y ahora realiza sus prácticas profesionales en el programa de difusión de educación financiera en BBVA.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/7NLwU7vIzEw?si=L-q3-ZBEEjqKzHSs" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/NathanMachorro.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Nathan Machorro</b>
+                            <p class="text-justify"> Nathan estudió la carrera de Psicología y aprovechó al máximo las herramientas que la beca le brindó. Gracias a las clases de inglés y acceso a la plataforma Cuéntame, fortaleció su desarrollo personal y amplió sus oportunidades profesionales.</p>
+                        </div>
+                    </div>                
+                </div>          
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/k--6mnts_ys?si=qEQECqRMWQqEUqsa" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/AmeyaltzinGonzález.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Ameyaltzin González</b>
+                            <p class="text-justify"> Ameyaltzin estudió la carrera de Mercadotecnia con un promedio sobresaliente. Ahora continúa su crecimiento profesional cursando dos maestrías, una en Mercadotecnia y otra en Gestión de Proyectos, para seguir fortaleciendo su perfil y conocimientos de negocio.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/6SeyaAyY2HQ?si=_Q661M5PY_t2t9gY" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/AldoRuíz.jpg' %}" alt="Miniatura del video"  style="height:235px;">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Aldo Ruíz</b>
+                            <p class="text-justify">Aldo se graduó de la carrera de Comercio Internacional como el primer universitario de ambos lados de su familia. A través de Quick Learning logró proyectar su carrera laboral al ser bilingüe, una parte de la beca que aprecia mucho.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/Y_EhbxUz2fk?si=Bql4F-kdNnrU5mBT" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/ItzelMartínez.png' %}" alt="Miniatura del video" >
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Itzel Martínez</b>
+                            <p class="text-justify">Itzel participó en la convocatoria de INFOMATRIX, un prestigioso concurso de ciencia y tecnología organizado por SOLACYT, donde obtuvo un trofeo y medalla Platino con acreditación a Sevilla, España, y tres medallas de plata con acreditación a la sede nacional en Guadalajara. Actualmente, forma parte de los mejores estudiantes de México en el Movimiento STEM National Student Prize 2023.</p>
+                        </div>
+                    </div> 
+                </div>                
+            </div>           
+        </div>
+        <div class="container">
+            <h1 class="text-center mt-5" style="color:#23356B;" >Proyección del otorgamiento de becas<br> a población en vulnerabilidad económica</h1>
+            <div class="text-center">
+                <div id="becasChart" style="width: 100%; height:500px;"></div>
+            </div>  
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>    
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/comunidad.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fragment = window.location.hash;
+
+            if (fragment.includes("tab=")) {
+                const tabId = fragment.split("tab=")[1]; 
+
+                $('#myTab a[href="#' + tabId + '"]').tab('show');
+
+                $('html, body').animate({
+                    scrollTop: $("#ppropiedades").offset().top
+                }, 500, function() {
+                    setTimeout(function() {
+                        $('#myTab a[href="#' + tabId + '"]').tab('show');
+                    }, 100);
+                });
+            }
+        });
+
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: true,
+            navText: ['<i class="icon-arrow-left" aria-hidden="true"></i>', '<i class="icon-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                680: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                },
+                1000: {
+                    items: 3,
+                    nav: true
+                }
+            }
+        });
+    </script>
+{% endblock %}

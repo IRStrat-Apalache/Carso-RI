@@ -1,0 +1,68 @@
+<style>
+  .investor-card {
+  background: white;
+  border-left: 4px solid #23356B;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.investor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.investor-card h6 {
+  font-weight: 600;
+  color: #23356B;
+}
+.investor-card p {
+  font-size: 0.875rem;
+}
+
+
+ .badge-destacado {
+  background-color: #23356B;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  letter-spacing: 1px;
+}
+
+
+</style>
+
+<section class="s-block py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-6"> <!-- Esto lo empuja a la derecha -->
+        <div class="col-12 mb-3">
+  <div class="d-flex align-items-center">
+    <span class="badge-destacado">DESTACADO</span>
+    <div class="flex-grow-1 border-bottom ms-3" style="border-color: #23356B;"></div>
+  </div>
+</div>
+
+
+        <div id="destacados-container">
+          {% for item in destacados %}
+            <article class="investor-card d-flex shadow-sm rounded mb-3">
+  <a target="_blank" href="{{ item.enlace }}" class="d-flex text-decoration-none w-100">
+    {% if item.imagen %}
+      <img src="{{ item.imagen }}" alt="{{ item.titulo }}" class="me-3" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+    {% endif %}
+    <div class="d-flex flex-column justify-content-center">
+      <h6 class="mb-1">{{ item.titulo }}</h6>
+      <p class="mb-0 text-muted">{{ item.resumen }}</p>
+    </div>
+  </a>
+</article>
+
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

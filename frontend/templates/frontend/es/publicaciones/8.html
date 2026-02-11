@@ -1,0 +1,105 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Que-son-los-Instrumentos-de-Inversion"
+                         src="{% static 'images/post/Que-son-los-Instrumentos-de-Inversion.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Quienes están en proceso de comenzar a invertir sus ahorros se habrán encontrado muchas veces con
+                        el término “<strong>instrumentos de inversión</strong>” sin entender en realidad de qué se
+                        tratan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Entrar al mundo de las inversiones puede resultar muy problemático si no se cuenta con la
+                        asesoría indicada, por eso, desde <a href={% url 'index' %}>Fibras
+                            MTY</a>, hoy te explicamos qué son estos instrumentos y
+                        cómo se diferencian las FIBRAs dentro de los instrumentos comparables.</p>
+                    <h2>Opciones por todas partes</h2>
+                    <p>Los <strong>instrumentos de inversión</strong> son las distintas modalidades en las que puedes
+                        invertir dinero
+                        para aumentar tu capital según la rentabilidad del negocio en el que decidas depositar tu
+                        confianza. Algunos de los más populares son: </p>
+                    <ul class="ls-disc">
+                        <li>Bonos gubernamentales</li>
+                        <li>Bienes Raíces</li>
+                        <li>Fondos de Inversión</li>
+                        <li>Acciones</li>
+                        <li>Pagarés Bancarios</li>
+                        <li>Metales (Oro, Plata, Cobre)</li>
+                    </ul>
+                    <p>En términos generales, todos estos <strong>instrumentos de inversión</strong> tienen como
+                        propósito preservar y/o
+                        aumentar el patrimonio de los inversionistas. Sin embargo, hay grandes diferencias entre ellos
+                        <strong>en cuanto a los costos, beneficios y nivel de riesgo</strong>. Por ejemplo, comprar
+                        bonos gubernamentales
+                        tiene un bajo riesgo debido a que es poco probable que un país no pague los intereses de su
+                        deuda además de que el rendimiento y plazo del bono es conocido desde el día en que se lleva la
+                        inversión, por su bajo riesgo, la tasa de rendimiento es menos atractiva. </p>
+                    <h2>Invertir en FIBRAs</h2>
+                    <p>Una de las mejores opciones para hacer inversiones con poco capital y sin un alto nivel de riesgo
+                        es invertir tu dinero en un Fideicomiso de Inversión en Bienes Raíces (FIBRA). Este es un
+                        instrumento de inversión que tiene como objetivo adquirir y administrar propiedades a gran
+                        escala para generar valor y rendimientos para sus inversionistas. </p>
+                    <p>Al invertir en FIBRAs recibirás ganancias provenientes del arrendamiento de propiedades de gran
+                        escala como naves industriales, centros comerciales, hoteles, edificios de oficinas, etc.
+                        Además, obtendrás beneficios fiscales como el no pago de impuestos por el rendimiento por
+                        apreciación del título. Este instrumento es una de las mejores maneras de invertir tu dinero con
+                        bajo riesgo y con una de las mayores rentabilidades del mercado inmobiliario.</p>
+
+                    <p>Las <a href="{% url 'noticia_2' %}">FIBRAs</a> tienen similitudes con <strong>instrumentos de
+                        inversión</strong> de renta fija y renta variable, pero
+                        cuentan con un menor riesgo ya que <strong>están respaldados por el mercado
+                            inmobiliario</strong>, uno de los más
+                        estables de todo México. De igual manera, los pagos de las distribuciones provienen de las
+                        rentas las cuales están mayormente ligadas a la inflación, <strong>siendo un instrumento
+                            defensivo</strong> y
+                        teniendo características similares a las del oro y bonos inflacionarios. </p>
+                    <p>Si estás buscando en qué invertir tu dinero y no tienes claro cómo hacerlo, te invitamos a
+                        visitar nuestro <a href="{% url 'escuela-fibra-finn' %}">sitio web</a>. Además,
+                        puedes seguirnos en nuestras <a href="https://twitter.com/fibra_mty">redes sociales</a> para
+                        conocer más
+                        sobre las ventajas de <strong>invertir en FIBRAs</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

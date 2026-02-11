@@ -1,0 +1,103 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>19 de Abril del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/abril-04.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Un día nuestra preocupación es cómo conseguir dinero y al siguiente es qué hacer para no
+                        perderlo. En Fibra MTY te contamos cuáles son los aspectos que siempre debes tener en cuenta
+                        para cuando quieras invertir en FIBRAs o cualquier otro instrumento de inversión sin que tengas
+                        que preocuparte por ser víctima de una estafa o que pierdas todo el capital que invertiste.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Al experto nadie lo puede engañar</h2>
+                    <p>Es normal que cuando una persona empieza a buscar opciones para invertir su dinero se encuentre
+                        con miles de “minas de oro” que prometen rentabilidades enormes con una poca inversión.
+                        Lastimosamente, estos negocios no suelen ser tan buenos como los pintan y quienes son engañados
+                        nunca vuelven a ver su dinero.</p>
+                    <p>La forma más fácil para evitar estas situaciones es convertirte en un experto de las inversiones.
+                        Por una parte, hay que conocer a profundidad todos los <a href="{% url 'noticia_8' %}">instrumentos</a>
+                        que hay disponibles en el
+                        mercado para poder entender cada uno y así elegir el que más se adapte a tus necesidades.</p>
+
+                    <ul class="ls-disc">
+                        <li><strong> Sigue leyendo: </strong>
+                            <a href="{% url 'noticia_6' %}">¿Qué son las FIBRAs Inmobiliarias? Inversiones de bajo
+                                riesgo?</a>
+                        </li>
+                    </ul>
+                    <p>Otra manera de asegurarnos que no seamos víctimas de una inversión fraudulenta es realizar
+                        inversiones a través de participantes aprobados, un ejemplo es realizar las operaciones de
+                        inversión a través de una casa de bolsa autorizada. </p>
+                    <p>El siguiente paso es convertirte en un experto de la modalidad en la que vas a invertir. Por
+                        ejemplo, si eliges <strong>invertir en FIBRAs</strong> es muy importante que conozcas
+                        detalladamente cómo se
+                        comporta el mercado inmobiliario y domines conceptos como Activos Inmobiliarios, Certificados
+                        Bursátiles Fiduciarios Inmobiliarios, Nivel de Endeudamiento, Lineamientos de Inversión, entre
+                        otros.</p>
+                    <h2>Piensa a largo plazo</h2>
+                    <p>Los principiantes en el mundo de las inversiones suelen cometer dos grandes errores por su falta
+                        de paciencia: invierten impulsivamente y pretenden multiplicar su capital en un corto
+                        tiempo.</p>
+                    <p>La decisión de <strong>invertir en FIBRAs</strong> o cualquier otro tipo de instrumento de
+                        inversión debe tomarse
+                        de una manera racional. Lo más recomendable es no tomar decisiones basadas en tendencias de
+                        redes sociales o especulación en los medios de comunicación.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Te recomendamos: </strong>
+                            <a href="{% url 'noticia_9' %}">FIBRAs en México: Invierte en propiedades de gran escala</a>
+                        </li>
+                    </ul>
+                    <p>Igualmente, se debe evitar hacer inversiones con dinero que puedas necesitar en el corto plazo.
+                        Si por alguna razón sucede que el mecanismo en el que decidiste invertir sufre una caída podrás
+                        esperar y recuperar tu inversión cuando la situación mejore. Una ventaja de las FIBRAs es que en
+                        caso de que el precio del CBFI se vea disminuido, puedes seguir recibiendo distribuciones de
+                        efectivo de manera consistente, teniendo rendimientos constantes en lo que el precio regresa a
+                        niveles razonables. </p>
+                    <p>Al <strong>invertir en FIBRAs</strong> podrás aumentar tu dinero con el respaldo de una compañía
+                        como Fibra MTY y
+                        de uno de los mercados históricamente más estables en México: el inmobiliario.</p>
+                    <p>Si quieres conocer más consejos sobre cómo invertir en FIBRAs y los beneficios que trae te
+                        invitamos a que visites ya mismo nuestra página web y nos sigas en nuestras redes de <a
+                                href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                      href="https://www.linkedin.com/company/fibramty">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

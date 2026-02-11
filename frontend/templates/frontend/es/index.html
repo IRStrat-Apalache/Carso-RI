@@ -1,0 +1,1513 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/settings.css?v=1.0' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-slider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+
+            .card-enfoque {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 1s forwards;
+                border-radius: 10%;
+            }
+
+
+    .card-enfoque:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 0;
+            position: relative;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .popup-img {
+            width: 100%;
+            display: block;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .recuadro {
+            background-color: #23356B;
+            color: white;
+            width: 450px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: center
+            font-size: 20px;
+            color: white
+        }
+
+        .pregunta::after {
+            content: "";
+            display: in-line;
+            width: 100%;
+            height: 4px;
+            background-color: #59A971;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .title {
+            text-align: center;
+            color: #4e4f51;
+        }
+
+        .st0 {
+            fill: #3461B2;
+            stroke: #fff;
+            stroke-width: 1;
+            content: "\f041";
+            cursor: pointer;
+
+        }
+
+        .mapa .active {
+            fill: #001548;
+            stroke: #263155;
+            stroke-width: 0.9;
+        }
+
+        .st1 {
+            fill: #E0E0E0;
+            stroke: #4e4f51;
+            stroke-width: 0.5;
+        }
+
+        .st2 {
+            fill: #E2E2E2;
+            stroke: #FFFFFF;
+            stroke-width: 0.75;
+        }
+
+        .st4 {
+            fill: #4e4f51;
+            stroke: #4e4f51;
+            stroke-width: 0.75;
+        }
+
+        .st3 {
+            stroke: #fff;
+            fill: none;
+            cursor: pointer;
+            z-index: 99999;
+        }
+
+        .propiedades-circle {
+            border-style: dashed;
+            border-color: #263155;
+            padding: 0.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #propiedades-circle h4, #propiedades-circle h3 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        #propiedades-circle ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .list-unstyled {
+            padding-left: 10%;
+        }
+
+        .portfolio-image-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-img {
+            width: 800px;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .portfolio-image-container {
+            position: relative;
+            width: 600px; /* Asegúrate de que el ancho de la imagen sea el deseado */
+            height: 463px; /* Asegúrate de que la altura de la imagen sea la deseada */
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s ease; /* Transición para el efecto de oscurecimiento */
+        }
+
+        .portfolio-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1130px; /* Ancho máximo del contenedor */
+            margin: auto;
+        }
+
+        .portfolio-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2; /* Asegura que el contenido de hover esté por encima de la superposición */
+        }
+
+        .inside-text {
+            text-align: center;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            padding: 10px;
+            width: 100%; /* Usa el 100% del ancho del contenedor padre */
+            max-width: 300px; /* Limita el ancho máximo */
+            height: 250px; /* Fija el alto para que todos los contenedores sean iguales */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden; /* Asegura que el contenido extra no se desborde */
+        }
+
+        .image-container img {
+            max-width: 50%; /* Ajusta el tamaño de la imagen al 80% del ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+
+        .image-container {
+            transition: background-color 0.3s, filter 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .image-container.hover-effect {
+            background-color: white;
+            color: #23356B;
+            filter: brightness(1.1);
+        }
+
+        .image-container.hover-effect p {
+            color: #23356B;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .image-container:hover {
+            background-color: white;
+            border-radius: 15px; /* Bordes redondeados al hacer hover */
+        }
+
+        .image-container:hover p {
+            color: #23356B;
+        }
+
+
+        /* Contenedor de navegación que incluye las flechas y los puntos */
+        .owl-carousel .owl-nav,
+        .owl-carousel .owl-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 20px; /* Espacio adicional por encima del conjunto de navegación */
+        }
+
+        /* Contenedor conjunto para las flechas y los puntos */
+        .owl-carousel .owl-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            bottom: -30px; /* Ajusta la posición vertical según sea necesario */
+        }
+
+        /* Estiliza los botones de las flechas */
+        .owl-carousel .owl-nav button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #59A971 !important; /* Cambia el color de las flechas según tu preferencia */
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0 25px; /* Espacio horizontal adicional para las flechas */
+            transition: transform 0.3s ease;
+            outline: none;
+        }
+
+        /* Estiliza los puntos y asegúrate de que estén centrados */
+        .owl-carousel .owl-dots {
+            flex-grow: 1; /* Los puntos ocupan el espacio central */
+            display: flex;
+            justify-content: center;
+        }
+
+        .owl-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: grey !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background-color: #59A971 !important;
+        }
+
+        .owl-carousel .owl-dot:focus {
+            outline: none;
+        }
+
+        .owl-carousel .owl-nav button:hover {
+            transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+
+        .owl-carousel .owl-stage {
+            display: flex !important;
+            justify-content: center; /* centra los items */
+        }
+
+
+        .news-section {
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px; /* Espacio uniforme entre los contenedores */
+        }
+
+        .news-item {
+            text-align: center;
+            background-color: #EDEDED;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 8px;
+            overflow: hidden;
+            box-sizing: border-box; /* Asegura que el padding no altere el tamaño del contenedor */
+        }
+
+        .news-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            height: 250px; /* Ajusta la altura de las imágenes */
+            border-radius: 8px;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+            transition: transform 0.3s ease;
+        }
+
+        .news-image:hover img {
+            transform: scale(1.1); /* Efecto de zoom al hacer hover */
+        }
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .news-image:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .hover-overlay i {
+            color: white;
+            font-size: 40px;
+        }
+
+        .news-title {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 14px;
+            color: #23356B;
+            text-align: justify;
+            flex-grow: 1; /* Asegura que el título ocupe el espacio disponible */
+        }
+
+        .bordered {
+            width: 80%;
+            border: 2px solid #3461B2; /* Establece el color del borde */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno (opcional) */
+            margin: 10px; /* Espaciado entre los divs */
+            margin-bottom: 60px; /* Espaciado entre los divs (opcional) */
+        }
+
+        .imgPres {
+            width: 80%;
+        }
+
+        .btn-suscripcion {
+            background-color: #23356B;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px !important;
+            font-size: 30px !important;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: none !important;
+        }
+
+        .btn-suscripcion:hover {
+            background-color: #59A971;
+        }
+
+        /* #contenido img {
+             width: 300px!important;
+             height: auto;
+             object-fit: cover;
+         }*/
+
+        #contenido .content-item {
+            transition: scale 0.5s ease;
+            padding: 0;
+        {#box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;#}
+        }
+
+        #contenido .content-item img {
+            transition: scale 0.5s ease;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        #contenido .content-item:hover img {
+            transform: scale(1.1); /* Efecto de zoom al hacer hover */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .news-section {
+                margin-left: 40px !important;
+            }
+
+            #img-certificado {
+                width: 80% !important;
+
+            }
+
+            #mapita {
+                height: 200px !important;
+            }
+
+
+        }
+
+        .lineas-card {
+            border: 2px white solid;
+            color: #212529;
+            border-radius: 30px;
+            margin: 0 5px;
+            width: 30%;
+            transition: .5s ease;
+        }
+        .lineas-card:hover {
+            border: 2px #62D482 solid;
+            transform: translateY(-7px);
+        }
+        .lineas-card a {
+            border: 2px #62D482 solid;
+            color:#62D482;
+            padding: 5px 10px;
+            border-radius: 40px;
+            transition: .5s ease;
+        }
+        .lineas-card a:hover {
+            border: 2px #23356B solid;
+            color:#23356B;
+        }
+
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+  <!--  <div style="background-color:#1D3164">
+        <div class="container py-5">
+            <div id="icon-carousel" class="carousel slide d-md-none" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="image-container">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                               data-description="Lorem ipsum dolor.">
+                                <img src="{% static 'images/iconos2-05.png' %}" alt="Imagen 1" class="d-block w-100">
+                                <p>Contratos de Largo Plazo</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/administracion.png' %}" alt="Imagen 2" class="d-block w-100">
+                            <p>Administración Internalizada</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Gobiernocorporativo.png' %}" alt="Imagen 3"
+                                 class="d-block w-100">
+                            <p>Gobierno Corporativo con las mejores prácticas del mercado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Carterainicial.png' %}" alt="Imagen 4" class="d-block w-100">
+                            <p>Cartera inicial de alto valor</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/lvt.png' %}" alt="Imagen 5" class="d-block w-100">
+                            <p>3° LTV más bajo del mercado</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/ocupacion.png' %}" alt="Imagen 6" class="d-block w-100">
+                            <p>100% de ocupación</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/0_comisiones.png' %}" alt="Imagen 7" class="d-block w-100">
+                            <p>Totalmente internalizada, 0% comisiones y fees</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Distribuciontrismetral.png' %}" alt="Imagen 8"
+                                 class="d-block w-100">
+                            <p>Distribución trimestral</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#icon-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#icon-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- Para pantallas grandes 
+            <div>
+                <div class="row d-none d-md-flex">
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                         
+                               data-description="Una de nuestras principales fortalezas es que todos nuestros contratos tienen una duración inicial de 15 años, con renovaciones automáticas estipuladas desde su firma. Nuestros inquilinos jamás han incurrido en morosidad o impago, incluso durante la pandemia, lo que refleja la solidez operativa y financiera de nuestros activos.">
+                                <img src="{% static 'images/iconos2-05.png' %}" alt="Imagen 1" class="img-fluid">
+                                <p>Contratos de<br>Largo Plazo</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                            
+                               data-description="Fuimos la primera FIBRA en México con un modelo 100% internalizado desde nuestro IPO, priorizando siempre la conformación de un equipo directivo altamente experimentado. Actualmente, el  85% de los miembros de nuestro Comité Técnico son independientes, y el 50% son mujeres, reforzando nuestro compromiso con la diversidad y la excelencia en la toma de decisiones.">
+                                <img src="{% static 'images/administracion.png' %}" alt="Imagen 2" class="img-fluid">
+                                <p>Administración Internalizada</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                           
+                               data-description="Desde nuestro debut en el mercado adoptamos los más altos estándares de Gobierno Corporativo. Hoy somos reconocidos como una de las cinco organizaciones mejor evaluadas a nivel global entre empresas públicas y privadas de Estados Unidos, Canadá y Europa. Esta distinción nos posiciona como un referente en el sector, no solo en México, sino a nivel internacional.">
+                                <img src="{% static 'images/Gobiernocorporativo.png' %}" alt="Imagen 3"
+                                     class="img-fluid">
+                                <p>Gobierno Corporativo</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="Contamos con un portafolio ampliamente diversificado, tanto geográficamente en las regiones con mayor potencial de crecimiento, como en distintas marcas educativas. Esta estrategia nos permite maximizar la solidez y previsibilidad de nuestras fuentes de ingresos, integrando además un firme enfoque de sostenibilidad para generar valor ambiental y económico a largo plazo para inversionistas e inquilinos.">
+                                <img src="{% static 'images/Carterainicial.png' %}" alt="Imagen 4" class="img-fluid">
+                                <p>Diversificación<br>Regional y Sectorial</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="Con un LTV del 20%, contamos con uno de los niveles de apalancamiento más bajos del mercado. Esta posición financiera robusta ha sido respaldada por calificaciones de crédito sobresalientes: AA+ por Moody’s y AAA por HR Ratings, lo que nos brinda acceso preferencial a los mercados financieros.">
+                                <img src="{% static 'images/lvt.png' %}" alt="Imagen 5" class="img-fluid">
+                                <p>Bajo Nivel de<br>Apalancamiento</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="Nuestro historial de ocupación es ejemplar: mantenemos una tasa del 100% y no registramos rotación de inquilinos, incluso en entornos económicos adversos. Esto evidencia la solidez de nuestras relaciones contractuales y la estabilidad financiera de nuestros arrendatarios.">
+                                <img src="{% static 'images/ocupacion.png' %}" alt="Imagen 6" class="img-fluid">
+                                <p>Ocupación Total</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                               
+                               data-description="Nuestro modelo de operación no contempla el cobro de comisiones ni fees, respaldando nuestro objetivo de generar valor directo para nuestros tenedores. Esta estructura transparente y alineada permite que los beneficios generados se canalicen hacia nuestros tenedores sin intermediarios que diluyan rendimientos.">
+                                <img src="{% static 'images/0_comisiones.png' %}" alt="Imagen 7" class="img-fluid">
+                                <p>Política de Cero<br>Comisiones</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                             
+                               data-description="Bajo una filosofía de previsibilidad, estabilidad y disciplina financiera, contamos con una política de distribución trimestral. Esta práctica reafirma nuestro compromiso con la generación constante de valor para nuestros inversionistas a través de retornos sostenibles y consistentes.">
+                                <img src="{% static 'images/Distribuciontrismetral.png' %}" alt="Imagen 8"
+                                     class="img-fluid">
+                                <p>Distribución Trimestral</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade popup" id="IconModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="card">
+                            <div class="card-body text-justify">
+                                <h4 class="event-title card-title my-2">
+                                </h4>
+{#                                <i class="fa fa-calendar"></i>#}
+{#                                <span class="event-date">#}
+{#                    </span>#}
+{#                                <i class="fa fa-folder"></i>#}
+{##}
+{#                                <span class="event-category">#}
+{#                    </span>#}
+                                <p class="event-description card-text my-5">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center py-3">
+                            <button type="button" class="btn close-btn card-link" style="background-color: #23356B; color: #ffff;" data-mdb-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+
+
+    {% include 'partials/slider_home.html' %}
+<!--Objetivo-->
+<section id="sobre">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-2" style="">
+                <br>
+                <h2 style="color:#62D482;text-transform: uppercase; text-align: left;" ><b>Nuestro objetivo</b>
+                </h2>
+            </div>
+            <div class="col-md-6" style="padding: 20px 10px;">
+                <p style="color:#23356B; font-weight: 400; font-size:18px; text-align: justify; line-height: 1.9;">
+                    Impulsamos la cultura del capital de riesgo en México, canalizando recursos de inversionistas institucionales hacia empresas y proyectos con alto potencial. 
+                    <br>
+                    Administramos y estructuramos fondos especializados, diseñamos mecanismos de salida eficientes y brindamos soluciones estratégicas que fomentan la inversión productiva en México y la región panamericana.
+                </p>
+            </div>
+            <div class="col-md-4" style="display: flex; padding-top:25px; align-items: flex-start;">
+                <img src= "{% static 'images/image-11.png' %}" style="width: 100%; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!--NUESTRO CERTIFICADO-->
+ <!--  <div class="pb-0">
+        <section id="tiker-sec" class="page-section-ptb py-5" style="background-color: #EDEDED;">
+            <div class="container">
+                <h1 class="py-3 text-center" style="color:#23356B; font-weight:bold; font-size:54px;">Nuestro
+                    certificado.</h1>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-xl-6 mt-4 mt-xl-0 d-flex flex-column align-items-center">
+                        <div class="pl-3 pt-lg-3 pl-lg-5 pb-lg-3 pr-lg-5 text-white  pricedata america mt-3 d-flex flex-column justify-content-center"
+                             style="max-width: 600px; background-color:#23356B; border-radius: 15px;">
+                            <img src="{% static 'images/bmv.png' %}" alt="BMV Logo"
+                                 style="position: absolute; top: -40px; right: -25px; width: 200px; height: auto;">
+                            <h1 id="tiker-sec-tiker" class="mb-0 text-left" style="font-size:28px; font-weight:bold;">
+                                Symbol
+                            </h1>
+                            <h1 class="mb-0 text-left"
+                                style="color: #59A971; line-height: 1.5; font-size: 54px; font-weight:bold;">$
+                                <span id="tiker-sec-price" class="last" style="color: #59A971;">0</span>
+                                <span style="color: #59A971;">MXN</span> &nbsp;&nbsp;
+                                <span class="d-none change-direction">-</span>
+                                {% comment %} <span id="tiker-sec-percent" class="percent" style="color: #005598;">0%</span> {% endcomment %}
+                            </h1>
+
+                            <h1 class="text-center" style="white-space: nowrap; font-size:28px; font-weight:bold;">Valor
+                                de capitalización*:<br>
+                                <span style="font-size:44px;">$</span>
+                                <span id="tiker-sec-capitalizacion" style="font-size:44px;" class="capitalizacion count"
+                                      data-speed="2500"
+                                      data-to="0" data-in-viewport="yes" data-decimals="0"
+                                >0</span>
+                                <span>MXN</span>
+                            </h1>
+                            <br>
+                            <h1 class="text-left " style="white-space: nowrap; font-size:28px; font-weight:bold;">CBFIs
+                                en circulación: 1,227,636,170**</h1>
+                            <br><br>
+                            <p class="text-left mb-0" style="font-size: 16px; ">* Retraso mínimo de 20 min.</p>
+                            <p class="text-left mb-0" style="font-size: 16px; ">** Al cierre del 1T25.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>-->
+
+<!--Nuestro enfloque-->
+<section id="enfoque" style="background-image: url('static/images/fondo4.png'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;">
+    <div class="container">
+        <h2 style="color:#fff;font-weight: bold; text-transform: uppercase; text-align: center; padding: 3% 6%;">
+            Nuestro Enfoque
+        </h2>
+
+        <div class="d-flex justify-content-center flex-wrap">
+            <!--Card 1-->
+            <div class="card card-enfoque mb-4 mx-3" style="width: 18rem; color: #0D1F2E; background-color: #fff !important;">
+                <div class="card-body">
+                    <h5 class="card-title">Capital para el desarrollo</h5>
+                    <p class="card-text">
+                        Canalizamos capital hacia sectores clave del país, generando retornos atractivos y un impacto económico, social y ambiental medible.
+                    </p>
+                </div>
+            </div>
+
+            <!--Card 2-->
+            <div class="card card-enfoque mb-4 mx-3" style="width: 18rem; color: #0D1F2E;  background-color: #fff !important;">
+                <div class="card-body">
+                    <h5 class="card-title">Alianzas estratégicas</h5>
+                    <p class="card-text">
+                        Establecemos vínculos con actores clave del ecosistema de inversión para movilizar capital inteligente, sostenible y de largo plazo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--LINEAS NEGOCIO-->
+<section id="lineas-negocio" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style=" font-weight:bold; color: #62D482; text-transform: uppercase; margin-top: 1rem;">Negocios y Estrategias</h2>
+        <div class="row justify-content-center">
+
+            <!-- Capital Privado -->
+
+            <div class=" mb-4 lineas-card">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-building me-2"></i> Capital Privado</h5>
+                        <p class="card-text">Participamos en fondos de capital y deuda privada, infraestructura y bienes raíces, con presencia local y regional. Buscamos generar retornos ajustados al riesgo, contribuyendo a la consolidación de empresas con alto potencial.</p>
+                        <a href="">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energía -->
+            <div class=" mb-4 lineas-card">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-bolt me-2"></i> Energía</h5>
+                        <p class="card-text">Administramos vehículos de inversión orientados al fortalecimiento del sector energético, priorizando la transición hacia modelos más sostenibles y resilientes.</p>
+                        <a href="">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capital Emprendedor -->
+            <div class=" mb-4 lineas-card">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-rocket me-2"></i> Capital Emprendedor</h5>
+                        <p class="card-text">Invertimos en fondos y de forma directa en startups y PyMEs tecnológicas, promoviendo la innovación, escalabilidad y dinamismo del ecosistema emprendedor.</p>
+                        <a href="">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inversiones de Impacto -->
+            <div class=" mb-4 lineas-card">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-leaf me-2"></i> Inversiones de Impacto</h5>
+                        <p class="card-text">Contamos con un portafolio regional orientado a proyectos que combinan rentabilidad financiera con impactos positivos en inclusión financiera, salud, educación, energías limpias y sostenibilidad ambiental.</p>
+                        <a href="">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión de Programas -->
+            <div class=" mb-4 lineas-card">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-chart-line me-2"></i> Gestión de Programas de Inversión</h5>
+                        <p class="card-text">Administramos vehículos y programas de inversión para una amplia gama de inversionistas, incluyendo fondos de pensiones, aseguradoras, organismos multilaterales, y family offices. Nuestra gestión se caracteriza por la transparencia, la solidez técnica y el enfoque en resultados.</p>
+                        <a href="">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <div class="py-5" style="background-color:#0D1F2E">
+        <div class="container-fluid">
+            <!-- TÍTULO CON BOTÓN -->
+            <h1 class="text-white mx-2" style="font-size:48px;">
+                Últimas <b>noticias.</b>
+            </h1>
+            {% comment %}
+            <h1 class="text-white mx-2 mb-5" style="font-size: 32px; cursor: pointer;" data-bs-toggle="modal"
+                data-bs-target="#modalSuscripcion">
+                <span style="text-decoration: underline;">Suscríbete</span>
+                <span style="text-decoration: none;"> para recibir nuestro newsletter.</span>
+            </h1>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-labelledby="modalSuscripcionLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-white" style="background-color:#62D482">
+                            <h5 class="modal-title" id="modalSuscripcionLabel">Suscribirse al Newsletter</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="correo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="empresa" class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" id="empresa">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cargo" class="form-label">Cargo</label>
+                                    <input type="text" class="form-control" id="cargo">
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn-suscripcion">Suscribirme</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
+            
+           <!-- <section class="news-section owl-carousel" style="margin-left:40px;"> -->
+            <section class="row " style=" display: flex; flex-direction: row; height: 450px;">
+                <div class="col-md-4" style="padding: 10px;">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7250351295167889409?collapsed=1" frameborder="0" allowfullscreen="" title="Publicación integrada" style="width: 100%; height: 100%"></iframe>
+                </div>
+                <div class="col-md-4" style="padding: 10px;">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7245222787118702593?collapsed=1" frameborder="0" allowfullscreen="" title="Publicación integrada" style="width: 100%; height: 100%;"></iframe>
+                </div>
+                <div class="col-md-4" style="padding: 10px;">
+                    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7232526551911653376?collapsed=1" frameborder="0" allowfullscreen="" title="Publicación integrada" style="width: 100%; height: 100%;"></iframe>
+                </div>
+            </section>
+            {% comment %}
+            <section class="news-section " style=" display: flex; flex-direction: row;">
+                {% for noticia in noticias %}
+                    <div class="news-item">
+                        <div class="news-image">
+                            <a href="{{ noticia.url }}" target="_blank">
+                            <img src="{% static noticia.image %}" alt="Noticia">
+                            <div class="hover-overlay">
+                                <i class="fa fa-link"></i>
+                            </div>
+                            </a>
+                        </div>
+                        <p class="news-title">{{ noticia.texto }}</p>
+                    </div>
+                {% endfor %}
+            </section>
+            {% endcomment %}
+        </div>
+
+
+    </div>
+    {% comment %}
+    <div class="my-5">
+      <div class="text-left">
+        <h1 class="my-3" style="color:#59A971; margin-left:40px; font-size:48px;">Fechas de pago de<br><b>cupón y distribución.</b>
+        </h1>
+    </div>
+    <section class="container text-center">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23L</h3>
+                    <br>
+                    <p style="font-size:22px;">Jueves, 27 de marzo de 2025</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23-2L</h3>
+                    <br>
+                    <p style="font-size:22px;">Jueves, 14 de agosto de 2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23UL</h3>
+                    <br>
+                    <p style="font-size:22px;">Jueves, 27 de marzo de 2025</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">Distribución 1T25</h3>
+                    <br>
+                    <p style="font-size:22px;">Lunes, 26 de mayo de 2025</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </div>
+  
+
+    <div class="text-center">
+        <img src="{% static 'images/homehash.png' %}" style="width:250%">
+    </div>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Solicitar una reunión</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body contact-page2 contact-page">
+                    <div class="contact-form-area">
+                        <div id="form-messages"></div>
+                        <form id="form-meeting" action="" method="post" class="agenda">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Nombre*</label>
+                                        <input id="name" name="name" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="company">Compañía*</label>
+                                        <input id="company" name="company" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Correo*</label>
+                                        <input id="email" name="email" class="form-control" type="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">Asunto*</label>
+                                        <input id="subject" name="subject" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message">Mensaje*</label>
+                                        <textarea cols="40" rows="10" id="message" name="message"
+                                                  class="textarea form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="button button-border button-large noleftmargin topmargin-sm"
+                                    id="btn-send-agenda submit-button"
+                                    style="color:white; background-color: #005598">Enviar
+                            </button>
+                        </form>
+                        <div class="alert-message-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+</div>
+{% endblock %}
+
+{% block otherscripts %}
+    
+    <script>
+        {#modal icons#}
+        $(".modal-icons").click(function (e) {
+            e.preventDefault();
+            let target = $(e.currentTarget);
+            console.log('entro');
+            $("#IconModal1 .event-title").text(target.data('title'));
+            $("#IconModal1 .event-description").text(target.data('description'));
+            $("#IconModal1").modal('show');
+        });
+        $("#IconModal1 .close-btn").click(function (e) {
+            $("#IconModal1").modal('hide');
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const containers = document.querySelectorAll(".image-container");
+            let animationInterval;
+            let animationIndex = 0;
+            let isMouseOverAny = false;
+
+            function clearAllEffects() {
+                containers.forEach(container => container.classList.remove("hover-effect"));
+            }
+
+            function startAnimation() {
+                clearInterval(animationInterval);
+                animationInterval = setInterval(() => {
+                    if (isMouseOverAny) return; // No avanza si el mouse está en uno
+
+                    clearAllEffects();
+                    containers[animationIndex].classList.add("hover-effect");
+                    animationIndex = (animationIndex + 1) % containers.length;
+                }, 1000); // Velocidad entre cambios (ajústala a gusto)
+            }
+
+            containers.forEach((container, index) => {
+                container.addEventListener("mouseenter", () => {
+                    isMouseOverAny = true;
+                    clearAllEffects();
+                    container.classList.add("hover-effect");
+                });
+
+                container.addEventListener("mouseleave", () => {
+                    isMouseOverAny = false;
+                    clearAllEffects(); // Limpiar para que no se mantenga duplicado
+                    startAnimation();
+                });
+            });
+
+            startAnimation(); // Empieza animación al cargar
+        });
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#invitacionModal').on('show.bs.modal', function (e) {
+                $('body').addClass("inv-modal");
+            }).on('hide.bs.modal', function (e) {
+                $('body').removeClass("inv-modal").css({'overflow': 'auto'});
+            });
+            $('#invitacionModal').modal('show');
+            $('#invitacionModalRoad').modal('show');
+
+            $('body').css({'overflow': 'scroll'});
+            $(document).off('scroll');
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+                dots: true,
+                autoplay: true,  // Activa el autoplay
+                autoplayTimeout: 10000,  // 3 segundos entre slides
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+        });
+
+    </script>
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/propiedades.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/jquery.flexslider.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/theme-vendors.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/maps-states-mx.min.js' %}"></script>
+    {#    <script src="{% static 'js/index.js' %}"></script>#}
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/variables_cotizacion.js' %}"></script>
+    <script src="{% static 'js/index.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/bootstrap-slider.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel-Cifras").owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+            });
+
+            $('.owl-carousel.index').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            $('.owl-carousel.ods').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Función para verificar si un elemento está visible en el viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Función para activar el contador solo en la slide activa
+            function activateCounter() {
+                // Seleccionamos la slide activa
+                var activeSlide = $('#myCarousel2 .carousel-item.active');
+
+                // Solo activamos el contador en la slide activa
+                activeSlide.find('.finn-counto .count').each(function () {
+                    var $this = $(this);
+                    if (isElementInViewport(this)) {
+                        $this.countTo({
+                            to: $this.data('to'),
+                            speed: $this.data('speed'),
+                            decimals: $this.data('decimals'),
+                            formatter: function (value, options) {
+                                let formattedValue = value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                                if ($this.data('currency') === 'usd') {
+                                    formattedValue = '$' + formattedValue;
+                                }
+                                return formattedValue;
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Activar el contador cuando el carrusel se mueva
+            $('#myCarousel2').on('slid.bs.carousel', function () {
+                activateCounter();  // Llamamos a la función para la nueva slide activa
+            });
+
+
+            // Inicializar el contador para la slide activa al cargar la página
+            activateCounter();
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Verifica si la pantalla es menor de 768px
+            if ($(window).width() < 768) {
+                $('.icon-carousel').addClass('owl-carousel owl-theme'); // Agrega las clases necesarias para el carrusel
+                $('.icon-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    items: 1, // Muestra un ítem a la vez en móvil
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                });
+            }
+        });
+
+    </script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.finn-counto').each(function () {
+                finn_waypoint('#' + $(this).attr('id'));
+                finn_counto('#' + $(this).attr('id'));
+            });
+            $("#modalCuestionario").modal('show');
+        });
+
+        function finn_waypoint(elemento) {
+            var waypoint = new Waypoint({
+                element: $(elemento),
+                handler: function (direction) {
+                    $(elemento + ' .count').trigger('on-appear');
+                },
+                offset: '75%',
+                triggerOnce: true
+            });
+        }
+
+        function finn_counto(elemento) {
+            if ($().countTo) {
+                $(elemento + ' .count').on('on-appear', function () {
+                    $(elemento + ' .honeycomb-path.honeycomb-1').addClass('honeycomb-animated');
+
+                    $(this).each(function () {
+                        var to = parseFloat($(this).data('to')),
+                            speed = parseInt($(this).data('speed')),
+                            decimals = parseInt($(this).data('decimals')),
+                            addDollar = $(this).data('currency') === 'usd'; // Verifica si el elemento tiene la etiqueta data-currency="usd"
+
+                        $(this).countTo({
+                            to: to,
+                            speed: speed,
+                            decimals: decimals,
+                            formatter: function (value, options) {
+                                let formattedValue = value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+
+                                // Si el campo tiene data-currency="usd", agregamos el símbolo de dólar
+                                if (addDollar) {
+                                    formattedValue = '$' + formattedValue;
+                                }
+
+                                return formattedValue;
+                            },
+                            onComplete: function (value) {
+                                // Aquí podrías agregar más condiciones para otros formatos si es necesario
+                            }
+                        });
+                    });
+                }); //counter
+            }
+        }
+
+
+        function alert_animations(container, type, text) {
+            var htmlAlert = '<div class="alert alert-' + type + ' mt-2">' + text + '</div>';
+            $(container).prepend(htmlAlert);
+            $(container + " .alert").first().hide().fadeIn(800).delay(2000).fadeOut(800, function () {
+                $(this).remove();
+            });
+        }
+
+        var form = $('#form-meeting');
+        form.submit(function (event) {
+            event.preventDefault();
+            $('#submit-button').addClass('disabled');
+            $.ajax({
+                type: 'POST',
+                url: '{% url 'meeting' %}',
+                data: form.serialize(),
+                success: function (response) {
+                    if (response['success']) {
+                        form.trigger('reset');
+                        $('#submit-button').removeClass('disabled');
+                        alert_animations('.alert-message-footer', 'success', response['message']);
+                        {#grecaptcha.reset();#}
+                    } else {
+                        alert_animations('.alert-message-footer', 'danger', response['message']);
+                        $('#submit-button').removeClass('disabled');
+                        {#grecaptcha.reset();#}
+                    }
+                },
+            });
+        });
+
+        $(window).on('load', function () {
+
+            $('body').css({'overflow': 'scroll'});
+            $(document).off('scroll');
+
+
+            $("#propiedades-circle").attr("style", "opacity:0;left:100px");
+
+            let divText = $("#propiedades-text");
+            divText.empty();
+            let state = mxStates['MEX2706'];
+            $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+            $("#propiedades-state").text(state.name);
+            $("#propiedades-legend").text(state.leyend);
+            let list = state.list;
+            if (list.length) {
+                for (let i of list) {
+                    divText.append('<h4 class="text-bold">' + i.titulos + '</h4>');
+                    if (i.items.length) {
+                        let ul = '<ul class="list-group list-unstyled" >';
+                        for (let j of i.items) {
+                            ul += '<li class="list-unstyled text-bold" style="font-size:25px !important;">' + j + '</li>';
+                        }
+                        ul += '</ul>';
+                        divText.append(ul);
+                    }
+                }
+            }
+
+            $("path.st0, path.st3")
+                .click(function () {
+                    let id = $(this).attr("id") ?? $(this).data("id");
+
+                    {#activo css#}
+                    $('path.active').removeClass('active');
+                    $("#" + id).attr("class", "st0 active");
+
+                    $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+                    {#$("#propiedades-state").text($(this).attr("name"));#}
+                    $("#propiedades-state").text(mxStates[id].name);
+                    $("#propiedades-legend").text(mxStates[id].leyend);
+
+                    let divText = $("#propiedades-text");
+                    divText.empty();
+                    let list = mxStates[id].list;
+                    if (list.length) {
+                        for (let i of list) {
+                            divText.append('<h4 class="text-bold">' + i.titulos + '</h4>');
+                            if (i.items.length) {
+                                let ul = '<ul class="list-group list-unstyled">';
+                                for (let j of i.items) {
+                                    ul += '<li class="list-unstyled text-bold" style="font-size:25px !important;">' + j + '</li>';
+                                }
+                                ul += '</ul>';
+                                divText.append(ul);
+                            }
+                        }
+                    }
+                })
+            {#.mouseup(function () {#}
+            {#    $("#propiedades-circle").attr("style", "opacity:0;left:100px");#}
+            {# })#}
+            ;
+        });
+
+    </script>
+{% endblock %}

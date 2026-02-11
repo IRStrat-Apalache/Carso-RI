@@ -1,0 +1,121 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-lg-6">
+                    <form id="contact-form" class="contact-form" action="" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                <label class="required">{% trans 'Nombre' %}</label>
+                                <input type="text" value="" data-msg-required="Por favor, escriba su nombre."
+                                       class="form-control" name="nombre" required>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label class="required">{% trans 'Email' %}</label>
+                                <input type="email" value="{{ email }}"
+                                       data-msg-required="Por favor, introduzca su dirección de correo electrónico."
+                                       data-msg-email="Por favor, introduce una dirección de correo electrónico válida."
+                                       class="form-control" name="correo" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="required">{% trans 'Tema' %}</label>
+                                <input type="text" value="" data-msg-required="Por favor, ingrese un tema."
+                                       class="form-control" name="tema" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="required">{% trans 'Mensaje' %}</label>
+                                <textarea data-msg-required="Por favor, ingrese un mensaje." rows="8"
+                                          class="form-control" name="mensaje" required></textarea>
+                            </div>
+                        </div>
+
+                        <input type="hidden" id="contact_recaptcha_response" name="contact_recaptcha_response">
+
+                        {#                        <div class="form-row">#}
+                        {#                            <div class="form-group col-md-12">#}
+                        {#                                <div class="form-check form-check-inline">#}
+                        {#                                    <label class="form-check-label d-flex align-items-center">#}
+                        {#                                        <input class="form-check-input mr-2" name="checkboxes[]" type="checkbox"#}
+                        {#                                               id="contactCheckbox"#}
+                        {#                                               value="option1"> Aceptar <a class="ml-1 mr-1" href="#"#}
+                        {#                                                                           data-toggle="modal"#}
+                        {#                                                                           data-target="#modalPrivacidad">términos y#}
+                        {#                                        condiciones de uso</a> *#}
+                        {#                                    </label>#}
+                        {#                                </div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+
+                        <div class="alert-message"></div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <button style="font-size: 14px !important;" id="contact-submit" type="submit" value=""
+                                        class="btn-black btn loading" disabled="disabled">
+                                    <i class="fa fa-spinner fa-spin mr-2"></i>
+                                    {% trans 'Enviar mensaje' %}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert-message-footer"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="200">
+                        <h4 style="color:#62D482">We'd Like to hear from you'</h4>
+                        <p class="mb-0">{% trans 'Si necesita más detalles o tiene preguntas específicas acerca de nuestra compañía, estaremos encantados de atender y resolver sus consultas.' %}</p>
+                        <p class="lead"></p>
+                    </div>
+
+                    <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="200">
+                        <h4 style="color:#62D482">{% trans 'Corporativo' %}</h4>
+                        <p class="m-0"><i class="fa fa-map-marker"></i> <strong>{% trans 'Dirección' %}</strong>:
+                            Av. San Jerónimo 458, Col. Jardines del Pedregal, Delegación Álvaro Obregón,
+                            C.P. 01900, México, CDMX.</p>
+                        <br>
+                        <p class="m-0"><i class="fa fa-phone"></i> <strong>{% trans 'Tel' %}</strong>:
+                            +52 (55) 8842 5500.</p>
+                        <br>
+                        {#                        <p class="m-0"><i class="fa fa-phone"></i> <strong>{% trans 'Teléfono' %}</strong>:#}
+                        {#                            <a href="tel:+525552798106"> <span#}
+                        {#                                    class="">+52 (55) 5279-8106</span></a>#}
+                        {#                        </p>#}
+                        {#                        <p class="m-0"><i class="fa fa-envelope"></i> <strong>{% trans 'Email' %}</strong>:#}
+                        {#                            <a href="mailto:contacto@terrafina.mx">#}
+                        {#                                <span class="">contacto@terrafina.mx</span></a></p>#}
+                        {#                        <p class="lead"></p>#}
+                    </div>
+                    <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="200">
+                        <h4 style="color:#62D482">{% trans 'Información destacada' %}</h4>
+                        <p class="mb-0">
+                            <i class="fa fa-angle-up"></i>
+                            <a class="" href="{% url 'nosotros' %}">About us</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fa fa-angle-up"></i>
+                            <a href="{% url 'propiedades' %}#ppropiedades">Our portfolio</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fa fa-angle-up"></i>
+                            <a href="{% url 'nosotros' %}#preguntas">FAQS</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}&trustedtypes=true"></script>
+    <script>
+        let site_key = "{{ site_key }}";
+    </script>
+{% endblock %}

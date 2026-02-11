@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>22 de septiembre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/septiembre/5.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Cuando pensamos en realizar una inversión en bienes raíces por medio de las fibras inmobiliarias
+                        pueden surgir grandes dudas respecto a los conceptos básicos, los cuales pueden parecer confusos
+                        para los inversionistas que apenas empiezan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Para que puedas hacer una inversión con total certeza y conocimiento, en Fibra MTY hemos
+                        preparado un breve glosario con todo lo que debes saber paro iniciarte en el mundo de las
+                        FIBRAS.</p>
+                    <h2>La mejor inversión en bienes raíces es la que se hace informado</h2>
+                    <p>Una de nuestras mayores prioridades es dar información clara a toda nuestra comunidad. Esto con
+                        el fin de que los inversionistas puedan realizar una inversión en bienes raíces con toda la
+                        seguridad y confianza que nos caracteriza. </p>
+                    <p>Veamos algunos de los conceptos que sí o sí debe saber todo inversionista:</p>
+                    <p><strong>Activos</strong></p>
+                    <p>En el ámbito de las FIBRAS, los activos representan los inmuebles a los que los inversionistas
+                        tienen derechos para recibir ingresos por el arrendamiento y/o venta de un bien inmueble.</p>
+                    <p><strong>CBFI</strong></p>
+                    <p>Los Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs) son los equivalentes a los títulos
+                        accionarios e identifican a los inversionistas como socios de una FIBRA inmobiliaria. </p>
+                    <p>Este documento otorga el derecho a recibir las distribuciones de efectivo correspondientes.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Lee más sobre los CBFIs en nuestro blog: </strong>
+                            <a href="{% url 'noticia_11' %}">¿Qué son los Certificados Bursátiles Fiduciarios
+                                Inmobiliarios?</a>
+                        </li>
+                    </ul>
+                    <h2>Distribuciones de efectivo</h2>
+                    <p>Las distribuciones de efectivo es el rendimiento proveniente de las rentas que debe realizar la
+                        FIBRA a los propietarios de los CBFIs. Según la ley, estos deben ser de al menos el 95% del
+                        Resultado Fiscal.</p>
+                    <h2>Ley del Mercado de Valores (LMV)</h2>
+                    <p>La <a
+                            href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiV8ruJ7b70AhWMQzABHbdZD6MQFnoECAQQAQ&url=http%3A%2F%2Fwww.diputados.gob.mx%2FLeyesBiblio%2Fpdf%2FLMV_090119.pdf&usg=AOvVaw0VFwiioEPGkK9y3URiOYNS"
+                            target="_blank">Ley del Mercado de Valores</a
+                    > es la norma que en México busca regular e
+                        impulsar el mercado de
+                        valores. Fue diseñada para proteger los intereses de los inversionistas; minimizar los riesgos
+                        de inversión; fomentar la sana competencia y vigilar las acciones de todos los actores
+                        involucrados en estas transacciones.</p>
+                    <h2>Portafolio de Propiedades</h2>
+                    <p>El portafolio de Propiedades hace referencia a los activos que tiene la FIBRA y a partir de los
+                        cuales surgirán las distribuciones para los propietarios de los CBFIs. </p>
+                    <p>Cabe destacar que al hacer una inversión en bienes raíces con una compañía como Fibra Mty accedes
+                        a un portafolio diversificado con múltiples ubicaciones geográficas, distintos sectores
+                        económicos e inquilinos. </p>
+                    <p>Conoce más sobre nosotros y cómo puedes empezar a aumentar tu riqueza desde ahora en <a
+                            href="{% url 'index' %}">Fibra
+                        MTY</a>.</p>
+                   <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty"
+                                                                    target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                     href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

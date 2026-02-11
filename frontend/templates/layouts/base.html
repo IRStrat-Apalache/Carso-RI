@@ -1,0 +1,335 @@
+{% load static i18n change_languaje %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <meta name="title" content="{{ title_meta }}">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords"
+          content="invertir en FIBRAs, inversión en bienes raíces, inversión en fibras, inversión en FIBRAs, instrumentos de inversión, fibras inmobiliarias, FIBRAs inmobiliarias, el mercado inmobiliario, México, FIBRAs, bienes raíces, están libres de impuestos, ¿cómo aprovechar el dinero para que mañana no falte nada?, en cuanto a los costos, beneficios y nivel de riesgo, están respaldados por el mercado inmobiliario, siendo un instrumento defensivo, ofrecen derechos corporativos y económicos a su tenedor, Fideicomiso de Inversión en Bienes Raíces, investing in Mexican REITs, invest in Mexican REITs, real estate investment, investment instruments, Mexican REITs, invest in Fibra Mty, investing in real estate, Mexican Real Estate Investment Trust, invest in large-scale real estate">
+
+    {% if post %}
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{{ title_meta }}"/>
+        <meta property="og:description" content="{{ description }}"/>
+        <meta property="og:url" content="https://www.fibramty.com/{{ post.get_absolute_url }}"/>
+        <meta property="og:site_name" content="Finn"/>
+        <meta property="og:image" content="https://www.fibramty.com/static/images/post/{{ numero }}"/>
+        <meta property="og:image:secure_url" content="https://www.fibramty.com/static/images/post/{{ numero }}"/>
+        <meta property="og:image:width" content="675"/>
+        <meta property="og:image:height" content="450"/>
+        <meta property="og:image:type" content="image/jpeg"/>
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ title_meta }}">
+        <meta name="twitter:description" content="{{ description }}">
+        <meta name="twitter:image" content="https://www.fibramty.com/static/images/post/{{ numero }}.jpg">
+    {% endif %}
+    
+    <link rel="stylesheet" href="{% static 'css/critical_min.css' %}">
+
+
+    <script>var locale = '{{ request.LANGUAGE_CODE }}'</script>
+
+
+    <title>{{ title_meta }}</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0VY9PTNN7L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0VY9PTNN7L');
+</script>
+
+</head>
+<body data-spy="scroll" data-target="#nosotros-list">
+<div class="preloader">
+    <img class="spinner" src="{% static 'images/educa_preloader.gif' %}">
+</div>
+
+{% include 'partials/header.html' %}
+
+<main>
+    {% block title %}
+        {% if request.path == '/' or request.path == '/es/' or request.path == '/en/' %}
+            {% if  request.LANGUAGE_CODE  == 'es' %}
+                {% include 'partials/slider.html' %}
+            {% else %}
+                {% include 'partials/slider_en.html' %}
+            {% endif %}
+
+        {% else %}
+            {% include 'partials/breadcrumbs.html' %}
+        {% endif %}
+    {% endblock %}
+
+    {% if request.LANGUAGE_CODE == 'es' %}        
+        
+  
+        
+    {% else %}
+        <div class="custom-floating-button-container">
+            <a href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2025_1T25.pdf" target="_blank" class="custom-btnAnual" >
+                <img src="{% static 'images/botones-1Q25.png' %}" style="width:100px"/>
+            </a>
+            <a href="https://investorcloud.s3.us-east-1.amazonaws.com/FibraEDUCA/InformacionFinanciera/Presentaciones/FIBRA_EDUCA_CORPORATE_PRESENTATION_1Q25-junio-eng.pdf" target="_blank" class="custom-btnAnual" >
+                <img src="{% static 'images/Boton-presentacion-en.png' %}" style="width:100px"/>
+            </a>
+        </div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+</main>
+{% if  request.LANGUAGE_CODE  == 'es' %}
+    {% include 'partials/footer.html' %}
+{% else %}
+    {% include 'partials/footer_en.html' %}
+{% endif %}
+
+<div id="modalSearch" class="modal fadeOut" tabIndex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <form action="{% url 'search' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="q"
+                                   class="form-style search" placeholder="{% trans 'Buscar' %}..."
+                                   autoComplete="off"/>
+                        </div>
+                        <p class="mb-0 mt-4 text-center tc-gray font-weight-500">{% trans 'Empiece a escribir y presione "Enter" o "ESC" para cerrar' %}</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="menu-sidebar" style="padding-top:50px !important;">
+    
+    <div id="option-menu" class="d-flex align-items-center justify-content-center">
+        <div class="position-relative change-languages mr-4">
+            <div class="select-language">
+                {% comment %}
+                {% if request.LANGUAGE_CODE == 'es' %}
+                    <a href="{% change_lang 'en' %}">
+                        <img src="{% static 'images/ENG.png' %}" alt="English">
+                    </a>
+                {% else %}
+                    <a href="{% change_lang 'es' %}">
+                        <img src="{% static 'images/ES.png' %}" alt="Español">
+                    </a>
+                {% endif %}
+                {% endcomment %}
+            </div>
+        </div>        
+    </div>
+    
+    <div id="close-menu" class="">
+        <i class="fa fa-close fa-2x font-weight-normal"></i>
+    </div>
+    <ul>
+        <li data-toggle="collapse" href="#nosotros" aria-expanded="false" aria-controls="nosotros"><a
+                href="{% url 'nosotros' %}">{% trans 'Nosotros' %}</a></li>
+        {% comment %}
+        <div class="collapse" id="nosotros">
+            
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'nosotros' %}#tabs-nosotros">{% trans 'Misión, visión y valores' %}</a></li>
+                    <li><a href="{% url 'nosotros' %}#directivos_section">{% trans 'Nuestro equipo' %}</a></li>
+                    <li><a href="{% url 'nosotros' %}#ventajas">{% trans 'Ejes estrategicos' %}</a></li>
+                    <li><a href="{% url 'nosotros' %}#preguntas">{% trans 'Preguntas frecuentes' %}</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <li data-toggle="collapse" href="#portafolio" aria-expanded="false" aria-controls="portafolio"><a
+                href="{% url 'propiedades' %}">{% trans 'Portafolio' %}</a>
+        </li>
+        <div class="collapse" id="portafolio">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'propiedades' %}#uni">{% trans 'Planteles universitarios' %}</a></li>
+                    <li><a href="{% url 'propiedades' %}#ofi">{% trans 'Edificios de oficinas' %}</a></li>
+                    <li><a href="{% url 'propiedades' %}#centros">{% trans 'Centros de aprendizaje' %}</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <li data-toggle="collapse" href="#gobierno" aria-expanded="false" aria-controls="gobierno"><a
+                href="#">{% trans 'Gobierno corporativo' %}</a>
+        </li>
+        <div class="collapse" id="gobierno">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'comites' %}#estructura">{% trans 'Estructura del fideicomiso' %}</a></li>
+                    <li><a href="{% url 'comites' %}#comites">{% trans 'Comités' %}</a></li>
+                    <li><a href="{% url 'comites' %}#audiex">{% trans 'Auditores Externos' %}</a></li>
+                    <li><a href="{% url 'comites' %}#asambleas">{% trans 'Asambleas' %}</a></li>
+
+                </ul>
+            </div>
+        </div>
+        {% endcomment %}
+        <li data-toggle="collapse" href="#inversionistas" aria-expanded="false" aria-controls="inversionistas"><a
+                href="{% url 'nosotros' %}">{% trans 'Inversionistas' %}</a>
+        </li>
+        <li data-toggle="collapse" href="#asg" aria-expanded="false" aria-controls="asg"><a
+                href="https://fondodefondos-esg.investorcloud3.net/es/">{% trans 'ASG' %}</a>
+        </li>
+        <li data-toggle="collapse" href="#contacto" aria-expanded="false" aria-controls="contacto"><a
+                href="{% url 'contacto' %}">{% trans 'Contacto' %}</a>
+        </li>
+        {% comment %}
+        <div class="collapse" id="inversionistas">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'fundamentales' %}">{% trans 'Métricas' %}</a></li>
+                    <li><a href="{% url 'reportes_financieros' %}?filter=reportes">{% trans 'Reportes BMV' %}</a></li>
+                    <li><a href="{% url 'cotizacion' %}">{% trans 'Información bursátil' %}</a></li>
+                    <li><a href="{% url 'eventos-relevantes' %}">{% trans 'Eventos relevantes' %}</a></li>
+                </ul>
+            </div>
+        </div>       
+        <li data-toggle="collapse" href="#sostenibilidad" aria-expanded="false" aria-controls="sostenibilidad"><a
+                href="#">{% trans 'sostenibilidad' %}</a>
+        </li>
+        <div class="collapse" id="sostenibilidad">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'modelo-sostenible' %}">{% trans 'Modelo sostenible' %}</a></li>
+                    <li><a href="{% url 'medio-ambiente' %}">{% trans 'Medio ambiente' %}</a></li>
+                    <li><a href="{% url 'responsabilidad-social' %}">{% trans 'Responsabilidad social' %}</a></li>
+                    <li><a href="{% url 'gobernanza' %}">{% trans 'Gobernanza' %}</a></li>
+                    <li><a href="{% url 'conducta' %}">{% trans 'Código de conducta' %}</a></li>
+                    <li><a href="{% url 'comunidad' %}">{% trans 'Vinculación con la comunidad' %}</a></li>
+                    <li><a href="{% url 'financiamiento' %}">{% trans 'Contenido descargable' %}</a></li>
+                </ul>
+            </div>
+        </div>      
+        <li><a href="{% url 'blog' %}">{% trans 'Noticias' %}</a></li>
+        <li data-toggle="collapse" href="#contacto" aria-expanded="false" aria-controls="contacto"><a
+                href="#">{% trans 'Contacto' %}</a>
+        </li>
+        <div class="collapse" id="contacto">
+            <div class="collapse-sub-menu">
+                <ul>
+                    <li><a href="{% url 'contacto' %}">{% trans 'Relación con inversionistas' %}</a></li>
+                    <li><a href="{% url 'contacto-exp' %}">{% trans 'Expansión' %}</a></li>
+                    <li><a href="{% url 'denuncia' %}">{% trans 'Línea de denuncia' %}</a></li>                    
+                </ul>
+            </div>
+        </div>
+        {% endcomment %}
+    </ul>
+</div>
+<div id="menu-overlay"></div>
+
+<div class="modal-frame">
+    <div class="modal">
+        <div class="modal-inset">
+            <div class="button close"><i class="fa fa-close"></i></div>
+
+            <div class="modal-body">
+                <h3>Such Modal, Much Animate!</h3>
+                <p>Nothing groundbreaking, but I hope you enjoyed <br/> the physics for the open/close animation =).</p>
+                <p class="ps">**I know the SASS is a bit messy, I did this on the fly and for fun <br/> and w.e. I DO
+                    WHAT I WANT!!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-overlay"></div>
+
+<div id="modalHelp" class="modal" tabindex="-1">
+    <div class="modal-dialog animated zoomIn modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p id="text-help" class="pb-0"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="newsletter-success" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            {% if request.LANGUAGE_CODE == 'es' %}
+                <div class="modal-header">
+                    <h6 class="modal-title">Muchas gracias por suscribirse al boletín de noticias.</h6>
+                </div>
+                <div class="modal-body">
+                    <button class="" data-dismiss="modal">ACEPTAR</button>
+                </div>
+            {% else %}
+                <div class="modal-header">
+                    <h6 class="modal-title">Thank you for subscribing to the newsletter</h6>
+
+                </div>
+                <div class="modal-body">
+                    <button class="" data-dismiss="modal">Close</button>
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap-big-grid.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}{{ css_js_version }}">
+<link rel="stylesheet" href="{% static 'css/theme-elements.min.css' %}{{ css_js_version }}">
+<link rel="stylesheet" href="{% static 'css/general.css' %}">
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+<link rel="stylesheet" href="{% static 'css/constantes.css' %}{{ css_js_version }}">
+<link rel="stylesheet" href="{% static 'css/footer.css' %}{{ css_js_version }}">
+<link rel="stylesheet" href="{% static 'css/antonio.css' %}{{ css_js_version }}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+{% block otherstyles %}
+
+   
+{% endblock %}
+<link rel="stylesheet" href="{% static 'css/tania.css' %}">
+<link rel="stylesheet" href="{% static 'css/dani.css' %}">
+<link rel="stylesheet" href="{% static 'css/media-query.css' %}">
+<link rel="stylesheet" href="https://use.typekit.net/juf1irj.css">
+<script src="{% static 'js/jquery.min.js' %}{{ css_js_version }}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/js.cookie.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.js' %}"></script>
+<script src="{% static 'js/jquery.timelinr-0.9.7.js' %}"></script>
+
+{% block otherscripts %}
+
+{% endblock %}
+{% if request.path != '/inversionistas' and request.path != '/en/inversionistas' %}
+    <script src="{% static 'js/js.js' %}"></script>
+{% else %}
+    <script src="{% static 'js/jsinv.js' %}"></script>
+{% endif %}
+ <script type="text/javascript">
+    var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    if (mobile) {
+        $(document).ready(function() {
+            $(".anuales a").removeAttr("target");
+         });
+    }
+</script>
+</body>
+</html>

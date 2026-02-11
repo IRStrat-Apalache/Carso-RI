@@ -1,0 +1,141 @@
+#footer {
+  background: #232323;
+  color: #f5f5f5;
+  padding-top: 40px;
+}
+#footer ul {
+  padding-left: 0;
+}
+#footer ul.news p {
+  opacity: 1;
+  font-family: RobotoRegular;
+}
+#footer ul.news p a span {
+  text-decoration: underline;
+}
+#footer p {
+  margin-bottom: 1.625em;
+}
+#footer h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 2.36363636363636em;
+  font-size: 0.625em;
+  font-family: RobotoRegular;
+}
+#footer .logo {
+  max-height: 3.03125em;
+  margin-bottom: 1.21875em;
+}
+#footer a {
+  color: #fff;
+}
+#footer .navigation li {
+  font-family: RobotoRegular;
+  font-variant-ligatures: common-ligatures;
+  font-size: 12px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 3.2em;
+}
+#footer .navigation li a {
+  opacity: 0.5;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+}
+#footer .navigation li a:hover {
+  opacity: 1;
+}
+#footer form {
+  margin-bottom: 3.25em;
+}
+#footer input {
+  border-radius: 50px 0 0 50px;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  color: #767676;
+  padding-left: 1.625em;
+  padding-right: 1.625em;
+  height: 53px;
+  font-family: RobotoRegular;
+  -webkit-appearance: none;
+  background: #fff;
+  border: none;
+  font-size: 14px;
+}
+button[type="submit"] {
+  margin-left: -4px;
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  padding: 0.54166667em 2.25em 0.65em;
+  line-height: 1.625em;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 53px;
+  font-size: 0.625em !important;
+  letter-spacing: 1px;
+  color: #fff;
+  background: #194f90 none;
+  border: 1px #194f90;
+}
+button[type="submit"]:hover {
+  color: #fff;
+}
+#footer .social-list li:not(:last-child) {
+  margin-right: 1.625em;
+}
+#footer .social-list li {
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 0;
+}
+#footer .copyright {
+  position: relative;
+  margin-top: 10px;
+  background: #1e1e1e;
+  padding: 15px 0;
+}
+#footer .copyright .value {
+  opacity: 0.5;
+  font-size: 0.6875em;
+  font-family: RobotoRegular;
+}
+#footer .top-link {
+  width: 3.25em;
+  height: 3.25em;
+  border-radius: 50%;
+  background: #122D56;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 45px;
+}
+#footer .media-link {
+  width: 3.25em;
+  height: 3.25em;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5px;
+}

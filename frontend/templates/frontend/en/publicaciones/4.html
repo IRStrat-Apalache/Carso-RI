@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Instrumentos-de-Inversion-en-el-sector-inmobiliario"
+                         src="{% static 'images/post/Instrumentos-de-Inversion-en-el-sector-inmobiliario.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Durante los últimos años han comenzado a surgir nuevos <strong>instrumentos de inversión</strong>
+                        para el sector
+                        inmobiliario en nuestro país. Esto ha abierto las puertas a pequeños y grandes inversionistas
+                        que tienen la intención de desarrollar su capital en los mercados bursátiles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">
+                        Instrumentos de inversión inmobiliarios </h2>
+                    <p>Generalmente quienes buscan <strong>instrumentos de inversión</strong> en bienes raíces optan por
+                        comprar un inmueble con la intención de generar ganancias por las rentas o la <a
+                                href="https://es.wikipedia.org/wiki/Plusvalor" target="_blank">plusvalía</a>. </p>
+                    <p>En este sentido, cualquier persona tiene la posibilidad de comprar una casa o un departamento. No
+                        obstante, para proyectos y propiedades corporativas o comerciales es necesaria la participación
+                        de grandes inversionistas que se especialicen en el sector inmobiliario.</p>
+                    <h2>FIBRA</h2>
+                    <p>Por otro lado, los Fideicomisos de Inversión en Bienes Raíces (FIBRA) son fondos de inversión que
+                        permiten invertir en inmuebles de forma indirecta a quienes no cuentan con una gran experiencia
+                        en el mercado o que no tienen un capital elevado.</p>
+                    <p>Invirtiendo a través de Certificados Bursátiles Fiduciarios Inmobiliarios (CBFI), los
+                        inversionistas de un fideicomiso reciben ganancias individuales por las rentas de los inmuebles
+                        en cuestión. </p>
+                    <p>Además, estos <strong>instrumentos de inversión</strong> ofrecen ciertas ventajas fiscales y
+                        tienen mayor
+                        flexibilidad de entrada y salida. Lo que significa que los tenedores de CBFI pueden comprar y
+                        vender sus títulos con mayor agilidad. </p>
+                    <p>FIBRA Mty es una empresa relacionada con el sector inmobiliario que cotiza en la Bolsa Mexicana
+                        de Valores. Adquiere, administra y desarrolla un portafolio de inmuebles corporativos de primer
+                        nivel en México. </p>
+                    <p>Conoce cómo puedes invertir en Finn en el siguiente <a
+                            href="{% url 'escuela-fibra-finn' %}#como-invertir">enlace</a>. </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

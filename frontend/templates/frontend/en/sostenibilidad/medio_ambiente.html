@@ -1,0 +1,783 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">    
+    <style>
+        
+    .bc-gray{
+        background-color: #E7E7E7;
+    }
+
+    .shadow{
+        box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .nav-tabs .nav-link.active {
+        box-shadow:0 -10px #fff;
+        border:none;
+        
+    }
+
+    .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+        border:none;
+    }
+
+    .downloadv2 {
+            background-position: center;
+            background-size: cover;
+            min-height: 400px;
+            width: 100%;
+            padding: 30px;
+        }
+
+        .border-radius-30 {
+            border-radius: 30px;
+        }
+
+        .texto-animacion {
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+
+        .item-hover .img-bg {
+            transition: all 1s ease-out;
+        }
+
+        .item-hover .show-desc {
+            -webkit-transition: opacity 0.5s ease;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            padding-top: 0;
+            min-height: unset;
+
+        }
+
+        .item-hover .show-desc img {
+            width: 30%;
+        }
+
+        .item-hover:hover .show-desc {
+            opacity: 1;
+            height: auto;
+            padding-top: 0px;
+            min-height: 150px;
+        }
+
+        .item-hover:hover .img-bg {
+            opacity: 0;
+            display: block;
+            height: 0;
+            width: 0;
+            padding: 0;
+            min-height: unset;
+        }
+
+        .icon_container {
+            background-position: top center;
+            background-size: 10rem;
+            min-height: 150px;
+            background-repeat: no-repeat;
+            padding-top: 120px;
+        }
+
+        .icon_container h4 {
+            padding-top: 4rem;
+        }
+        .no-cursor:not(:disabled){
+            cursor: default;
+        }
+
+        text{
+            font-size:15px !important;
+        }
+
+        .honeycomb {
+            display: flex;                /* Asegura que el contenido esté alineado correctamente */
+            justify-content: center;      /* Centra el contenido horizontalmente */
+            align-items: center;          /* Centra el contenido verticalmente */
+            position: relative;           /* Mantiene el posicionamiento de los hijos */
+            transition: transform 0.3s ease; /* Efecto de transición para el escalado */
+        }
+        
+        .honeycomb:hover {
+            transform: scale(1.1); /* Escala todo el contenido al 110% */
+        }
+        
+        .honeycomb-path {
+            transition: transform 0.3s ease; /* Asegura que la transición también se aplique al SVG */
+        }
+        
+        .icono-con-circulo {
+            position: relative;
+            display: inline-block;
+          }
+      
+          .icono-con-circulo::before {
+            content: "";
+            justify-content:center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90px;
+            height: 90px;
+            border: 4px solid #4CAF50; /* Color del círculo */
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            animation: encircle 0.6s ease-out forwards;
+          }
+      
+          @keyframes encircle {
+            from {
+              transform: translate(-50%, -50%) scale(0.5);
+              opacity: 0;
+            }
+            to {
+              transform: translate(-50%, -50%) scale(1);
+              opacity: 1;
+            }
+          }
+        
+        
+        
+        
+        
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <ul class="nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="politica-tab" data-toggle="tab" href="#politica" role="tab" aria-controls="politica" aria-selected="true">{% trans 'Medio ambiente' %}</a>
+                </li>
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="energia-tab" data-toggle="tab" href="#energia" role="tab" aria-controls="energia" aria-selected="false">{% trans 'Energía' %}</a>
+                </li>                    
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="emisiones-tab" data-toggle="tab" href="#emisiones" role="tab" aria-controls="emisiones" aria-selected="false">{% trans 'Emisiones' %}</a>
+                </li>                    
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="agua-tab" data-toggle="tab" href="#agua" role="tab" aria-controls="agua" aria-selected="false">{% trans 'Agua' %}</a>
+                </li>                  
+                <li class="nav-item bg-light-gray">
+                    <a class="nav-link" id="certificaciones-tab" data-toggle="tab" href="#certificaciones" role="tab" aria-controls="certificaciones" aria-selected="false">{% trans 'Certificaciones sostenibles' %}</a>
+                </li>                  
+                                  
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section id="ppropiedades" class="">    
+    <div class="container-fluid">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="politica" role="tabpanel" aria-labelledby="politica-tab">
+                <section id = "politica_ambiental">
+                        <div class="container py-5">
+                            <h1 class="text-center tc-blue">Environmental</h1>
+                            <p class="text-justify">At Fibra Educa, we are committed to optimizing the efficient use of resources in order to minimize the environmental impact of our tenants' operations. Through initiatives aligned with our sustainability strategy, we encourage more responsible and environmentally friendly consumption.</p>
+
+                            <p class="text-justify">We focus on improving the operating efficiency of our properties to achieve certification as green buildings and on the transition from fossil energy to renewable sources. </p>
+                            <p class="text-justify" style="font-weight:bold; color:#59A971">Our goal is to certify 30% of our gross rentable area as sustainable and to migrate 45% of our energy consumption to renewable energy, with a baseline year of 2022.</p>
+                            
+                        </div>
+                </section>
+            </div>
+            
+            <div class="tab-pane fade" id="energia" role="tabpanel" aria-labelledby="energia-tab">
+                <section id ="energiaCont">
+                    <div class="container py-5">
+                        <h1 class="text-center tc-blue">Energy</h1>
+                        <p class="text-justify">
+                            At Fibra Educa, we are continuously working to optimize our energy consumption and that of our tenants, implementing measures that improve energy efficiency. We monitor our consumption through electricity bills, with data from 100% of our tenants.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chart1Energia" style="width: 100%; height:500px;"></div>
+                            </div>
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chart2Energia" style="width: 100%; height:500px;"></div>
+                            </div>
+                        </div>                       
+
+                        <p class="text-justify">We have set ourselves the goal that,<b class="tc-blue" style="font-weight:bold;"> by 2030, 45% of Fibra Educa's energy consumption will come from renewable sources.</b> To achieve this goal, we are installing photovoltaic panels in our buildings, taking as a reference the energy consumption of 2022, which was 3,198,967 kWh.</p>
+                        <div class="text-center">
+                            <div id="chartRenovables" style="width: 100%; height:500px;"></div>
+                        </div>
+                        <h2 class="text-center tc-blue m-5">Properties with solar panels</h2>
+                        <div class="row">
+                            <div class="col-md-4 col-12">
+                                <h4 class="text-center tc-blue">UNIDEP Hermosillo</h4>
+                                <img src="{% static 'images/Hermosillo-10.png' %}" style="width:500px;" />
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <h4 class="text-center tc-blue">Universidad Victoria Viaducto</h4>
+                                <img src="{% static 'images/UniversidadVictoria-12.png' %}" style="width:500px;" />
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <h4 class="text-center tc-blue">UNIDEP Culiacán</h4>
+                                <img src="{% static 'images/Unidepculiacán-03.png' %}" style="width:500px;" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="emisiones" role="tabpanel" aria-labelledby="emisiones-tab">
+                <section id ="emisiones">
+                    <div class="container py-5">
+                        <h1 class="text-center tc-blue">Emissions</h1>
+                        <p class="text-justify">At Fibra Educa, we are committed to reducing our emissions as a fundamental part of our environmental responsibility and corporate sustainability. We are implementing strategic measures to minimize our environmental impact, including the optimization of processes to improve energy efficiency, and the promotion of sustainable practices in all our operations, thus contributing to the preservation of the environment and the well-being of the communities where we operate.</p>
+
+                        <div id="cifras_relevantes_energia" class="pt-3 pb-3 finn-counto">
+                            <div class="container">
+                                <div class="section-title mb-3 text-center">
+                                    <h3 class="title-effect">Emissions ton (CO<sub>2</sub>3)</h3>
+                                </div>
+                                <div class="row honeycomb-wrapper justify-content-center">
+                                    <div class="col-md-3 tile">
+                                        <div class="honeycomb">
+                                            <svg class="honeycomb-path honeycomb-1" xmlns="http://www.w3.org/2000/svg"
+                                                width="150" viewBox="0 0 160 160">
+                                                <circle cx="80" cy="80" r="75" stroke-width="2" fill="none"></circle>
+                                            </svg>
+                                            <div class="content">
+                                                <h3 style="transform: translate(-50%, -50%) !important;" class="count" data-speed="1500" data-to="1.248" data-in-viewport="yes"
+                                                    data-decimals="3">0</h3><span class="title-effect "></span>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-center"><b>Scope 1</b></h5>
+                                    </div>
+                                    <div class="col-md-3 tile">
+                                        <div class="honeycomb">
+                                            <svg class="honeycomb-path honeycomb-1" xmlns="http://www.w3.org/2000/svg"
+                                                width="150" viewBox="0 0 160 160">
+                                                <circle cx="80" cy="80" r="75" stroke-width="2" fill="none"></circle>
+                                            </svg>
+                                            <div class="content">
+                                                <h3 class="count" style="transform: translate(-50%, -50%) !important;" data-speed="1500" data-to="162.393" data-in-viewport="yes"
+                                                    data-decimals="3">0</h3><span class="title-effect "></span>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-center"><b>Scope 2</b></h5><br>
+                                    </div>
+                                    <div class="col-md-3 tile">
+                                        <div class="honeycomb">
+                                            <svg class="honeycomb-path honeycomb-1" xmlns="http://www.w3.org/2000/svg"
+                                                width="150" viewBox="0 0 160 160">
+                                                <circle cx="80" cy="80" r="75" stroke-width="2" fill="none"></circle>
+                                            </svg>
+                                            <div class="content">
+                                                <h3 class="count" style="transform: translate(-50%, -50%) !important;" data-speed="1500" data-to="1242.597" data-in-viewport="yes"
+                                                    data-decimals="3">0</h3><span class="title-effect "></span>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-center"><b>Scope 3</b><br></h5>
+                                    </div>
+                                    <div class="col-md-3 tile">
+                                        <div class="honeycomb">
+                                            <svg class="honeycomb-path honeycomb-1" xmlns="http://www.w3.org/2000/svg"
+                                                width="300" viewBox="0 0 160 160">
+                                                <circle cx="80" cy="80" r="75" stroke-dasharray="10,10" fill="none"></circle>
+                                            </svg>
+                                            <div class="content">
+                                                <h3 class="count font-weight-bolder" style="color:red; transform: translate(-50%, -50%) !important;" data-speed="1500" data-to="1406.238"
+                                                    data-in-viewport="yes"
+                                                    data-decimals="3">0</h3><span
+                                                    class="title-effect "></span>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-center"><b>Total</b></h5>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="agua" role="tabpanel" aria-labelledby="agua-tab">
+                <section id ="agua">
+                    <div class="container py-5">
+                        <h1 class="text-center tc-blue">Water</h1>
+                        <p class="text-justify">
+                            We are committed to reducing our water consumption through various initiatives to mitigate the risks associated with water scarcity or low water supply.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chart1Agua" style="width: 100%; height:500px;"></div>
+                            </div>
+                            <div class="col-md-6 col-12 text-center">
+                                <div id="chart2Agua" style="width: 100%; height:500px;"></div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </section>
+            </div>
+
+            <div class="tab-pane fade" id="certificaciones" role="tabpanel" aria-labelledby="certificaciones-tab">
+                <section id ="certificaciones">
+                    <div class="container">
+                        <p class="text-justify mt-5">Our goal is to certify 30% of the gross leasable area as sustainable, taking the base year 2022 as a reference, equivalent to 161,514 m<sup>2</sup>.</p>
+                        <div class="container mt-5">                            
+                            <div class="row" style="margin-top:20px;"> 
+                                <div class="col-12 " style="scroll-margin-top: 80px;" id="uni">
+                                    <div class="descripcion">
+                                        <h1 class="text-center" style="color:#23356B">UNIDEP Culiacán</h1>
+                                        <br><br>
+                                    </div>
+                                </div>                   
+                                <div class="row">                       
+                                    
+                                    <!-- Columna para la imagen -->
+                                    <div class="col-md-6 filter-content">
+                                        <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-1col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                                            <li class="grid-item">
+                                                <div class="portfolio-box border-radius-6px box-shadow-large">
+                                                    <div>
+                                                        <img style="height:450px;" src="{% static 'images/Unidepculiacán-02.png' %}" class="portfolio-img img-fluid" />
+                                                    </div>
+                                                    <h4>EDGE Certified Property</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Columna para estadísticas -->
+
+                                    <div class="col-md-6 filter-content honeycomb-wrapper">                                        
+                                        <div class="row text-center">
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px;" src="{% static 'images/ahorro_energia.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>30% Energy Savings</span>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px" src="{% static 'images/ahorro_agua.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>51% Water Savings </span>
+                                            </div>
+
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/energia_incorporada.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>34% Less Embodied Energy in Materials</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/co2.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>Total emissions savings of 48.00 CO<sub>2</sub> (tCO<sub>2</sub>/year)</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/área.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>3,260 m<sup>2</sup> of total area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="row" style="margin-top: 20px;"> 
+                                <div class="col-12" style="scroll-margin-top: 80px;" id="uni">
+                                    <div class="descripcion">
+                                        <h1 class="text-center" style="color:#23356B">UNIDEP Hermosillo</h1>
+                                        <br><br>
+                                    </div>
+                                </div>                   
+                                <div class="row">                     
+                                    
+                                    
+                                    <!-- Columna para estadísticas -->
+                                    <div class="col-md-6 filter-content honeycomb-wrapper">                                        
+                                        <div class="row text-center">
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px;" src="{% static 'images/ahorro_energia.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>47% Energy Savings</span>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px" src="{% static 'images/ahorro_agua.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>33% Water Savings </span>
+                                            </div>
+
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/energia_incorporada.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>83% Less Embodied Energy in Materials</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/co2.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>Total emissions savings of 148.68 CO<sub>2</sub> (tCO<sub>2</sub>/year)</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/área.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>6,516 m<sup>2</sup> of total area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Columna para la imagen -->
+                                    <div class="col-md-6 filter-content">
+                                        <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-1col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                                            <li class="grid-item">
+                                                <div class="portfolio-box border-radius-6px box-shadow-large">
+                                                    <div>
+                                                        <img style="height:450px;" src="{% static 'images/Hermosillo-09.png' %}" class="portfolio-img img-fluid" />
+                                                    </div>
+                                                    <h4>EDGE Advanced Certified Property</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="row" style="margin-top:20px;"> 
+                                <div class="col-12" style="scroll-margin-top: 80px;" id="uni">
+                                    <div class="descripcion">
+                                        <h1 class="text-center" style="color:#23356B">UNIDEP Tijuana</h1>
+                                        <br><br>
+                                    </div>
+                                </div>                   
+                                <div class="row">                       
+                                    
+                                    <!-- Columna para la imagen -->
+                                    <div class="col-md-6 filter-content">
+                                        <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-1col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                                            <li class="grid-item">
+                                                <div class="portfolio-box border-radius-6px box-shadow-large">
+                                                    <div>
+                                                        <img style="height:450px;" src="{% static 'images/UNIDEPtijuana-13.png' %}" class="portfolio-img img-fluid" />
+                                                    </div>
+                                                    <h4>EDGE Advanced Certified Property</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Columna para estadísticas -->
+
+                                    <div class="col-md-6 filter-content honeycomb-wrapper">                                        
+                                        <div class="row text-center">
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px;" src="{% static 'images/ahorro_energia.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>41% Energy Savings</span>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px" src="{% static 'images/ahorro_agua.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>21% Water Savings </span>
+                                            </div>
+
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/energia_incorporada.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>85% Less Embodied Energy in Materials</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/co2.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>Total emissions savings of 38.07 CO<sub>2</sub> (tCO<sub>2</sub>/year)</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/área.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>3,451 m<sup>2</sup> of total area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="row" style="margin-top:20px;"> 
+                                <div class="col-12" style="scroll-margin-top: 80px;" id="uni">
+                                    <div class="descripcion">
+                                        <h1 class="text-center" style="color:#23356B">UNIDEP Torreón</h1>
+                                        <br><br>
+                                    </div>
+                                </div>                   
+                                <div class="row">                       
+                                    
+                                    
+                                    <!-- Columna para estadísticas -->
+                                    <div class="col-md-6 filter-content honeycomb-wrapper">                                        
+                                        <div class="row text-center">
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px;" src="{% static 'images/ahorro_energia.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>43% Energy Savings</span>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px" src="{% static 'images/ahorro_agua.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>41% Water Savings </span>
+                                            </div>
+
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/energia_incorporada.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>84% Less Embodied Energy in Materials</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/co2.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>Total emissions savings of 57.74 CO<sub>2</sub> (tCO<sub>2</sub>/year)</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/área.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>3,336 m<sup>2</sup> of total area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Columna para la imagen -->
+                                    <div class="col-md-6 filter-content">
+                                        <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-1col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                                            <li class="grid-item">
+                                                <div class="portfolio-box border-radius-6px box-shadow-large">
+                                                    <div>
+                                                        <img style="height:450px;" src="{% static 'images/UNIDEPtorreón-15.png' %}" class="portfolio-img img-fluid" />
+                                                    </div>
+                                                    <h4>EDGE Advanced Certified Property</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div class="row" style="margin-top: 20px;"> 
+                                <div class="col-12" style="scroll-margin-top: 80px;" id="uni">
+                                    <div class="descripcion">
+                                        <h1 class="text-center" style="color:#23356B">Universidad Victoria Viaducto</h1>
+                                        <br><br>
+                                    </div>
+                                </div>                   
+                                <div class="row">                       
+                                    
+                                    <!-- Columna para la imagen -->
+                                    <div class="col-md-6 filter-content">
+                                        <ul class="portfolio-classic portfolio-wrapper grid grid-loading grid-1col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large text-center">
+                                            <li class="grid-item">
+                                                <div class="portfolio-box border-radius-6px box-shadow-large">
+                                                    <div>
+                                                        <img style="height:450px;" src="{% static 'images/UniversidadVictoria-11.png' %}" class="portfolio-img img-fluid" />
+                                                    </div>
+                                                    <h4>EDGE Advanced Certified Property</h4>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Columna para estadísticas -->
+
+                                    <div class="col-md-6 filter-content honeycomb-wrapper">                                        
+                                        <div class="row text-center">
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px;" src="{% static 'images/ahorro_energia.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>41% Energy Savings</span>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div  class="icono-con-circulo">
+                                                    <img style="width:80px" src="{% static 'images/ahorro_agua.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>43% Water Savings </span>
+                                            </div>
+
+                                            <div class="col-4 d-flex flex-column align-items-center">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/energia_incorporada.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>93% Less Embodied Energy in Materials</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/co2.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>Total emissions savings of 16.58 CO<sub>2</sub> (tCO<sub>2</sub>/year)</span>
+                                            </div>
+                                            <div class="col-6 d-flex flex-column align-items-center mt-4">
+                                                <div class="icono-con-circulo">
+                                                    <img style="width:75px" src="{% static 'images/área.png' %}" alt="" class="img-fluid">
+                                                </div>
+                                                <br>
+                                                <span>17,788 m<sup>2</sup> of total area</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div id="percentageChart" style="width: 100%; height:500px;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+           
+
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>    
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/medio-ambiente.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/certificaciones.js' %}{{ css_js_version }}"></script>
+    
+    
+    <script>
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            // Recorre los elementos con la clase .finn-counto y los inicializa de nuevo
+            $('.finn-counto').each(function () {
+                finn_waypoint('#' + $(this).attr('id'));
+                finn_counto('#' + $(this).attr('id'));
+            });
+
+        });
+
+        function finn_waypoint(elemento) {
+            var waypoint = new Waypoint({
+                element: $(elemento),
+                handler: function (direction) {
+                    $(elemento + ' .count').trigger('on-appear');
+                },
+                offset: '75%',
+                triggerOnce: true
+            })
+        }
+
+        function finn_counto(elemento) {
+            if ($().countTo) {
+                $(elemento + ' .count').on('on-appear', function () {
+                    $(elemento + ' .honeycomb-path.honeycomb-1').addClass('honeycomb-animated');
+
+                    $(this).each(function () {
+                        var to = parseFloat($(this).data('to')),
+                            speed = parseInt($(this).data('speed')),
+                            decimals = parseInt($(this).data('decimals'));
+
+                        $(this).countTo({
+                            to: to,
+                            speen: speed,
+                            decimals: decimals,
+                            formatter: function (value, options) {
+                                return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                            },
+                            onComplete: function (value) {
+                                if (value === 1.9)
+                                    return this.innerHTML += '%';
+                            }
+
+                        });
+                    });
+                }); //counter
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+             function updateTabVisibility(activeTab) {
+                 // Ocultar todas las secciones de tab
+                 $('.tab-section').hide(); // Oculta todas las secciones
+ 
+                 // Mostrar la sección activa
+                 $(activeTab).show(); // Muestra solo la sección correspondiente
+             }
+ 
+             // Detectar cuando se cambia de pestaña
+             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                 var activeTab = $(e.target).attr('href'); // Obtener el ID de la pestaña activa
+                 updateTabVisibility(activeTab); // Llama a la función para manejar el cambio
+             });
+ 
+             // Manejar la carga inicial de la página
+             var initialActiveTab = $('.nav-link.active').attr('href'); // ID de la pestaña activa al inicio
+             updateTabVisibility(initialActiveTab); // Llama a la función para manejar el cambio inicial
+         });
+ 
+ 
+ 
+ 
+     </script>
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+{% endblock %}

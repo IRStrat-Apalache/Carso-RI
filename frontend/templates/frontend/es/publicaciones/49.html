@@ -1,0 +1,116 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>9 de octubre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/octubre/3.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Durante los últimos años, la inestabilidad de los mercados y de la vida en general, ha llevado a
+                        cientos de jóvenes a interesarse en construir un patrimonio fuerte y emprender negocios propios
+                        e independientes. Y aunque esto no es tarea fácil, en la actualidad existen diferentes
+                        instrumentos de inversión más seguros y rentables que los tradicionales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Continúa leyendo y conoce cómo <a href="{% url 'noticia_15' %}">invertir sabiamente</a> cuando
+                        eres joven y cuáles son las mejores
+                        opciones. </p>
+                    <h2>¿Invertir o ahorrar?</h2>
+                    <p>Aunque ahorrar es importante para las finanzas personales, invertir puede llegar a ser una
+                        alternativa más llamativa en tanto que permite incrementar el valor de nuestro patrimonio. Si
+                        bien invertir siempre lleva consigo una probabilidad de pérdida, optar por instrumentos de
+                        inversión <a href="{% url 'noticia_6' %}">de bajo riesgo</a> puede ser una mejor opción.</p>
+                    <p>Antes de comenzar a invertir recuerda siempre: </p>
+                    <ul>
+                        <li>● Despejar todas tus deudas, o al menos la mayoría.</li>
+                        <li>● Establecer el presupuesto para calcular el monto máximo que tienes para invertir, se
+                            recomienda por lo menos el 10% de tus ingresos.
+                        </li>
+                        <li>● Plantear metas y objetivos a pequeño, mediano y largo plazo.</li>
+                        <li>● Elegir los sectores o modelos de negocio en los que deseas invertir.</li>
+                    </ul>
+                    <p>Con estos cuatro recursos bien establecidos podrás comenzar a invertir. A continuación, te
+                        presentamos brevemente cuáles son las alternativas más indicadas. </p>
+                    <h2>Invierte Online</h2>
+                    <p>Las inversiones en línea (o a través de plataformas digitales reguladas), sean en la <a
+                            href="{% url 'noticia_16' %}">bolsa de
+                        valores</a>, productos de importación, o mercancía al por mayor, son una excelente alternativa
+                        para
+                        comenzar un negocio o capitalizar tu dinero. </p>
+                    <p>En un primer momento, invertir en línea es una buena opción pues en general te evita un montón de
+                        pagos alternos que deberías hacer en caso de invertir en un negocio físico. </p>
+                    <p>No obstante, vale la pena aclarar que esta inversión, aunque dependerá en gran parte de la
+                        autogestión y disciplina que tengas. </p>
+                    <h2>Opta por instrumentos de inversión de renta fija </h2>
+                    <p>Los instrumentos de inversión de renta fija pueden ayudarte a obtener dinero y capitalizar tus
+                        ahorros día a día. En México, una de las mejores alternativas son los llamados Cetes. Allí,
+                        podrás obtener ganancias según los plazos establecidos sin necesidad de invertir demasiado
+                        tiempo. </p>
+                    <p>Sin embargo, vale la pena aclarar que la rentabilidad de este instrumento financiero no
+                        representa un alto porcentaje de ganancias. Aunque, esto puede variar según la entidad con la
+                        que decidas invertir tu dinero. </p>
+                    <h2>Invierte en Bienes Raíces </h2>
+                    <p>Desde hace ya algunas décadas, la inversión en bienes raíces se ha posicionado como una
+                        alternativa bastante llamativa. El sector inmobiliario representa un retorno de inversión
+                        sustancial para los inversionistas debido a la valorización de los inmuebles. </p>
+                    <p>No obstante, este sector representa, en la mayoría de casos, inversiones iniciales de altos
+                        montos. No por nada el primer pensamiento de todo joven interesado en invertir en bienes raíces
+                        es: ¿Cuánto es necesario ahorrar para comenzar? </p>
+                    <p>Por fortuna, la llegada del modelo de <a href="{% url 'noticia_9' %}">FIBRAs en México</a>
+                        permite a cualquier inversionista
+                        interesado en formar parte del sector inmobiliario invertir desde montos moderados y obtener
+                        dividendos constantes y predecibles. De igual forma, estos instrumentos de inversión son una
+                        excelente alternativa para <a href="{% url 'noticia_33' %}">diversificar tus inversiones</a> y
+                        dar más seguridad a tu retorno de
+                        inversión. </p>
+                    <p>Suena bien ¿Cierto? </p>
+                    <p>Con Fibra MTY, podrás invertir en <a href="{% url 'propiedades' %}">diferentes propiedades</a> en
+                        el momento que desees, aún si no
+                        tienes experiencia en el mercado. </p>
+                    <p>¿Quieres saber cómo hacerlo? Ingresa a <a href="{% url 'escuela-fibra-finn' %}">Fibra MTY</a> y
+                        conoce por qué somos la mejor opción para
+                        invertir en FIBRAs en México. </p>
+                    <p>No olvides seguirnos en <a
+                            href="https://twitter.com/fibra_mty"
+                            target="_blank">Twitter</a>, <a
+                            target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a>
+                        y <a target="_blank"
+                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

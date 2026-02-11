@@ -1,0 +1,135 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        {#                        <div class="alt-font text-fast-blue text-uppercase font-weight-500 margin-30px-bottom xs-margin-10px-bottom">#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Inversiones</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Fibras</a><span class="margin-10px-lr">&#8226;</span>#}
+                        {#                            <a href="blog-grid.html" class="text-fast-blue">Finn</a>#}
+                        {#                        </div>#}
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava <br>
+                            <p>25 de Septiembre del 2019</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Accede-al-mercado-inmobiliario-y-comienza-a-Invertir-en-Fibras"
+                         src="{% static 'images/post/Accede-al-mercado-inmobiliario-y-comienza-a-Invertir-en-Fibras.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>A causa de la pandemia y otros factores que han golpeado duramente las economías mundiales, la
+                        volatilidad ha aumentado y ha generado incertidumbre financiera. Sin embargo, siempre hay una
+                        oportunidad de inversión. Los Fideicomisos de Inversión en Bienes Raíces (FIBRAs) son una de
+                        ellas. A continuación te explicaremos qué son y cómo puedes <strong>invertir en FIBRAs</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            {#            <div class="row">#}
+            {#                <div class="col-12 col-md-6 bg-light-gray background-no-repeat background-position-right-bottom padding-90px-lr padding-8-rem-tb lg-padding-5-half-rem-lr wow animate__fadeIn"#}
+            {#                     data-wow-delay="0.2s"#}
+            {#                     style="background-image:url('/static/images/blog-post-layout-01-img-11.png');">#}
+            {#                    <i class="fa fa-quote-left text-fast-blue icon-extra-medium margin-30px-bottom"></i>#}
+            {#                    <h5 class="alt-font text-extra-dark-gray font-weight-500">una FIBRA está obligada a distribuir#}
+            {#                        anualmente al menos el 95% de su Resultado Fiscal</h5>#}
+            {#                    <div class="alt-font">artículos 187 y 188 de la Ley de Impuesto Sobre la Renta (ISR)</div>#}
+            {#                </div>#}
+            {#                <div class="col-12 col-md-6 cover-background sm-h-450px xs-h-300px wow animate__fadeIn"#}
+            {#                     data-wow-delay="0.4s"#}
+            {#                     style="background-image: url({% static 'images/propiedades/prometeo11.jpg' %})">#}
+            {#                </div>#}
+            {#            </div>#}
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">
+                        ¿Qué son las fibras inmobiliarias? </h2>
+                    <p>En palabras generales, las fibras son un instrumento que “democratiza” las inversiones en bienes
+                        raíces de gran escala. Las FIBRAs se dedican a adquirir y administrar bienes inmuebles para
+                        generar ingresos a través del arrendamiento. Para convertirse en un inversionista de FIBRAs, es
+                        necesario adquirir Certificados Bursátiles Fiduciarios Inmobiliarios (CBFIs) a través del
+                        mercado de valores, estos son el equivalente a un título accionario en una empresa o
+                        emisora.</p>
+                    <p>Dentro de sus principales características puedes encontrar que las FIBRAs disponen de: </p>
+                    <ul class="ls-disc">
+                        <li>Un rendimiento atractivo a largo plazo, a través del pago de distribuciones de efectivo
+                            (provenientes de las rentas)
+                        </li>
+                        <li>Protección contra la <a target="_blank"
+                                                    href="http://educa.banxico.org.mx/infografias_y_fichas/inflacion_infografias_/que-es-inflacion-como-se-mide.html">inflación</a>.
+                        </li>
+                        <li>Mayor liquidez a los inversionistas, al tener una entrada y salida flexible de la
+                            inversión.
+                        </li>
+                        <li>Diversificación al contar con rentas provenientes de múltiples propiedades, inquilinos y
+                            sectores económicos.
+                        </li>
+                    </ul>
+                    <p>Asimismo, es importante que sepas que los rendimientos provenientes de la ganancia de capital
+                        (cuando vendes los CBFIs por encima del precio que compraste) no pagan impuestos y te da la
+                        posibilidad de diversificar tu portafolio en diferentes tipos de propiedades y en cualquier
+                        parte del país. </p>
+                    <h2 class="alt-font text-extra-dark-gray font-weight-500 margin-20px-bottom">¿Cómo invertir en
+                        fibras? </h2>
+                    <p>Si quieres empezar tu camino como inversionista las FIBRAs pueden ser una buena alternativa.
+                        <strong>Invertir en FIBRAs</strong> es muy sencillo, sólo sigue los siguientes pasos y comienza
+                        a generar el
+                        rendimiento económico que siempre has querido.</p>
+                    <h3 class="alt-font text-extra-dark-gray margin-20px-bottom">Acércate a la casa de bolsa que cumpla
+                        con tus objetivos</h3>
+                    <p>Lo primero que debes hacer para <strong>invertir en FIBRAs</strong> es acercarte a una casa de
+                        bolsa que esté
+                        regulada por la <a target="_blank" href="https://www.gob.mx/cnbv">Comisión Nacional Bancaria y
+                            de Valores</a> (CNBV). Es importante que antes de
+                        elegir, revises muy bien cuál se adapta mejor a tu perfil y te brinda mejores beneficios en
+                        cuanto a comisiones, monto mínimo de apertura, entre otros.</p>
+                    <h3 class="alt-font text-extra-dark-gray margin-20px-bottom">Regístrate y crea tu cuenta </h3>
+                    <p>Después de elegir tu casa de bolsa debes crear una cuenta para tus inversiones. A través de esta,
+                        vas a poder depositar el dinero que quieras para iniciar con todos los procesos de compra y
+                        venta de CBFIs. </p>
+                    <h3 class="alt-font text-extra-dark-gray margin-20px-bottom">Comprar CBFIs</h3>
+                    <p>Al tener saldo en tu cuenta, ya puedes adquirir certificados de <a
+                                                                                          href={% url 'index' %}>Fibra
+                        Mty</a>. Para este proceso hemos dispuesto dos maneras en las que puedes invertir:</p>
+                    <ul class="ls-disc">
+                        <li>La primera es a través de una orden de compra de tu promotor o agente.</li>
+                        <li>La segunda, directamente desde tu cuenta en línea. Asegúrate que la casa de bolsa que
+                            elegiste cuente con esta opción dentro de su plataforma.
+                        </li>
+                    </ul>
+                    <h3 class="alt-font text-extra-dark-gray margin-20px-bottom">Recibe tu inversión </h3>
+                    <p>El poseer un certificado de Fibra Mty te garantizará el beneficio de recibir distribuciones
+                        mensuales en efectivo que serán depositadas directamente a tu cuenta. Por lo que, según sean tus
+                        objetivos o necesidades, puedes reinvertir o retirar tu dinero. </p>
+                    <p>¡No lo pienses más! Pon a trabajar tu dinero. <strong>Invertir en FIBRAs</strong> puede ser la
+                        opción que tanto
+                        estabas esperando. ¿Tienes dudas? Contáctanos a través de nuestro <a
+                                                                                             href={% url 'index' %}>sitio
+                            web</a>. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

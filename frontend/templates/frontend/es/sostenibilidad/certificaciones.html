@@ -1,0 +1,153 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 10px;
+        }   
+        
+    </style>
+{% endblock %}
+
+{% block content %}
+   <section>
+        <div class="container">
+            <p class="text-justify mt-5">Nuestro objetivo es certificar el 30% del área bruta rentable como sostenible, tomando como referencia el año base 2022, equivalente a 161,514 m2.</p>
+            <div class="container mt-5">
+                
+                <div class="row">
+                    <!-- Contenedor 1 -->
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <h4 class="text-center tc-blue">UNIDEP Culiacán</h4>
+                            <img src="{% static 'images/Unidepculiacán-02.png' %}" style="width:500px;" />
+                            <div class="content p-3">
+                                <ul>
+                                    <li>Inmueble Certificado EDGE</li>
+                                    <li>30% Ahorro de Energía</li>
+                                    <li>51% Ahorro de Agua</li>
+                                    <li>34% Menos Energía Incorporada en los Materiales</li>
+                                    <li>Ahorro de emisiones totales de 48 CO₂ (tCO₂/año)</li>
+                                    <li>3,260 m2 de área total</li>
+                                </ul>
+                                <div class="button-container text-center">
+                                    <a href="https://app.edgebuildings.com/project-studies/unidep-culiac%C3%A1n" class="btn btn-primary" target="_blank">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor 2 -->
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <h4 class="text-center tc-blue">UNIDEP Hermosillo</h4>
+                            <img src="{% static 'images/Hermosillo-09.png' %}" style="width:500px;" />
+                            <div class="content p-3">
+                                <ul>
+                                    <li>Inmueble Certificado EDGE Advanced</li>
+                                    <li>47% Ahorro de Energía</li>
+                                    <li>33% Ahorro de Agua</li>
+                                    <li>83% Menos Energía Incorporada en los Materiales</li>
+                                    <li>Ahorro de emisiones totales de 148.68 CO₂ (tCO₂/año)</li>
+                                    <li>6,516 m<sup>2</sup>de área total</li>
+                                </ul>
+                                <div class="button-container text-center">
+                                    <a href="https://app.edgebuildings.com/project-studies/unidep-hermosillo" class="btn btn-primary" target="_blank">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor 3 -->
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <h4 class="text-center tc-blue">UNIDEP Tijuana</h4>
+                            <img src="{% static 'images/UNIDEPtijuana-13.png' %}" style="width:500px;" />
+                            <div class="content p-3">
+                                <ul>
+                                    <li>Inmueble Certificado EDGE Advanced</li>
+                                    <li>41% Ahorro de Energía</li>
+                                    <li>21% Ahorro de Agua</li>
+                                    <li>85% Menos Energía Incorporada en los Materiales</li>
+                                    <li>Ahorro de emisiones totales de 38.07 CO₂ (tCO₂/año)</li>
+                                    <li>3,451 m<sup>2</sup>de área total</li>
+                                </ul>
+                                <div class="button-container text-center">
+                                    <a href="https://app.edgebuildings.com/project-studies/unidep-tijuana" class="btn btn-primary" target="_blank">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Contenedor 4 -->
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <h4 class="text-center tc-blue">UNIDEP Torreón</h4>
+                            <img src="{% static 'images/UNIDEPtorreón-15.png' %}" style="width:500px;" />
+                            <div class="content p-3">
+                                <ul>
+                                    <li>Inmueble Certificado EDGE Advanced</li>
+                                    <li>43% Ahorro de Energía</li>
+                                    <li>41% Ahorro de Agua</li>
+                                    <li>84% Menos Energía Incorporada en los Materiales</li>
+                                    <li>Ahorro de emisiones totales de 57.74 CO₂ (tCO₂/año)</li>
+                                    <li>3,336 m<sup>2</sup>de área total</li>
+                                </ul>
+                                <div class="button-container text-center">
+                                    <a href="https://app.edgebuildings.com/project-studies/unidep-torre%C3%B3n" class="btn btn-primary" target="_blank">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor 5 -->
+                    <div class="col-md-4">
+                        <div class="image-container">
+                            <h4 class="text-center tc-blue">Universidad Victoria Viaducto</h4>
+                            <img src="{% static 'images/UniversidadVictoria-11.png' %}" style="width:500px;" />
+                            <div class="content p-3">
+                                <ul>
+                                    <li>Inmueble Certificado EDGE Advanced</li>
+                                    <li>41% Ahorro de Energía</li>
+                                    <li>43% Ahorro de Agua</li>
+                                    <li>93% Menos Energía Incorporada en los Materiales</li>
+                                    <li>Ahorro de emisiones totales de 16.58 CO₂ (tCO₂/año)</li>
+                                    <li>17,788 m<sup>2</sup>de área total</li>
+                                </ul>
+                                <div class="button-container text-center">
+                                    <a href=" https://app.edgebuildings.com/project-studies/universidad-victoria-viaducto" class="btn btn-primary" target="_blank">Ver Más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="text-center">
+                <div id="percentageChart" style="width: 100%; height:500px;"></div>
+            </div>
+        </div>
+   </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>    
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/certificaciones.js' %}{{ css_js_version }}"></script>
+{% endblock %}

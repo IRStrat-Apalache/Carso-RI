@@ -1,0 +1,584 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="white-wrapper mt-5 mb-5 anuales">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contenedor">
+                  <div class="mb-4">
+
+                     <div class="mb-4">
+                        <div class="text-center"><h2>2023</h2></div>
+
+                        <!--<div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">4T 2023</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-4T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-4T22-Reporte.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2022-4T22-CC.wav">Teleconferencia</a>
+                          </div>
+                      </div>-->
+
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2023</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-3T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-3T23-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2023-3T23-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2023</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-2T23-Reporte-.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2023-2T23-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2023</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2023-1T23-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2023-1T23-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                      </div>
+
+                    <div class="mb-4">
+                      <div class="text-center"><h2>2022</h2></div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">2022</div>
+                          <div class="w-75 d-flex flex-column">
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2022-Anual-inf.pdf">Adjunto</a>
+                                 <div class="separator"></div>
+                                 <a target="_blank"
+                                    href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/IAF_2022.pdf">Informe Anual Financiero</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2022</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-4T-XBRL.pdf">Descargar</a>
+                            <div class="separator"></div>
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-4T22-Reporte.pdf">Adjunto</a>
+                            <div class="separator"></div>
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2022-4T22-CC.wav">Teleconferencia</a>
+                        </div>
+                    </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">3T 2022</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-3T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-3T22-Reporte.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2022-3T22-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">2T 2022</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-2T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-2T22-Reporte.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2022-2T22-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">1T 2022</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-1T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2022-1T22-Reporte-vf.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2022-1T22-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+                    </div>
+                      <div class="text-center"><h2>2021</h2></div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">2021</div>
+                          <div class="w-75 d-flex flex-column">
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2021-Anual-inf.pdf">Adjunto</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">4T 2021</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-4T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-4T21-Reporte-vf.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2021-4T21-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">3T 2021</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-3T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-3T21-Reporte-vf.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2021-3T21-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">2T 2021</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-2T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-2T21-Reporte-vf.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2021-2T21-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+
+                      <div class="d-flex align-items-center justify-content-between div-content">
+                          <div class="w-25 pl-5">1T 2021</div>
+                          <div class="w-75 d-flex flex-column">
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-1T-XBRL.pdf">Descargar</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-1T21-Reporte-vf.pdf">Adjunto</a>
+                              <div class="separator"></div>
+                              <a target="_blank"
+                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2021-1T21-CC.mp3">Teleconferencia</a>
+                          </div>
+                      </div>
+                  </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2020</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2020</div>
+                            <div class="w-75 d-flex flex-column">
+                                <!-- <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2019-Anual-.pdf">DOWNLOAD</a> -->
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2020-Anual-inf.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2020</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-4T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-4T20-Reporte-.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2020-4T20-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2020</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-3T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-3T20-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2020-3T20-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2020</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-2T20-Reporte-.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2020-2T20-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2020</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2020-1T20-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2020-1T20-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2019</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2019</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2019-Anual-.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2019-Anual-inf-.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2019</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-4T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-4T19-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2019-4T19-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2019</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-3T-XBRL-.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-3T19-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2019-3T19-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2019</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-2T19-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2019-2T19-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2019</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2019-1T19-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2019-1T19-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2018</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2018</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2018-Anual.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2018-Anual-inf.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2018</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-4T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-4T18-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2018-4T18-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2018</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-3T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-3T18-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2018-3T18-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2018</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-2T18-Reporte-En-vf.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2018-2T18-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2018</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2018-1T18-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2018-1T18-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2017</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2017</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2017-Anual-vf.pdf">Descargar</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2017</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-4T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-4T17-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2017-4T17-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2017</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-3T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-3T17-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2017-3T17-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2017</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-2T17-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2017-2T17-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2017</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2017-1T17-Reporte.pdf">Adjunto</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Teleconferencias/2017-1T17-CC.mp3">Teleconferencia</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2016</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2016</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2016-Anual.pdf">Descargar</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2016</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-4T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-4T16-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2016</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-3T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-3T16-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2016</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-2T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-2T16-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2016</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-1T-XBRL.pdf">Descargar</a>
+                                <div class="separator"></div>
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-1T16-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2015</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2015</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2015-Anual.pdf">Descargar</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">4T 2015</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-4T15-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">3T 2015</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-3T15-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2T 2015</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-2T15-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">1T 2015</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-1T15-Reporte.pdf">Adjunto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="text-center"><h2>2014</h2></div>
+                        <div class="d-flex align-items-center justify-content-between div-content">
+                            <div class="w-25 pl-5">2014</div>
+                            <div class="w-75 d-flex flex-column">
+                                <a target="_blank"
+                                   href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesAnuales/2014-Anual.pdf">Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/bootstrap-datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datatables/dataTables.bootstrap4.min.js' %}"></script>
+{% endblock %}

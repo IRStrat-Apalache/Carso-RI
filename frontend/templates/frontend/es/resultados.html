@@ -1,0 +1,55 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container">
+            <div class="row m-0">
+                <script>
+                    (function () {
+                        var cx = '2692ccd0a0125a09f';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:searchresults-only></gcse:searchresults-only>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modalDirectivo1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Directivo 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/propiedades/redwood11.jpg' %}"
+                                 class="img-fluid"
+                                 alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consequuntur dicta
+                                dolorem
+                                dolores dolorum eaque enim exercitationem facilis fuga ipsa laudantium magnam neque,
+                                obcaecati
+                                pariatur ratione similique suscipit tenetur voluptates!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

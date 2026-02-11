@@ -1,0 +1,539 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/comites-styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        a.team {
+            text-decoration: none;
+        }
+
+        .investor-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .investor-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .investor-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .owl-carousel .owl-dots {
+            flex-grow: 1; /* Los puntos ocupan el espacio central */
+            display: flex;
+            justify-content: center;
+        }
+
+        .owl-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: grey !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background-color: #59A971 !important;
+        }
+
+
+        .owl-carousel .owl-dot:focus {
+            outline: none;
+        }
+
+        .owl-carousel1 {
+            overflow: visible !important;
+            margin: 10px 0;
+        }
+
+        /* Estilos para el efecto hover de las imágenes */
+        .image-hover-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .image-hover-container img {
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: auto;
+        }
+
+        .hover-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(35, 53, 107, 0.95);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            font-weight: 500;
+            font-size: 13px;
+            max-width: 90%;
+            min-width: 80%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .hover-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #59A971;
+            border-bottom: 2px solid #59A971;
+            padding-bottom: 8px;
+        }
+
+        .hover-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+
+        .hover-list li {
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 15px;
+        }
+
+        .hover-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hover-download-btn {
+            background-color: #59A971;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 12px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hover-download-btn:hover {
+            background-color: #4a8a5f;
+        }
+
+        .image-hover-container:hover img {
+            opacity: 0.2;
+        }
+
+        .image-hover-container:hover .hover-content {
+            opacity: 1;
+        }
+
+        /* Estilos para las métricas interactivas */
+        .metric-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #59A971;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(89, 169, 113, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .metric-card:hover::before {
+            left: 100%;
+        }
+
+        .metric-icon {
+            font-size: 48px;
+            color: #59A971;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover .metric-icon {
+            transform: scale(1.1);
+            color: #4a8a5f;
+        }
+
+        .metric-content {
+            margin-bottom: 20px;
+        }
+
+        .metric-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #23356B;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover .metric-number {
+            color: #59A971;
+            transform: scale(1.05);
+        }
+
+        .metric-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin: 10px 0 5px 0;
+        }
+
+        .metric-unit {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .metric-description {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .metric-card:hover .metric-description {
+            opacity: 1;
+            max-height: 100px;
+            padding: 15px;
+        }
+
+        .metric-description p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Animación de contador */
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .metric-number.animating {
+            animation: countUp 0.6s ease-out;
+        }
+
+        .owl-carousel1 .owl-item {
+            /* border: 2px green solid; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            /* width: 350px !important; */
+            height: 100% !important;
+            transition: .5s ease;
+        }
+
+        .owl-carousel1 .owl-item:hover {
+            transform: translateY(-7px);
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+    <section id="directivos_section" class="py-5">
+        <div class="container directivos">
+            <div class=" my-5">
+                <h1 class="wow slideInLeft" style="color: #23356B; padding-top:0px !important; font-weight:bold;">
+                    Equipo Directivo
+                </h1>
+                <div class="container text-right wow slideInRight">
+                </div>
+            </div>
+            <!-- Directivos Principales -->
+            <div class="row">
+                {% for directivo in directivos_principales %}
+                    <div class="col-sm-12 col-md-4 col-lg-4 mb-4 d-flex justify-content-center" style="height: 600px;">
+                        <a href="#"
+                           class="team p-2 d-flex flex-column justify-content-center align-items-center text-center"
+                           data-item="{{ forloop.counter }}"
+                           data-imagen="{{ directivo.imagen }}"
+                           data-nombre="{{ directivo.nombre }}"
+                           data-cargo="{{ directivo.cargo }}"
+                           data-resumen="{{ directivo.resumen }}"
+                           data-url="{{ directivo.url }}">
+                            <div class="position-relative image-container2">
+                                <!-- Imagen principal -->
+                                <img class="img-fluid d-flex main-image" src="{% static directivo.imagen %}"
+                                     alt="{{ directivo.nombre }}">
+                                {% comment %}
+                                <!-- Imagen superpuesta -->
+                                <img class="overlay-image" src="{% static directivo.puesto %}" alt="Imagen superpuesta">
+                                {% endcomment %}
+                            </div>
+
+                            <h6 class="mb-0 mt-3 text-black font-weight-bold">{{ directivo.nombre }}</h6>
+                            <p class="mb-0">{{ directivo.cargo | safe }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- Perfil de Directivo -->
+            <article id="directivo-perfil" class="d-none directivo-perfil pt-5 pb-5 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="cerrar-info">
+                                <i class="fa fa-times fa-2x"></i>
+                            </div>
+                            <h3 class="mt-2 mb-0 d_nombre"></h3>
+                            <div class="mb-4">
+                                <em class="d_cargo"></em>
+                            </div>
+                            <p class="d_resumen text-justify"></p>
+                            <div class="icono-img image-container position-relative">
+                                <a href="#" class="image-link position-absolute d-imagen" target="_blank"
+                                   style="bottom:0px; right:0px;"><img src="{% static 'images/Linkedin-08.png' %}"
+                                                                       alt="" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="comites" class="pb-5" style="background-color: #0D1F2E">
+        <div class="container pt-5">
+            <div class="col-4 rectangulo-l" style="background-color: #62D482; width: 30%">
+                <h2 class="text-str">Estructura de</h2>
+                <h2 class="text-str">Gobernanza</h2>
+            </div>
+            <div class="col-md-12 text-v pt-5">
+                <h4 class="text-white">La estructura de gobierno corporativo de Administradora CMIC, S.A. de C.V. está diseñada para garantizar la efectividad en la toma de decisiones. 
+                </h4>
+            </div>
+            <div class="col-12 mt-5 mb-5">
+                <h4 class="text-white">Por otro lado, en la Corporación Mexicana de Inversiones de Capital, S.A. de C.V., hemos implementado un modelo de gobierno corporativo
+moderno, con el propósito de cumplir de manera eficiente con los objetivos de nuestros accionistas. Este enfoque se basa en la independencia de la toma de decisiones, lo que nos permite adoptar las mejores prácticas internacionales y aplicar principios sólidos de gestión</h4>
+            </div>
+            <div class="linea-horizontal mb-5" style="background: #62D482; height: 3px;"></div>
+
+            <div class="container mt-4">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn1 btn-primary text-str "
+                                style="font-size: 20px; width: 20%!important; background-color: #62D482;" onclick="mostrarContenido('tecnico')">
+                            Consejo de Administración CMIC
+                        </button>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                        <button type="button" class="btn1 btn-primary mb-2 text-str"
+                                style="font-size: 20px; background-color: #62D482;" onclick="mostrarContenido('nominaciones')">
+                            Comité de <br>Inversiones
+                        </button>
+                        <button type="button" class="btn1 btn-primary text-str"
+                                style="font-size: 20px; background-color: #62D482;" onclick="mostrarContenido('practicas')">
+                            Comité de <br> Prácticas Societarias
+                        </button>
+                    </div>
+                    <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                        <button type="button" class="btn1 btn-primary mb-2 text-str"
+                                style="font-size: 20px;background-color: #62D482;" onclick="mostrarContenido('auditoria')">
+                            Comité de <br> Auditoría
+                        </button>
+                        <button type="button" class="btn1 btn-primary text-str"
+                                style="font-size: 20px; background-color: #62D482;" onclick="mostrarContenido('subcomite')">
+                            Subcomité <br> ASG
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="content-wrap">
+        <div class="container">
+            <div id="contenidos">
+                <!-- Consejo de Administración  -->
+                <div id="contenido-tecnico" class="contenido-activo">
+                    <div class="text-center">
+                        <img src="{% static 'images/gobierno-fdf/consejo_fdf.png' %}" class="img-fluid mb-3"
+                             alt="Comité Técnico" style="margin-bottom: 2em;">
+                     
+
+                        <h3 style="color: #62D482;" class="text-v text-str text-left">Consejo de Administración CMIC</h3>
+                        <hr style="border-top:3px solid #62d482;">
+                        <h5 style="color: #62D482;" class="text-v text-str text-left">4 miembros institucionales y 4 miembros independientes.</h5>
+                        <p class="text-a text-justify">
+                            El Consejo de Administración, compuesto por la participación de los cuatro consejeros institucionales, uno por cada accionista, supervisa y orienta las acciones de la Compañía, asegurando una representación equitativa de los intereses de todos los accionistas.
+
+                            Una característica clave de nuestro modelo es la composición del Consejo de Administración, que incluye un 50% de consejeros independientes, lo cual refuerza la imparcialidad en las decisiones.
+                        </p>
+
+                     
+                    </div>
+                </div>
+                <!-- Inversionistas -->
+                <div id="contenido-nominaciones" class="contenido-oculto">
+                    <div class="text-center">
+                        <img src="{% static 'images/gobierno-fdf/inversiones_fdf.png' %}" class="mb-3"
+                             style="max-width: 50%;margin-bottom: 2em;"
+                             alt="Comité Técnico">
+                        <h3 style="color: #62D482;" class="text-v text-str text-left">Comité de Inversiones</h3>
+                        <hr style="border-top:3px solid #62d482;">
+                        <h5 style="color: #62D482;" class="text-v text-str text-left">3 miembros institucionales y 2 miembros independientes.
+                        </h5>
+                        <p class="text-a text-justify">
+                            Evalúa y ofrece recomendaciones sobre las decisiones de inversión al Consejo de Administración
+                        </p>
+                        <p class="text-a text-justify">El Comité se desempeña como el principal órgano de apoyo al Consejo de Administración de CMIC, proporcionando respaldo técnico y recomendaciones estratégicas para la toma de decisiones de inversión. Entre sus funciones se encuentra la revisión y análisis de oportunidades de inversión en capital de riesgo. Asimismo, tiene la responsabilidad de proponer las políticas de inversión, examinar los planes de negocio de los fondos en los que se invierte, y evaluar operaciones o transacciones extraordinarias que involucren compromisos de capital.
+                        
+                       <p class="text-a text-justify"> Adicionalmente, el Comité lidera la implementación y seguimiento de la estrategia de inversión responsable, integrando el cuestionario de Due Diligence ASG como una herramienta clave en el proceso de análisis y evaluación de inversiones                        </p>
+
+                     </div>
+                </div>
+
+                <!-- Prácticas -->
+                <div id="contenido-practicas" class="contenido-oculto">
+                    <div class="text-center">
+                        <img src="{% static 'images/gobierno-fdf/practicas_fdf.png' %}" class="mb-3"
+                             style="max-width: 60%;margin-bottom: 2em;"
+                             alt="Comité Técnico">
+                        <h3 style="color: #62D482;" class="text-v text-str text-left">Comité de Prácticas Societarias
+                        </h3>
+                        <hr style="border-top:3px solid #62d482;">
+                        <h5 style="color: #62D482;" class="text-v text-str text-left">
+                            4 miembros institucionales y 2 miembros independientes.
+                        </h5>
+                        <p class="text-a text-justify">
+                            Examina manuales, políticas y perfiles de puestos, incluyendo los de los consejeros y directivos.
+                        </p>
+                        <p class="text-a text-justify">
+                            El Comité brinda soporte al Consejo de Administración de CMIC en múltiples áreas estratégicas, entre las que se incluyen la revisión y actualización de manuales y políticas internas, la nominación y evaluación de consejeros y altos directivos, así como la definición de perfiles de puestos clave dentro de la organización. Además, participa en la evaluación de esquemas de compensación y en el análisis detallado de operaciones con partes relacionadas, asegurando que estas se conduzcan bajo criterios de transparencia, integridad y alineación con los intereses de la Compañía.
+                        </p>
+                        
+                    </div> 
+                </div>
+                <!-- Auditoría -->
+                <div id="contenido-auditoria" class="contenido-oculto">
+                    <div class="text-center">
+                        <img src="{% static 'images/gobierno-fdf/auditoria_fdf.png' %}" class="mb-3"
+                             style="max-width: 50%;margin-bottom: 2em;"
+                             alt="Comité Técnico">
+                        <h3 style="color: #62D482;" class="text-v text-str text-left">Comité de Auditoría
+                        </h3>
+                        <hr style="border-top:3px solid #62d482;">
+                        <h5 style="color: #62D482;" class="text-v text-str text-left"> 2 miembros institucionales y 2 miembros independientes.
+                        </h5>
+                        <p class="text-a text-justify">
+                         Supervisa las actividades y la situación financiera de la Sociedad para proporcionar recomendaciones al Consejo de Administración
+                        </p>
+                        
+                        <p class="text-a text-justify">
+                            El Comité funciona como un órgano de soporte fundamental para el Consejo de Administración de CMIC, con la responsabilidad de supervisar los procesos internos de la Sociedad y ofrecer orientación en temas clave como el cumplimiento normativo, la gestión de riesgos, la revisión de información financiera, el trabajo de auditoría externa, los controles internos, y la observancia de las disposicionescontables y fiscales aplicables. 
+                        </p>
+
+                    </div>
+                </div>
+                        <!-- Subcomité -->
+                <div id="contenido-subcomite" class="contenido-oculto">
+                    <div class="text-center">
+                        <figure class="d-flex text-center justify-content-center" style=" height: 180px;margin-bottom: 2em;">
+                            <img src= "{% static 'images/gobierno-fdf/subcomite_fdf.png' %}" class="obj-cov">
+                        </figure>
+                        <!-- <img src="{% static 'images/corporativo/subcomite_fdf.png' %}" class="mb-3"
+                             style="max-width: 50%"
+                             alt="Comité Técnico"> -->
+                        <h3 style="color: #62D482;" class="text-v text-str text-left">Subcomité ASG
+                        </h3>
+                        <hr style="border-top:3px solid #62d482;">
+                        <h5 style="color: #62D482;" class="text-v text-str text-left"> 1 miembro independiente.
+                        </h5>
+                        <p class="text-a text-justify">
+                         Nuestro compromiso con la inversión responsable y la gestión de riesgos ambientales, sociales y de gobernanza (ASG) se ve reflejado en la labor de nuestro Subcomité ASG, establecido en 2024, y que desempeña un papel clave en la supervisión de nuestra estrategia de sostenibilidad.
+                        </p>
+                        
+                        <p class="text-a text-justify">
+                            El Subcomité ASG tiene la misión de integrar los principios de sostenibilidad en la estrategia corporativa, asegurando que nuestras inversiones y operaciones sean responsables y alineadas con las mejores prácticas internacionales.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    {#    <script src="{% static 'js/amCharts/contenido/inversionistas.min.js' %}{{ css_js_version }}"></script>#}
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    {#    <script src="{% static 'js/theme-vendors.min.js' %}"></script>#}
+    <script src="{% static 'js/tabsinv.js' %}{{ css_js_version }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/comites-script.js' %}{{ css_js_version }}"></script>
+{% endblock %}

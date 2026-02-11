@@ -1,0 +1,99 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>1 de Agosto del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/agosto/01.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>La inversión en bienes raíces, como muchos otros modelos de negocio, ha ido cambiando con el paso
+                        del tiempo. Se ha transformado y evolucionado, según las necesidades del mercado, los
+                        consumidores y los inversionistas. Según el <a
+                                href="https://www.inegi.org.mx/contenidos/saladeprensa/aproposito/2020/vivienda2020_Nal.pdf"
+                                target="_blank">INEGI</a>, el sector de servicios inmobiliarios y
+                        alquiler de propiedades aportó el 10,3% PIB Nacional en 2020.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>En términos generales, y exceptuando la reciente crisis económica global desatada por la pandemia
+                        de COVID-19, el sector inmobiliario en México se ha caracterizado por ser un sector rentable,
+                        sólido y en constante crecimiento. </p>
+                    <p>Asimismo, particularmente en México, la inversión en bienes raíces se ha visto fuertemente
+                        impulsada -y se ha diversificado- gracias a la figura de las <a
+                                href="https://www.fibramty.com/escuela-fibra-finn" target="_blank">FIBRAs
+                            inmobiliarias</a>. </p>
+                    <p>¿Por qué? </p>
+                    <p>Te contamos brevemente. </p>
+                    <h2>¿Por qué las FIBRAs son el futuro de la Inversión en Bienes Raíces? </h2>
+                    <p>Las FIBRAs inmobiliarias se han convertido en una excelente oportunidad para pequeños y grandes
+                        inversionistas, no solo por la facilidad de inversión, sino por el rendimiento estable y
+                        continuo que brinda este instrumento de inversión. </p>
+                    <p>El mercado de las FIBRAs ha crecido tanto que incluso ahora puedes invertir en inmuebles de
+                        almacenamiento personal, infraestructura de energía, carreteras, etc. Algunas FIBRAs, como lo es
+                        Fibra Mty, tienen ingresos denominados en dólares, haciendo que sus distribuciones de efectivo
+                        tengan un carácter defensivo ante una devaluación de la moneda. </p>
+                    <p>Finalmente, es importante resaltar que uno de los grandes beneficios de la Inversión en bienes
+                        raíces por medio de las FIBRAs es el tiempo de espera. Al ser las empresas o fideicomisos los
+                        encargados de gestionar las propiedades (que generalmente ya están listos para su uso o renta),
+                        el tiempo de retorno de tu inversión es mucho más rápido que en la inversión tradicional en
+                        bienes raíces. </p>
+                    <p>Aunque esto puede variar según el tipo de inmueble en el que decidas invertir. Los principales
+                        son:</p>
+                    <ul>
+                        <li>● Oficinas</li>
+                        <li>● Industrial</li>
+                        <li>● Centros Comerciales</li>
+                        <li>● Hoteles</li>
+                        <li>● Educación</li>
+                        <li>● Almacenamiento</li>
+                        <li>● Hipotecario</li>
+                        <li>● Infraestructura</li>
+                    </ul>
+                    <p>En términos generales, las FIBRAs otorgan bonificaciones competitivas, y generalmente estables,
+                        sin embargo, algunas son más rentables que otras. Lo anterior se debe principalmente a la
+                        gestión estratégica de las propiedades y activos financieros de cada una de las
+                        administraciones.</p>
+                    <p>Actualmente, en un contexto 'inter-pandemia' las FIBRAs que proyectan más estabilidad son las
+                        industriales, debido a que los sectores de manufactura, almacenamiento y logística no han parado
+                        de crecer, pese a la crisis sanitaria mundial. Sin embargo, sectores como oficinas y comercial,
+                        tienen una alta expectativa de crecimiento conforme se converja a un ambiente pre-pandemia. </p>
+                    <p>¿Quieres conocer dónde invertir en FIBRAs de este tipo? Ingresa a <a href="{% url 'index' %}">nuestro
+                        sitio</a> y conoce porque
+                        Fibras MTY es la mejor opción de inversión en bienes raíces hoy en día. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

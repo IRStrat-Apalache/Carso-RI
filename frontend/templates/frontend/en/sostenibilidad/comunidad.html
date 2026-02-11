@@ -1,0 +1,356 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-icons.min.css' %}">
+    <style>
+        
+    .bc-gray{
+        background-color: #E7E7E7;
+    }
+
+    .shadow{
+        box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .nav-tabs .nav-link.active {
+        box-shadow:0 -10px #fff;
+        border:none;
+        
+    }
+
+    .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+        border:none;
+    }
+
+    .video-thumbnail {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-thumbnail img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-thumbnail:hover img {
+        transform: scale(1.1);
+        filter: brightness(0.6);
+    }
+
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .video-thumbnail:hover .play-icon {
+        opacity: 1;
+    }
+
+    .btn-conoce {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color:white;
+        border: 2px solid white;
+        background-color: transparent;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .btn-conoce:hover {
+        transform: scale(1.1);
+        color:white;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <section id="becas" class="my-5">
+        <div class="container">
+            <div class="text-center">
+                <h4 style="color:#59A971">Fundación Fibra Educa A.C. was established as the social component of the Trust, with the purpose of generating a plausible impact on the members that make up society. From this, we focus on providing more and better educational opportunities to socially and economically disadvantaged sectors, which do not have access to high school and/or university education, so we guarantee a substantial improvement in the academic level of the beneficiaries and their communities.</h4>
+            </div>           
+            <br>
+            <p class="text-justify">
+                We established the following criteria for the allocation of scholarships, in order to benefit the most vulnerable population:
+            </p>
+            <br>
+            {% comment %} <div id="card-becas" class="row m-t-40 justify-content-between my-4">
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/70becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    Established in 2021, the Fibra Educa Foundation is a fundamental part of Fibra Educa's social impact initiatives. In collaboration with some of its tenants, who are operators of educational services, the Foundation offers young people educational scholarships for the upper secondary and higher levels.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/35becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    These scholarships are preferentially aimed at women and those in situations of economic vulnerability, as well as young people interested in a variety of careers, with a particular focus on the STEM (Science, Technology, Engineering and Mathematics) and Health Sciences areas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/15becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">                                    
+                                    The academic scholarships are complemented by a scholarship to study English online. This not only improves the language skills of the interns, but also expands their opportunities in the globalized world of work and improves their income prospects.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 card cards mb-3 card-shadow" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="row no-gutters">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <img src="{% static 'images/atencion_comunidad/45becas.png' %}"
+                                 class="card-img" alt="Inversion">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title tc-black text-center"></h5>
+                                <p class="font-medium text-justify">
+                                    Since its inception, the Fibra Educa Foundation has helped many young people thrive and develop their full potential. The Foundation seeks to help young people achieve academic and professional success. By investing in the education of new generations, a more equitable future is being built for all.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    {% endcomment %} 
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu.jpg' %}" alt="Inversion" >
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        Established in 2021, the <b style="color:#23356B">Fibra Educa Foundation</b> is a fundamental part of <b style="color:#23356B">Fibra Educa's social impact initiatives</b>. In collaboration with some of its tenants, who are operators of educational services, the Foundation offers young people <b style="color:#23356B">educational scholarships for the upper secondary and higher levels</b>.
+                    </h3>
+                </div>
+            </div> 
+            <br>     
+            <div class="row">                
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        These scholarships are preferentially aimed at <b style="color:#23356B">women</b> and those in <b style="color:#23356B">situations of economic vulnerability</b>, as well as young people interested in a variety of careers, with a particular focus on the <b style="color:#23356B">STEM (Science, Technology, Engineering and Mathematics)</b> and <b style="color:#23356B">Health Sciences</b> areas.
+                    </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu2.jpg' %}" alt="Inversion" >
+                </div>
+            </div>
+            <br>      
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu3.jpg' %}" alt="Inversion" >
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                        
+                        The academic scholarships are complemented by a <b style="color:#23356B">scholarship to study English online</b>. This not only <b style="color:#23356B">improves the language skills</b> of the interns, but also <b style="color:#23356B">expands their opportunities in the globalized world of work</b> and <b style="color:#23356B">improves their income prospects</b>.
+                    </h3>
+                </div>
+            </div>   
+            <br>   
+            <div class="row">                
+                <div class="col-md-6">
+                    <h3 class="text-justify">
+                       
+                        Since its inception, the <b style="color:#23356B">Fibra Educa Foundation</b> has <b style="color:#23356B">helped many young people thrive</b> and develop their full potential. The Foundation seeks to help young people <b style="color:#23356B">achieve academic and professional success</b>. By <b style="color:#23356B">investing in the education of new generations</b>, a <b style="color:#23356B">more equitable future</b> is being built for all.
+                    </h3>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'images/atencion_comunidad/comu4.jpg' %}" alt="Inversion" >
+                </div>
+            </div>                               
+        </div>
+        <br>
+        <div style="background-color:#23356B; color:white;">
+            <div class="container pt-1">
+                <h1 class="text-center mt-5" style="color:white">Meet the Fibra Educa Foundation interns</h1>
+                <div class="text-center m-3">
+                    <a href="https://fundacionfibraeduca.com/" class="btn-conoce" target="_blank">Visit the Fibra Educa Foundation's website</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/y4Y9ivj6aUQ?si=lxfOpLHiTTU2XNMB" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/becario1.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Melanie Vega</b>
+                            <p class="text-justify">Melanie studied psychology and became a model in her community. Her dedication inspired her parents to resume their high school studies, and now they are about to enter college, following their daughter’s example.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/HxLw3nl2LU8?si=0Jn_UppjOZvmPfZB" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/YulianaAparicio.png' %}" alt="Miniatura del video" >
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Yuliana Aparicio</b>
+                            <p class="text-justify"> Yuliana studied a degree in Business Administration with the goal of supporting her grandparents’ family business. With effort and dedication, she obtained the best average of her generation and is now doing her professional internship in the financial education outreach program at BBVA.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/7NLwU7vIzEw?si=L-q3-ZBEEjqKzHSs" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/NathanMachorro.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Nathan Machorro</b>
+                            <p class="text-justify">  Nathan studied psychology and took full advantage of the tools that the scholarship provided him. Thanks to the English classes and access to the Cuéntame platform, he strengthened his personal development and expanded his professional opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/k--6mnts_ys?si=qEQECqRMWQqEUqsa" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/AmeyaltzinGonzález.jpg' %}" alt="Miniatura del video">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Ameyaltzin González</b>
+                            <p class="text-justify">  Ameyaltzin studied Marketing with an outstanding average. Now she continues her professional growth by pursuing two master’s degrees, one in Marketing and the other in Project Management, to continue strengthening her profile and business knowledge.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/6SeyaAyY2HQ?si=_Q661M5PY_t2t9gY" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/AldoRuíz.jpg' %}" alt="Miniatura del video" style="height:235px;">
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Aldo Ruíz</b>
+                            <p class="text-justify">Aldo graduated with a degree in International Business as the first college graduate from both sides of his family. Through Quick Learning he was able to project his work career by being bilingual, a part of the scholarship that he appreciates very much.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://youtu.be/Y_EhbxUz2fk?si=Bql4F-kdNnrU5mBT" target="_blank" class="video-thumbnail">
+                            <img src="{% static 'images/ItzelMartínez.png' %}" alt="Miniatura del video" >
+                            <i class="fa fa-play-circle play-icon"></i>
+                        </a>
+                        <br>
+                        <div class="justify-content-center">
+                            <b>Itzel Martínez</b>
+                            <p class="text-justify">Itzel participated in INFOMATRIX, a prestigious science and technology competition organized by SOLACYT, where she won a trophy and a Platinum medal with accreditation to Seville, Spain, and three silver medals with accreditation to the national headquarters in Guadalajara. Currently, he is one of the best students from Mexico in the STEM Movement National Student Prize 2023.</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>            
+        </div>
+        <div class="container">
+            <h1 class="text-center mt-5" style="color:#23356B;" >Projection of the Scholarship Allocation<br>to Economically Vulnerable Population</h1>
+            <div class="text-center">
+                <div id="becasChart" style="width: 100%; height:500px;"></div>
+            </div> 
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>    
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/comunidad.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const fragment = window.location.hash;
+
+            if (fragment.includes("tab=")) {
+                const tabId = fragment.split("tab=")[1]; 
+
+                $('#myTab a[href="#' + tabId + '"]').tab('show');
+
+                $('html, body').animate({
+                    scrollTop: $("#ppropiedades").offset().top
+                }, 500, function() {
+                    setTimeout(function() {
+                        $('#myTab a[href="#' + tabId + '"]').tab('show');
+                    }, 100);
+                });
+            }
+        });
+
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 0,
+            responsiveClass: true,
+            nav: true,
+            navText: ['<i class="icon-arrow-left" aria-hidden="true"></i>', '<i class="icon-arrow-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                680: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                },
+                1000: {
+                    items: 3,
+                    nav: true
+                }
+            }
+        });
+    </script>
+{% endblock %}

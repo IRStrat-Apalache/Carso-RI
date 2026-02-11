@@ -1,0 +1,88 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>14 de Junio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/junio-02.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>A pesar del particular momento que vive el mundo, en México la inversión en bienes raíces sigue
+                        siendo una operación rentable en el largo plazo y con buenos prospectos a futuro. Parte de la
+                        recuperación económica se verá a partir del desarrollo de proyectos inmobiliarios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Según el <a
+                            href="https://www.bbvaresearch.com/publicaciones/situacion-inmobiliaria-mexico-primer-semestre-2021/#:~:text=Tasas%20de%20inter%C3%A9s%20amortiguan%20contracci%C3%B3n,a%C3%BAn%20hay%20mucho%20por%20hacer."
+                            target="_blank">reporte</a> del BBVA sobre la Situación Inmobiliaria de México
+                        correspondiente al primer
+                        semestre de 2021, la construcción podría crecer 2,7% en 2021. Además, la edificación industrial
+                        sería la primera del sector en recuperarse debido al impulso de la vía industrial y del comercio
+                        exterior. </p>
+                    <p>Ante este panorama, las alternativas para invertir capital en bienes raíces siguen siendo una
+                        opción apetecible para quienes buscan ingresar en este mercado, y hay una opción en particular
+                        que despunta como inversión: las FIBRAs.</p>
+                    <h2>Alternativas para tu Inversión en Bienes Raíces</h2>
+                    <p>Comprar una propiedad es la forma más tradicional de invertir en el mercado inmobiliario.
+                        Requiere de un desembolso inicial relevante, pero puede dar frutos a través del arrendamiento,
+                        que dejará un rendimiento mes a mes. </p>
+                    <p>Adquirir un inmueble para su refacción y venta es otra opción que puede ser redituable en el
+                        corto y mediano plazo. En este caso, se compra una propiedad que requiere una inversión en
+                        arreglos y reparaciones para luego ser vendida a un precio más alto, obteniendo una diferencia.
+                        La ventaja de este negocio es que se ve la ganancia más rápidamente, sin embargo el
+                        requerimiento de inversión es alto, existe el riesgo de no poder venderla además de que la
+                        transacción involucra gastos legales, notariales y tener experiencia en el sector bienes
+                        raíces</p>
+                    <p>Pero la inversión en bienes raíces que está revolucionando el mercado inmobiliario desde su
+                        llegada a México son los fideicomisos de bienes raíces, o FIBRAs. Entre sus ventajas se
+                        encuentran que es una operación accesible a partir de montos bajos, lo que la hace apta para
+                        cualquier persona que quiera ingresar. </p>
+                    <p>Además, permite diversificar el capital invertido a través de un <a href="{% url 'noticia_5' %}">portafolio
+                        de distintos
+                        inmuebles productivos</a> como oficinas y complejos industriales, administrado por una
+                        organización
+                        dedicada y especializada en el desarrollo de inmuebles. Más aún, las FIBRAs permiten obtener
+                        rendimientos recurrentes a través de la distribución de efectivo, y le dan al inversionista la
+                        posibilidad de contar con liquidez inmediata vendiendo sus títulos en la bolsa de valores.</p>
+                    <p>Si estás proyectando tu primera incursión en bienes raíces, te recomendamos prestarle especial
+                        atención a las FIBRAs. <a href="{% url 'escuela-fibra-finn' %}">Conoce más</a> sobre cómo operar
+                        con este excelente instrumento financiero en
+                        Fibra MTY.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

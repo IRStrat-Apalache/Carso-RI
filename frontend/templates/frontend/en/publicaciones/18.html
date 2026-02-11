@@ -1,0 +1,113 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>17 de Mayo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/mayo-03.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Las Fibras son un vehículo de inversión en bienes raíces de reciente creación que, desde su
+                        entrada en la Bolsa Mexicana de Valores en 2011, se han convertido en un instrumento atractivo
+                        dentro del mercado bursátil nacional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Este novedoso modelo de inversión se basa en la distribución de utilidades procedentes del
+                        arrendamiento de bienes inmuebles y la generación de rendimientos a partir de la plusvalía de
+                        dichas propiedades. </p>
+                    <p>A diferencia de otros métodos de inversión más tradicionales, las Fibras son un instrumento
+                        idóneo para diversificar nuestro portafolio de inversión y obtener ganancias constantes. </p>
+
+                    <h2>Seguridad y estabilidad económica</h2>
+                    <p>Hacer una inversión en bienes raíces representa un riesgo menor en comparación con otras opciones
+                        de inversión debido a sus rendimientos constantes derivados de las rentas generadas por las
+                        propiedades. </p>
+                    <p>Las FIBRAs son consideradas instrumentos defensivos porque los contratos de arrendamiento (en su
+                        mayoría) están ligados a la inflación, además de que, el valor de la inversión está respaldada
+                        por propiedades, y por ende, cuentan con un valor mínimo (el de la construcción y terreno).</p>
+                    <h2>Administración profesional</h2>
+                    <p>En el caso de las Fibras, estas son fideicomisos que adquieren y administran propiedades a gran
+                        escala como edificios de oficinas, hoteles, centros comerciales o naves industriales. </p>
+                    <p>Esto significa una gran ventaja para los inversionistas ya que no son ellos quienes se encargan
+                        de la gestión de las propiedades. Para el mantenimiento, operación y mejora de los inmuebles,
+                        existe un equipo de profesionales que se encarga de ello. </p>
+                    <p>De esta manera, lo único que tiene que hacer el inversionista es adquirir un CBFI, que es el
+                        equivalente a un título accionario, para tener derecho a una parte de los rendimientos y
+                        distribuciones de efectivo de una Fibra. </p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_11' %}">¿Qué son los Certificados Bursátiles Fiduciarios
+                                Inmobiliarios?</a>
+                        </li>
+                    </ul>
+                    <h2>Plusvalía</h2>
+                    <p>Una de las grandes ventajas de hacer una inversión en bienes raíces mediante Fibras, es que estas
+                        cotizan en la Bolsa Mexicana de Valores (<a href="https://www.bmv.com.mx/"
+                                                                    target="_blank">BMV</a>), lo cual nos permite
+                        visualizar el precio de
+                        cotización de cada CBFI. </p>
+                    <p>Esto es muy importante ya que la plusvalía de cada certificado está relacionada directamente con
+                        la oferta y la demanda del mercado en el sector inmobiliario. Por lo que podremos comprar y
+                        vender estos títulos a diferentes precios según las expectativas de crecimiento y rentabilidad
+                        de los inversionistas. </p>
+                    <h2>Retorno de inversión</h2>
+                    <p>La característica principal de las Fibras es la distribución de dividendos en efectivo entre
+                        todos los tenedores de CBFIs. Estos rendimientos obtenidos por el arrendamiento de las
+                        propiedades son repartidos periódicamente. </p>
+                    <p>De acuerdo con la Ley del Impuesto sobre la Renta en sus artículos 187 y 188, las distribuciones
+                        catalogadas como “reembolsos de capital” y la apreciación de capital de un CBFI tendrán una tasa
+                        de impuestos del 0%. </p>
+                    <p>Esto nos da a entender que el retorno de inversión en Fibras es altamente rentable y con ciertas
+                        ventajas en impuestos, lo que favorece notablemente su atractivo. </p>
+                    <h2>Diversificación de portafolio</h2>
+                    <p>Por último, es bien sabido que invertir en bienes inmuebles te permite diversificar tu
+                        portafolio. Entonces, si una Fibra es un fideicomiso que tiene su propio portafolio de
+                        propiedades, al adquirir un CBFI estás obteniendo el derecho de participar sobre todas sus
+                        propiedades. </p>
+                    <p>Es decir, en lugar de invertir en un solo inmueble, mediante una Fibra estarás invirtiendo en un
+                        catálogo extenso de propiedades que te permitirá diversificar al máximo tu propio
+                        portafolio. </p>
+                    <p>En Fibra Mty nos distinguimos por brindar solidez y confianza a través de un modelo de negocio de
+                        inversiones a largo plazo con beneficios tangibles. </p>
+                    <p>Conoce más en nuestro <a href="{% url 'index' %}">sitio web</a>. </p>
+                    <p>Síguenos en nuestras redes sociales: <a
+                            href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> – <a
+                            href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos" target="_blank">YouTube</a>
+                        – <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

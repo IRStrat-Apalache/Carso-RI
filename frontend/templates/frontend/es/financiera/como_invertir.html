@@ -1,0 +1,240 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}{{ css_js_version }}">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <style>
+        /* Estilos para el carrusel y los elementos */
+        .owl-carousel {
+            background: #263155;
+        }
+
+        .item, .texto-invertir {
+            color: #fff; /* Color del texto */
+            padding: 20px; /* Espaciado interior */
+        }
+
+        .content h3 {
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 800;
+        }
+
+        .content p {
+            font-size: 16px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .invers .owl-theme .owl-nav.disabled + .owl-dots {
+            position: absolute;
+            bottom: 0 !important;
+            left: 0;
+            right: 0;
+        }
+
+        .invers .owl-theme .owl-nav {
+            position: absolute;
+            bottom: 1%;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block title %}
+    <section class="hero-parallax text-white d-flex align-items-center justify-content-center position-relative"
+             style="background-image: url({% static image %})">
+        <div class="container-fluid container-relative text-title headerint">
+            <h1>{{ title }}</h1>
+            {#            <div class="row">#}
+            {#                <div class="col-lg-7">#}
+            {#                    <div class="owl-carousel header owl-theme headerint-sub ">#}
+            {#                        <div class="item">#}
+            {#                            <h3>Fibra Mty ha crecido de manera continua la distribución por CBFI desde su oferta pública#}
+            {#                                inicial.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha realizado múltiples emisiones de capital en el mercado de valores.</h3>#}
+            {#                        </div>#}
+            {#                        <div class="item">#}
+            {#                            <h3> Fibra Mty ha cumplido con su guía de resultados consistentemente a lo largo de su#}
+            {#                                historia.</h3>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </section>
+{% endblock %}
+
+{% block content %}
+    <section class="s-block pt-5 pb-4">
+        <div class="container ">
+
+            <div class="row m-0 d-flex align-self-center w-100 h-100 z-index">
+                <div class="col-12 pl-0"><h2>Cómo invertir en Fibra Inn </h2></div>
+                <div class="col-3 texto-invertir d-flex align-items-center" style="background: #263155">
+                    <p class ="text-center" style = "font-size: 50px;">Para invertir en Fibra Inn</p>
+                </div>
+                <div class="col-9 invers ">
+                    <div class="owl-carousel  owl-theme h-100 p-3">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <h3>Elige una casa de bolsa para crear una cuenta</h3>
+                                        <p class="text-justify">Se recomienda investigar y analizar las diferentes
+                                            opciones que hay en el
+                                            mercado para comparar comisiones, monto mínimo de apertura y sus diferentes
+                                            módulos para la compra-venta de instrumentos de inversión; seleccionando
+                                            aquella que se considere mejor para abrir una cuenta.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image">
+                                        <img src="{% static 'images/invertir/Imagen3.2.png' %}"
+                                             alt="Imagen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <h3>Compra los certificados de Fibra Inn</h3>
+                                        <p class="text-justify">Para este paso ya se debe contar con una cuenta de una
+                                            casa de bolsa, misma
+                                            que debe contar con los fondos suficientes para llevar a cabo la compra de
+                                            los instrumentos de inversión. La compra se puede realizar de dos formas: i)
+                                            Mediante una orden de compra con un agente de la Casa de Bolsa en la que se
+                                            abrió la cuenta o, ii) Directamente desde la cuenta en línea (no todas las
+                                            casas de bolsa ofrecen esta opción) usando la clave de pizarra FINN13 o
+                                            Fibra Inn. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image">
+                                        <img src="{% static 'images/invertir/Imagen3.3.png' %}"
+                                             alt="Imagen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <h3>Recibe distribuciones trimestrales </h3>
+                                        <p class="text-justify">La Ley del Impuesto sobre la Renta en México establece
+                                            que una FIBRA debe
+                                            distribuir anualmente por lo menos el 95% de su utilidad antes de impuestos.
+                                            De esta forma, el propietario de los certificados de Fibra Inn se convierte
+                                            en beneficiario de las distribuciones de efectivo, las cuales son realizadas
+                                            de forma recurrente y depositadas directamente a tu cuenta de
+                                            inversión. </p>
+                                        <p class="text-justify">El efectivo recibido mediante dichas distribuciones podrá ser utilizado para
+                                            comprar más instrumentos o retirado para destinarlo a otros fines. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image">
+                                        <img src="{% static 'images/invertir/Imagen3.4.png' %}"
+                                             alt="Imagen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <h3>Monitorea tu inversión</h3>
+                                        <p class="text-justify">Si bien el principal canal de rendimiento de las FIBRAs
+                                            es la distribución de
+                                            efectivo, también puede generarse un rendimiento a través de la apreciación
+                                            del certificado, el cual se concreta cuando se lleva a cabo la venta del
+                                            instrumento (mientras tanto se considera una ganancia o pérdida no
+                                            realizada). Por ello, dedica tiempo a informarte sobre los resultados
+                                            trimestrales del Fideicomiso así como de otra información relevante.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image">
+                                        <img src="{% static 'images/invertir/Imagen3.5.png' %}"
+                                             alt="Imagen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-center mt-4 mb-5">
+        <a href="{% url 'reportes_financieros' %}"
+           class="button button-border button-large noleftmargin topmargin-sm"
+           style="background-color: #005598;">Centro de reportes
+        </a></div>
+
+
+    <div class="modal" id="newsletter-success" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Muchas gracias por suscribirse al boletín de noticias.</h6>
+                </div>
+                <div class="modal-body">
+                    <button class="" data-dismiss="modal">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/tabsinv.js' %}{{ css_js_version }}"></script>
+
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 1,
+                animateOut: 'fadeOut',
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"]
+            });
+        });
+
+
+    </script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.js' %}"></script>
+{% endblock %}

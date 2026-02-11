@@ -1,0 +1,78 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>25 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/10.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Tener un taxi que nunca lleve pasajeros sería una inversión completamente perdida, tanto como un
+                        restaurante al que no llegan clientes o un hotel que no tiene huéspedes. Puede parecer algo
+                        obvio, pero el concepto de la “ocupación” es algo fundamental en todo tipo de inversión y puede
+                        llegar a afectar sustancialmente el correcto desarrollo de las FIBRAs inmobiliarias.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>La finalidad de las FIBRAs inmobiliarias</h2>
+                    <p>A grandes rasgos, la inversión en FIBRAs funciona de la siguiente manera: con el dinero de
+                        inversionistas, la FIBRA adquiere y administra portafolios de propiedades de alto nivel que
+                        genere renta y plusvalía con el paso del tiempo.</p>
+                    <p>Tomando como referencia nuestra comparación inicial, el inmueble, por más bueno que sea, no
+                        generará rentas por sí solo. Los ladrillos, el acero y el concreto no pueden generar rendimiento
+                        alguno si nadie paga por su uso.</p>
+                    <p>Para que esto no suceda, la organización que administra el inmueble (en este caso Fibra Mty)
+                        ofrece comercializar el espacio vacío mediante contratos de arrendamiento, asegurando la
+                        ocupación por un periodo determinado y con condiciones justas para la Compañía y el Inquilino.
+                        Fibra Mty se enfoca mucho en tener calidad en la ubicación del inmueble, la calidad de la
+                        construcción, la calidad de los inquilinos y en la calidad de los contratos de
+                        arrendamiento.</p>
+                    <h2>¿Qué es la tasa de ocupación?</h2>
+                    <p>La tasa de ocupación en las FIBRAs inmobiliarias hace referencia a la porción del Área Bruta
+                        Rentable (ABR) de un inmueble que está siendo productiva.</p>
+                    <p>Por ejemplo, el portafolio de Fibra Mty cuenta con 749,564 m<sup>2</sup> de ARB y una ocupación del 90.5%.
+                        Además, más de la mitad de los contratos de arrendamiento tienen fecha de vencimiento posterior
+                        al 2025 y, tal y como se expuso en nuestro <a href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-2T21-Reporte-vf.pdf" target="_blank"> Reporte de Resultados 2T2021</a>, se proyecta una
+                        retención del 83% de los contratos de arrendamiento con vencimiento menor a un año a partir del
+                        segundo trimestre del 2020.</p>
+                    <p>En Fibra MTY centramos todos nuestros esfuerzos en que tu inversión en FIBRAs inmobiliarias sea
+                        rentable en el largo plazo y permita generar riqueza. Si quieres conocer más sobre nuestra
+                        operación o cómo invertir en el mercado de bienes raíces te invitamos a que visites <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro blog</a>.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

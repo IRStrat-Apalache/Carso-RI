@@ -1,0 +1,120 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>19 de octubre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/octubre/5.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>En los últimos años México se ha posicionado como uno de los países de Latinoamérica con mayor
+                        inversión en bienes raíces. Esto no solo se debe al desarrollo urbanístico de algunos estados,
+                        sino también a lo rentable que es invertir en este sector.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>México cuenta con una ubicación geográfica tan privilegiada que permite el desarrollo de
+                        importantes puntos de comercio, turismo y demás actividades que dan un valor agregado a cada
+                        propiedad. </p>
+                    <p>Con este panorama, son cada vez más los inversionistas interesados en los bienes raíces de
+                        nuestro país. Por eso, hoy resumimos cuáles son los estados con mejor proyección para <a
+                                href="{% url 'noticia_37' %}">inversión
+                            inmobiliaria</a>. </p>
+                    <h2>Estados de la república con mejor inversión en bienes raíces</h2>
+                    <p>Algunos estados se han posicionado con un alto potencial de desarrollo y crecimiento, por lo que
+                        la inversión en bienes raíces en estos territorios es una excelente alternativa. </p>
+                    <p><strong>Querétaro</strong></p>
+                    <p>Gracias a su posición privilegiada en el país, <a href="https://www.queretaro.gob.mx/"
+                                                                         target="_blank">Querétaro</a> combina lo mejor
+                        de dos grandes mundos:
+                        la tranquilidad de una ciudad intermedia y la euforia de la gran ciudad. Esto gracias a que se
+                        ubica a tan solo un par de horas de la capital del país. </p>
+                    <p>La inversión industrial, el constante desarrollo y la innovación en el sector inmobiliario
+                        permiten proyectar a Querétaro como uno de los estados más importantes en materia de inversión
+                        en bienes raíces. </p>
+                    <p>Por destacar algunas cifras que lo respaldan, en el último año, Querétaro acumuló un total de
+                        $342MUSD en Inversión Extranjera Directa, según <a target="_blank"
+                                                                           href="https://datamexico.org/es/profile/geo/queretaro-qt">datos
+                            oficiales</a> de Data México. </p>
+                    <p><strong>Nuevo León </strong></p>
+                    <p>Para nadie es un secreto que el norte del país tiene los índices de inversión más altos de todo
+                        el territorio nacional. Y, como es de suponer, esto permite que algunos estados como <a
+                                href="https://www.nl.gob.mx/" target="_blank">Nuevo León</a>,
+                        Coahuila o Chihuahua hayan tenido un importante crecimiento industrial y urbanístico. </p>
+                    <p>Especialmente en Nuevo León, la <a target="_blank"
+                                                          href="https://datamexico.org/es/profile/geo/nuevo-leon-nl">inversión
+                        extranjera</a> superó los $1,455MUSD, acontecimiento que ha
+                        impulsado un crecimiento económico importante. Esto ha sido un sello de garantía para que la
+                        inversión en bienes raíces sea una excelente alternativa de capitalización. </p>
+                    <p><strong>Jalisco</strong></p>
+                    <p><a href="https://www.jalisco.gob.mx/" target="_blank">Jalisco</a> es en la actualidad el estado
+                        más importante de la zona occidental del país,
+                        especialmente por su desarrollo en la industria tecnológica. Esto, sumado al importante
+                        desarrollo de <a target="_blank"
+                                         href="https://sedeco.jalisco.gob.mx/comercializacion-e-inversion/promocion-la-inversion/por-que-invertir-en-jalisco">otras
+                            industrias emergentes</a> como el turismo y la industria de infraestructura e
+                        innovación. </p>
+                    <p>Adicionalmente, tanto como otros estados de México, Jalisco tuvo, en el último año una <a
+                            href="https://datamexico.org/es/profile/geo/jalisco-jc" target="_blank">inversión
+                        extranjera importante</a> que ronda los $875MUSD e incentiva el crecimiento económico y
+                        urbanístico
+                        en esta región del país. </p>
+                    <p>Ahora bien, es verdad que la inversión en bienes raíces no es una opción del todo asequible por
+                        los altos montos de capital inicial que representa. No obstante, la llegada de las <a
+                                href="{% url 'noticia_9' %}">FIBRAs a
+                            México</a> permite a cualquier inversionista interesado en formar parte del sector
+                        inmobiliario
+                        invertir desde montos moderados y obtener dividendos constantes y predecibles. </p>
+                    <p>De igual forma, invertir en FIBRAs es una excelente alternativa para <a
+                            href="{% url 'noticia_33' %}">diversificar tus inversiones</a>
+                        ya que los portafolios de propiedades abarcan diferentes estados de la República.</p>
+                    <p>Suena bien ¿Cierto? </p>
+                    <p>Con Fibra MTY podrás invertir en <a href="{% url 'propiedades' %}">diferentes propiedades</a>
+                        ubicadas en cada uno de los a <a href="{% url 'propiedades' %}#pmapa">estados</a>
+                        mencionados en el momento que desees, aún si no tienes experiencia en el mercado. </p>
+                    <p>¿Quieres saber cómo hacerlo? Ingresa a <a href="{% url 'escuela-fibra-finn' %}">Fibra MTY</a> y
+                        conoce por qué somos la mejor opción para
+                        invertir en FIBRAs en México. </p>
+                    <p>No olvides seguirnos en <a
+                            href="https://twitter.com/fibra_mty"
+                            target="_blank">Twitter</a>, <a
+                            target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a>
+                        y <a target="_blank"
+                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

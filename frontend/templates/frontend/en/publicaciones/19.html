@@ -1,0 +1,93 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>24 de Mayo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/mayo-04.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>De nuestros padres y abuelos escuchamos reiteradas veces que la mejor inversión es comprar una
+                        casa o un departamento. No en vano “vivir de rentas” se convirtió en una expresión de comodidad
+                        y de seguridad financiera. El tema es que no todas las personas podían desembolsar la suma
+                        necesaria para acceder al mercado inmobiliario. Pero desde hace relativamente poco, vivir de
+                        rentas es una posibilidad más que factible, gracias a la entrada en acción de las FIBRAs en
+                        México.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>La historia de los fideicomisos en México se remonta hasta el año 1905 con el Proyecto Limantour.
+                        En 1926 se estructuró por primera vez la figura del fideicomiso a través de la Ley de Bancos de
+                        Fideicomiso. Faltaría mucho todavía para que se diera sustento a la FIBRA como un instrumento de
+                        inversión similar a los <a href="https://es.wikipedia.org/wiki/Real_estate_investment_trust"
+                                                   target="_blank">REITs</a> estadounidenses (Real Estate Investment
+                        Trust). Esa alternativa
+                        llegó con la reforma fiscal de principios de 2004</p>
+                    <p>Recién en 2011 salieron al mercado público las primeras FIBRAs en México como un nuevo
+                        instrumento de inversión para financiamiento. <a href="{% url 'nosotros' %}">Fibra MTY</a> tuvo
+                        su oferta pública inicial en la
+                        Bolsa Mexicana de Valores en 2014, destacándose como un fideicomiso especializado en desarrollar
+                        inmuebles corporativos.</p>
+
+                    <h2>¿Por qué se habla de la democratización del mercado inmobiliario?</h2>
+                    <p>Las FIBRAs generan inversiones en bienes raíces a través de la colocación de Certificados
+                        Bursátiles Fiduciarios Inmobiliarios (CBFI) en una bolsa de valores reconocida en México. Su
+                        finalidad es adquirir y administrar edificios que generen rentas, como oficinas, centros
+                        comerciales, naves industriales, hoteles, departamentos, entre otros.</p>
+
+                    <p>El fideicomiso administra los edificios y se encarga de realizar el mantenimiento
+                        correspondiente. De las rentas obtenidas, se le reparten dividendos a los accionistas de forma
+                        periódica. <a target="{% url 'escuela-fibra-finn' %}">Cualquier persona puede invertir en bienes
+                            raíces a través de las FIBRAs</a> y, además,
+                        cualquier inversor puede disponer de liquidez inmediata al vender sus certificados, el
+                        equivalente a las acciones, si es que así lo requiere.</p>
+
+                    <p>Desde el nacimiento de las FIBRAs en México, <a href="{% url 'noticia_1' %}">el sector
+                        inmobiliario dejó de ser un mercado para
+                        grandes inversionistas</a>. Más aún, en Fibra MTY contamos con un <a
+                            href="{% url 'propiedades' %}">portafolio</a> diversificado con
+                        inmuebles de alta calidad distribuidos por todo el país, para reducir el riesgo al mínimo
+                        posible y cuidar la seguridad de cada uno de nuestros inversores.</p>
+                    <p>Las FIBRAs son el vehículo financiero que permitirá el ingreso al mercado inmobiliario de cientos
+                        de miles de personas, ampliando los márgenes de capitalización del sector como nunca antes y
+                        dando un paso más hacia la inclusión financiera. </p>
+
+
+                    <p>Conoce más sobre esta novedosa inversión en nuestro <a href="{% url 'escuela-fibra-finn' %}">sitio</a>. </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

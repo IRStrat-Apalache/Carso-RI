@@ -1,0 +1,343 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+    <style>
+        #chartdiv3 {
+            {#width: 100%;#}
+            height: 500px;
+        }
+
+        .tab-content {
+            margin: 0; /* Eliminar márgenes */
+            padding: 0; /* Eliminar padding si es necesario */
+        }
+
+        .tab-section {
+            display: none; /* Asegúrate de que esté oculto por defecto */
+        }
+
+        
+        .border-bottom{
+            border-bottom: 1px solid #dee2e6 !important;
+        }
+
+        .shadow{
+            box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
+        .nav-tabs .nav-link.active {
+            box-shadow:0 -10px #fff;
+            border:none;
+            
+        }
+    
+        @media only screen and (max-width: 768px) {
+        
+        
+            #analistas{                
+                text-align:center;
+            }
+        
+            #img-cotizacion{
+                width:200px;
+                height:200px !important;
+            }
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <ul class="nav nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="cotizacion-tab" data-toggle="tab" href="#cotizacion" role="tab" aria-controls="cotizacion" aria-selected="true">{% trans 'Cotización' %}</a>
+                    </li>
+                    <li class="nav-item bg-light-gray">
+                        <a class="nav-link" id="cobertura-tab" data-toggle="tab" href="#cobertura" role="tab" aria-controls="cobertura" aria-selected="false">{% trans 'Cobertura de analistas' %}</a>
+                    </li>                    
+                    <li class="nav-item bg-light-gray">
+                        <a class="nav-link" id="distribuciones-tab" data-toggle="tab" href="#distribuciones" role="tab" aria-controls="distribuciones" aria-selected="false">{% trans 'Distribuciones' %}</a>
+                    </li>                    
+                    <li class="nav-item bg-light-gray">
+                        <a class="nav-link" id="calificadoras-tab" data-toggle="tab" href="#calificadoras" role="tab" aria-controls="calificadoras" aria-selected="false">{% trans 'Calificadoras' %}</a>
+                    </li>                    
+                    <li class="nav-item bg-light-gray">
+                        <a class="nav-link" id="prospectos-tab" data-toggle="tab" href="#prospectos" role="tab" aria-controls="prospectos" aria-selected="false">{% trans 'Prospectos' %}</a>
+                    </li> 
+                    <li class="nav-item bg-light-gray">
+                        <a class="nav-link" id="certificado-tab" data-toggle="tab" href="#certificado" role="tab" aria-controls="Certificado" aria-selected="false">{% trans 'Certificado' %}</a>
+                    </li>                     
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="ppropiedades" class="tab-content">
+
+        <div class="tab-pane fade tab-section show active" id="cotizacion" role="tabpanel" aria-labelledby="cotizacion-tab">
+            <section class="s-block " id="cotizacion-section">
+                <div class="container-fluid container-relative">
+                    <div class="row">
+                        <div class="col-md-12 text-justify">
+                            <div id="cotizacion-table-2" class="table-responsive">
+                                <table class="table table-bordered table-striped bc-lblue"
+                                    style="margin-bottom: 10px;">
+                                    <thead>
+                                    <tr>
+                                        <th>Ticker</th>
+                                        <th>Price</th>
+                                        <th>Change</th>
+                                        <th>Day range</th>
+                                        <th>Volume</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>EDUCA18.MX</td>
+                                        <td id="table-price"></td>
+                                        <td id="table-change"></td>
+                                        <td id="table-range"></td>
+                                        <td id="table-volume"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <small id="table-date"></small>
+                                <br>
+                                <small>* Information at least 20 minutes late, for reference purposes only.
+                                </small>
+                            </div>
+                            {#                    <div id="chartdiv3" class="mt-5 mb-3" style="width:100%; min-height:200px;">#}
+                            {#                        <div class="text-center">#}
+                            {#                          {% comment %}{% endcomment %}  <img src="{% static 'images/educa_preloader.gif' %}">#}
+                            {#                        </div>#}
+                            {#                    </div>#}
+                            <div id="chartdiv3" height="500px" class="" style=""></div>
+                            <div class="space80"></div>
+                            <small>* Prices adjusted by distributions</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade tab-section" id="cobertura" role="tabpanel" aria-labelledby="cobertura-tab">
+            <section id="equipo_trabajo" class="intro py-5">
+                <article class="intro py-2 container">
+                    <h1 class="text-center tc-blue">Equities</h1>
+                    <div class="row">
+                        <div id="analistas" class="col-md-3 col-12">                            
+                            
+                            <h3 style="color:#23356B">Carlos Alcaraz</h3>
+                            <b class="text-center">Apalache Análisis</b>
+                            <p>Deputy Director of Analysis</p>
+                            <p>Target price (Mexican pesos): $63.60</p>
+                            <p>Contact: carlos.alcaraz@apalache.mx</p>
+                        </div>
+                        <div id="analistas" class="col-md-3 col-12">                            
+                            <h3 style="color:#23356B">Martín Lara</h3>
+                            <b class="text-center">Miranda Global Research</b>
+                            <p>Director of analysiss</p>
+                            <p>Target price (Mexican pesos): $65.00</p>
+                            <p>Contact: martin.lara@miranda.gr.com</p>
+                        </div>
+                      
+                    </div>
+
+                    <h1 class="text-center tc-blue">Fixed Income</h1>
+                    <div class="row ">
+                        <div id="analistas" class="col-md-3 col-12 ">
+                            <h3 style="color:#23356B">Elizabeth Martínez</h3>
+                            <b>HR Ratings</b>
+                            <p>Deputy Director of Corporate</p>
+                            <p>Contact: elizabeth.martinez@hrratings.com</p>
+                        </div>
+                        <div id="analistas" class="col-md-3 col-12">
+                            <h3 style="color:#23356B">Karla Castillo</h3>
+                            <b>HR Ratings</b>
+                            <p>Analyst</p>
+                            <p>Contact: karla.castillo@hrratings.com</p>
+                        </div>
+                        <div id="analistas" class="col-md-3 col-12">
+                            <h3 style="color:#23356B">Martha González</h3>
+                            <b>HR Ratings</b>
+                            <p>Senior Analyst</p>
+                            <p>Contact: martha.gonzalez@hrratings.com</p>
+                        </div>
+                        <div id="analistas" class="col-md-3 col-12 ">
+                            <h3 style="color:#23356B">Heinz Cederborg</h3>
+                            <b>HR Ratings</b>
+                            <p>Sr. Executive Director of Corporate / ABS</p>
+                            <p>Contact: heinz.cederborg@hrratings.com</p>
+                        </div>                            
+                    </div>
+
+    
+                </article>
+            </section>
+        </div>
+
+        <div class="tab-pane fade tab-section" id="distribuciones" role="tabpanel" aria-labelledby="distribuciones-tab">
+            <section class="s-block pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img class="img-fluid" src="{% static 'images/grafiquita-en.png' %}" style="width:1200px; margin-top:20px;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <a rel="noreferrer"
+                       href="https://investorcloud.s3.amazonaws.com/Educa/Fundamentales/Distribuciones-en.xlsx"
+                       class="btn btn-primary btn-lg pull-right" target="_blank"><i class="fa fa-download"></i>
+                       Download XLS format</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade tab-section" id="calificadoras" role="tabpanel" aria-labelledby="calificadoras-tab">
+            <section class="s-block pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center"> <h1 class="text-center tc-blue">HR Ratings</h1>
+                            <img class="img-fluid" src="{% static 'images/tablita-en.png' %}" style="width:800px; margin-top:20px;" alt="">
+                        </div>
+                        <div class="col-12 text-center"> <h1 class="text-center tc-blue">Moody's</h1>
+                            <img class="img-fluid" src="{% static 'images/moodys-en.png' %}" style="width:800px; margin-top:20px;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade tab-section" id="prospectos" role="tabpanel" aria-labelledby="prospectos-tab">
+            <div class="container">
+                <div class="events-list">
+                    {% for prospecto in prospectos %}   
+                        <article class="event-item all border-bottom show-event" data-date="{{ prospecto.date }}">
+                            <span class="event-date">
+                                {{ prospecto.date }}
+                            </span>
+                            <h4 class="mb-0 uppercase">
+                                <a target="_blank"
+                                    href="{{ prospecto.url }}">
+                                    {{ prospecto.title }}
+                                </a>
+                            </h4>
+                            <p class="description">
+                                    {{ prospecto.description }}
+                            </p>
+                        </article>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade tab-section" id="certificado" role="tabpanel" aria-labelledby="certificado-tab">
+            <section id="tiker-sec" class="page-section-ptb mt-5 py-5" >
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-6">                        
+                            <div class="text-center"> 
+                                <img id="img-cotizacion" src="{% static 'images/bmv.png' %}" style="height:400px; width:380px !important;" />
+                            </div>
+                        </div>
+                      <div class="col-xl-6 mt-4 mt-xl-0 d-flex flex-column align-items-center">
+                            <div class="text-center w-100">
+                                <h1 class="py-2" style="color:#23356B">Our stock</h1>
+                            </div>
+    
+                            
+                            <div class="pl-3 pt-lg-3 pl-lg-5 pb-lg-3 pr-lg-5 pricedata america border border-primary border-radius-6px mt-3 d-flex flex-column justify-content-center" style="max-width: 400px;">
+                                <p id="tiker-sec-tiker" class="mb-0 text-left">
+                                    Symbol
+                                </p>
+                                <p class="mb-0 text-left" style="line-height: 1.5; font-size: 2rem;">
+                                    $
+                                    <span id="tiker-sec-price" class="last">0</span>
+                                    <span style="font-size:20px">MXN</span> &nbsp;&nbsp;
+                                    <span class="d-none change-direction">-</span>
+                                    <span id="tiker-sec-percent" class="percent" style="color: #005598;">0%</span>
+                                </p>
+                                <p class="text-left" style="white-space: nowrap;">Capitalization value: 
+                                    <span style="color: #005598;">$</span>
+                                    <span id="tiker-sec-capitalizacion" class="capitalizacion count" data-speed="2500"
+                                        data-to="0" data-in-viewport="yes" data-decimals="0"
+                                        style="color: #005598;">69,974,063,322</span>
+                                    <span style="color: #005598;">MXN</span>
+                                </p>                                                      
+                                <p class="text-left mb-0" style="font-size: 12px; ">LTM** dividend & yield: 2.64 (4.67%).***</p>
+                                <p class="text-left mb-0" style="font-size: 12px; ">Minimum delay of 20 min.</p>
+                                <p class="text-left mb-0" style="font-size: 12px; ">* Variation compared to the previous year-end.</p>
+                                <p class="text-left mb-0" style="font-size: 12px; ">** Last twelve months.</p>
+                                <p class="text-left mb-0" style="font-size: 12px; ">*** Yield paid.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/dividendos.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/amstock.js' %}"></script>
+    <script src="{% static 'js/jquery-ui-1.11.0.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/variables_cotizacion.js' %}"></script>
+    <script src="{% static 'js/amCharts/contenido/dashboard.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script>
+       $(document).ready(function () {
+            function updateTabVisibility(activeTab) {
+                // Ocultar todas las secciones de tab
+                $('.tab-section').hide(); // Oculta todas las secciones
+
+                // Mostrar la sección activa
+                $(activeTab).show(); // Muestra solo la sección correspondiente
+            }
+
+            // Detectar cuando se cambia de pestaña
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                var activeTab = $(e.target).attr('href'); // Obtener el ID de la pestaña activa
+                updateTabVisibility(activeTab); // Llama a la función para manejar el cambio
+            });
+
+            // Manejar la carga inicial de la página
+            var initialActiveTab = $('.nav-link.active').attr('href'); // ID de la pestaña activa al inicio
+            updateTabVisibility(initialActiveTab); // Llama a la función para manejar el cambio inicial
+        });
+
+
+
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const seccion = params.get("seccion");
+            if (seccion) {
+                const tabTrigger = document.querySelector(`a[href="#${seccion}"]`);
+                if (tabTrigger) {
+                    new bootstrap.Tab(tabTrigger).show();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });  // sube al inicio
+                }
+            }
+        });
+    </script>
+{% endblock %}
+
+
+    

@@ -1,0 +1,661 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<section class="white-wrapper mt-5 mb-5 anuales">
+    <div class="container-fluid container-relative">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+              <div class="mb-4">
+                <div class="text-center"><h2>2023</h2></div>
+
+                <div class="d-flex align-items-center justify-content-between div-content">
+                    <div class="w-25 pl-5">3T 2023</div>
+                    <div class="w-75 d-flex flex-column">
+                      <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-3T23-2.pdf"
+                         target="_blank"> Presentación de Resultados</a>
+                      <!--<a target="_blank"
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-2022-.pdf"
+                            target="_blank"> Presentación a Inversionistas Roadshow 2022</a>-->
+                      <a target="_blank"
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T23-Presentacion-Inversionistas.pdf"
+                            target="_blank"> Presentación para Inversionistas</a>
+                    </div>
+                </div>
+
+               <div class="d-flex align-items-center justify-content-between div-content">
+                    <div class="w-25 pl-5">2T 2023</div>
+                    <div class="w-75 d-flex flex-column">
+                      <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-2T23-.pdf"
+                         target="_blank"> Presentación de Resultados</a>
+                      <!--  <a target="_blank"
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-2022-.pdf"
+                            target="_blank"> Presentación a Inversionistas Roadshow 2022</a>-->
+                      <a target="_blank"
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T23-Presentacion-Inversionistas.pdf"
+                            target="_blank"> Presentación para Inversionistas</a>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between div-content">
+                    <div class="w-25 pl-5">1T 2023</div>
+                    <div class="w-75 d-flex flex-column">
+                      <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-1T23.pdf"
+                         target="_blank"> Presentación de Resultados</a>
+                         <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T23-Presentacion-Inversionistas.pdf"
+                            target="_blank"> Presentación para Inversionistas</a>
+                      <a target="_blank"
+                       <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-Suscripcion-2023.pdf"
+                           target="_blank"> Presentación a Inversionistas para Suscripción Preferente de Capital 2023 </a>
+                    </div>
+                </div>
+
+
+                  </div>
+
+            <div class="mb-4">
+              <div class="text-center"><h2>2022</h2></div>
+
+              <div class="d-flex align-items-center justify-content-between div-content">
+                <div class="w-25 pl-5">4T 2022</div>
+                <div class="w-75 d-flex flex-column">
+                  <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-4T22-.pdf"
+                     target="_blank"> Presentación de Resultados</a>
+                  <!--<a target="_blank"
+                    <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-2022-.pdf"
+                        target="_blank"> Presentación a Inversionistas Roadshow 2022</a>-->
+                  <a target="_blank"
+                    <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T22-Presentacion-Inversionistas-.pdf"
+                        target="_blank"> Presentación para Inversionistas</a>
+                </div>
+            </div>
+
+              <div class="d-flex align-items-center justify-content-between div-content">
+                  <div class="w-25 pl-5">3T 2022</div>
+                  <div class="w-75 d-flex flex-column">
+                    <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-3T22-.pdf"
+                       target="_blank"> Presentación de Resultados</a>
+                    <!--<a target="_blank"
+                      <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-2022-.pdf"
+                          target="_blank"> Presentación a Inversionistas Roadshow 2022</a>-->
+                    <a target="_blank"
+                      <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T22-Presentacion-Inversionistas.pdf"
+                          target="_blank"> Presentación para Inversionistas</a>
+                  </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between div-content">
+                  <div class="w-25 pl-5">2T 2022</div>
+                  <div class="w-75 d-flex flex-column">
+                    <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-2T22.pdf"
+                       target="_blank"> Presentación de Resultados</a>
+                    <a target="_blank"
+                      <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Presentacion-Roadshow-2022-.pdf"
+                          target="_blank"> Presentación a Inversionistas Roadshow 2022</a>
+                    <a target="_blank"
+                      <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T22-Presentacion-Inversionistas.pdf"
+                          target="_blank"> Presentación para Inversionistas</a>
+                  </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between div-content">
+                  <div class="w-25 pl-5">1T 2022</div>
+                  <div class="w-75 d-flex flex-column">
+                    <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-1T22.pdf"
+                       target="_blank"> Presentación de Resultados</a>
+                    <a target="_blank"
+                     <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T22-Presentacion-Inversionistas.pdf"
+                         target="_blank"> Presentación para Inversionistas</a>
+                  </div>
+              </div>
+
+
+                </div>
+              <div class="mb-4">
+                  <div class="text-center"><h2>2021</h2></div>
+
+                  <div class="d-flex align-items-center justify-content-between div-content">
+                      <div class="w-25 pl-5">4T 2021</div>
+                      <div class="w-75 d-flex flex-column">
+                        <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-4T21-.pdf"
+                           target="_blank"> Presentación de Resultados</a>
+                         <a target="_blank"
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T21-Presentacion-Inversionistas.pdf"
+                             target="_blank"> Presentación para Inversionistas</a>
+                      </div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between div-content">
+                      <div class="w-25 pl-5">3T 2021</div>
+                      <div class="w-75 d-flex flex-column">
+                        <a rel="noreferrer" href="https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/Presentaciones/Presentation-CC-3T21-.pdf"
+                           target="_blank"> Presentación de Resultados</a>
+                          <a target="_blank"
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T21-Presentacion-Inversionistas-.pdf"
+                             target="_blank"> Presentación para Inversionistas</a>
+                      </div>
+                  </div>
+
+
+                  <div class="d-flex align-items-center justify-content-between div-content">
+                      <div class="w-25 pl-5">2T 2021</div>
+                      <div class="w-75 d-flex flex-column">
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T21-Presentacion.pdf"
+                           target="_blank"> Presentación de Resultados</a>
+                          <a target="_blank"
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T21-Presentacion-Inversionistas-.pdf"
+                             target="_blank"> Presentación para Inversionistas</a>
+                      </div>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-between div-content">
+                      <div class="w-25 pl-5">1T 2021</div>
+                      <div class="w-75 d-flex flex-column">
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T21-Presentacion.pdf"
+                           target="_blank"> Presentación de Resultados</a>
+                      </div>
+                  </div>
+              </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2020</h2></div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2020</div>
+                        <div class="w-75 d-flex flex-column">
+
+                        </div>
+                    </div>-->
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2020</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T20-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2020</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T20-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2020</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T20-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2020</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T20-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2019</h2></div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2019</div>
+                        <div class="w-75 d-flex flex-column">
+
+                        </div>
+                    </div>-->
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2019</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T19-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2019</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T19-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                             <div class="separator"></div>
+                             <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2019-09-23-Presentacion-RS.pdf"
+                                target="_blank"> Presentación para Inversionistas</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2019</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T19-Presentacion.pdf"
+                               target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2019</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T19-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2018</h2></div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2018</div>
+                        <div class="w-75 d-flex flex-column">
+
+                        </div>
+                    </div>-->
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2018</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T18-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                             <div class="separator"></div>
+                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2018-10-09-Presentacion-NDRS-vf.pdf"
+                           target="_blank"> Presentación para Inversionistas Institucionales</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2018</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T18-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2018</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T18-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2018</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2018-03-Presentacion.pdf"
+                             target="_blank"> Presentación para Inversionistas Institucionales</a>
+                              <div class="separator"></div>
+                              <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T18-Presentacion.pdf"
+                                 target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2017</h2></div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2017</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Vision-2020-Finn.pdf"
+                             target="_blank"> Visión 2020</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2017</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T17-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2017</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T17-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2017</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T17-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2017</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T17-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2016</h2></div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2016</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2016-04-01-Presentacion.pdf"
+                             target="_blank"> Presentación para Suscripción</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2016</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T16-Presentacion.pdf"
+                             target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2016</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-3T-XBRL.pdf">Descargar</a>
+                            <div class="separator"></div>
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-3T16-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>-->
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2016</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T16-Presentacion.pdf"
+                               target="_blank"> Presentación de Resultados</a>
+                        </div>
+                    </div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2016</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-1T-XBRL.pdf">Descargar</a>
+                            <div class="separator"></div>
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2016-1T16-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2015</h2></div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2015</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2015-11-01-Presentacion.pdf"
+                             target="_blank"> Presentación para Inversionistas Institucionales</a>
+                        </div>
+                    </div>
+                    <!--<div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">4T 2015</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-4T15-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">3T 2015</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-3T15-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2T 2015</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-2T15-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">1T 2015</div>
+                        <div class="w-75 d-flex flex-column">
+                            <a target="_blank"
+                               href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2015-1T15-Reporte.pdf">Adjunto</a>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-center"><h2>2014</h2></div>
+                    <div class="d-flex align-items-center justify-content-between div-content">
+                        <div class="w-25 pl-5">2014</div>
+                        <div class="w-75 d-flex flex-column">
+                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2014-11-01-Presentacion.pdf"
+                             target="_blank">Presentación a Inversionistas: Oferta Pública Inicial de
+                              CBFIs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!--<section id="contenido" class="white-wrapper mt-5 mb-5 s-block">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="widget text-justify">
+                        <div class="table-responsive">
+                            <table class="table table-bordered bc-black dataTableC">
+                                <thead>
+                                <tr role="row">
+                                    <th class="col-md-9 sorting_disabled" rowspan="1" colspan="1" style="width: 597px;">
+                                        Documentos
+                                    </th>
+                                    <th class="col-md-3 sorting_disabled" rowspan="1" colspan="1" style="width: 175px;">
+                                        Fecha de publicación
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T21-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 2T21</a><br>
+                                        </td>
+                                        <td>2021-07-29</td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                          <td><i class="fa fa-download"> </i>
+                                              <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T21-Presentacion-Inversionistas.pdf"
+                                                 target="_blank"> Presentación para Inversionistas 2T21</a><br>
+                                          </td>
+                                          <td>2021-07-28</td>
+                                      </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T21-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 1T21</a><br>
+                                        </td>
+                                        <td>2021-04-29</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T20-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 4T20</a><br>
+                                        </td>
+                                        <td>2021-03-02</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T20-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 3T20</a><br>
+                                        </td>
+                                        <td>2020-10-22</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T20-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 2T20</a><br>
+                                        </td>
+                                        <td>2020-07-23</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T20-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 1T20</a><br>
+                                        </td>
+                                        <td>2020-04-29</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T19-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 4T19</a><br>
+                                        </td>
+                                        <td>2020-02-20</td>
+                                    </tr>
+                                  <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T19-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 3T19</a><br>
+                                        </td>
+                                        <td>2019-10-23</td>
+                                    </tr>
+                                <tr role="row" class="odd">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2019-09-23-Presentacion-RS.pdf"
+                                           target="_blank"> Presentación para Inversionistas, septiembre 2019</a><br>
+                                    </td>
+                                    <td>2019-09-23</td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T19-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 2T19</a><br>
+                                      </td>
+                                      <td>2019-07-25</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T19-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 1T19</a><br>
+                                      </td>
+                                      <td>2019-04-25</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T18-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 4T18</a><br>
+                                      </td>
+                                      <td>2019-02-21</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T18-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 3T18</a><br>
+                                      </td>
+                                      <td>2018-10-25</td>
+                                  </tr>
+                                <tr role="row" class="even">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2018-10-09-Presentacion-NDRS-vf.pdf"
+                                           target="_blank"> Presentación para Inversionistas Institucionales, octubre
+                                            2018</a><br>
+                                    </td>
+                                    <td>2018-10-09</td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T18-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 2T18</a><br>
+                                      </td>
+                                      <td>2018-07-26</td>
+                                  </tr>
+                                 <tr role="row" class="odd">
+                                        <td><i class="fa fa-download"> </i>
+                                            <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T18-Presentacion.pdf"
+                                               target="_blank"> Presentación de Resultados 1T18</a><br>
+                                        </td>
+                                        <td>2018-04-26</td>
+                                    </tr>
+                                <tr role="row" class="odd">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2018-03-Presentacion.pdf"
+                                           target="_blank"> Presentación para Inversionistas Institucionales, marzo
+                                            2018</a><br>
+                                    </td>
+                                    <td>2018-04-10</td>
+                                </tr>
+                               <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T17-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 4T17</a><br>
+                                      </td>
+                                      <td>2018-02-27</td>
+                                  </tr>
+                                 <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/3T17-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 3T17</a><br>
+                                      </td>
+                                      <td>2017-10-26</td>
+                                  </tr>
+                               <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T17-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 2T17</a><br>
+                                      </td>
+                                      <td>2017-07-27</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/1T17-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 1T17</a><br>
+                                      </td>
+                                      <td>2017-05-03</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/4T16-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 4T16</a><br>
+                                      </td>
+                                      <td>2017-02-21</td>
+                                  </tr>
+                                <tr role="row" class="even">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/Vision-2020-Finn.pdf"
+                                           target="_blank"> Visión 2020</a><br>
+                                    </td>
+                                    <td>2017-01-01</td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                      <td><i class="fa fa-download"> </i>
+                                          <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2T16-Presentacion.pdf"
+                                             target="_blank"> Presentación de Resultados 2T16</a><br>
+                                      </td>
+                                      <td>2016-07-26</td>
+                                  </tr>
+                                <tr role="row" class="odd">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2016-04-01-Presentacion.pdf"
+                                           target="_blank"> Presentación para Suscripción</a><br>
+                                    </td>
+                                    <td>2016-04-01</td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2015-11-01-Presentacion.pdf"
+                                           target="_blank"> Presentación para Inversionistas Institucionales</a><br>
+                                    </td>
+                                    <td>2015-11-01</td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td><i class="fa fa-download"> </i>
+                                        <a rel="noreferrer" href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/Presentaciones/2014-11-01-Presentacion.pdf"
+                                           target="_blank"> Presentación a Inversionistas: Oferta Pública Inicial de
+                                            CBFIs</a><br>
+                                    </td>
+                                    <td>2014-11-01</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/bootstrap-datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datatables/dataTables.bootstrap4.min.js' %}"></script>
+{% endblock %}

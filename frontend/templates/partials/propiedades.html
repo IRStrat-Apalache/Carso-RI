@@ -1,0 +1,504 @@
+{% load static i18n %}
+
+{% block otherstyles %}
+
+    <style>
+        .img-hover-zoom {
+            transition: transform 0.3s ease;
+        }
+    
+        .img-hover-zoom:hover {
+            transform: scale(1.1); /* Puedes aumentar más si quieres */
+        }
+        .txt-blue{
+            color: #23356B;
+        }
+        .modal {
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            text-align: center;
+          }
+          .modal-content2 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+          }
+          
+          .cerrar {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          
+          .cerrar:hover {
+            color: #59A971;
+          }
+          
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: center
+            font-size:20px;
+            color:white
+        }
+
+        .pregunta::after {
+            content: "";
+            display: in-line;
+            width: 100%;
+            height: 4px;
+            background-color: #59A971;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .link-subrayado {
+            text-decoration: none; /* Quita el subrayado por defecto */
+            color: white; /* Color del enlace, puedes cambiarlo */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .link-subrayado:hover {
+            transform: scale(1.2); 
+        }
+                 
+          
+        .number {
+            font-size: 4rem; 
+            font-weight: bold;
+            color: white;
+          }
+          
+          .subtitle {
+            color: #59A971;
+            font-size: 1.2rem;
+          }
+          
+        
+            html {
+            scroll-behavior: smooth;
+        }
+        .img-fondo {
+            position: relative;
+            background-image: url("{% static 'images/Linea.png' %}");
+            background-repeat: no-repeat;
+            background-size: contain; /* o cover si quieres que llene el contenedor */
+            background-position: top center;
+            width: 100%;
+            max-width: 1920px;
+            aspect-ratio: 16 / 9; /* Esto mantiene proporciones */
+            margin: 0 auto;
+        }
+        
+        
+        .fondo-uni {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-uni.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .fondo-centros {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-centros.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .fondo-ofi {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-ofi.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .texto-izquierda-abajo {
+            position: absolute;
+            bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+            left: 20px;  /* Ajusta la distancia desde el borde izquierdo */
+            color: white; /* Ajusta el color del texto */           
+          }
+
+          .img-24, .img-23, .img-22, .img-21, .img-19, .img-18 {
+            position: absolute;
+            width: 18%;
+            height: auto;
+            max-width: 300px;
+        }
+        
+        /* Posiciones relativas en porcentaje para adaptarse */
+        .img-24 { top: 10%; left: 75%; }
+        .img-23 { top: 40%; left: 67%; }
+        .img-22 { top: 52%; left: 53%; }
+        .img-21 { top: 30%; left: 42%; }
+        .img-19 { top: 70%; left: 30%; }
+        .img-18 { top: 52%; left: 5%; }
+
+        @media (max-width: 768px) {
+            .img-24, .img-23, .img-22, .img-21, .img-19, .img-18 {
+                width: 30%;
+            }
+        
+            .text-box {
+                margin: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .honeycomb-wrapper .row {
+                flex-direction: column; /* Alinea las columnas verticalmente */
+                align-items: center; /* Centra los elementos */
+            }
+            
+            .filter-content {
+                margin-bottom: 20px; /* Espacio entre las columnas en móvil */
+            }
+        
+            .honeycomb-wrapper span {
+                text-align: center; /* Centra el texto de las estadísticas */
+                display: block; /* Asegura que cada texto esté en una línea separada */
+            }
+            
+            .honeycomb-wrapper b {
+                font-size: 1.2em; /* Aumenta el tamaño del texto en negrita */
+                margin-top: 5px; /* Espacio entre el texto y la negrita */
+            }
+        }
+    
+    
+    </style>
+{% endblock %}
+
+<section style="background-color:#F2F2F2">
+    <div class="m-5 justify-content-center d-flex align-items-center h-100">
+        <div class="row w-100">
+            <div class="col-md-6">
+                <br><br>
+                <h2 style="color:#59A971">
+                    Somos una FIBRA enfocada en un<br>sector de <b style="font-size:36px;">crecimiento<br>sostenido, resiliente a los <br>ciclos económicos.</b>
+                </h2>
+                <br>
+                <h3 style="color:#59A971">
+                    Capturamos ventajas competitivas y<br>economías de escala para generar valor.
+                </h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <img src="{% static 'images/frases-1.png' %}" alt="infos" style="width: 500px;">
+                <img src="{% static 'images/frases-2.png' %}" alt="infos" style="width: 500px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="ppropiedades" class="bg-light-gray">    
+    <div class="">      
+
+        <div class="img-fondo">
+            <div class="m-5">
+                <h2 style="color:#23356B"><b style="font-size:36px;">Historial de adquisiciones<br>acumuladas</b><h2>
+                <h3 style="color:#23356B">probando nuestro modelo de<br>creación de valor.<h3>
+            </div>
+            <img class="wow fadeInRight img-24
+             " src="{% static 'images/Esp-14.png' %}" alt="Imagen Superpuesta" >
+            <img class="wow fadeInRight img-23
+             " src="{% static 'images/Esp-13.png' %}" alt="Imagen Superpuesta" >
+            <img class="wow fadeInRight img-22
+             " src="{% static 'images/Esp-12.png' %}" alt="Imagen Superpuesta" >
+            <img class="wow fadeInDown img-21
+             " src="{% static 'images/Esp-11.png' %}" alt="Imagen Superpuesta" >
+            <img class="wow fadeInLeft img-19
+             " src="{% static 'images/Esp-10.png' %}" alt="Imagen Superpuesta" >
+            <img class="wow fadeInLeft img-18
+             " src="{% static 'images/Esp-09.png' %}" alt="Imagen Superpuesta" >
+            
+        </div>
+
+        <section  style="background-color:#F2F2F2">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="m-5">
+                        <br><br>
+                        <h2 style="color:#23356B"><b style="font-size:36px;">Incrementos históricos</b><br>de nuestro ABR.<h2>
+                        <br>
+                        <h3 style="color:#23356B">Crecimiento del <b>66.5%</b><br>desde el IPO.<h3>  
+                    </div>              
+                </div>
+                <div class="col-md-7 text-right">
+                    <img src="{% static 'images/info-3.png' %}" alt="infos" style="width:1000px">
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="col-md-5"> 
+                <div class="m-5">               
+                    <h2 style="color:#23356B"><b style="font-size:36px;">Diversificación</b> a<br>través de diferentes<br>segmentos<br>educativos,<br>geografías y estratos<br>sociodemográficos.</h2>  
+                </div>
+                <br>
+                <img src="{% static 'images/gráfica-20.png' %}" alt="infos" >                                         
+            </div>
+            <div class="col-md-7 text-center">
+                <img src="{% static 'images/Mapaesp.png' %}" alt="infos" style="width:2000px">
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+<section style="background-color: #23356B">
+    <div class="container">
+        <h1 class="text-white m-5"><b>Nuestro</b><br>portafolio en cifras:</h1>
+        <div class="row text-center">
+            <div class="col-md-4">
+              <h2 class="number">72</h2>
+              <p class="subtitle">Inmuebles</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">100%</h2>
+              <p class="subtitle">Ocupación</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">20</h2>
+              <p class="subtitle">Estados</p>
+            </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-md-4">
+              <h2 class="number">15</h2>
+              <p class="subtitle">Años de duración para<br>cada contrato</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">589 mil</h2>
+              <p class="subtitle">m2 de ABR</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">18</h2>
+              <p class="subtitle">Marcas<br>inquilinas</p>
+            </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2 class="number">67%</h2>
+                <p class="subtitle">Crecimiento de ABR<br>desde IPO</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">24</h2>
+              <p class="subtitle">Años WALT</p>
+            </div>
+            <div class="col-md-4">
+                <h2 class="number">51%</h2>
+                <p class="subtitle">Crecimiento del NOI<br>desde IPO</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<section>
+    <div class="m-5">
+        <h2 style="color:#23356B;" class="mt-5"><b style="font-size:36px;">Fl<span class="highlight-letter">u</span>jos de caja estables</b><br>indexados a la inflación</h2>
+        <br>        
+        <h3 style="color:#23356B; text-align:center;">Contamos con <b>contratos de arrendamiento de largo plazo</b> con <b>inquilinos de la<br> más alta calidad</b> con un desempeño operativo impecable y de alta rentabilidad.
+        </h3>
+        <br>
+        <div class="text-center">
+            <img src="{% static 'images/info-5.png' %}" alt="infos">
+        </div>
+    </div>
+      
+      
+      
+</section>
+
+<section>
+    <div class="fondo-uni">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Universidades.</h1>       
+        <h2>Inmuebles que albergan a los líderes del mañana.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;" {% comment %}  onclick="abrirModal('modalUniversidad')" {% endcomment %}>Descubrir más</a>        
+    </div>
+    <div id="modalUniversidad" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold; "><b style="color:#59A971;">U</b>niversidades</h2>
+          <div class="row">
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">32</h1>
+                <h3 class="txt-blue font-weight-bold">Inmuebles</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">15</h1>
+                <h3 class="txt-blue font-weight-bold">Estados de la Republica</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">532</h1>
+                <h3 class="txt-blue">mil m<sup>2</sup></h3>
+                <h3 class="txt-blue font-weight-bold">ABR</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">15</h1>
+                <h3 class="txt-blue font-weight-bold">Maracas educativas</h3>
+            </div>
+        </div>
+            <div class="text-center">
+                <img src="{% static 'images/marcas.png' %}" style="width:500px;">
+            </div>  
+        </div>
+    </div>
+</section>
+<section>
+    <div class="fondo-centros">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Centros de Aprendizaje.</h1>       
+        <h2>Espacios diseñados para el éxito.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;" {% comment %} onclick="abrirModal('modalCentros')" {% endcomment %}>Descubrir más</a>        
+    </div>
+    <div id="modalCentros" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold; ">Centros de Aprendizaje</h2>
+          <div class="row">
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">35</h1>
+                    <h3 class="txt-blue font-weight-bold">Inmuebles</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">14</h1>
+                    <h3 class="txt-blue font-weight-bold">Estados de la Republica</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">23</h1>
+                    <h3 class="txt-blue">mil m<sup>2</sup></h3>
+                    <h3 class="txt-blue font-weight-bold">ABR</h3>
+                </div> 
+            </div>
+            <div class="text-center">
+                <img src="{% static 'images/quick.png' %}" style="width:300px;">
+            </div>           
+        </div>
+    </div>
+</section>
+<section>
+    <div class="fondo-ofi">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Edificios de oficinas.</h1>       
+        <h2>Donde las grandes ideas toman forma.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;" {% comment %} onclick="abrirModal('modalEdificios')" {% endcomment %}>Descubrir más</a>        
+    </div>
+    <div id="modalEdificios" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold;">Edificios de oficinas</h2>
+          <div class="row">
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">5</h1>
+                    <h3 class="txt-blue font-weight-bold">Inmuebles</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">1</h1>
+                    <h3 class="txt-blue font-weight-bold">Estado de la Republica</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">35</h1>
+                    <h3 class="txt-blue">mil m<sup>2</sup></h3>
+                    <h3 class="txt-blue font-weight-bold">ABR</h3>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <br>
+                  <img src="{% static 'images/eco.png' %}" style="width: 300px;">
+                </div>
+                <div class="col-md-6">
+                  <img src="{% static 'images/mex-becas.png' %}"  style="width: 300px;">
+                </div>
+            </div>                      
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #23356B;">
+    <div class="container mb-5">
+        <h2 class="text-white text-right m-5"><b>Para más información</b><br>visita nuestra sección de métricas operativas:</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="{% url 'fundamentales' %}#metricas">
+                        <img class="img-hover-zoom" src="{% static 'images/geo.png' %}" alt="infos" style="width:150px">
+                    </a>
+                </div>
+                <h4 class="pregunta">Diversificación geográfica</h4>
+            </div>            
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="{% url 'fundamentales' %}#metricas">
+                        <img class="img-hover-zoom" src="{% static 'images/Icono.png' %}" alt="infos" style="width:150px; ">
+                    </a>
+                </div>
+                <h4 class="pregunta">Diversificación por ABR</h4>
+            </div>            
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="img-hover-zoom" onclick="abrirModal('modalSector')" src="{% static 'images/sector.png' %}" alt="infos" style="width:150px; cursor:pointer;">
+                    <div id="modalSector" class="modal" style="display:none;">
+                        <div class="modal-content2">
+                          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                          <h2 class="mt-5 mb-3 text-center" style="color:#23356B; font-weight:bold; ">En construcción...</h2>                            
+                        </div>
+                    </div>
+                </div>
+                <h4 class="pregunta">Información del sector</h4>
+            </div>            
+        </div>   
+    </div>
+</section>
+
+{% block otherscipts %}
+<script>
+    function abrirModal(idModal) {     
+      document.getElementById('modalUniversidad').style.display = 'none';
+      document.getElementById('modalCentros').style.display = 'none';
+      document.getElementById('modalEdificios').style.display = 'none';
+      document.getElementById('modalSector').style.display = 'none';
+  
+      document.getElementById(idModal).style.display = 'flex';
+    }
+  
+    function cerrarModal() {
+      document.getElementById('modalUniversidad').style.display = 'none';
+      document.getElementById('modalCentros').style.display = 'none';
+      document.getElementById('modalEdificios').style.display = 'none';
+      document.getElementById('modalSector').style.display = 'none';
+    }
+  </script>
+  
+{% endblock %}

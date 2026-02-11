@@ -1,0 +1,93 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>30 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/12.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>El éxito al invertir en FIBRAs, como con cualquier otro instrumento de inversión o negocio,
+                        depende casi en su totalidad de los aliados con los que creemos relaciones. Así como es
+                        imposible tener una gran empresa trabajando de manera individual, para aumentar tu riqueza
+                        invirtiendo en el mercado de los bienes raíces necesitas estar respaldado por los mejores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Pero no solo basta con tener el capital y buenas intenciones. Como bien te imaginarás, en el
+                        mundo de las inversiones son necesarios muchos elementos que solo poseen ciertas personas o
+                        instituciones que cuentan con varios años de experiencia.</p>
+                    <h2>¿Cómo encontrar el mejor aliado para Invertir en FIBRAs?</h2>
+                    <p>El mejor aliado para invertir en FIBRAs será aquel que te pueda ofrecer confianza, inversión
+                        diversificada y proyección a futuro. Tres aspectos en los que destaca con creces Fibra MTY
+                        ¡Veamos!</p>
+                    <h2>Gobierno corporativo</h2>
+                    <p>Para ofrecer confianza a nuestros aliados contamos con un gobierno corporativo que toma
+                        decisiones según los estándares internacionales más exigentes. Para garantizar esto, la
+                        estructura de Fibra Mty está diseñada para alinear los intereses con el de sus inversionistas,
+                        algunos ejemplos se encuentran en que no existe persona que tenga más del 15% de tenencia
+                        accionaria de la compañía, no existe un grupo de control, la mayoría (80%) de los miembros del
+                        comité técnico son independientes y todas las decisiones relevantes son tomadas en la Asamblea
+                        de Tenedores, en donde todos los que tienen inversión en Fibra Mty tienen derecho a votar, sin
+                        importar el tamaño de la inversión.</p>
+                    <p>Además, de manera anual se ratifican los miembros del comité técnico para garantizar que este
+                        permanezca eficiente y que las decisiones de gran importancia como la adquisición de bienes o
+                        emisiones de capital solo son tomadas por los inversionistas.</p>
+                    <h2>Portafolio de calidad</h2>
+                    <p>Para que tu inversión sea un éxito, centramos nuestros esfuerzos en contar con un portafolio
+                        diversificado que tiene presencia en distintos sectores económicos y goza de arrendamientos de
+                        largo plazo en su mayoría dolarizados.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Si quieres saber más al respecto: </strong>
+                            <a href="{% url 'noticia_32' %}"> ¿En qué tipo de propiedades invierto con las Fibras
+                                Inmobiliarias?</a>
+                        </li>
+                    </ul>
+                    <h2>Pensando en el futuro</h2>
+                    <p>Entendiendo que la inversión en bienes raíces debe pensarse en el futuro, en Fibra MTY
+                        constantemente tomamos acciones para garantizar que en los años posteriores nuestros inmuebles
+                        sigan siendo rentables. Para esto tomamos dos acciones fundamentales: invertir en los mercados
+                        primarios del país y evitar al 100% la compra de edificios especulativos (no ocupados).</p>
+                    <p>Nuestro excelente manejo en estas tres áreas nos convierte en el aliado ideal para invertir en
+                        FIBRAs. Conoce más sobre nosotros y cómo podemos ayudarte a aumentar tu riqueza visitando
+                        <a href="{% url 'index' %}"> nuestra página web</a>.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty"
+                                                                    target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                     href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

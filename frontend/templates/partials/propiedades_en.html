@@ -1,0 +1,501 @@
+{% load static i18n %}
+
+{% block otherstyles %}
+
+    <style>
+        .img-hover-zoom {
+            transition: transform 0.3s ease;
+        }
+    
+        .img-hover-zoom:hover {
+            transform: scale(1.1); /* Puedes aumentar más si quieres */
+        }
+        .txt-blue{
+            color: #23356B;
+        }
+        .modal {
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            text-align: center;
+          }
+          
+          .modal-content2 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+          }
+          
+          .cerrar {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          
+        .cerrar:hover {
+            color: #59A971;
+        }
+
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: center
+            font-size:20px;
+            color:white
+        }
+
+        .pregunta::after {
+            content: "";
+            display: in-line;
+            width: 100%;
+            height: 4px;
+            background-color: #59A971;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .link-subrayado {
+            text-decoration: none; /* Quita el subrayado por defecto */
+            color: white; /* Color del enlace, puedes cambiarlo */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .link-subrayado:hover {
+            transform: scale(1.2); 
+        }
+                 
+          
+        .number {
+            font-size: 4rem; 
+            font-weight: bold;
+            color: white;
+          }
+          
+          .subtitle {
+            color: #59A971;
+            font-size: 1.2rem;
+          }
+          
+        
+            html {
+            scroll-behavior: smooth;
+        }
+        .img-fondo {
+            position: relative;
+            background-image: url("{% static 'images/Linea.png' %}");
+            background-repeat: no-repeat;
+            background-size: contain; /* o cover si quieres que llene el contenedor */
+            background-position: top center;
+            width: 100%;
+            max-width: 1920px;
+            aspect-ratio: 16 / 9; /* Esto mantiene proporciones */
+            margin: 0 auto;
+        }
+
+        .fondo-uni {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-uni.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .fondo-centros {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-centros.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .fondo-ofi {
+            position: relative;       
+            background-image: url("{% static 'images/fondo-ofi.png' %}");
+            background-size: cover;
+            background-position: top;            
+            height:650px;
+        }
+        .texto-izquierda-abajo {
+            position: absolute;
+            bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+            left: 20px;  /* Ajusta la distancia desde el borde izquierdo */
+            color: white; /* Ajusta el color del texto */           
+          }
+
+        .img-24, .img-23, .img-22, .img-21, .img-19, .img-18 {
+            position: absolute;
+            width: 18%;
+            height: auto;
+            max-width: 300px;
+        }
+        
+        /* Posiciones relativas en porcentaje para adaptarse */
+        .img-24 { top: 10%; left: 75%; }
+        .img-23 { top: 40%; left: 67%; }
+        .img-22 { top: 52%; left: 53%; }
+        .img-21 { top: 30%; left: 42%; }
+        .img-19 { top: 70%; left: 30%; }
+        .img-18 { top: 52%; left: 5%; }
+
+        @media (max-width: 768px) {
+            .img-24, .img-23, .img-22, .img-21, .img-19, .img-18 {
+                width: 30%;
+            }
+        
+            .text-box {
+                margin: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .honeycomb-wrapper .row {
+                flex-direction: column; /* Alinea las columnas verticalmente */
+                align-items: center; /* Centra los elementos */
+            }
+            
+            .filter-content {
+                margin-bottom: 20px; /* Espacio entre las columnas en móvil */
+            }
+        
+            .honeycomb-wrapper span {
+                text-align: center; /* Centra el texto de las estadísticas */
+                display: block; /* Asegura que cada texto esté en una línea separada */
+            }
+            
+            .honeycomb-wrapper b {
+                font-size: 1.2em; /* Aumenta el tamaño del texto en negrita */
+                margin-top: 5px; /* Espacio entre el texto y la negrita */
+            }
+        }
+    
+    
+    </style>
+{% endblock %}
+
+<section style="background-color:#F2F2F2">
+    <div class="m-5 justify-content-center d-flex align-items-center h-100" >
+        <div class="row w-100">
+            <div class="col-md-6">
+                <br><br>
+                <h2 style="color:#59A971">We are a FIBRA focused on a sector of<b style="font-size:36px;"> sustained <br>growth, resilient to economic cycles.</b>
+                </h2>
+                <br>
+                <h3 style="color:#59A971">We capture competitive advantages and<br>economies of scale to generate value.
+                </h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <img src="{% static 'images/frases-3.png' %}" alt="infos" style="width:500px">
+                <img src="{% static 'images/frases-4.png' %}" alt="infos" style="width:500px">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="ppropiedades" class="bg-light-gray">    
+    <div >     
+
+        <div class="img-fondo">
+                <div class="m-5">
+                    <h2 style="color:#23356B"><b style="font-size:36px;">Cumulative acquisition <br>history</b><h2>
+                    <h3 style="color:#23356B">Testing our value<br>creation model.<h3>
+                </div>
+                <img class="wow fadeInRight img-24
+                " src="{% static 'images/eng-24.png' %}" alt="Imagen Superpuesta" >
+               <img class="wow fadeInRight img-23
+                " src="{% static 'images/eng-23.png' %}" alt="Imagen Superpuesta" >
+               <img class="wow fadeInRight img-22
+                " src="{% static 'images/eng-22.png' %}" alt="Imagen Superpuesta" >
+               <img class="wow fadeInDown img-21
+                " src="{% static 'images/eng-21.png' %}" alt="Imagen Superpuesta" >
+               <img class="wow fadeInLeft img-19
+                " src="{% static 'images/eng-19.png' %}" alt="Imagen Superpuesta" >
+               <img class="wow fadeInLeft img-18
+                " src="{% static 'images/eng-18.png' %}" alt="Imagen Superpuesta" >
+            
+        </div>       
+
+        <section style="background-color:#F2F2F2">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="m-5">
+                        <br><br>
+                        <h2 style="color:#23356B"><b style="font-sie:36px;">Historical increases</b><br>in our GLA.<h2>
+                        <br>
+                        <h3 style="color:#23356B">Growth of the <b>66.5%</b><br>since the IPO.<h3>
+                    </div>                
+                </div>
+                <div class="col-md-8 text-right">
+                    <img src="{% static 'images/info-3.png' %}" alt="infos" style="width:1000px">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">   
+                <div class="m-5">             
+                    <h2 style="color:#23356B"><b style="font-size:36px;">Diversification</b> across<br>different<br>educational<br>segments,<br>geographies<br>and socio-demographic strata.</h2>
+                </div>
+                <br>
+                <img src="{% static 'images/gráfica-22.png' %}" alt="infos">                                            
+            </div>
+            <div class="col-md-7">
+                <img src="{% static 'images/Mapaeng.png' %}" alt="infos">
+            </div>
+        </div>
+       
+    </div>
+</section>
+
+<section style="background-color: #23356B">
+    <div class="container">
+        <h2 class="text-white m-5"><b>Our</b><br>portfolio in figures:</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+              <h2 class="number">72</h2>
+              <p class="subtitle">Properties</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">100%</h2>
+              <p class="subtitle">Occupancy</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">20</h2>
+              <p class="subtitle">States</p>
+            </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-md-4">
+              <h2 class="number">15</h2>
+              <p class="subtitle">Years of duration<br>for each contract</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">589 mil</h2>
+              <p class="subtitle">m2 of GLA</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">18</h2>
+              <p class="subtitle">Tenant<br>brands</p>
+            </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2 class="number">67%</h2>
+                <p class="subtitle">GLA growt<br>since IPO</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">24</h2>
+              <p class="subtitle">WALT Years</p>
+            </div>
+            <div class="col-md-4">
+              <h2 class="number">51%</h2>
+              <p class="subtitle">NOI growt<br>since IPO</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="m-5">
+        <h2 style="color:#23356B;" class="mt-5"><b style="font-size:36px;">St<span class="highlight-letter">a</span>ble cash flows</b><br>indexed to inflation</h2>    
+        <br>    
+        <h3 style="color:#23356B; text-align:center;">We have <b>long-term leases</b> with the <b>highest quality tenants<br> with impeccable operating</b> performance and high profitability.
+        </h3>
+        <br>
+        <div class="text-center">
+            <img src="{% static 'images/infoENG-5.png' %}" alt="infos">
+        </div>
+    </div>
+      
+      
+      
+</section>
+
+<section>
+    <div class="fondo-uni">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Universities.</h1>       
+        <h2>Properties that host tomorrow’s leaders.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;"  {% comment %} onclick="abrirModal('modalUniversidad')" {% endcomment %}>Learn more</a>        
+    </div>
+    <div id="modalUniversidad" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold; "><b style="color:#59A971;">U</b>niversities</h2>
+          <div class="row">
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">32</h1>
+                <h3 class="txt-blue font-weight-bold">Properties</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">15</h1>
+                <h3 class="txt-blue font-weight-bold">States of the Republic</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">532</h1>
+                <h3 class="txt-blue">thousand m<sup>2</sup> of</h3>
+                <h3 class="txt-blue font-weight-bold">GLA</h3>
+            </div>
+            <div class="col-md-3">
+                <h1 style="color:#59A971; font-weight:bold;">15</h1>
+                <h3 class="txt-blue font-weight-bold">Educative brands</h3>
+            </div>
+        </div>
+            <div class="text-center">
+                <img src="{% static 'images/marcas.png' %}" style="width:500px;">
+            </div>  
+        </div>
+    </div>
+</section>
+<section>
+    <div class="fondo-centros">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Learning centers.</h1>       
+        <h2>Spaces designed for success.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;" {% comment %} onclick="abrirModal('modalCentros')" {% endcomment %}>Learn more</a>        
+    </div>
+    <div id="modalCentros" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold; ">Learning centers</h2>
+          <div class="row">
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">35</h1>
+                    <h3 class="txt-blue font-weight-bold">Properties</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">14</h1>
+                    <h3 class="txt-blue font-weight-bold">States of the Republic</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">23</h1>
+                    <h3 class="txt-blue">thousand m<sup>2</sup> of</h3>
+                    <h3 class="txt-blue font-weight-bold">GLA</h3>
+                </div> 
+            </div>
+            <div class="text-center">
+                <img src="{% static 'images/quick.png' %}" style="width:300px;">
+            </div>           
+        </div>
+    </div>
+</section>
+<section>
+    <div class="fondo-ofi">
+        <div class="texto-izquierda-abajo">
+        <h1 class="font-weight-bold" style="font-size:44px;">Office buildings.</h1>       
+        <h2>Where great ideas take shape.</h2>
+        <a class="link-subrayado" style="text-decoration:underline; cursor:pointer;" {% comment %} onclick="abrirModal('modalEdificios')" {% endcomment %}>Learn more</a>        
+    </div>
+    <div id="modalEdificios" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <h2 class="mt-5 mb-3 text-left" style="color:#23356B; font-weight:bold;">Office buildings</h2>
+          <div class="row">
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">5</h1>
+                    <h3 class="txt-blue font-weight-bold">Properties</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">1</h1>
+                    <h3 class="txt-blue font-weight-bold">State of the Republic</h3>
+                </div>
+                <div class="col-md-4">
+                    <h1 style="color:#59A971; font-weight:bold;">35</h1>
+                    <h3 class="txt-blue">thousand m<sup>2</sup> of</h3>
+                    <h3 class="txt-blue font-weight-bold">GLA</h3>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <br>
+                  <img src="{% static 'images/eco.png' %}" style="width: 300px;">
+                </div>
+                <div class="col-md-6">
+                  <img src="{% static 'images/mex-becas.png' %}"  style="width: 300px;">
+                </div>
+            </div>                      
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #23356B;">
+    <div class="container mb-5">
+        <h2 class="text-white text-right m-5"><b>For more information</b><br>please visit our section on operative metrics:</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="{% url 'fundamentales' %}#metrics">
+                        <img class="img-hover-zoom" src="{% static 'images/geo.png' %}" alt="infos" style="width:150px">
+                    </a>
+                </div>
+                <h4 class="pregunta">Geographic diversification</h4>
+            </div>            
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="{% url 'fundamentales' %}#metrics">
+                        <img class="img-hover-zoom" src="{% static 'images/Icono.png' %}" alt="infos" style="width:150px; ">
+                    </a>
+                </div>
+                <h4 class="pregunta">Diversification by GLA</h4>
+            </div>            
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="img-hover-zoom" onclick="abrirModal('modalSector')" src="{% static 'images/sector.png' %}" alt="infos" style="width:150px; cursor:pointer;">
+                    <div id="modalSector" class="modal" style="display:none;">
+                        <div class="modal-content2">
+                          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                          <h2 class="mt-5 mb-3 text-center" style="color:#23356B; font-weight:bold; ">In construction...</h2>                            
+                        </div>
+                    </div>
+                </div>
+                <h4 class="pregunta">Industry information</h4>
+            </div>            
+        </div>  
+    </div>
+</section>
+
+{% block otherscipts %}
+<script>
+    function abrirModal(idModal) {     
+      document.getElementById('modalUniversidad').style.display = 'none';
+      document.getElementById('modalCentros').style.display = 'none';
+      document.getElementById('modalEdificios').style.display = 'none';
+      document.getElementById('modalSector').style.display = 'none';
+  
+      document.getElementById(idModal).style.display = 'flex';
+    }
+  
+    function cerrarModal() {
+      document.getElementById('modalUniversidad').style.display = 'none';
+      document.getElementById('modalCentros').style.display = 'none';
+      document.getElementById('modalEdificios').style.display = 'none';
+      document.getElementById('modalSector').style.display = 'none';
+    }
+  </script>
+  
+{% endblock %}

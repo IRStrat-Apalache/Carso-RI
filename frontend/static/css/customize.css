@@ -1,0 +1,20 @@
+.hero-parallax {
+    min-height: 500px;
+}
+.hero-parallax.perfil h1{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.subtitle1{
+    font-size: 1.1875rem;
+    line-height: 1.6875rem;
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+}
+.subtitle2{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-family: "Open Sans", sans-serif;
+}

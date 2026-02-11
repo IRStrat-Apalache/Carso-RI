@@ -1,0 +1,1442 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/settings.css?v=1.0' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'revolution/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-slider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 0;
+            position: relative;
+            max-width: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .popup-img {
+            width: 100%;
+            display: block;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .recuadro {
+            background-color: #23356B;
+            color: white;
+            width: 450px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: center
+            font-size: 20px;
+            color: white
+        }
+
+        .pregunta::after {
+            content: "";
+            display: in-line;
+            width: 100%;
+            height: 4px;
+            background-color: #59A971;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .title {
+            text-align: center;
+            color: #4e4f51;
+        }
+
+        .st0 {
+            fill: #3461B2;
+            stroke: #fff;
+            stroke-width: 1;
+            content: "\f041";
+            cursor: pointer;
+
+        }
+
+        .mapa .active {
+            fill: #001548;
+            stroke: #263155;
+            stroke-width: 0.9;
+        }
+
+        .st1 {
+            fill: #E0E0E0;
+            stroke: #4e4f51;
+            stroke-width: 0.5;
+        }
+
+        .st2 {
+            fill: #E2E2E2;
+            stroke: #FFFFFF;
+            stroke-width: 0.75;
+        }
+
+        .st4 {
+            fill: #4e4f51;
+            stroke: #4e4f51;
+            stroke-width: 0.75;
+        }
+
+        .st3 {
+            stroke: #fff;
+            fill: none;
+            cursor: pointer;
+            z-index: 99999;
+        }
+
+        .propiedades-circle {
+            border-style: dashed;
+            border-color: #263155;
+            padding: 0.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        #propiedades-circle h4, #propiedades-circle h3 {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        #propiedades-circle ul {
+            margin-bottom: 0.5rem;
+        }
+
+        .list-unstyled {
+            padding-left: 10%;
+        }
+
+        .portfolio-image-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-img {
+            width: 800px;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .portfolio-image-container {
+            position: relative;
+            width: 600px; /* Asegúrate de que el ancho de la imagen sea el deseado */
+            height: 463px; /* Asegúrate de que la altura de la imagen sea la deseada */
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.3s ease; /* Transición para el efecto de oscurecimiento */
+        }
+
+        .portfolio-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1130px; /* Ancho máximo del contenedor */
+            margin: auto;
+        }
+
+        .portfolio-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2; /* Asegura que el contenido de hover esté por encima de la superposición */
+        }
+
+        .inside-text {
+            text-align: center;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            padding: 10px;
+            width: 100%; /* Usa el 100% del ancho del contenedor padre */
+            max-width: 300px; /* Limita el ancho máximo */
+            height: 250px; /* Fija el alto para que todos los contenedores sean iguales */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden; /* Asegura que el contenido extra no se desborde */
+        }
+
+        .image-container img {
+            max-width: 50%; /* Ajusta el tamaño de la imagen al 80% del ancho del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+
+        .image-container {
+            transition: background-color 0.3s, filter 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .image-container.hover-effect {
+            background-color: white;
+            color: #23356B;
+            filter: brightness(1.1);
+        }
+
+        .image-container.hover-effect p {
+            color: #23356B;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .image-container:hover {
+            background-color: white;
+            border-radius: 15px; /* Bordes redondeados al hacer hover */
+        }
+
+        .image-container:hover p {
+            color: #23356B;
+        }
+
+
+        /* Contenedor de navegación que incluye las flechas y los puntos */
+        .owl-carousel .owl-nav,
+        .owl-carousel .owl-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 20px; /* Espacio adicional por encima del conjunto de navegación */
+        }
+
+        /* Contenedor conjunto para las flechas y los puntos */
+        .owl-carousel .owl-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            bottom: -30px; /* Ajusta la posición vertical según sea necesario */
+        }
+
+        /* Estiliza los botones de las flechas */
+        .owl-carousel .owl-nav button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #59A971 !important; /* Cambia el color de las flechas según tu preferencia */
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0 25px; /* Espacio horizontal adicional para las flechas */
+            transition: transform 0.3s ease;
+            outline: none;
+        }
+
+        /* Estiliza los puntos y asegúrate de que estén centrados */
+        .owl-carousel .owl-dots {
+            flex-grow: 1; /* Los puntos ocupan el espacio central */
+            display: flex;
+            justify-content: center;
+        }
+
+        .owl-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+            background-color: grey !important;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background-color: #59A971 !important;
+        }
+
+        .owl-carousel .owl-dot:focus {
+            outline: none;
+        }
+
+        .owl-carousel .owl-nav button:hover {
+            transform: scale(1.2); /* Aumenta el tamaño al 120% */
+        }
+
+
+        .owl-carousel .owl-stage {
+            display: flex !important;
+            justify-content: center; /* centra los items */
+        }
+
+
+        .news-section {
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px; /* Espacio uniforme entre los contenedores */
+        }
+
+        .news-item {
+            justify-content: center;
+            text-align: center;
+            width: 300px; /* Ancho fijo para todas las noticias */
+            background-color: #EDEDED;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 8px;
+            overflow: hidden;
+            box-sizing: border-box; /* Asegura que el padding no altere el tamaño del contenedor */
+            height: 400px; /* Altura fija para uniformidad en todos los contenedores */
+        }
+
+        .news-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            height: 250px; /* Ajusta la altura de las imágenes */
+            border-radius: 8px;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+            transition: transform 0.3s ease;
+        }
+
+        .news-image:hover img {
+            transform: scale(1.1); /* Efecto de zoom al hacer hover */
+        }
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .news-image:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .hover-overlay i {
+            color: white;
+            font-size: 40px;
+        }
+
+        .news-title {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 14px;
+            color: #23356B;
+            text-align: justify;
+            flex-grow: 1; /* Asegura que el título ocupe el espacio disponible */
+        }
+
+        .bordered {
+            width: 80%;
+            border: 2px solid #3461B2; /* Establece el color del borde */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno (opcional) */
+            margin: 10px; /* Espaciado entre los divs */
+            margin-bottom: 60px; /* Espaciado entre los divs (opcional) */
+        }
+
+        .imgPres {
+            width: 80%;
+        }
+
+        .btn-suscripcion {
+            background-color: #23356B;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px !important;
+            font-size: 30px !important;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: none !important;
+        }
+
+        .btn-suscripcion:hover {
+            background-color: #59A971;
+        }
+
+        /* #contenido img {
+             width: 300px!important;
+             height: auto;
+             object-fit: cover;
+         }*/
+
+        #contenido .content-item {
+            transition: scale 0.5s ease;
+            padding: 0;
+        {#box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;#}
+        }
+
+        #contenido .content-item img {
+            transition: scale 0.5s ease;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+
+        #contenido .content-item:hover img {
+            transform: scale(1.1); /* Efecto de zoom al hacer hover */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .news-section {
+                margin-left: 40px !important;
+            }
+
+            #img-certificado {
+                width: 80% !important;
+
+            }
+
+            #mapita {
+                height: 200px !important;
+            }
+
+
+        }
+
+
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div style="background-color:#1D3164">
+        <div class="container py-5">
+            <div id="icon-carousel" class="carousel slide d-md-none" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="image-container">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                               data-description="Lorem ipsum dolor.">
+                                <img src="{% static 'images/iconos2-05.png' %}" alt="Imagen 1" class="d-block w-100">
+                                <p>Long-Term Contracts</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/administracion.png' %}" alt="Imagen 2" class="d-block w-100">
+                            <p>Internalized Management</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Gobiernocorporativo.png' %}" alt="Imagen 3"
+                                 class="d-block w-100">
+                            <p>Corporate Governance</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Carterainicial.png' %}" alt="Imagen 4" class="d-block w-100">
+                            <p>Regional and Sector Diversification</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/lvt.png' %}" alt="Imagen 5" class="d-block w-100">
+                            <p>Low Leverage Level</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/ocupacion.png' %}" alt="Imagen 6" class="d-block w-100">
+                            <p>Total Occupancy</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/0_comisiones.png' %}" alt="Imagen 7" class="d-block w-100">
+                            <p>Zero Comission Policy</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-container">
+                            <img src="{% static 'images/Distribuciontrismetral.png' %}" alt="Imagen 8"
+                                 class="d-block w-100">
+                            <p>Quarterly Distribution</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#icon-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#icon-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- Para pantallas grandes -->
+            <div>
+                <div class="row d-none d-md-flex">
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                         
+                               data-description="One of our main strengths is that all of our leases have an initial term of 15 years, with automatic renewals stipulated upon signing. Our tenants have never defaulted or defaulted, even during the pandemic, reflecting the operational and financial strength of our assets.">
+                                <img src="{% static 'images/iconos2-05.png' %}" alt="Imagen 1" class="img-fluid">
+                                <p>Long-Term <br>Contracts</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                            
+                               data-description="We were the first REIT in Mexico with a 100% internalized model since our IPO, always prioritizing the formation of a highly experienced management team. Currently, 85% of the members of our Technical Committee are independent, and 50% are women, reinforcing our commitment to diversity and excellence in decision-making.">
+                                <img src="{% static 'images/administracion.png' %}" alt="Imagen 2" class="img-fluid">
+                                <p>Internalized Management</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                           
+                               data-description="Since our debut in the market, we have adopted the highest standards of Corporate Governance. Today we are recognized as one of the five best evaluated organizations globally among public and private companies in the United States, Canada and Europe. This distinction positions us as a benchmark in the sector, not only in Mexico, but also internationally.">
+                                <img src="{% static 'images/Gobiernocorporativo.png' %}" alt="Imagen 3"
+                                     class="img-fluid">
+                                <p>Corporate Governance</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="We have a broadly diversified portfolio, both geographically in the regions with the greatest growth potential, as well as in different educational brands. This strategy allows us to maximize the strength and predictability of our revenue streams, while integrating a strong sustainability focus to generate long-term environmental and economic value for investors and tenants.">
+                                <img src="{% static 'images/Carterainicial.png' %}" alt="Imagen 4" class="img-fluid">
+                                <p>Regional and Sector <br>Diversification</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="With an LTV of 20%, we have one of the lowest leverage levels in the market. This robust financial position has been backed by outstanding credit ratings: AA+ by Moody's and AAA by HR Ratings, which gives us preferential access to financial markets.">
+                                <img src="{% static 'images/lvt.png' %}" alt="Imagen 5" class="img-fluid">
+                                <p>Low Leverage <br>Level</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                              
+                               data-description="Our occupancy record is exemplary: we maintain a 100% occupancy rate and no tenant turnover, even in adverse economic environments. This is evidence of the strength of our contractual relationships and the financial stability of our tenants.">
+                                <img src="{% static 'images/ocupacion.png' %}" alt="Imagen 6" class="img-fluid">
+                                <p>Total Occupancy</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                               
+                               data-description="Our operating model does not contemplate the collection of commissions or fees, supporting our objective of generating direct value for our holders. This transparent and aligned structure allows the benefits generated to be channeled to our holders without intermediaries that dilute returns.">
+                                <img src="{% static 'images/0_comisiones.png' %}" alt="Imagen 7" class="img-fluid">
+                                <p>Zero Commission<br>Policy</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 py-3">
+                        <div class="image-container text-center">
+                            <a href="#"
+                               class="modal-icons"
+                               data-mdb-toggle="modal"
+                               data-mdb-target="#IconModal1"
+                             
+                               data-description="Under a philosophy of predictability, stability and financial discipline, we have a quarterly distribution policy. This practice reaffirms our commitment to the constant generation of value for our investors through sustainable and consistent returns.">
+                                <img src="{% static 'images/Distribuciontrismetral.png' %}" alt="Imagen 8"
+                                     class="img-fluid">
+                                <p>Quarterly Distribution</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade popup" id="IconModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="card">
+                            <div class="card-body text-justify">
+                                <h4 class="event-title card-title my-2">
+                                </h4>
+{#                                <i class="fa fa-calendar"></i>#}
+{#                                <span class="event-date">#}
+{#                    </span>#}
+{#                                <i class="fa fa-folder"></i>#}
+{##}
+{#                                <span class="event-category">#}
+{#                    </span>#}
+                                <p class="event-description card-text my-5">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center py-3">
+                            <button type="button" class="btn close-btn card-link" style="background-color: #23356B; color: #ffff;" data-mdb-dismiss="modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    {% include 'partials/slider_home_eng.html' %}
+
+
+    <div class="pb-0">
+        <section id="tiker-sec" class="page-section-ptb py-5" style="background-color: #EDEDED;">
+            <div class="container">
+                <h1 class="py-3 text-center" style="color:#23356B; font-weight:bold; font-size:54px;">Our
+                    stock.</h1>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-xl-6 mt-4 mt-xl-0 d-flex flex-column align-items-center">
+                        <div class="pl-3 pt-lg-3 pl-lg-5 pb-lg-3 pr-lg-5 text-white  pricedata america mt-3 d-flex flex-column justify-content-center"
+                             style="max-width: 600px; background-color:#23356B; border-radius: 15px;">
+                            <img src="{% static 'images/bmv.png' %}" alt="BMV Logo"
+                                 style="position: absolute; top: -40px; right: -25px; width: 200px; height: auto;">
+                            <h1 id="tiker-sec-tiker" class="mb-0 text-left" style="font-size:28px; font-weight:bold;">
+                                Symbol
+                            </h1>
+                            <h1 class="mb-0 text-left"
+                                style="color: #59A971; line-height: 1.5; font-size: 54px; font-weight:bold;">$
+                                <span id="tiker-sec-price" class="last" style="color: #59A971;">0</span>
+                                <span style="color: #59A971;">MXN</span> &nbsp;&nbsp;
+                                <span class="d-none change-direction">-</span>
+                                {% comment %} <span id="tiker-sec-percent" class="percent" style="color: #005598;">0%</span> {% endcomment %}
+                            </h1>
+
+                            <h1 class="text-center" style="white-space: nowrap; font-size:28px; font-weight:bold;">Capitalization Value*:<br>
+                                <span style="font-size:44px;">$</span>
+                                <span id="tiker-sec-capitalizacion" style="font-size:44px;" class="capitalizacion count"
+                                      data-speed="2500"
+                                      data-to="0" data-in-viewport="yes" data-decimals="0"
+                                >0</span>
+                                <span>MXN</span>
+                            </h1>
+                            <br>
+                            <h1 class="text-left " style="white-space: nowrap; font-size:28px; font-weight:bold;">Outstanding stocks: 1,227,636,170**</h1>
+                            <br><br>
+                            <p class="text-left mb-0" style="font-size: 16px; ">* Minimun delay of 20 min.</p>
+                            <p class="text-left mb-0" style="font-size: 16px; ">** As of 1Q25.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="py-5" style="background-color:#23356B">
+        <div class="container-fluid">
+            <!-- TÍTULO CON BOTÓN -->
+            <h1 class="text-white mx-2" style="font-size:48px;">
+                Latest <b>news.</b>
+            </h1>
+            <h1 class="text-white mx-2 mb-5" style="font-size: 32px; cursor: pointer;" data-bs-toggle="modal"
+                data-bs-target="#modalSuscripcion">
+                <span style="text-decoration: underline;">Suscribe</span>
+                <span style="text-decoration: none;"> to receive our newsletter.</span>
+            </h1>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="modalSuscripcion" tabindex="-1" aria-labelledby="modalSuscripcionLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-white" style="background-color:#59A971">
+                            <h5 class="modal-title" id="modalSuscripcionLabel">Suscribe to the Newsletter</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="correo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="empresa" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="empresa">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cargo" class="form-label">Position</label>
+                                    <input type="text" class="form-control" id="cargo">
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn-suscripcion">Suscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       <section class="news-section owl-carousel" style="margin-left:40px;">
+            {% for noticia in noticias %}
+                <div class="news-item">
+                    <div class="news-image">
+                        <a href="{{ noticia.url }}" target="_blank">
+                        <img src="{% static noticia.image %}" alt="Noticia">
+                        <div class="hover-overlay">
+                            <i class="fa fa-link"></i>
+                        </div>
+                        </a>
+                    </div>
+                    <p class="news-title">{{ noticia.texto }}</p>
+                </div>
+            {% endfor %}
+        </section>
+        </div>
+
+
+    </div>
+
+    <div id="contenido" class="py-5" style="background-color: #EDEDED;">
+        <div class="container-fluid">
+            <h1 class="text-right py-4 px-2" style="color: #23356B; padding-bottom:10px; font-size:48px;">
+                Downloadable <b>content.</b>
+            </h1>
+
+            <div class="row d-flex justify-content-around wow fadeInUp">
+                <div class="col-md-3 col-lg-2 mb-4 content-item">
+                    <a class=""
+                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2025_1T25.pdf"
+                       target="_blank"
+                    >
+                        <img class="mb-3 img-fluid" src="{% static 'images/portada_1Q25.png' %}" alt="">
+                        {% comment %} <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Reporte <br> Trimestral</button> {% endcomment %}
+                    </a>
+                </div>
+                <div class="col-md-3 col-lg-2 mb-4 content-item">
+                    <a class="d-flex flex-column"
+                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesAnuales/Reporte-Anual2024.pdf"
+                       target="_blank"
+                    >
+                        <img class="mb-3" src="{% static 'images/anual-en.png' %}" alt="">
+                        {% comment %} <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Reporte <br>Anual</button> {% endcomment %}
+                    </a>
+                </div>
+                <div class="col-md-3 col-lg-2 mb-4 content-item">
+                    <a class="d-flex flex-column"
+                       href="https://investorcloud.s3.us-east-1.amazonaws.com/FibraEDUCA/InformacionFinanciera/Presentaciones/FIBRA_EDUCA_CORPORATE_PRESENTATION_1Q25-junio-eng.pdf"
+                       target="_blank"
+                    >
+                        <img class="mb-3" src="{% static 'images/Presentacion-en.png' %}" alt="">
+                        {% comment %} <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Presentación Corporativa <br>al 1T2025</button> {% endcomment %}
+                    </a>
+                </div>
+                <div class="col-md-3 col-lg-2 mb-4 content-item">
+                    <a class="d-flex flex-column"
+                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/factsheet-educa-1T25.pdf" target="_blank"
+                    >
+                        <img class="mb-3" src="{% static 'images/Factsheet-en.png' %}" alt="">
+                        {% comment %} <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px; height:50px;">Factsheet</button> {% endcomment %}
+                    </a>
+                </div>
+                <div class="col-md-3 col-lg-2 mb-4 content-item">
+                    <a class="d-flex flex-column"
+                       href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/Sostenibilidad/InformesAnuales/Informe-Anual-de-Sustentabilidad-2024-en-.pdf"
+                       target="_blank"
+                    >
+                        <img class="mb-3" src="{% static 'images/Informes-24-en.png' %}" alt="">
+                        {% comment %} <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Informe <br>Anual 2023</button> {% endcomment %}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% comment %}  <div>
+            <h2 id ="contenido" class="text-center" style="color: #071D49; padding-bottom:10px;">Presentaciones corportativas</h2>
+            <div class="row justify-content-center wow fadeInUp">
+                <div class="col-md-3">
+                    <a class="d-flex flex-column"
+                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                       >
+                        <div class="text-center">
+                            <img class="mb-3 imgPres" src="{% static 'images/present.png' %}" alt="">
+                        </div>
+                        <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Presentación Corporativa</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="d-flex flex-column"
+                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                       >
+                       <div class="text-center">
+                            <img class="mb-3 imgPres" src="{% static 'images/present.png' %}" alt="">
+                        </div>
+                        <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Presentación Corporativa</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="d-flex flex-column"
+                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                       >
+                       <div class="text-center">
+                            <img class="mb-3 imgPres" src="{% static 'images/present.png' %}" alt="">
+                        </div>
+                        <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Presentación Corporativa</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="d-flex flex-column"
+                        href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/ReportesTrimestrales/2024_3T24.pdf"
+                       >
+                       <div class="text-center">
+                            <img class="mb-3 imgPres" src="{% static 'images/present.png' %}" alt="">
+                        </div>
+                        <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Presentación Corporativa</button>
+                    </a>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+    <div class="my-5">
+      <div class="text-left">
+        <h1 class="my-3" style="color:#59A971; margin-left:40px; font-size:48px;">Coupon payment and<br><b>cash distribution.</b>
+        </h1>
+    </div>
+    <section class="container text-center">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23L</h3>
+                    <br>
+                    <p style="font-size:22px;">Thursday, April 24, 2025</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23-2L</h3>
+                    <br>
+                    <p style="font-size:22px;">Thursday, August 14, 2025</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">EDUCA 23UL</h3>
+                    <br>
+                    <p style="font-size:22px;">Thursday, August 14, 2025</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="recuadro">
+                    <h3 class="pregunta">Distribution 4Q24</h3>
+                    <br>
+                    <p style="font-size:22px;">Friday, March 14, 2025</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    </div>
+  
+
+    <div class="text-center">
+        <img src="{% static 'images/homehash-eng.png' %}" style="width:250%">
+    </div>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Solicitar una reunión</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body contact-page2 contact-page">
+                    <div class="contact-form-area">
+                        <div id="form-messages"></div>
+                        <form id="form-meeting" action="" method="post" class="agenda">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Nombre*</label>
+                                        <input id="name" name="name" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="company">Compañía*</label>
+                                        <input id="company" name="company" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Correo*</label>
+                                        <input id="email" name="email" class="form-control" type="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="subject">Asunto*</label>
+                                        <input id="subject" name="subject" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="message">Mensaje*</label>
+                                        <textarea cols="40" rows="10" id="message" name="message"
+                                                  class="textarea form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="button button-border button-large noleftmargin topmargin-sm"
+                                    id="btn-send-agenda submit-button"
+                                    style="color:white; background-color: #005598">Enviar
+                            </button>
+                        </form>
+                        <div class="alert-message-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup-overlay">
+         <div class="popup-content">
+    <span class="popup-close" onclick="cerrarPopup()">&times;</span>
+    <a href="https://us02web.zoom.us/webinar/register/WN_GBTFsjWsSOS09V2H23uydw#/registration" target="_blank">
+        <img src="{% static 'images/educa-day.jpeg' %}" alt="Promoción" class="popup-img">
+    </a>
+</div>
+    </div>
+{% endblock %}
+
+{% block otherscripts %}
+    <script>
+        function cerrarPopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        window.onload = function () {
+            document.getElementById("popup").style.display = "flex";
+        }
+    </script>
+    <script>
+        {#modal icons#}
+        $(".modal-icons").click(function (e) {
+            e.preventDefault();
+            let target = $(e.currentTarget);
+            console.log('entro');
+            $("#IconModal1 .event-title").text(target.data('title'));
+            $("#IconModal1 .event-description").text(target.data('description'));
+            $("#IconModal1").modal('show');
+        });
+        $("#IconModal1 .close-btn").click(function (e) {
+            $("#IconModal1").modal('hide');
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const containers = document.querySelectorAll(".image-container");
+            let animationInterval;
+            let animationIndex = 0;
+            let isMouseOverAny = false;
+
+            function clearAllEffects() {
+                containers.forEach(container => container.classList.remove("hover-effect"));
+            }
+
+            function startAnimation() {
+                clearInterval(animationInterval);
+                animationInterval = setInterval(() => {
+                    if (isMouseOverAny) return; // No avanza si el mouse está en uno
+
+                    clearAllEffects();
+                    containers[animationIndex].classList.add("hover-effect");
+                    animationIndex = (animationIndex + 1) % containers.length;
+                }, 1000); // Velocidad entre cambios (ajústala a gusto)
+            }
+
+            containers.forEach((container, index) => {
+                container.addEventListener("mouseenter", () => {
+                    isMouseOverAny = true;
+                    clearAllEffects();
+                    container.classList.add("hover-effect");
+                });
+
+                container.addEventListener("mouseleave", () => {
+                    isMouseOverAny = false;
+                    clearAllEffects(); // Limpiar para que no se mantenga duplicado
+                    startAnimation();
+                });
+            });
+
+            startAnimation(); // Empieza animación al cargar
+        });
+    </script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#invitacionModal').on('show.bs.modal', function (e) {
+                $('body').addClass("inv-modal");
+            }).on('hide.bs.modal', function (e) {
+                $('body').removeClass("inv-modal").css({'overflow': 'auto'});
+            });
+            $('#invitacionModal').modal('show');
+            $('#invitacionModalRoad').modal('show');
+
+            $('body').css({'overflow': 'scroll'});
+            $(document).off('scroll');
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+                dots: true,
+                autoplay: true,  // Activa el autoplay
+                autoplayTimeout: 10000,  // 3 segundos entre slides
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
+                }
+            });
+        });
+
+    </script>
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/pie.js' %}"></script>
+    <script src="{% static 'js/amCharts/ammap.js' %}"></script>
+    <script src="{% static 'js/amCharts/mexicoLow.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/propiedades.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/jquery.flexslider.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/theme-vendors.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/maps-states-mx.min.js' %}"></script>
+    {#    <script src="{% static 'js/index.js' %}"></script>#}
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/variables_cotizacion.js' %}"></script>
+    <script src="{% static 'js/index.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/moment.min.js' %}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/countTo.js' %}"></script>
+    <script src="{% static 'js/bootstrap-slider.min.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel-Cifras").owlCarousel({
+                items: 1,
+                loop: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+            });
+
+            $('.owl-carousel.index').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            $('.owl-carousel.ods').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                navText: ["<i class='fa fa-arrow-left'></i>", "<i class='fa fa-arrow-right'></i>"],
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Función para verificar si un elemento está visible en el viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Función para activar el contador solo en la slide activa
+            function activateCounter() {
+                // Seleccionamos la slide activa
+                var activeSlide = $('#myCarousel2 .carousel-item.active');
+
+                // Solo activamos el contador en la slide activa
+                activeSlide.find('.finn-counto .count').each(function () {
+                    var $this = $(this);
+                    if (isElementInViewport(this)) {
+                        $this.countTo({
+                            to: $this.data('to'),
+                            speed: $this.data('speed'),
+                            decimals: $this.data('decimals'),
+                            formatter: function (value, options) {
+                                let formattedValue = value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                                if ($this.data('currency') === 'usd') {
+                                    formattedValue = '$' + formattedValue;
+                                }
+                                return formattedValue;
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Activar el contador cuando el carrusel se mueva
+            $('#myCarousel2').on('slid.bs.carousel', function () {
+                activateCounter();  // Llamamos a la función para la nueva slide activa
+            });
+
+
+            // Inicializar el contador para la slide activa al cargar la página
+            activateCounter();
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Verifica si la pantalla es menor de 768px
+            if ($(window).width() < 768) {
+                $('.icon-carousel').addClass('owl-carousel owl-theme'); // Agrega las clases necesarias para el carrusel
+                $('.icon-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    items: 1, // Muestra un ítem a la vez en móvil
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                });
+            }
+        });
+
+    </script>
+
+    <script>
+        $(window).on('load', function () {
+            $('.finn-counto').each(function () {
+                finn_waypoint('#' + $(this).attr('id'));
+                finn_counto('#' + $(this).attr('id'));
+            });
+            $("#modalCuestionario").modal('show');
+        });
+
+        function finn_waypoint(elemento) {
+            var waypoint = new Waypoint({
+                element: $(elemento),
+                handler: function (direction) {
+                    $(elemento + ' .count').trigger('on-appear');
+                },
+                offset: '75%',
+                triggerOnce: true
+            });
+        }
+
+        function finn_counto(elemento) {
+            if ($().countTo) {
+                $(elemento + ' .count').on('on-appear', function () {
+                    $(elemento + ' .honeycomb-path.honeycomb-1').addClass('honeycomb-animated');
+
+                    $(this).each(function () {
+                        var to = parseFloat($(this).data('to')),
+                            speed = parseInt($(this).data('speed')),
+                            decimals = parseInt($(this).data('decimals')),
+                            addDollar = $(this).data('currency') === 'usd'; // Verifica si el elemento tiene la etiqueta data-currency="usd"
+
+                        $(this).countTo({
+                            to: to,
+                            speed: speed,
+                            decimals: decimals,
+                            formatter: function (value, options) {
+                                let formattedValue = value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+
+                                // Si el campo tiene data-currency="usd", agregamos el símbolo de dólar
+                                if (addDollar) {
+                                    formattedValue = '$' + formattedValue;
+                                }
+
+                                return formattedValue;
+                            },
+                            onComplete: function (value) {
+                                // Aquí podrías agregar más condiciones para otros formatos si es necesario
+                            }
+                        });
+                    });
+                }); //counter
+            }
+        }
+
+
+        function alert_animations(container, type, text) {
+            var htmlAlert = '<div class="alert alert-' + type + ' mt-2">' + text + '</div>';
+            $(container).prepend(htmlAlert);
+            $(container + " .alert").first().hide().fadeIn(800).delay(2000).fadeOut(800, function () {
+                $(this).remove();
+            });
+        }
+
+        var form = $('#form-meeting');
+        form.submit(function (event) {
+            event.preventDefault();
+            $('#submit-button').addClass('disabled');
+            $.ajax({
+                type: 'POST',
+                url: '{% url 'meeting' %}',
+                data: form.serialize(),
+                success: function (response) {
+                    if (response['success']) {
+                        form.trigger('reset');
+                        $('#submit-button').removeClass('disabled');
+                        alert_animations('.alert-message-footer', 'success', response['message']);
+                        {#grecaptcha.reset();#}
+                    } else {
+                        alert_animations('.alert-message-footer', 'danger', response['message']);
+                        $('#submit-button').removeClass('disabled');
+                        {#grecaptcha.reset();#}
+                    }
+                },
+            });
+        });
+
+        $(window).on('load', function () {
+
+            $('body').css({'overflow': 'scroll'});
+            $(document).off('scroll');
+
+
+            $("#propiedades-circle").attr("style", "opacity:0;left:100px");
+
+            let divText = $("#propiedades-text");
+            divText.empty();
+            let state = mxStates['MEX2706'];
+            $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+            $("#propiedades-state").text(state.name);
+            $("#propiedades-legend").text(state.leyend);
+            let list = state.list;
+            if (list.length) {
+                for (let i of list) {
+                    divText.append('<h4 class="text-bold">' + i.titulos + '</h4>');
+                    if (i.items.length) {
+                        let ul = '<ul class="list-group list-unstyled" >';
+                        for (let j of i.items) {
+                            ul += '<li class="list-unstyled text-bold" style="font-size:25px !important;">' + j + '</li>';
+                        }
+                        ul += '</ul>';
+                        divText.append(ul);
+                    }
+                }
+            }
+
+            $("path.st0, path.st3")
+                .click(function () {
+                    let id = $(this).attr("id") ?? $(this).data("id");
+
+                    {#activo css#}
+                    $('path.active').removeClass('active');
+                    $("#" + id).attr("class", "st0 active");
+
+                    $("#propiedades-circle").attr("style", "opacity:1;left:-40px");
+                    {#$("#propiedades-state").text($(this).attr("name"));#}
+                    $("#propiedades-state").text(mxStates[id].name);
+                    $("#propiedades-legend").text(mxStates[id].leyend);
+
+                    let divText = $("#propiedades-text");
+                    divText.empty();
+                    let list = mxStates[id].list;
+                    if (list.length) {
+                        for (let i of list) {
+                            divText.append('<h4 class="text-bold">' + i.titulos + '</h4>');
+                            if (i.items.length) {
+                                let ul = '<ul class="list-group list-unstyled">';
+                                for (let j of i.items) {
+                                    ul += '<li class="list-unstyled text-bold" style="font-size:25px !important;">' + j + '</li>';
+                                }
+                                ul += '</ul>';
+                                divText.append(ul);
+                            }
+                        }
+                    }
+                })
+            {#.mouseup(function () {#}
+            {#    $("#propiedades-circle").attr("style", "opacity:0;left:100px");#}
+            {# })#}
+            ;
+        });
+
+    </script>
+{% endblock %}

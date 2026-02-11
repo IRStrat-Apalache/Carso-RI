@@ -1,0 +1,1370 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/tabsinver.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+.owl-carousel .item img{
+    width: 200px;
+}
+.owl-carousel .item > div{
+    color: #fff;
+}
+.owl-carousel .item{
+    height:325px;
+}
+.item{
+    background-color: #1D3164;
+    padding: 10px;
+    border-radius: 5px;
+}
+table.bc-blue th{
+    color :#fff;
+    background-color: #1D3164;
+}
+.list-item-justified {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding-left: 0; /* Elimina el padding predeterminado */
+}
+.list-item-justified li {
+    position: relative;
+    padding-left: 1.5em; /* Ajusta el espacio para el pseudo-elemento */
+    margin-bottom: 0.5em; /* Espacio entre los elementos de la lista */
+}
+.list-item-justified li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.6em; 
+    height: 0.6em; 
+    background-color: #1D3164;
+    border-radius: 50%; 
+    transform: translateY(-50%);
+}
+.btn-color{
+    background : #1D3164;
+}
+.portfolio-filter .nav.selector.active a,.portfolio-filter .nav.selector a:hover {
+    background-color: #1D3164; 
+    color: #fff; 
+}
+.container{
+    padding:5%;
+}
+.list-item-justified {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding-left: 0; /* Elimina el padding predeterminado */
+}
+.list-item-justified li {
+    position: relative;
+    padding-left: 1.5em; /* Ajusta el espacio para el pseudo-elemento */
+    margin-bottom: 0.5em; /* Espacio entre los elementos de la lista */
+}
+.list-item-justified li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.6em; 
+    height: 0.6em; 
+    background-color: #1D3164;
+    border-radius: 50%; 
+    transform: translateY(-50%);
+}
+.btn-color{
+    background : #1D3164;
+}
+
+.btn-close i {
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    color: #1D3164; /* Ajusta el color del ícono */
+}
+.portfolio-filter .nav.selector.active a,.portfolio-filter .nav.selector a:hover {
+    background-color: #1D3164; 
+    color: #fff; 
+}
+.container{
+    padding:5%;
+}
+
+
+.custom-button {
+    background-color: transparent; /* Elimina el fondo del botón */
+    border: none; /* Opcional: elimina el borde del botón */
+    padding: 0; /* Opcional: ajusta el padding si es necesario */
+}
+
+.custom-button img {
+    width: 300px !important;
+    height: 200px !important;    
+    transition: transform 0.3s ease; /* Suaviza el efecto de hover */
+}
+
+.custom-button img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al hacer hover */
+}
+
+.cus-button {
+    display: inline-block;
+    background-color: #59A971; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno para ajustar el texto */
+    text-align: center; /* Centra el texto dentro del botón */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: Arial, sans-serif; /* Familia tipográfica */
+    transition: background-color 0.3s ease; /* Suaviza la animación del color */
+}
+
+.cus-button:hover {
+    background-color: #4c8b5e; /* Color al hacer hover */
+}
+
+
+.close {
+    color:white;
+    text-shadow: none; 
+    opacity: 1; 
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    outline: none; 
+}
+
+@media only screen and (max-width: 768px) {
+
+    #img-comites{                
+        height: 100px !important;
+        
+    }
+
+    
+    
+}
+
+@media only screen and (min-width: 300px) {
+    .text-mov{
+        font-size: 18px !important;
+    }
+
+    .custom-button img{
+        height: 100px !important;
+    }
+    
+    #img-comites{                
+        height: 80px !important;
+        width: 50px !important;
+    }
+}
+   
+</style>
+{% endblock %}
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative py-5"  id="estructura">
+            <div class="text-center" style=" color:#59A971">
+                <h4>En Fibra Educa contamos con un Gobierno Corporativo de clase mundial que además de respaldar nuestro compromiso con la gestión ética en la toma de decisiones, es evaluado constantemente por firmas internacionales para establecer los más altos niveles de protección a nuestros tenedores bajo las mejores prácticas del Mercado.</h4>
+            </div>
+            <h1  class ="text-center mb-5 py-5" style="color:#23356B">Estructura del Fideicomiso</h1>
+            <div class="container text-center mt-3">
+                <img src="{% static 'images/fide.png' %}">
+            </div>
+            
+            
+            <div class="container text-center">
+                <img style="width:700px;" src="{% static 'images/muñequitos.png' %}">
+            </div>
+            
+            <div id="comites" class="py-5">
+                <h1  class ="text-center mb-5" style="color:#23356B">Comités</h1>
+            </div>
+            <!-- start filter navigation -->
+            <ul class="portfolio-filter grid-filter nav comite nav-tabs justify-content-center border-0 text-uppercase font-weight-500 alt-font padding-6-rem-bottom md-padding-4-half-rem-bottom sm-padding-2-rem-bottom d-flex flex-wrap">
+                <li data-valor="c0" class="nav selector active mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Comité Técnico</a></li>
+                <li data-valor="c1" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Comité de Nominaciones</a></li>
+                <li data-valor="c2" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Comité de Prácticas</a></li>
+                <li data-valor="c3" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Comité de Compensaciones</a></li>
+                <li data-valor="c4" class="nav selector mx-2"><a href="javascript: void(0)" class="px-3 py-2 w-100 text-center text-mov">Comité de Auditoría</a></li>
+            </ul>
+
+             <!-- Modales -->
+             <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="width:600px;">
+                        <div class="modal-header" style="background-color: #1D3164">
+                        <h5 class="modal-title" style="color:white" id="dynamicModalLabel"></h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-justify" >
+                            <!-- Información adicional -->
+                        </div>                                
+                    </div>
+                </div>
+            </div>
+
+            <!-- end filter navigation -->
+            <div class="row m-0">
+                
+
+                <div class="col-md-12 comite">
+                    <!-- Comite tecnico -->
+                    <div id="c0" class="d-none comite">
+                        <div class="col-12">
+                            <div class ="owl-carousel mb-5">
+                                <!-- Jorge Nacer -->
+                                <div class="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Educación: Ingeniería en cibernética y sistemas computacionales de la Universidad La Salle | Doctorado Honoris Causa del Consejo Iberoamericano en Honor a la Calidad Educativa.</p>" 
+                                                data-bs-title="Jorge Nacer Gobera">
+                                           
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src="{% static 'images/gobera.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class="fw-bold"><b>Jorge Nacer Gobera</b></h3>
+                                                <p>Presidente y miembro no independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Blanca Rodríguez-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p> Arquitecta, con más de 25 años de experiencia en Finanzas, asesoría y
+                                                Administración de Fondos. Blanca Rodríguez ha participado activamente en la
+                                                ejecución de más de US$7 billones de deuda y capital de riesgo a través de diversas
+                                                plataformas y vehículos de inversión, en proyectos de bienes raíces y de
+                                                infraestructura en Estados Unidos, México y Latinoamérica.</p>
+                                                <p>Actualmente, Blanca Rodríguez es Directora de Capital y Finanzas de Marhnos,
+                                                compañía con más de 7 décadas de experiencia especializada en el financiamiento,
+                                                desarrollo y operación de proyectos inmobiliarios y de infraestructura.</p>
+                                                <p>Antes de Marhnos, Blanca Rodríguez participó en diferentes capacidades con
+                                                Banyan Tree Mexico Hospitality Fund, y es una de las socias fundadoras de Real
+                                                Capital Investment Management “RCIM” (antes DTZ Rockwood Mexico) donde
+                                                colaboro por 10 años. Previo a RCIM fue Directora de Nuevos Negocios y Capitales en
+                                                GE Real Estate México y anteriormente colaboró en AEW Capital Management y en
+                                                Beacon Properties ambos en Boston, MA.</p>
+                                                <p>Blanca Rodríguez es Arquitecta y tiene una maestría en Diseño Urbano, con
+                                                especialidad en Finanzas y Bienes Raíces; ambos por la Universidad de Cornell.
+                                                Forma parte del Comité de Gobierno Corporativo del ULI México. Es Miembro
+                                                Independiente del Comité Técnico de FIBRA EDUCA y es también Miembro
+                                                Independiente del Comité Técnico del CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">
+                                             
+                                    </button>                         
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/blanca.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class ="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Marta Vaca tiene 17 años de experiencia en gobierno corporativo y en sostenibilidad. Dirige
+                                            Delphi Consulting & Advisory Firm desde hace 10 años y ha trabajado con más de 160
+                                            empresas (tanto en México y otros países de América Latina), como en EE.UU. y Europa. Su
+                                            expertise se centra en temas de gobierno corporativo y sostenibilidad del negocio tanto a
+                                            nivel estratégico, como a nivel operativo y de comunicación. </p>
+                                            <p>Marta es consejera de dos empresas: CADU y EDUCA -ambas, listadas en la Bolsa Mexicana de
+                                            Valores. También es Oficial de Gobierno Corporativo y Sustentabilidad para América Latina del
+                                            Banco Mundial en el International Finance Corporation, trabaja como investigadora con la
+                                            Organización para la Cooperación y el Desarrollo Económico (OCDE) y forma parte la
+                                            Comisión de Gobierno Corporativo del Consejo Coordinador Empresarial, en donde preside la
+                                            Subcomisión Internacional y de Mejores Prácticas.</p>
+                                            <p>Marta Vaca ha sido premiada por Hermes Fund Management y el International Corporate
+                                            Governance Network (ICGN); ha sido conferencista en la Universidad de Yale; ha publicado
+                                            dos libros de gobierno corporativo con el Banco Mundial; ha sido representante de México en
+                                            las mesas de gobierno corporativo de América Latina organizadas OCDE desde 2008 hasta la
+                                            fecha; ha trabajado en Nueva York y es cofundadora de la red de Institutos de Gobierno
+                                            Corporativo de América Latina la cual integran 12 países de la región.</p>
+                                            <p>Marta estudió la licenciatura de economía en la Universidad Anáhuac en México e hizo una
+                                            maestría en la London School of Economics and Political Science (Reino Unido) lo cual
+                                            también la ha llevado a ser catedrática en México a nivel posgrado – programas para los
+                                            cuales imparte tópicos de sostenibilidad y gobierno corporativo en reconocidas escuelas de
+                                            negocios.</p>" 
+                                            data-bs-title="Marta Vaca Viana">
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/vaca.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class="fw-bold"><b>Marta Vaca Viana</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar cuenta con una trayectoria de más de 25 años en los mercados financieros. Es Maestra en Finanzas por el ITAM y tiene una especialización en Mercados de Carbono por ICMA. Actualmente es la Directora del Consejo Mexicano de Finanzas Sostenibles (CMFS), organismo representativo del Sistema Financiero Mexicano que impulsa desde 2016 las mejores prácticas en finanzas verdes y sostenibles, promoviendo la creación de capacidades entre actores del mercado y la movilización de capitales con impactos positivos en el medio ambiente y la sociedad como un todo.<p>Alba Aguilar participa en el Comité de Finanzas Sostenibles del Consejo de Estabilidad del Sistema Financiero, liderado por la SHCP y el Banco de México; forma parte del Comité Ejecutivo de la red de Centros Financieros para la Sostenibilidad (FC4S) de Naciones Unidas, representando al Centro Financiero de la Ciudad de México en el Hub de las Américas junto con  los Centros Financieros de Montreal y Río de Janeiro; también es miembro del Comité Técnico  del Consorcio TCFD-México, miembro del Comité Técnico Consultivo de Sostenibilidad del CINIF y del Comité de Revisión de normas de sostenibilidad del IFRS.</p><p> Alba fue parte del Comité de Sustentabilidad de la BMV del 2015 al 2021 y actualmente Juez del premio Empresas a líderes en innovación sustentable de HSBC &EY así como del Premio Contacto Banxico.</p><p> Alba Aguilar es profesora de la Universidad Panamericana, impartiendo la cátedra de Sostenibilidad Empresarial. Participa como ponente en múltiples foros locales e internacionales sobre finanzas verdes y sostenibles, regulación, taxonomías, divulgación y riesgos en coordinación con diversos gremios del sistema financiero.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/alba.png' %}" style="width:200px !important;">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class= "fw-bold"><b>Alba Aguilar Priego</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Diego Laresgoiti-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center ">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Con 17 años de experiencia laboral en el sector financiero, Diego Laresgoiti es Socio Fundador de Sancus Capital Partners, empresa con US$3.5B de activos gestionados (“AUM”) dedicada a la gestión de vehículos de inversión en el sector de hoteles de lujo, energías renovables, capital de riesgo e inmobiliario. El Sr. Laresgoiti es responsable de la estrategia de inversiones líquidas de la firma.</p>
+        
+                                            <p>Diego Laresgoiti participa en el Consejo de Administración de Ciudad Mayakoba, Encinno Capital - es un inversionista de inversión de capital privado que busca adquirir, operar y hacer crecer una empresa mediana. También se desempeña como miembro independiente del Comité de Inversiones del fondo de capital de riesgo más grande de México, Dila Capital (US$150 AUM).</p>
+        
+                                            <p>Diego Laresgoiti fue Consejero y Jefe de Relación con Inversionistas / Mercado de Capitales de RLH Properties, empresa que cofundó, primero como fondo de capital privado y luego como empresa pública. Después de 10 años desde su constitución, RLH se convirtió en la compañía hotelera más grande que cotiza en la bolsa mexicana de valores, siendo propietaria de hoteles de lujo operados por los principales operadores de hoteles de lujo como Four Seasons, Rosewood, One&Only, Fairmont y Banyan Tree, entre otros.</p>
+        
+                                            <p>Es miembro del Consejo Independiente de Fibra Educa, una de las FIBRAS más grandes de México que cotiza en bolsa, con una capitalización de mercado de aprox. US$3,7 mil millones.</p>
+        
+                                            <p>Diego Laresgoiti es Ingeniero Industrial por la Universidad Iberoamericana.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src= "{% static 'images/diego.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>El señor Creel es Licenciado en Administración por el Instituto Tecnológico Autónomo de México y cuenta con un Diplomado en Derecho Bancario por la Universidad Iberoamericana, además de haber completado el curso de Gobierno Corporativo de The Wharton School, University of Pennsylvania.</p>
+        
+                                            <p>Con más de 40 años de trayectoria profesional, se ha desempeñado en posiciones de alta dirección en el sector financiero. Cuenta con experiencia en el sector público, habiendo participado como director de activos corporativos del Fondo Bancario de Protección al Ahorro y Vocal de la Junta de Gobierno del IPAB.</p>
+        
+                                            <p>Destaca su experiencia en el sector financiero como Director de Banca de Inversión de Finamex, además de ocupar la dirección general de Grupo Fin, Casa de Bolsa Inverlat y una dirección general adjunta en Banco Inverlat.</p>
+        
+                                            <p>La participación del señor Creel en los Consejos de Administración del Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, Grupo Collado, entre otros, respaldan su amplia trayectoria como integrante de órganos de gobierno corporativos.</p>
+        
+                                            <p>Desde 2002 es Socio Director de Alcrecob y Asociados, firma especializada en asesoría financiera, principalmente en las áreas de Banca de Inversión, Financiamiento Corporativo y Reestructuras.</p>
+        
+                                            <p>Es Consejero Independiente del Comité Técnico de FIBRA EDUCA y algunos otros vehículos de inversión públicos.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src= "{% static 'images/creel.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class="fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre es el Director del Instituto de Alta Dirección Anáhuac, IADA, de la Universidad Anáhuac. Fue Vicerrector Académico de la Universidad Anáhuac Sur de 2015 a 2023 y decano de la Escuela de Negocios de la Universidad Anáhuac México Sur de 1996 a 2014.</p>
+        
+                                                <p>Fundador del Centro de Excelencia en Gobierno Corporativo de México; es Senior Advisor en Morrow Sodali, proveedor líder de asesoría estratégica y servicios a accionistas para clientes corporativos de todo el mundo; y en Fabre Advisors/Governance Capital, donde ha asesorado a autoridades del mercado financiero, institutos de directores, family offices y más de cien empresas y organizaciones sin fines de lucro en México y en el extranjero.</p>
+        
+                                                <p>Profesor de gobierno corporativo. Coautor del libro "La Institucionalización de la Empresa: Casos de Éxito en Gobierno Corporativo" publicado en 2006 por el Global Corporate Governance Forum y el Center for International Private Enterprise.</p>
+        
+                                                <p>Diseñó la metodología del Índice ESG en la Bolsa Mexicana de Valores y presidió su comité de evaluación de 2010 a 2019 hasta su venta a Standard & Poor´s.</p>
+        
+                                                <p>Se desempeña como consejero independiente en Punto Casa de Bolsa y Fibra Educa.</p>
+        
+                                                <p>Sus actividades sin fines de lucro incluyen trabajo voluntario en Editorial LID México, Casa de la Amistad para Niños con Cáncer IAP, y en Catholic.net.</p>
+        
+                                                <p>Es Ingeniero Industrial con mención honorífica y tiene un MBA con especialidad en Finanzas de la Universidad Anáhuac del Sur; y una Maestría en Liderazgo Empresarial de Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                           
+                                        </button>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                <img src = "{% static 'images/mendoza.png' %}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>                                        
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <!-- Comite Nomincaciones -->
+                    <div id="c1" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5 ">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Con 17 años de experiencia laboral en el sector financiero, Diego Laresgoiti es Socio Fundador de Sancus Capital Partners, empresa con US$3.5B de activos gestionados (“AUM”) dedicada a la gestión de vehículos de inversión en el sector de hoteles de lujo, energías renovables, capital de riesgo e inmobiliario. El Sr. Laresgoiti es responsable de la estrategia de inversiones líquidas de la firma.</p>
+        
+                                            <p>Diego Laresgoiti participa en el Consejo de Administración de Ciudad Mayakoba, Encinno Capital - es un inversionista de inversión de capital privado que busca adquirir, operar y hacer crecer una empresa mediana. También se desempeña como miembro independiente del Comité de Inversiones del fondo de capital de riesgo más grande de México, Dila Capital (US$150 AUM).</p>
+        
+                                            <p>Diego Laresgoiti fue Consejero y Jefe de Relación con Inversionistas / Mercado de Capitales de RLH Properties, empresa que cofundó, primero como fondo de capital privado y luego como empresa pública. Después de 10 años desde su constitución, RLH se convirtió en la compañía hotelera más grande que cotiza en la bolsa mexicana de valores, siendo propietaria de hoteles de lujo operados por los principales operadores de hoteles de lujo como Four Seasons, Rosewood, One&Only, Fairmont y Banyan Tree, entre otros.</p>
+        
+                                            <p>Es miembro del Consejo Independiente de Fibra Educa, una de las FIBRAS más grandes de México que cotiza en bolsa, con una capitalización de mercado de aprox. US$3,7 mil millones.</p>
+        
+                                            <p>Diego Laresgoiti es Ingeniero Industrial por la Universidad Iberoamericana.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body text-center text-white" >
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/diego.png' %}"  style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p> Arquitecta, con más de 25 años de experiencia en Finanzas, asesoría y
+                                                Administración de Fondos. Blanca Rodríguez ha participado activamente en la
+                                                ejecución de más de US$7 billones de deuda y capital de riesgo a través de diversas
+                                                plataformas y vehículos de inversión, en proyectos de bienes raíces y de
+                                                infraestructura en Estados Unidos, México y Latinoamérica.</p>
+                                                <p>Actualmente, Blanca Rodríguez es Directora de Capital y Finanzas de Marhnos,
+                                                compañía con más de 7 décadas de experiencia especializada en el financiamiento,
+                                                desarrollo y operación de proyectos inmobiliarios y de infraestructura.</p>
+                                                <p>Antes de Marhnos, Blanca Rodríguez participó en diferentes capacidades con
+                                                Banyan Tree Mexico Hospitality Fund, y es una de las socias fundadoras de Real
+                                                Capital Investment Management “RCIM” (antes DTZ Rockwood Mexico) donde
+                                                colaboro por 10 años. Previo a RCIM fue Directora de Nuevos Negocios y Capitales en
+                                                GE Real Estate México y anteriormente colaboró en AEW Capital Management y en
+                                                Beacon Properties ambos en Boston, MA.</p>
+                                                <p>Blanca Rodríguez es Arquitecta y tiene una maestría en Diseño Urbano, con
+                                                especialidad en Finanzas y Bienes Raíces; ambos por la Universidad de Cornell.
+                                                Forma parte del Comité de Gobierno Corporativo del ULI México. Es Miembro
+                                                Independiente del Comité Técnico de FIBRA EDUCA y es también Miembro
+                                                Independiente del Comité Técnico del CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">
+                                           
+                                        </button>                         
+                                    <div class="card-body text-center text-white">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src= "{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                      
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>El señor Creel es Licenciado en Administración por el Instituto Tecnológico Autónomo de México y cuenta con un Diplomado en Derecho Bancario por la Universidad Iberoamericana, además de haber completado el curso de Gobierno Corporativo de The Wharton School, University of Pennsylvania.</p>
+        
+                                            <p>Con más de 40 años de trayectoria profesional, se ha desempeñado en posiciones de alta dirección en el sector financiero. Cuenta con experiencia en el sector público, habiendo participado como director de activos corporativos del Fondo Bancario de Protección al Ahorro y Vocal de la Junta de Gobierno del IPAB.</p>
+        
+                                            <p>Destaca su experiencia en el sector financiero como Director de Banca de Inversión de Finamex, además de ocupar la dirección general de Grupo Fin, Casa de Bolsa Inverlat y una dirección general adjunta en Banco Inverlat.</p>
+        
+                                            <p>La participación del señor Creel en los Consejos de Administración del Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, Grupo Collado, entre otros, respaldan su amplia trayectoria como integrante de órganos de gobierno corporativos.</p>
+        
+                                            <p>Desde 2002 es Socio Director de Alcrecob y Asociados, firma especializada en asesoría financiera, principalmente en las áreas de Banca de Inversión, Financiamiento Corporativo y Reestructuras.</p>
+        
+                                            <p>Es Consejero Independiente del Comité Técnico de FIBRA EDUCA y algunos otros vehículos de inversión públicos.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body text-center text-white">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src ="{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">                                                
+                                                <h3 class ="fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>                         
+                            <div class="col-md-6 col-12 text-white">
+                                <div class="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p>Educación: Ingeniería en cibernética y sistemas computacionales de la Universidad La Salle | Doctorado Honoris Causa del Consejo Iberoamericano en Honor a la Calidad Educativa.</p>" 
+                                                data-bs-title="Jorge Nacer Gobera">
+                                           
+                                    </button>
+                                    <div class="card-body text-center text-white">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="{% static 'images/gobera.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="fw-bold"><b>Jorge Nacer Gobera</b></h3>
+                                                <p>Miembro patrimonial</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">Mayoría de miembros independientes</li>
+                                <li style="font-size:25px">Responsable de nominación de Miembros Independientes</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_nominaciones.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comite Prácticas -->
+                    <div id="c2" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p> Arquitecta, con más de 25 años de experiencia en Finanzas, asesoría y
+                                                Administración de Fondos. Blanca Rodríguez ha participado activamente en la
+                                                ejecución de más de US$7 billones de deuda y capital de riesgo a través de diversas
+                                                plataformas y vehículos de inversión, en proyectos de bienes raíces y de
+                                                infraestructura en Estados Unidos, México y Latinoamérica.</p>
+                                                <p>Actualmente, Blanca Rodríguez es Directora de Capital y Finanzas de Marhnos,
+                                                compañía con más de 7 décadas de experiencia especializada en el financiamiento,
+                                                desarrollo y operación de proyectos inmobiliarios y de infraestructura.</p>
+                                                <p>Antes de Marhnos, Blanca Rodríguez participó en diferentes capacidades con
+                                                Banyan Tree Mexico Hospitality Fund, y es una de las socias fundadoras de Real
+                                                Capital Investment Management “RCIM” (antes DTZ Rockwood Mexico) donde
+                                                colaboro por 10 años. Previo a RCIM fue Directora de Nuevos Negocios y Capitales en
+                                                GE Real Estate México y anteriormente colaboró en AEW Capital Management y en
+                                                Beacon Properties ambos en Boston, MA.</p>
+                                                <p>Blanca Rodríguez es Arquitecta y tiene una maestría en Diseño Urbano, con
+                                                especialidad en Finanzas y Bienes Raíces; ambos por la Universidad de Cornell.
+                                                Forma parte del Comité de Gobierno Corporativo del ULI México. Es Miembro
+                                                Independiente del Comité Técnico de FIBRA EDUCA y es también Miembro
+                                                Independiente del Comité Técnico del CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">                                            
+                                        </button>                         
+                                    <div class="card-body text-center text-white">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important"> 
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                            <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar cuenta con una trayectoria de más de 25 años en los mercados financieros. Es Maestra en Finanzas por el ITAM y tiene una especialización en Mercados de Carbono por ICMA. Actualmente es la Directora del Consejo Mexicano de Finanzas Sostenibles (CMFS), organismo representativo del Sistema Financiero Mexicano que impulsa desde 2016 las mejores prácticas en finanzas verdes y sostenibles, promoviendo la creación de capacidades entre actores del mercado y la movilización de capitales con impactos positivos en el medio ambiente y la sociedad como un todo.<p>Alba Aguilar participa en el Comité de Finanzas Sostenibles del Consejo de Estabilidad del Sistema Financiero, liderado por la SHCP y el Banco de México; forma parte del Comité Ejecutivo de la red de Centros Financieros para la Sostenibilidad (FC4S) de Naciones Unidas, representando al Centro Financiero de la Ciudad de México en el Hub de las Américas junto con  los Centros Financieros de Montreal y Río de Janeiro; también es miembro del Comité Técnico  del Consorcio TCFD-México, miembro del Comité Técnico Consultivo de Sostenibilidad del CINIF y del Comité de Revisión de normas de sostenibilidad del IFRS.</p><p> Alba fue parte del Comité de Sustentabilidad de la BMV del 2015 al 2021 y actualmente Juez del premio Empresas a líderes en innovación sustentable de HSBC &EY así como del Premio Contacto Banxico.</p><p> Alba Aguilar es profesora de la Universidad Panamericana, impartiendo la cátedra de Sostenibilidad Empresarial. Participa como ponente en múltiples foros locales e internacionales sobre finanzas verdes y sostenibles, regulación, taxonomías, divulgación y riesgos en coordinación con diversos gremios del sistema financiero.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">
+                                        
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src= "{% static 'images/alba.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Alba Aguilar Priego</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                            <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Marta Vaca tiene 17 años de experiencia en gobierno corporativo y en sostenibilidad. Dirige
+                                            Delphi Consulting & Advisory Firm desde hace 10 años y ha trabajado con más de 160
+                                            empresas (tanto en México y otros países de América Latina), como en EE.UU. y Europa. Su
+                                            expertise se centra en temas de gobierno corporativo y sostenibilidad del negocio tanto a
+                                            nivel estratégico, como a nivel operativo y de comunicación. </p>
+                                                                                    <p>Marta es consejera de dos empresas: CADU y EDUCA -ambas, listadas en la Bolsa Mexicana de
+                                            Valores. También es Oficial de Gobierno Corporativo y Sustentabilidad para América Latina del
+                                            Banco Mundial en el International Finance Corporation, trabaja como investigadora con la
+                                            Organización para la Cooperación y el Desarrollo Económico (OCDE) y forma parte la
+                                            Comisión de Gobierno Corporativo del Consejo Coordinador Empresarial, en donde preside la
+                                            Subcomisión Internacional y de Mejores Prácticas.</p>
+                                                                                    <p>Marta Vaca ha sido premiada por Hermes Fund Management y el International Corporate
+                                            Governance Network (ICGN); ha sido conferencista en la Universidad de Yale; ha publicado
+                                            dos libros de gobierno corporativo con el Banco Mundial; ha sido representante de México en
+                                            las mesas de gobierno corporativo de América Latina organizadas OCDE desde 2008 hasta la
+                                            fecha; ha trabajado en Nueva York y es cofundadora de la red de Institutos de Gobierno
+                                            Corporativo de América Latina la cual integran 12 países de la región.</p>
+                                                                                    <p>Marta estudió la licenciatura de economía en la Universidad Anáhuac en México e hizo una
+                                            maestría en la London School of Economics and Political Science (Reino Unido) lo cual
+                                            también la ha llevado a ser catedrática en México a nivel posgrado – programas para los
+                                            cuales imparte tópicos de sostenibilidad y gobierno corporativo en reconocidas escuelas de
+                                            negocios.</p>" 
+                                            data-bs-title="Marta Vaca Viana">
+                                       
+                                    </button>
+                                    <div class="card-body text-center" >
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/vaca.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class ="fw-bold"><b>Marta Vaca Viana</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                             <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre es el Director del Instituto de Alta Dirección Anáhuac, IADA, de la Universidad Anáhuac. Fue Vicerrector Académico de la Universidad Anáhuac de 2015 a 2023 y decano de la Escuela de Negocios de la Universidad Anáhuac México Sur de 1996 a 2014.</p>
+        
+                                                <p>Fundador del Centro de Excelencia en Gobierno Corporativo de México; es Senior Advisor en Morrow Sodali, proveedor líder de asesoría estratégica y servicios a accionistas para clientes corporativos de todo el mundo; y en Fabre Advisors/Governance Capital, donde ha asesorado a autoridades del mercado financiero, institutos de directores, family offices y más de cien empresas y organizaciones sin fines de lucro en México y en el extranjero.</p>
+        
+                                                <p>Profesor de gobierno corporativo. Coautor del libro "La Institucionalización de la Empresa: Casos de Éxito en Gobierno Corporativo" publicado en 2006 por el Global Corporate Governance Forum y el Center for International Private Enterprise.</p>
+        
+                                                <p>Diseñó la metodología del Índice ESG en la Bolsa Mexicana de Valores y presidió su comité de evaluación de 2010 a 2019 hasta su venta a Standard & Poor´s.</p>
+        
+                                                <p>Se desempeña como consejero independiente en Punto Casa de Bolsa y Fibra Educa.</p>
+        
+                                                <p>Sus actividades sin fines de lucro incluyen trabajo voluntario en Editorial LID México, Casa de la Amistad para Niños con Cáncer IAP, y en Catholic.net.</p>
+        
+                                                <p>Es Ingeniero Industrial con mención honorífica y tiene un MBA con especialidad en Finanzas de la Universidad Anáhuac del Sur; y una Maestría en Liderazgo Empresarial de Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                            
+                                        </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>                                        
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">100% miembros independientes</li>
+                                <li style="font-size:25px">Responsable de resolver conflictos de interés
+                                    y procurar adopción de políticas de gestión
+                                </li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_practicas.png' %}">
+                            </div>           
+                        </div>
+                    </div>
+                    <!-- Comite de Compensaciones -->
+                    <div id="c3" class="d-none comite">    
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                            <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>El señor Creel es Licenciado en Administración por el Instituto Tecnológico Autónomo de México y cuenta con un Diplomado en Derecho Bancario por la Universidad Iberoamericana, además de haber completado el curso de Gobierno Corporativo de The Wharton School, University of Pennsylvania.</p>
+        
+                                            <p>Con más de 40 años de trayectoria profesional, se ha desempeñado en posiciones de alta dirección en el sector financiero. Cuenta con experiencia en el sector público, habiendo participado como director de activos corporativos del Fondo Bancario de Protección al Ahorro y Vocal de la Junta de Gobierno del IPAB.</p>
+        
+                                            <p>Destaca su experiencia en el sector financiero como Director de Banca de Inversión de Finamex, además de ocupar la dirección general de Grupo Fin, Casa de Bolsa Inverlat y una dirección general adjunta en Banco Inverlat.</p>
+        
+                                            <p>La participación del señor Creel en los Consejos de Administración del Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, Grupo Collado, entre otros, respaldan su amplia trayectoria como integrante de órganos de gobierno corporativos.</p>
+        
+                                            <p>Desde 2002 es Socio Director de Alcrecob y Asociados, firma especializada en asesoría financiera, principalmente en las áreas de Banca de Inversión, Financiamiento Corporativo y Reestructuras.</p>
+        
+                                            <p>Es Consejero Independiente del Comité Técnico de FIBRA EDUCA y algunos otros vehículos de inversión públicos.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img  src = "{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                             <!-- Blanca Rodríguez-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info="<p> Arquitecta, con más de 25 años de experiencia en Finanzas, asesoría y
+                                                Administración de Fondos. Blanca Rodríguez ha participado activamente en la
+                                                ejecución de más de US$7 billones de deuda y capital de riesgo a través de diversas
+                                                plataformas y vehículos de inversión, en proyectos de bienes raíces y de
+                                                infraestructura en Estados Unidos, México y Latinoamérica.</p>
+                                                <p>Actualmente, Blanca Rodríguez es Directora de Capital y Finanzas de Marhnos,
+                                                compañía con más de 7 décadas de experiencia especializada en el financiamiento,
+                                                desarrollo y operación de proyectos inmobiliarios y de infraestructura.</p>
+                                                <p>Antes de Marhnos, Blanca Rodríguez participó en diferentes capacidades con
+                                                Banyan Tree Mexico Hospitality Fund, y es una de las socias fundadoras de Real
+                                                Capital Investment Management “RCIM” (antes DTZ Rockwood Mexico) donde
+                                                colaboro por 10 años. Previo a RCIM fue Directora de Nuevos Negocios y Capitales en
+                                                GE Real Estate México y anteriormente colaboró en AEW Capital Management y en
+                                                Beacon Properties ambos en Boston, MA.</p>
+                                                <p>Blanca Rodríguez es Arquitecta y tiene una maestría en Diseño Urbano, con
+                                                especialidad en Finanzas y Bienes Raíces; ambos por la Universidad de Cornell.
+                                                Forma parte del Comité de Gobierno Corporativo del ULI México. Es Miembro
+                                                Independiente del Comité Técnico de FIBRA EDUCA y es también Miembro
+                                                Independiente del Comité Técnico del CKD ODOCK18.</p>" 
+                                                data-bs-title="Blanca Rodríguez Ortiz">
+                                            
+                                        </button>                         
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/blanca.png' %}" style="width:180px !important; height:160px; !important"> 
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class ="fw-bold"><b>Blanca Rodríguez Ortiz</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5"> 
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre es el Director del Instituto de Alta Dirección Anáhuac, IADA, de la Universidad Anáhuac. Fue Vicerrector Académico de la Universidad Anáhuac de 2015 a 2023 y decano de la Escuela de Negocios de la Universidad Anáhuac Anáhuac México Sur de 1996 a 2014.</p>
+        
+                                                <p>Fundador del Centro de Excelencia en Gobierno Corporativo de México; es Senior Advisor en Morrow Sodali, proveedor líder de asesoría estratégica y servicios a accionistas para clientes corporativos de todo el mundo; y en Fabre Advisors/Governance Capital, donde ha asesorado a autoridades del mercado financiero, institutos de directores, family offices y más de cien empresas y organizaciones sin fines de lucro en México y en el extranjero.</p>
+        
+                                                <p>Profesor de gobierno corporativo. Coautor del libro "La Institucionalización de la Empresa: Casos de Éxito en Gobierno Corporativo" publicado en 2006 por el Global Corporate Governance Forum y el Center for International Private Enterprise.</p>
+        
+                                                <p>Diseñó la metodología del Índice ESG en la Bolsa Mexicana de Valores y presidió su comité de evaluación de 2010 a 2019 hasta su venta a Standard & Poor´s.</p>
+        
+                                                <p>Se desempeña como consejero independiente en Punto Casa de Bolsa y Fibra Educa.</p>
+        
+                                                <p>Sus actividades sin fines de lucro incluyen trabajo voluntario en Editorial LID México, Casa de la Amistad para Niños con Cáncer IAP, y en Catholic.net.</p>
+        
+                                                <p>Es Ingeniero Industrial con mención honorífica y tiene un MBA con especialidad en Finanzas de la Universidad Anáhuac del Sur; y una Maestría en Liderazgo Empresarial de Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+
+                                        </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>                                        
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Alba Aguilar-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Alba Aguilar cuenta con una trayectoria de más de 25 años en los mercados financieros. Es Maestra en Finanzas por el ITAM y tiene una especialización en Mercados de Carbono por ICMA. Actualmente es la Directora del Consejo Mexicano de Finanzas Sostenibles (CMFS), organismo representativo del Sistema Financiero Mexicano que impulsa desde 2016 las mejores prácticas en finanzas verdes y sostenibles, promoviendo la creación de capacidades entre actores del mercado y la movilización de capitales con impactos positivos en el medio ambiente y la sociedad como un todo.<p>Alba Aguilar participa en el Comité de Finanzas Sostenibles del Consejo de Estabilidad del Sistema Financiero, liderado por la SHCP y el Banco de México; forma parte del Comité Ejecutivo de la red de Centros Financieros para la Sostenibilidad (FC4S) de Naciones Unidas, representando al Centro Financiero de la Ciudad de México en el Hub de las Américas junto con  los Centros Financieros de Montreal y Río de Janeiro; también es miembro del Comité Técnico  del Consorcio TCFD-México, miembro del Comité Técnico Consultivo de Sostenibilidad del CINIF y del Comité de Revisión de normas de sostenibilidad del IFRS.</p><p> Alba fue parte del Comité de Sustentabilidad de la BMV del 2015 al 2021 y actualmente Juez del premio Empresas a líderes en innovación sustentable de HSBC &EY así como del Premio Contacto Banxico.</p><p> Alba Aguilar es profesora de la Universidad Panamericana, impartiendo la cátedra de Sostenibilidad Empresarial. Participa como ponente en múltiples foros locales e internacionales sobre finanzas verdes y sostenibles, regulación, taxonomías, divulgación y riesgos en coordinación con diversos gremios del sistema financiero.</p>" 
+                                            data-bs-title="Alba Aguilar Priego">
+                                        
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/alba.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Alba Aguilar Priego</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">100% miembros independientes</li>
+                                <li style="font-size:25px">Recomendaciones sobre compensaciones, desarrollo de 
+                                    recursos humanos y retención de ejecutivos</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_compensaciones.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comite de Auditoría -->
+                    <div id="c4" class="d-none comite">
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white text-white">
+                                <!--Jorge Fabre-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                                data-bs-toggle="modal" 
+                                                data-bs-info='<p>Jorge M. Fabre es el Director del Instituto de Alta Dirección Anáhuac, IADA, de la Universidad Anáhuac. Fue Vicerrector Académico de la Universidad Anáhuac de 2015 a 2023 y decano de la Escuela de Negocios de la Universidad Anáhuac México Sur de 1996 a 2014.</p>
+        
+                                                <p>Fundador del Centro de Excelencia en Gobierno Corporativo de México; es Senior Advisor en Morrow Sodali, proveedor líder de asesoría estratégica y servicios a accionistas para clientes corporativos de todo el mundo; y en Fabre Advisors/Governance Capital, donde ha asesorado a autoridades del mercado financiero, institutos de directores, family offices y más de cien empresas y organizaciones sin fines de lucro en México y en el extranjero.</p>
+        
+                                                <p>Profesor de gobierno corporativo. Coautor del libro "La Institucionalización de la Empresa: Casos de Éxito en Gobierno Corporativo" publicado en 2006 por el Global Corporate Governance Forum y el Center for International Private Enterprise.</p>
+        
+                                                <p>Diseñó la metodología del Índice ESG en la Bolsa Mexicana de Valores y presidió su comité de evaluación de 2010 a 2019 hasta su venta a Standard & Poor´s.</p>
+        
+                                                <p>Se desempeña como consejero independiente en Punto Casa de Bolsa y Fibra Educa.</p>
+        
+                                                <p>Sus actividades sin fines de lucro incluyen trabajo voluntario en Editorial LID México, Casa de la Amistad para Niños con Cáncer IAP, y en Catholic.net.</p>
+        
+                                                <p>Es Ingeniero Industrial con mención honorífica y tiene un MBA con especialidad en Finanzas de la Universidad Anáhuac del Sur; y una Maestría en Liderazgo Empresarial de Duxx Graduate School of Business Leadership.</p>'
+                                                data-bs-title="Jorge M. Fabre Mendoza">
+                                            
+                                           
+                                        </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/mendoza.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Jorge M. Fabre Mendoza</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>                                        
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Marta Vaca-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p> Marta Vaca tiene 17 años de experiencia en gobierno corporativo y en sostenibilidad. Dirige
+                                            Delphi Consulting & Advisory Firm desde hace 10 años y ha trabajado con más de 160
+                                            empresas (tanto en México y otros países de América Latina), como en EE.UU. y Europa. Su
+                                            expertise se centra en temas de gobierno corporativo y sostenibilidad del negocio tanto a
+                                            nivel estratégico, como a nivel operativo y de comunicación. </p>
+                                                                                    <p>Marta es consejera de dos empresas: CADU y EDUCA -ambas, listadas en la Bolsa Mexicana de
+                                            Valores. También es Oficial de Gobierno Corporativo y Sustentabilidad para América Latina del
+                                            Banco Mundial en el International Finance Corporation, trabaja como investigadora con la
+                                            Organización para la Cooperación y el Desarrollo Económico (OCDE) y forma parte la
+                                            Comisión de Gobierno Corporativo del Consejo Coordinador Empresarial, en donde preside la
+                                            Subcomisión Internacional y de Mejores Prácticas.</p>
+                                                                                    <p>Marta Vaca ha sido premiada por Hermes Fund Management y el International Corporate
+                                            Governance Network (ICGN); ha sido conferencista en la Universidad de Yale; ha publicado
+                                            dos libros de gobierno corporativo con el Banco Mundial; ha sido representante de México en
+                                            las mesas de gobierno corporativo de América Latina organizadas OCDE desde 2008 hasta la
+                                            fecha; ha trabajado en Nueva York y es cofundadora de la red de Institutos de Gobierno
+                                            Corporativo de América Latina la cual integran 12 países de la región.</p>
+                                                                                    <p>Marta estudió la licenciatura de economía en la Universidad Anáhuac en México e hizo una
+                                            maestría en la London School of Economics and Political Science (Reino Unido) lo cual
+                                            también la ha llevado a ser catedrática en México a nivel posgrado – programas para los
+                                            cuales imparte tópicos de sostenibilidad y gobierno corporativo en reconocidas escuelas de
+                                            negocios.</p>" 
+                                            data-bs-title="Marta Vaca Viana">
+                                       
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/vaca.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class="fw-bold"><b>Marta Vaca Viana</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Creel-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center mb-5">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>El señor Creel es Licenciado en Administración por el Instituto Tecnológico Autónomo de México y cuenta con un Diplomado en Derecho Bancario por la Universidad Iberoamericana, además de haber completado el curso de Gobierno Corporativo de The Wharton School, University of Pennsylvania.</p>
+        
+                                            <p>Con más de 40 años de trayectoria profesional, se ha desempeñado en posiciones de alta dirección en el sector financiero. Cuenta con experiencia en el sector público, habiendo participado como director de activos corporativos del Fondo Bancario de Protección al Ahorro y Vocal de la Junta de Gobierno del IPAB.</p>
+        
+                                            <p>Destaca su experiencia en el sector financiero como Director de Banca de Inversión de Finamex, además de ocupar la dirección general de Grupo Fin, Casa de Bolsa Inverlat y una dirección general adjunta en Banco Inverlat.</p>
+        
+                                            <p>La participación del señor Creel en los Consejos de Administración del Grupo Financiero Inverlat, ING Seguros, Grupo Salinas y Rocha, Ingeal, Grupo Collado, entre otros, respaldan su amplia trayectoria como integrante de órganos de gobierno corporativos.</p>
+        
+                                            <p>Desde 2002 es Socio Director de Alcrecob y Asociados, firma especializada en asesoría financiera, principalmente en las áreas de Banca de Inversión, Financiamiento Corporativo y Reestructuras.</p>
+        
+                                            <p>Es Consejero Independiente del Comité Técnico de FIBRA EDUCA y algunos otros vehículos de inversión públicos.</p>" 
+                                            data-bs-title="Alejandro Creel Cobian">
+                                        
+                                       
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src = "{% static 'images/creel.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Alejandro Creel Cobian</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 6 años</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 text-white">
+                                <!--Diego Laresgoiti-->
+                                <div class ="item d-flex flex-row justify-content-center align-items-center ">
+                                    <button type="button" class="custom-button" 
+                                            data-bs-toggle="modal" 
+                                            data-bs-info="<p>Con 17 años de experiencia laboral en el sector financiero, Diego Laresgoiti es Socio Fundador de Sancus Capital Partners, empresa con US$3.5B de activos gestionados (“AUM”) dedicada a la gestión de vehículos de inversión en el sector de hoteles de lujo, energías renovables, capital de riesgo e inmobiliario. El Sr. Laresgoiti es responsable de la estrategia de inversiones líquidas de la firma.</p>
+        
+                                            <p>Diego Laresgoiti participa en el Consejo de Administración de Ciudad Mayakoba, Encinno Capital - es un inversionista de inversión de capital privado que busca adquirir, operar y hacer crecer una empresa mediana. También se desempeña como miembro independiente del Comité de Inversiones del fondo de capital de riesgo más grande de México, Dila Capital (US$150 AUM).</p>
+        
+                                            <p>Diego Laresgoiti fue Consejero y Jefe de Relación con Inversionistas / Mercado de Capitales de RLH Properties, empresa que cofundó, primero como fondo de capital privado y luego como empresa pública. Después de 10 años desde su constitución, RLH se convirtió en la compañía hotelera más grande que cotiza en la bolsa mexicana de valores, siendo propietaria de hoteles de lujo operados por los principales operadores de hoteles de lujo como Four Seasons, Rosewood, One&Only, Fairmont y Banyan Tree, entre otros.</p>
+        
+                                            <p>Es miembro del Consejo Independiente de Fibra Educa, una de las FIBRAS más grandes de México que cotiza en bolsa, con una capitalización de mercado de aprox. US$3,7 mil millones.</p>
+        
+                                            <p>Diego Laresgoiti es Ingeniero Industrial por la Universidad Iberoamericana.</p>" 
+                                            data-bs-title="Diego Laresgoiti Matute">
+                                        
+                                        
+                                    </button>
+                                    <div class="card-body text-center">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img  src = "{% static 'images/diego.png' %}" style="width:180px !important; height:160px; !important">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h3 class = "fw-bold"><b>Diego Laresgoiti Matute</b></h3>
+                                                <p>Miembro independiente</p>
+                                                <p>Antigüedad: 1 año</p>
+                                                <a class="cus-button" target="_blank" href="#">
+                                                    Ver semblanza
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="table-responsive mb-4">
+                            <ul class="list-item-justified" style="color: #59A971">
+                                <li style="font-size:25px">Al menos 3 miembros Independientes</li>
+                                <li style="font-size:25px">Revisión y aprobación de información operativa y financiera</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <img src="{% static 'images/educa_comite_auditoria.png' %}">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="audiex" class="py-5">
+                <h1  class ="text-center mb-5" style="color:#23356B">Auditores Externos</h1>
+            </div>
+            <p class="text-justify">Nuestro Comité Técnico es responsable de nombrar a nuestro Auditor Externo, el cual debe ser un despacho de contadores públicos independiente. El desempeño del auditor será evaluado por el comité de auditoría, mismo que cuenta con las facultados de la revisión y opinión de la información financiera.<p>
+            <p class="text-justify">Los Estados Financieros de la Emisora correspondientes al año fiscal que finalizó el 31 de diciembre de 2024, fueron auditados por Mancera, S.C., (Integrante de Ernst & Young Global Limited) (“E&Y”), auditor externo de la Compañía.</p>
+
+            <div class="container-fluid p-5 text-center" id ="asambleas">
+                <div >
+                    <h1  class="text-center py-5" style="color: #23356B; margin-bottom:20px;">Asambleas</h1>
+                    <div class="row justify-content-center wow fadeInUp">
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/2025/Informacion-tenedores-2025.pdf">
+                                <img class="mb-3" src="{% static 'images/informacion_tenedores_2025.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:14px;">Información 2025</button>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2025.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/convocatoria-2025.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:14px;">Convocatorias 2025</button>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2024.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/Convocatoria2024.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:14px;">Convocatorias 2024</button>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Informacion-tenedores-2024.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/Tenedores.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:14px;">Información 2024</button>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-Anual-2023.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/Acuerdos.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:14px;">Acuerdos 2023</button>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/CONVOCATORIA-ANUAL-2023.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/Convocatoria2023.png' %}" alt="">
+                                <button class="btn btn-default p-0" style="background-color:#23356B; color:white; font-size:14px;">Convocatorias 2023</button>
+                            </a>
+                        </div>
+                      
+                                        
+                    </div>
+                    <div class="row justify-content-center wow fadeInUp">
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2022-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/acu-22.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Acuerdos 2022</button>
+                            </a>
+                        </div>   
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Asamblea-Anual-2022-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/conv-22.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Convocatoria 2022</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2021-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/acu-21.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Acuerdos 2021</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Anual-2021-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/conv-21.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Convocatoria 2021</button>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Acuerdos-Asamblea-2020-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/acu-20.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Acuerdos 2020</button>
+                            </a>
+                        </div>                
+                        <div class="col-md-2 col-lg-2 mb-4">
+                            <a class="d-flex flex-column"
+                                href="https://investorcloud.s3.amazonaws.com/FibraEDUCA/InformacionFinanciera/Convocatorias/Convocatoria-Asamblea-2020-es.pdf"
+                                >
+                                <img class="mb-3" src="{% static 'images/conv-20.png' %}" alt="">
+                                <button class="btn btn-default" style="background-color:#23356B; color:white; font-size:12px;">Convocatoria 2020</button>
+                            </a>
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script>
+       $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,                             
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1300: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Estilo para los botones de navegación
+            $('.owl-prev, .owl-next').css({                
+                'color': '#1D3164', // Color del texto
+                'border': 'none',
+                'padding': '10px 15px',                
+                'font-size': '30px', // Tamaño del ícono
+                'cursor': 'pointer',
+                'position': 'absolute',
+                'top': '50%',
+                'transform': 'translateY(-50%)',
+                'z-index': '10',
+                'outline': 'none',
+            });
+
+            $('.owl-prev').css({
+                'left': '-40px' // Posición del botón anterior
+            });
+
+            $('.owl-next').css({
+                'right': '-40px' // Posición del botón siguiente
+            });
+
+            
+
+            // Adjunta eventos tanto al botón como al enlace para abrir el modal
+            $(document).on('click', '[data-bs-toggle="modal"], .cus-button', function(e) {
+                e.preventDefault();  // Prevenir el comportamiento por defecto (especialmente para <a>)
+                
+                // Si se hizo clic en el enlace, obtenemos el botón relacionado
+                var button;
+                if ($(this).hasClass('cus-button')) {
+                    // Encontrar el botón más cercano al enlace
+                    button = $(this).closest('.item').find('.custom-button');
+                } else {
+                    // Si se hizo clic en el botón, lo asignamos directamente
+                    button = $(this);
+                }
+
+                var info = button.data('bs-info');
+                var title = button.data('bs-title');
+                
+                // Rellenar el contenido del modal dinámico
+                $('#dynamicModalLabel').text(title);
+                $('#dynamicModal .modal-body').html(info);
+                
+                // Mostrar el modal
+                var modal = new bootstrap.Modal(document.getElementById('dynamicModal'));
+                modal.show();
+            });
+
+        });
+
+
+        $(function () {
+
+            $(".selector").on('click', function (event) {
+                var $this = $(this);
+                var id = $this.data('valor');
+                $('div.comite[id^="c"][class!="d-none"]').addClass('d-none');
+                $('#' + id).removeClass('d-none');
+                $('.selector').removeClass('active');
+                $this.addClass('active');
+            });
+
+            var divP = $('#select_comite').val();
+            $('#c0').removeClass('d-none');
+
+            $('#select_comite').change(function (event) {
+                $('div.comite[id^="c"][class!="d-none"]').addClass('d-none');
+                $('#' + $(this).val()).removeClass('d-none');
+            });
+
+            $(".show-cv").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".diretivo-perfil").addClass('d-none');
+                $('.diretivo-perfil.' + item).removeClass("d-none");
+
+                $("html, body").animate({scrollTop: $('.diretivo-perfil.' + item).offset().top - 200}, 1000);
+            });
+
+            $(".cerrar-info i").on('click', function (event) {
+                $(".diretivo-perfil").addClass('d-none');
+            });
+        });
+    </script>
+{% endblock %}

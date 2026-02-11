@@ -1,0 +1,98 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block otherstyles %}
+    <style>
+        .container2 {
+            max-width: 1000px; /* ajusta según necesidad */
+            margin: 0 auto; /* centra horizontalmente */
+            width: 100%;
+            text-align: right; /* alinea texto internamente a la derecha */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* asegura que el contenido se pegue a la derecha */
+        }           
+        
+        .small-title {
+            font-size: 18px;
+            display: block;
+        }
+        
+        .big-title {
+            font-size: 44px;
+            display: block;
+            font-weight: bold;
+        }
+        
+        /* .highlight-letter {
+            color: #59A971;
+            font-weight: bold;
+        } */
+        
+        .text-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+       
+    </style>
+{% endblock %}
+
+<section class="hero-parallax text-white d-flex align-items-center justify-content-center" 
+         style="background-image: url({% static image %}); position: relative;">
+    <div>
+        <div class="container2 d-flex flex-column justify-content-center">
+            {% comment %}
+            <span class="small-title" id="hashtag">
+                {% if LANGUAGE_CODE == 'es' %}
+                    #InfraestructuraParaLaEducación
+                {% else %}
+                    #InfraestructureForEducation
+                {% endif %}
+            </span>
+            {% endcomment %}
+            <span class="big-title" id="big-title">{{ title }}</span>
+        </div>
+    </div>
+</section>
+
+{% block otherscripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Selecciona el hashtag y el título grande
+        const hashtag = document.getElementById('hashtag');
+        const bigTitle = document.getElementById('big-title');
+    
+        // Resalta la primera "u" o "ú"
+        function highlightFirstU(textElement) {
+            if (textElement) {
+                textElement.innerHTML = textElement.innerHTML.replace(/u|ú/, function(match) {
+                    return `<span class="highlight-letter">${match}</span>`;
+                });
+            }
+        }
+
+        // Resalta todas las "u" o "ú"
+        function highlightAllUs(textElement) {
+            if (textElement) {
+                textElement.innerHTML = textElement.innerHTML.replace(/[uúUÚ]/g, function(match) {
+                    return `<span class="highlight-letter">${match}</span>`;
+                });
+            }
+        }
+
+    
+        // Resaltar la primera "u" en el hashtag, la "u" de "Educación", y todas las "u" en el título
+        highlightFirstU(hashtag);       
+        highlightAllUs(bigTitle); // Resaltamos todas las "u" en el título
+    });
+    
+    
+    
+    
+</script>
+{% endblock %}

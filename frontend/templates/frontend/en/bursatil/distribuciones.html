@@ -1,0 +1,84 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/amcharts.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row">
+                <div class="col-md-12 text-justify">
+                    <p>De conformidad con nuestro Fideicomiso llevamos a cabo la distribución de al menos el 95% de
+                        nuestro Resultado Fiscal a prorrata entre los tenedores, siempre y cuando ciertos requisitos
+                        se cumplan, incluyendo la autorización de nuestro Comité Técnico de:</p>
+
+                    <ol class="ls-decimal">
+                        <li>Los estados financieros en los cuales dichas Distribuciones estarán basadas</li>
+                        <li> El monto y los plazos de pago de la Distribución de Efectivo, con la previa opinión del
+                            Comité de Auditoría. Cualquier Distribución diferente al 95% de nuestro Resultado Fiscal
+                            también requerirá la aprobación de la mayoría de los Miembros Independientes de nuestro
+                            Comité Técnico.
+                        </li>
+                    </ol>
+
+                    <h3 class="text-center">Distribuciones por CBFI (en pesos)</h3>
+
+                    <div id="chartdiv" class="chart-style-dist"></div>
+
+                    <p>De conformidad con nuestro Fideicomiso, las condiciones de entrega de las Distribuciones de
+                        Efectivo, son determinadas por nuestro Comité Técnico, el cual considera, entre otros
+                        factores, los siguientes:</p>
+
+                    <ul class="ls-disc">
+                        <li>Resultados reales de operación</li>
+                        <li>Nivel de flujos de efectivo retenidos</li>
+                        <li>Términos y condiciones de cualquier financiamiento</li>
+                        <li>Cualquier requerimiento relacionado con el servicio de la deuda</li>
+                        <li>Requerimientos de CAPEX</li>
+                        <li>Ingreso gravable</li>
+                        <li>Requerimientos de entrega de Distribuciones conforme la legislación aplicable</li>
+                        <li>Gastos de operación</li>
+                        <li>Otros factores que nuestro Comité Técnico pueda considerar como importantes</li>
+                    </ul>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered bc-black dataTableC">
+                            <thead>
+                            <tr>
+                                <th>Aviso a tenedores</th>
+                                <th style="width: 150px;">Fecha</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for distribucion in distribuciones %}
+                                <tr>
+                                    <td>
+                                        <div class="d-flex">
+                                            <div><i class="fa fa-download mr-2"> </i></div>
+                                            <a href="{{ distribucion.reporte_url }}"
+                                               target="_blank">{{ distribucion.titulo }}</a></div>
+                                    </td>
+                                    <td class="text-right">{{ distribucion.fecha }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/bootstrap-datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-datatables/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'js/amCharts/amcharts.js' %}"></script>
+    <script src="{% static 'js/amCharts/serial.js' %}"></script>
+    <script src="{% static 'js/amCharts/themes/iredge.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/dataDistribucion.js' %}{{ css_js_version }}"></script>
+    <script src="{% static 'js/amCharts/contenido/distribuciones.js' %}{{ css_js_version }}"></script>
+{% endblock %}

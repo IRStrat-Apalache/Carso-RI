@@ -1,0 +1,92 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>5 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/02.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Uno de los aspectos que más peso tienen a la hora de elegir cualquier tipo de inversión es el de
+                        la cantidad de impuestos que se deben pagar por la rentabilidad obtenida. Sigue leyendo y conoce
+                        una de las principales razones por las que invertir en FIBRAs es la mejor inversión para ti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Rendimiento sin impuestos</h2>
+                    <p>Al invertir en FIBRAs obtendrás ganancias en tu capital a partir de dos fuentes principales. La
+                        primera será proveniente de las distribuciones en efectivo que recibirás mensualmente.
+                        Aproximadamente el 80% de las ganancias de tu inversión serán gracias a esto.</p>
+                    <p>La segunda fuente es la apreciación del título. Con esta no recibirás ingresos hasta que vendas y
+                        realices dicha ganancia, este rendimiento se calcula mediante la diferencia que haya entre el
+                        precio inicial de compra y el precio final de venta.</p>
+                    <p>Las FIBRAs (Fideicomisos de Inversión en Bienes Raíces) deben cumplir con lo establecido en los
+                        artículos 187 y 188 de la <a
+                                href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiVwMGd_ZLzAhVyQzABHVCkCj0QFnoECAIQAQ&url=https%3A%2F%2Fwww.personal.unam.mx%2Fdgpe%2Fdocs%2Fley_isr.pdf&usg=AOvVaw34AFNQJBrtT9EywoKlM4gs"
+                                target="_blank">Ley de Impuesto Sobre la Renta</a>. Allí se indica que la FIBRA está
+                        obligada a repartir anualmente el 95% del <a target="_blank"
+                                                                     href="https://www.fibramty.com/escuela-fibra-finn">Resultado
+                            Fiscal</a>. Además de esto, los recursos con los
+                        que se realizan las distribuciones en efectivo provienen principalmente del flujo de la
+                        operación y suelen superar el monto de la utilidad fiscal.</p>
+                    <p>Según dicha legislación, las distribuciones que superen la utilidad fiscal serán etiquetadas como
+                        “reembolso de capital” y no se gravan. Es decir, no tendrás que pagar impuestos por los
+                        reembolsos de capital que recibirás.</p>
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar:</strong>
+                            <a href="{% url 'noticia_25' %}">¿Inversión a 5, 10 o 20 años? Te contamos cuál es la mejor
+                                opción</a>
+                        </li>
+                    </ul>
+                    <p>Pero este no es el único beneficio. Con respecto a la segunda fuente para obtener ganancias con
+                        tu inversión, la venta del título, también hay ventajas fiscales. En primer lugar, el
+                        rendimiento por apreciación sólo se genera al momento de la venta, antes solo se considerará
+                        como una ganancia o pérdida no realizada.</p>
+                    <p>Asimismo, cuando el inversionista vende su título por encima del valor inicial obtiene ganancia
+                        de capital. Sin embargo, gracias a la legislación vigente, esta ganancia no genera
+                        impuestos.</p>
+                    <p>Como puedes ver, invertir en FIBRAs inmobiliarias tiene grandes beneficios que no te ofrecen
+                        otros instrumentos de inversión convencionales.</p>
+                    <p>Si quieres conocer más sobre los detalles de nuestra operación y cómo tú también puedes aumentar
+                        tu riqueza te invitamos a que visites <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro
+                            blog</a>. Sigue las novedades en nuestras redes de
+                        <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                 href="https://www.linkedin.com/company/fibramty">LinkedIn</a>
+                        para no perderte de ninguna novedad.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

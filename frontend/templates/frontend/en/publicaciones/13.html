@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>12 de Abril del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/abril-03.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>¿Deseas hacer una inversión confiable, tangible y rentable? Lo que realmente estás buscando es
+                        una inversión en bienes raíces, con contratos estables en dólares y enfocada en inmuebles de la
+                        más alta calidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+
+                    <p>Las FIBRAs, y en especial Fibra Mty, se dedican a la inversión en bienes raíces y buscan
+                        brindarle confianza a sus inversionistas. Esto no se consigue de la noche a la mañana, se logra
+                        mediante una intachable ética profesional y a través de un conjunto de máximas administrativas
+                        que se sostienen en el tiempo.</p>
+                    <p>En <a href="{% url 'nosotros' %}">Fibra Mty</a> llevamos adelante un modelo de negocios claro y
+                        consistente, basado en rendimientos
+                        constantes y predecibles para nuestros inversionistas, a quienes <a
+                                href="{% url 'distribuciones' %}">distribuimos efectivo todos los
+                            meses</a>. ¿Cómo lo conseguimos? Te explicamos:</p>
+
+
+                    <ul class="ls-disc">
+                        <li>Calidad en la gestión de la toma de decisiones, incentivos alineados y rendición de
+                            cuentas con nuestros inversionistas.
+                        </li>
+                        <li>Adquirimos inmuebles corporativos de la más alta calidad. Firmamos contratos a largo plazo
+                            y mayormente dolarizados con nuestros inquilinos, mismos que provienen de distintos sectores
+                            económicos. Procuramos invertir e innovar en nuestros edificios para brindar un servicio
+                            altamente satisfactorio así aumentando la retención de inquilinos y predictibilidad de
+                            flujos.
+                        </li>
+                        <li>No compramos ni adquirimos edificios especulativos o desocupados. Nuestro portafolio de
+                            inversión se encuentra 100% estabilizado. Además, reducimos el riesgo de nuestro portafolio
+                            al invertir en distintas ubicaciones, y manteniendo un balance entre <a
+                                    href="http://t21.com.mx/logistica/2020/02/05/crece-3-construccion-edificios-industriales-mexico"
+                                    target="_blank">propiedades
+                                industriales</a> y oficinas.
+                        </li>
+                        <li>Cuidamos la salud financiera al mantener los niveles de endeudamiento debajo del 35% de
+                            nuestros activos, adicionalmente, contamos con líneas de crédito disponibles en caso de ser
+                            necesarias.
+                        </li>
+                    </ul>
+                    <p>Desde nuestro inicio en 2014, hemos quintuplicado nuestros activos y hoy somos considerados
+                        referentes de la inversión en bienes raíces en México.</p>
+                    <p>Además, en 2019 comenzamos a marcar nuestra ruta crítica para lograr mejorar nuestras áreas de
+                        Ambiental, Social y Gobernanza, a través de la estrategia ASG.</p>
+                    <h2>Empieza a explorar tus posibilidades en el mercado inmobiliario con Fibra Mty</h2>
+
+                    <p>¿Quieres saber cómo trabajamos? ¿Te interesa invertir en <a href="{% url 'noticia_2' %}">FIBRAs</a> y empezar a poner tus activos en
+                        el mercado inmobiliario? Nada mejor que hacerlo con una de las emisoras más serias y
+                        transparentes del rubro. <a href="{% url 'escuela-fibra-finn' %}#como-invertir">Aquí</a> te mostramos cómo dar tus primeros pasos para que empieces hoy
+                        mismo a explorar tus posibilidades. </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

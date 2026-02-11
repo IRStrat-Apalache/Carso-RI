@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>29 de Marzo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/abril-OT.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Si eres nuevo en el mundo de las inversiones de FIBRAs lo más seguro es que te hayas encontrado
+                        ya con el acrónimo “CBFI”. No hay de qué preocuparse, <a href="https://www.fibramty.com/">Fibra
+                            MTY</a> te explica qué son los
+                        <strong>Certificados Bursátiles Fiduciarios Inmobiliarios</strong> y la importancia que tienen
+                        al momento de
+                        realizar tu inversión.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Lo primero que debes saber es que los CBFIs (Certificados Bursátiles Fiduciarios Inmobiliarios)
+                        son el equivalente a un título accionario y por ende el ser dueño de un CBFI te convierte en un
+                        socio de la FIBRA. Desde el momento en que adquieres un CBFI tienes derecho a recibir las
+                        distribuciones correspondientes, es decir que a partir de tu compra comenzarás a recibir el
+                        producto de las rentas. </p>
+                    <ul class="ls-disc">
+                        <li><strong>Sigue leyendo</strong>
+                            <a href="{% url 'noticia_7' %}">Invertir en
+                                FIBRAs ¿Buscas qué hacer con ese dinero extra?</a>
+                        </li>
+                    </ul>
+                    <h2>¿Qué pasa con mi dinero?</h2>
+                    <p>En el año 2005 en México se expidió la <a target="_blank"
+                                                                 href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LMV_090119.pdf">Ley
+                        del Mercado de Valores</a> con el objetivo de darle un
+                        respaldo legislativo a este mercado y proteger a los inversionistas. En este documento se
+                        explica que los <strong>Certificados Bursátiles Fiduciarios Inmobiliarios</strong> otorgan “una
+                        parte del derecho
+                        de propiedad o de la titularidad sobre bienes o derechos afectos en fideicomiso”. En otras
+                        palabras, los dueños de los CBFIs recibirán el fruto de las rentas de manera recurrente. </p>
+                    <ul class="ls-disc">
+                        <li><strong>Te recomendamos: </strong>
+                            <a href="{% url 'noticia_8' %}">¿Qué son los Instrumentos de
+                                Inversión?</a>
+                        </li>
+                    </ul>
+                    <h2>La importancia de tener un respaldo</h2>
+                    <p>Las personas que no son expertas en las inversiones de FIBRAs suelen tener dudas respecto a la
+                        validez de los CBFIs que pretenden adquirir. Cabe recordar que solo las casas de bolsa
+                        autorizadas pueden realizar operaciones de compra y venta con los <strong>Certificados
+                            Bursátiles Fiduciarios Inmobiliarios</strong>. Por ello es importante que las personas
+                        realicen sus inversiones
+                        únicamente a través de las casas de bolsa aprobadas por la Comisión Nacional de Banca y de
+                        Valores (CNBV).</p>
+                    <p>En Fibra MTY sabemos lo importante que es contar con toda la información antes de realizar una
+                        inversión de cualquier tipo. Si quieres saber más sobre la inversiones en FIBRAs y cómo funciona
+                        este mecanismo para incrementar o diversificar tus inversiones, te invitamos a que visites ya
+                        mismo nuestro <a href="" target="_blank">blog</a> y nos comentes tus inquietudes en nuestras
+                        cuentas de <a
+                                href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank"
+                                                                                                      href="https://www.linkedin.com/company/fibramty">LinkedIn</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

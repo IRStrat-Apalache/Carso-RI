@@ -1,0 +1,90 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>16 de septiembre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/septiembre/4.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p> En el inmenso mundo de la inversión inmobiliaria se conoce que los REITS fueron el antecedente
+                        más importante para el nacimiento y evolución de las FIBRAs en México. Esto, principalmente, por
+                        aquella filosofía implícita que ambos modelos comparten: la <a href="{% url 'noticia_19' %}">democratización
+                            de la inversión en
+                            bienes raíces</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Continúa leyendo y conoce todo sobre el origen, semejanzas y diferencias de ambos <a
+                            href="{% url 'noticia_4' %}">modelos de
+                        inversión</a>.</p>
+                    <h2>La experiencia hace al maestro </h2>
+                    <p>Justo como pasó en el origen de los REITS, las FIBRAs en México son un modelo que nació y fue
+                        creciendo de manera paulatina hasta convertirse en lo que son el día de hoy. No obstante, el
+                        crecimiento de las FIBRAs hasta el momento ha sido un poco más lento o pausado, puesto que es un
+                        modelo más joven y se desarrolla en un contexto distinto. </p>
+                    <h2>Principales diferencias entre ambos modelos de inversión </h2>
+                    <p>Tal vez una de las diferencias más destacables entre ambos modelos de inversión inmobiliaria es
+                        el nivel de endeudamiento. Los REITS, a diferencia de las <a
+                                href="{% url 'noticia_6' %}">FIBRAs</a>, no tienen un tope máximo de
+                        endeudamiento, mientras que, en el modelo de FIBRAs en México, este nivel es acordado por la
+                        Asamble General de Tenedores y comúnmente ronda el 50% de capacidad de deuda. </p>
+                    <p>Asimismo, los REITS son comúnmente administrados y asesorados de manera interna, mientras que en
+                        México un número importante de las FIBRAs cuentan con una administración externa . Fibra Mty fue
+                        la primera FIBRA administrada internamente, y desde entonces la mayoría de las FIBRAs han
+                        adoptado este modelo de negocio. </p>
+                    <h2>Principales similitudes entre los REITS y las FIBRAS en México</h2>
+                    <p>En definitiva, ambos modelos se destacan en el mercado por ser oportunidades de inversión con
+                        opciones de retorno efectivas y de bajo riesgo. Además, permiten invertir con montos de capital
+                        bajos, logrando que sean cada vez más los inversionistas que optan por este modelo. </p>
+                    <p>De manera similar, ambos modelos son ideales para diversificar el portafolio de cada
+                        inversionista. Es decir que con una sola inversión se puede invertir en los diferentes sectores
+                        en los cuales estos fideicomisos tienen propiedades, tales como el comercial, industrial,
+                        oficinas o de retail. </p>
+                    <p>Con Fibra MTY podrás invertir en diferentes propiedades de nuestro amplio <a
+                            href="{% url 'propiedades' %}">portafolio</a>, en el
+                        momento que desees, aún si no tienes experiencia en el mercado. </p>
+                    <p>¿Quieres saber cómo hacerlo? Ingresa a <a href=" {% url 'escuela-fibra-finn' %}">Fibra MTY</a> y
+                        conoce por qué somos la mejor opción para
+                        invertir en FIBRAs en México. </p>
+                    <p>No olvides seguirnos en <a href="https://twitter.com/fibra_mty"
+                                                  target="_blank">Twitter</a>, <a
+                            target="_blank" href="https://www.youtube.com/channel/UCPxJkA3IWjwwIs0lf_tZ_bg/videos">YouTube</a>
+                        y <a target="_blank"
+                             href="https://www.linkedin.com/company/fibramty">LinkedIn</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

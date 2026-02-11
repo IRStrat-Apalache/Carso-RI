@@ -1,0 +1,92 @@
+[
+  {
+    "fecha": "2023-04-27",
+    "titulo": " Annual General Meeting ",
+    "contenido": "",
+    "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-04-11-Convocatoria.pdf",
+    "presentacion": "",
+    "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-04-28-resumen-de-acuerdos.pdf",
+    "dictamen": "",
+      "folleto": "",
+      "ef": "https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/ReportesAnuales/2023-04-11-EF-2022.pdf",
+    "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2023-04-11-Informacion-Soporte-Asamblea.pdf"
+    },
+  {
+  "fecha": "2023-02-10",
+  "titulo": " General Meeting ",
+  "contenido": "",
+  "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-02-10-Convocatoria.pdf",
+  "presentacion": "",
+  "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-02-10-resumen-de-acuerdos.pdf",
+  "dictamen": "",
+    "folleto": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-02-10-Folleto-Informativo.pdf",
+    "ef": "",
+  "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2023-02-10-Informacion-Soporte-Asamblea.pdf"
+  },
+  {
+  "fecha": "2023-01-23",
+  "titulo": " General Meeting ",
+  "contenido": "",
+  "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-01-06-Convocatoria.pdf",
+  "presentacion": "",
+  "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2023-01-24-resumen-de-acuerdos.pdf",
+  "dictamen": "",
+  "ef": "",
+  "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2023-01-06-Informacion-Soporte-Asamblea.pdf"
+  },
+  {
+  "fecha": "2022-04-27",
+  "titulo": " Annual General Meeting ",
+  "contenido": "",
+  "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2022-04-11-Convocatoria.pdf",
+  "presentacion": "",
+  "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2022-04-28-resumen-de-acuerdos.pdf",
+  "dictamen": "",
+  "ef": "https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/ReportesAnuales/2022-04-11-EFES-2021.pdf",
+  "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2022-04-11-Informacion-Soporte-Asamblea.pdf"
+},
+  {
+    "fecha": "2021-10-21",
+    "titulo": "Ordinary and Extraordinary Assembly",
+    "contenido": "",
+    "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2021-10-04-Convocatoria-.pdf",
+    "presentacion": "",
+    "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2021-10-21-resumen-de-acuerdos.pdf",
+    "dictamen": "",
+    "ef": "",
+    "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2021-10-04-Informacion-Soporte-Asamblea.pdf"
+  },
+  {
+  "fecha": "2021-04-22",
+  "titulo": " Ordinary and Extraordinary Annual Assembly",
+  "contenido": "",
+  "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2021-04-22-Convocatoria.pdf",
+  "presentacion": "",
+    "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2021-04-22-resumen-de-acuerdos.pdf",
+  "dictamen": "",
+  "ef": "https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/ReportesAnuales/2021-04-06-EFES-2020.pdf",
+  "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2021-04-06-Informacion-Soporte-Asamblea.pdf"
+},
+  {
+    "fecha": "2020-10-12",
+    "titulo": "Annual General Meeting",
+    "contenido": "",
+    "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2020-09-22-Convocatoria.pdf",
+    "presentacion": "",
+    "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2020-10-13-resumen-de-acuerdos.pdf",
+    "dictamen": "",
+    "ef": "",
+    "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2020-09-22-ER-Convocatoria.pdf"
+  },
+  {
+    "fecha": "2020-04-29",
+    "titulo": "Annual General Meeting",
+    "contenido": "",
+    "convocatoria": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2020-04-03-Convocatoria.pdf",
+    "presentacion": "",
+    "resolucion": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/Convocatorias/2020-04-30-resumen-de-acuerdos.pdf",
+    "dictamen": "",
+    "ef": "https://investorcloud.s3.amazonaws.com/fibramty/InformacionFinanciera/ReportesAnuales/2020-04-03-EFES19-FibraMTY.pdf",
+    "er": "https://investorcloud.s3.amazonaws.com/fibramty/Comunicados/EventosRelevantes/2020-04-03-ER-Convocatoria.pdf"
+  }
+]

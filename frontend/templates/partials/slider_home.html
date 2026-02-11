@@ -1,0 +1,327 @@
+{% load static i18n%}
+
+{% block otherstyles%}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}"></link>
+
+<style>
+
+
+
+    .btn-sliderHome{
+      color:white;
+      border-radius:5px;
+      margin:10px;
+      padding:15px;
+    }
+
+
+
+
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        display: none !important; /* Oculta los iconos predeterminados de Bootstrap */
+    }
+    
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+        height: 700px; /* Altura predeterminada */
+    }
+
+    .carousel-text {          
+        color: white;        
+        text-align: justify; /* Justifica el texto */
+    }
+
+    /* Ajustes para dispositivos móviles */
+    @media (max-width: 768px) {
+        .txt-car{
+            font-size:20px !important;
+        }
+
+        .carousel-item {
+            height: auto; /* Ajusta la altura automáticamente en móviles */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-text {
+            font-size: 16px; /* Tamaño de fuente más pequeño en pantallas muy pequeñas */
+            padding: 10px; /* Reduce el padding */
+        }
+    }
+    .blanco {
+      color: white !important;
+    }
+
+      .swiper {
+        width: 100%;
+        height: 250px !important; /* alto del carrusel */
+        color: white;
+        overflow: hidden;
+      }
+
+      .swiper-slide {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: 24px;
+      }
+
+      
+
+    .swiper-img {
+      display: flex;
+      width: 200px;
+    }
+    .swiper-img img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+        .cifra-titulo {
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 1.2;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .cifra-titulo .count {
+      /* margin-left: 150px; */
+      font-size: 2.5rem;
+      font-weight: bold;
+      top: 25% !important;
+    }
+    .cifra-texto {
+      font-size: 2rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+</style>
+
+
+
+{% endblock %}
+
+<!-- Sección 1: Líderes en inversión -->
+<section style="background-image: url('{% static 'images/fondo1.png' %}'); height: 700px; background-size: cover; background-position: center;">
+  <div class="d-flex align-items-center justify-content-end" style="height: 100%;">
+    <div class=" text-right" style="color:white; padding: 0 100px;">
+      <p class="txt-car" style="font-size:35px; font-weight:bold; margin-top: 100px;">
+       Somos <b style="color: #62D482;">líderes </b> en la inversión y gestión de fondos de capital privado y activos alternativos. <br><br> 
+       Desarrollamos estrategias <b style="color: #62D482;">innovadoras</b> de gestión conforme a las características propias de nuestras inversiones.<br><br> 
+        <!-- <b style="color: #62D482;"> 1,600 MDD</b> en <b style="color: #62D482;">118</b> fondos y <b style="color: #62D482;">56</b> co-inversiones. -->
+
+      </p>
+      <div>
+        <a href="{% url 'nosotros' %}" class="btn-sliderHome" style="background-color:#62D482;font-weight:bold;">Saber más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección 2: Cifras relevantes -->
+<section style="background-color: #0D1F2E; height: 450px;">
+  <div class="container pb-5">
+    <div class="section-title text-center">
+      <h1 class="my-5 blanco"><b>CIFRAS RELEVANTES</b></h1>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper" >
+        <!-- ??? -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-28.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="1222" data-decimals="0">0</span>
+                <span class="cifra-texto">MDD en</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="126" data-decimals="0">0</span>
+                <span class="cifra-texto">fondos y</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="42" data-decimals="0">0</span>
+                <span class="cifra-texto">co-inversiones</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <!-- Capital aportado -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-29.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="cifra-texto">Más de</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="1000" data-decimals="0">0</span>
+                <span class="cifra-texto">MDD capital aportado a inversiones</span>
+              </h1>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Efecto multiplicador -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-30.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="59" data-decimals="0">0</span><span style="color:#62D482">x</span>
+                <span class="cifra-texto">Efecto multiplicador de CMIC</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empresas apoyadas -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-31.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="cifra-texto">Más de</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="1500" data-decimals="0">0</span>
+                <span class="cifra-texto">Empresas apoyadas</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empleos apoyados -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-32.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="cifra-texto">Más de</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="740000" data-decimals="0">0</span>
+                <span class="cifra-texto">Empleos apoyados activos</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recursos CKDs -->
+        <div class="swiper-slide tile text-center blanco">
+          <div class="">
+            <div class="content" style="display: flex; flex-direction: row; align-items: center;">
+              <figure class="swiper-img" style="">
+                <img src= "{% static 'images/Educaiconoss-33.png' %}">
+              </figure>
+              <h1 class="cifra-titulo">
+                <span class="cifra-texto">Más de</span>
+                <span class="count" style="color:#62D482" data-speed="1500" data-to="20400" data-decimals="0">2400</span>
+                <span class="cifra-texto">MPD Recursos de CKD's bajo administración</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.count');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-to');
+      const speed = +counter.getAttribute('data-speed') || 1500;
+      const decimals = +counter.getAttribute('data-decimals') || 0;
+      const increment = target / (speed / 20);
+      let count = 0;
+
+      const run = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = count.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          setTimeout(run, 20);
+        } else {
+          counter.innerText = Number(target.toFixed(decimals)).toLocaleString();
+        }
+      };
+      run();
+    });
+  });
+</script>
+
+
+{% block otherscripts %}
+
+<script src="{% static 'js/swiper.min.js' %}"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/countTo.js' %}"></script>
+
+<script>
+  // Carousel vertical
+  var swiper = new Swiper('.swiper', {
+    direction: 'vertical',
+    loop: true,
+    autoplay: {
+        delay: 9000,
+        disableOnInteraction: false
+    },
+    speed: 6000
+  });
+
+    $(document).ready(function () {
+        let countersActivated = false;
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight &&
+                rect.bottom >= 0
+            );
+        }
+
+        function activateCounters() {
+            if (countersActivated) return;
+
+            $('.count').each(function () {
+                const $this = $(this);
+                if (isElementInViewport(this)) {
+                    $this.countTo({
+                        from: $this.data('from') || 0,
+                        to: $this.data('to'),
+                        speed: $this.data('speed') || 1500,
+                        decimals: $this.data('decimals') || 0,
+                        refreshInterval: 50,
+                        formatter: function (value, options) {
+                            return value.toFixed(options.decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                        }
+                    });
+                }
+            });
+
+            countersActivated = true;
+        }
+
+        $(window).on('scroll', activateCounters);
+        activateCounters(); // por si ya están visibles al cargar
+    });
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+

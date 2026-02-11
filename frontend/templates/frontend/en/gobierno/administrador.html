@@ -1,0 +1,52 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <section class="s-block">
+        <div class="container-fluid container-relative">
+            <div class="row m-0">
+                <div class="col-md-12">
+                    <p>La administración de Fibra MTY y de sus activos inmobiliarios está a cargo de Fibra MTY, S.C.,
+                        cuyo objetivo y actividad principal consiste en mantener la administración en forma interna,
+                        alineando los intereses de nuestros inversionistas con los de la emisora. Está estructura
+                        permite la eliminación de comisiones proporcionales (al tamaño de los activos, adquisiciones,
+                        marker cap, o aspectos similares), por lo que solamente existe un gasto de la operación del
+                        negocio requerido para administrar la FIBRA.</p>
+
+                    <p>El Administrador no puede ser sustituido como administrador del Fideicomiso y de los Activos
+                        Inmobiliarios, sin embargo, el Comité Técnico podrá renovar o sustituir a los funcionarios del
+                        Administrador, siguiendo la opinión del Comité de Nominaciones.</p>
+
+                    <p>Entre las funciones del Administrador de Fibra MTY, destacan:</p>
+                    <ol class="ls-decimal">
+                        <li>
+                            <p>La operación de Fibra MTY y cualquier fideicomiso de propiedades, incluyendo:</p>
+                            <ol class="ls-letters">
+                                <li><p>La recepción y manejo de los recursos y operación de las cuentas de Fibra MTY y
+                                    cualquier cuenta abierta en los fideicomisos de propiedades</p></li>
+                                <li><p>La preparación de reportes, notificaciones, avisos y demás información y
+                                    documentación que deba prepararse y presentarse ante cualquier autoridad
+                                    gubernamental o divulgarse al público en conformidad con los contratos y legislación
+                                    aplicables</p></li>
+                                <li><p>La entrega al Fiduciario (Banco Invex, S.A., Institución de Banca Múltiple, Invex
+                                    Grupo Financiero) de aquellas instrucciones, avisos y notificaciones previstas en el
+                                    Contrato de Administración y en el Contrato de Fideicomiso o cualquier contrato que
+                                    evidencie un fideicomiso de propiedades</p></li>
+                            </ol>
+                        </li>
+                        <li><p>La realización de inversiones y desinversiones, ya sea de manera directa o indirecta a
+                            través de fideicomisos de propiedades</p></li>
+                        <li><p>La gestión de la administración de los activos inmobiliarios, incluyendo la
+                            administración de propiedades y de cualquier servicio que deba prestarse a dichas
+                            propiedades </p></li>
+                    </ol>
+
+                    <a href="{% url 'nosotros' %}#idirectivos" class="btn btn-primary btn-md w-100 mt-4">
+                        Conozca nuestro Equipo
+                        Directivo</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

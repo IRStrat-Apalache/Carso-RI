@@ -1,0 +1,112 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>31 de Mayo del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/mayo-05.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Invertir en FIBRAs (Fideicomisos de inversión en Bienes Raíces) es una de las mejores
+                        alternativas a la que pueden acceder personas que quieren aumentar su capital con inversiones
+                        con múltiples beneficios.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Este instrumento de inversión consta en adquirir y administrar bienes raíces de gran escala con
+                        la finalidad de generar rendimientos económicos provenientes del arrendamiento de dichas
+                        propiedades. </p>
+                    <p>Jorge Avalos, CEO de <a href="{% url 'index' %}">Fibra MTY</a>, explica que este mecanismo es
+                        fundamental para democratizar las
+                        inversiones en bienes inmuebles ya que es la única manera de entrar en uno de los mercados más
+                        confiables de México sin la necesidad de poseer grandes sumas de dinero. Él asegura que hay
+                        principalmente 10 beneficios que obtienen las personas que deciden invertir en FIBRAs.</p>
+
+                    <h2>No se requiere desembolsar un monto tan elevado</h2>
+                    <p>Como mencionamos anteriormente, este instrumento ha permitido que para la inversión en bienes
+                        raíces ya no se requiera una alta cantidad de recursos y cualquiera pueda invertir en este
+                        mercado.</p>
+                    <h2>Permite diversificar la inversión</h2>
+                    <p>Gracias a las FIBRAS se puede diversificar la inversión no solo en dos o más bienes inmuebles,
+                        sino en un gran portafolio de propiedades ubicadas en diferentes partes del país, múltiples
+                        inquilinos enfocados en distintos sectores económicos.</p>
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar: </strong>
+                            <a href="{% url 'noticia_10' %}">Inversión en bienes raíces a montos accesibles</a>
+                        </li>
+                    </ul>
+                    <h2>No se requiere administrar los activos</h2>
+                    <p>Las FIBRAs tienen un equipo profesional que se encarga de administrar las propiedades, el
+                        personal cuenta con la experiencia necesaria para tomar decisiones que aumenten la riqueza de
+                        los inversionistas.</p>
+                    <h2>Hay liquidez inmediata</h2>
+                    <p>Las acciones adquiridas al invertir en FIBRAs se pueden comprar y vender cada día. A diferencia
+                        de una inversión tradicional en bienes raíces en donde para llevar a cabo la venta de un bien
+                        inmueble se requiere de un largo procedimiento e involucramiento de abogados y notarios.</p>
+                    <h2>Da dividendos mayores que un departamento</h2>
+                    <p>Por el tipo de inmueble que adquiere la FIBRA se obtiene una rentabilidad tres veces mayor al del
+                        arrendamiento de un departamento promedio en la Ciudad de México.</p>
+                    <h2>La inversión puede estar protegida ante devaluaciones en el cambio</h2>
+                    <p>La mayoría de los ingresos de Fibra MTY provienen de contratos que están denominados en dólares,
+                        por ende, las rentas están protegidas ante una devaluación del peso frente al dólar. </p>
+                    <h2>Mayor predictibilidad</h2>
+                    <p>Los contratos en estos inmuebles están alrededor de los 5 y 6 años mientras que de un
+                        departamento máximo tendrán una vigencia de 2 años. El tener plazos largos aumenta la
+                        predictibilidad de los rendimientos a lo largo de los años.</p>
+                    <h2>El dividendo tiende a crecer</h2>
+                    <p>El valor de los inmuebles crece en línea con la inflación, las economías de escala ocasionadas
+                        por una administración interna y la adquisición de inmuebles rentables aumentan las
+                        distribuciones de efectivo a lo largo del tiempo.</p>
+                    <h2>Es un vehículo regulado por las autoridades</h2>
+                    <p>Invertir en FIBRAs es un vehículo de inversión que brinda altos niveles de transparencia a los
+                        inversionistas ya que distintas autoridades gubernamentales del país vigilan su funcionamiento
+                        bajo la <a href="http://www.diputados.gob.mx/LeyesBiblio/pdf/LMV_090119.pdf" target="_blank">Ley
+                            del Mercado de Valores</a>.</p>
+                    <h2>No se pagan impuesto por la ganancia del capital</h2>
+                    <p>Las FIBRAs cuentan con un diseño especial en el que la ganancia de capital está exenta de
+                        impuestos. En el caso de un departamento, normalmente se debe pagar un 35% por las ganancias de
+                        renta y tras la venta del inmueble.</p>
+                    <p>Invertir en FIBRAs es una opción novedosa y única en el mercado que permite a los mexicanos
+                        aumentar su riqueza sin la necesidad de invertir grandes montos de capital y sin el riesgo que
+                        representan otros instrumentos de inversión. </p>
+
+                    <p>¡Visita nuestra <a href="{% url 'index' %}">página web</a> y comienza a invertir!</p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

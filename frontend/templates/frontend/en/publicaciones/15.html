@@ -1,0 +1,98 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>26 de Abril del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/abril-05.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Cuando se habla de inversiones financieras, la palabra sustentable suele referir a un negocio que
+                        es autosuficiente, estable y sostenible en el tiempo. Pero <strong>invertir en Fibras</strong> también puede ser
+                        sustentable en toda la extensión de la palabra, siempre que detrás del negocio inmobiliario se
+                        encuentre una organización comprometida con el medioambiente, la sociedad y la transparencia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>La irrupción de la pandemia de COVID-19 hizo notar en todo el mundo la importancia de apostar por
+                        políticas de desarrollo a largo plazo. Tal y como menciona el CEO de Fibra Mty, Jorge Avalos
+                        Carpinteyro, en el último <a
+                                href="https://investorcloud.s3.amazonaws.com/fibramty/Descargables/sustentabilidad/2020-07-29-ESG-2019.pdf"
+                                target="_blank">Reporte de Sustentabilidad</a>, “Hoy toma especial relevancia el que
+                        empresas líderes en sus respectivas industrias, comiencen a dar el ejemplo con la implementación
+                        de los mejores estándares de gobierno corporativo, cuidado ambiental y responsabilidad social,
+                        que contribuirán al desarrollo sustentable de nuestro planeta y la permanencia y bienestar de
+                        los negocios”.</p>
+                    <h2>Cómo impacta todo esto en una compañía que ofrece oportunidades para invertir en Fibras</h2>
+
+                    <p>Los citados criterios, conocidos en inglés como <span class="font-italic">Environmental,
+                        Social and Governance</span> (ESG) son
+                        una serie de estándares para medir la calidad de las operaciones de una compañía en base a la
+                        conciencia social. En español se traducen en Ambiental, Social y Gobernanza (ASG). </p>
+
+
+                    <ul class="ls-disc">
+                        <li>La parte ambiental refiere a cómo una compañía trata con la naturaleza y el medio
+                            ambiente.
+                        </li>
+                        <li>La parte social examina las relaciones con los empleados, proveedores, clientes y las
+                            comunidades en donde la compañía opera.
+                        </li>
+                        <li>El criterio de gobernanza mide factores como el rendimiento de cuentas de los mandos
+                            ejecutivos, las auditorías, los controles internos, las remuneraciones de los puestos de
+                            liderazgo y los derechos de accionistas y partes interesadas.
+                        </li>
+                    </ul>
+                    <h2>Nuestra estrategia ASG: proyección a largo plazo</h2>
+                    <p>Desde el año 2019, <strong>Fibra Mty</strong> toma a la sustentabilidad como un compromiso en su
+                        modelo de
+                        negocios a través de la implementación de una estrategia ASG, y llama a aquellos jugadores con
+                        conciencia social y medioambiental a <strong>invertir en Fibras</strong>. </p>
+                    <p>Esta forma de hacer negocios no puede ser entendida simplemente como un bien ético. Para nuestra
+                        empresa, la estrategia ASG tiene un potencial enorme a futuro, siendo capaz de impactar
+                        positivamente no solo en colaboradores, sino en toda la cadena de valor, incluyendo a los grupos
+                        de interés. El efecto que visualizamos es un fortalecimiento de la resiliencia y la durabilidad
+                        de la organización, generando mayor rentabilidad para todos los inversionistas en el largo
+                        plazo.</p>
+                    <p><strong>Invertir en Fibras</strong> también puede ser un negocio sustentable y en Fibra Mty lo
+                        estamos
+                        demostrando. Entérate más sobre nuestro modelo <a href="{% url 'sustentabilidad' %}">ASG</a>, y
+                        comienza a <a href="{% url 'escuela-fibra-finn' %}">invertir en bienes</a> raíces con
+                        nosotros.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

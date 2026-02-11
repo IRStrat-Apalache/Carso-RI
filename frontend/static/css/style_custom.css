@@ -1,0 +1,516 @@
+/* ----------------------------------------------------------------
+	Owl Carousel CSS
+-----------------------------------------------------------------*/
+/* line 10477, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .animated {
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+/* line 10484, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-animated-in {
+    z-index: 0;
+}
+
+/* line 10486, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-animated-out {
+    z-index: 1;
+}
+
+/* line 10488, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* line 10503, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-height {
+    -webkit-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out;
+}
+
+/* line 10509, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel {
+    display: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* line 10517, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+}
+
+/* line 10522, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* line 10531, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* line 10537, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+/* line 10539, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-loading {
+    display: block;
+    min-height: 100px;
+}
+
+/* line 10545, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-refresh .owl-item {
+    display: none;
+}
+
+/* line 10547, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* line 10555, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+}
+
+/* line 10561, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.slider-element .owl-carousel .owl-item img {
+    -webkit-transform-style: preserve-3d;
+}
+
+/* line 10563, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+    display: none;
+}
+
+/* line 10565, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-nav .owl-prev,
+.owl-nav .owl-next,
+.owl-dot,
+.owl-dots button {
+    cursor: pointer;
+    cursor: hand;
+    padding: 0;
+    border: 0;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* line 10580, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+/* line 10582, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-loading {
+    opacity: 0;
+    display: block;
+}
+
+/* line 10587, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-hidden {
+    opacity: 0;
+}
+
+/* line 10589, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.mega-menu-content .owl-carousel.owl-hidden {
+    opacity: 1;
+}
+
+/* line 10591, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-refresh .owl-item {
+    display: none;
+}
+
+/* line 10593, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* line 10600, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+/* line 10606, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-rtl {
+    direction: rtl;
+}
+
+/* line 10608, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+}
+
+/* line 10610, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.no-js .owl-carousel {
+    display: block;
+}
+
+/* line 10612, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+/* line 10619, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+}
+
+/* line 10621, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #111;
+}
+
+/* line 10627, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-video-play-icon {
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    background: url("/assets/icons/play-ae0fc4e7854138838e2a7bf948ae8db1ece6e8b34dc31e2d11b8e6bd12c67d12.png") no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: scale 100ms ease;
+    -o-transition: scale 100ms ease;
+    transition: scale 100ms ease;
+}
+
+/* line 10650, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-video-playing .owl-video-play-icon,
+.owl-carousel .owl-video-playing .owl-video-tn {
+    display: none;
+}
+
+/* line 10653, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    -webkit-transition: opacity 400ms ease;
+    -o-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+/* line 10667, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Owl Carousel - Controls
+-----------------------------------------------------------------*/
+/* line 10678, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1;
+}
+
+/* Owl Carousel - Controls - Arrows
+-----------------------------------------------------------------*/
+/* line 10688, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-nav [class*=owl-] {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    left: -36px;
+    zoom: 1;
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #666;
+    background-color: #FFF;
+    font-size: 18px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* line 10708, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel.with-carousel-dots .owl-nav [class*=owl-] {
+    margin-top: -38px;
+}
+
+/* line 10710, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.slider-element .owl-nav [class*=owl-],
+.owl-carousel-full .owl-nav [class*=owl-] {
+    margin-top: -30px;
+    left: 0 !important;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+    color: #EEE;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 28px;
+    border-radius: 0 3px 3px 0;
+}
+
+/* line 10723, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel-full .with-carousel-dots .owl-nav [class*=owl-] {
+    margin-top: -50px;
+}
+
+/* line 10725, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-nav .owl-next {
+    left: auto;
+    right: -36px;
+}
+
+/* line 10730, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.slider-element .owl-nav .owl-next,
+.owl-carousel-full .owl-nav .owl-next {
+    left: auto !important;
+    right: 0 !important;
+    border-radius: 3px 0 0 3px;
+}
+
+/* line 10737, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel:hover .owl-nav [class*=owl-] {
+    opacity: 1;
+    left: -18px;
+}
+
+/* line 10742, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel:hover .owl-nav .owl-next {
+    left: auto;
+    right: -18px;
+}
+
+/* line 10747, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-nav [class*=owl-]:hover {
+    background-color: #86C7ED;
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* line 10753, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-nav .disabled {
+    display: none !important;
+}
+
+/* Owl Carousel - Controls - Dots
+-----------------------------------------------------------------*/
+/* line 10759, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+
+/* line 10773, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.owl-carousel .owl-dots .owl-dot.active,
+.owl-carousel .owl-dots .owl-dot:hover {
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------
+	Overlays
+-----------------------------------------------------------------*/
+/* line 10927, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* line 10935, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.overlay .overlay-wrap,
+.text-overlay {
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 10944, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+body:not(.device-touch) .overlay .overlay-wrap,
+body:not(.device-touch) .text-overlay {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* line 10951, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.overlay .overlay-wrap i {
+    position: absolute;
+    opacity: 0.8;
+    font-size: 24px;
+    line-height: 1;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    left: 50%;
+    margin-left: -12px;
+    color: #FFF;
+}
+
+/* line 10966, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.overlay:hover .overlay-wrap,
+.overlay:hover .text-overlay {
+    opacity: 1;
+}
+
+/* line 10970, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay {
+    position: absolute;
+    opacity: 0.85;
+    top: auto;
+    bottom: 0;
+    height: auto;
+    padding: 40px 15px 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+    /* IE6-9 */
+    backface-visibility: hidden;
+}
+
+/* line 10988, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-title h2,
+.text-overlay-title h3,
+.text-overlay-title h4 {
+    margin: 0;
+    color: #F5F5F5;
+}
+
+/* line 10995, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-title h2 {
+    font-size: 28px;
+}
+
+/* line 10997, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-title h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* line 11002, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-title h2,
+.text-overlay-title h3,
+.text-overlay-title h4,
+.text-overlay-meta {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* line 11012, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-meta {
+    color: #CCC;
+    font-size: 13px;
+}
+
+/* line 11017, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.text-overlay-meta span i {
+    position: relative;
+    top: 1px;
+    font-size: 14px;
+}
+
+/* Toggle - FAQs
+-----------------------------------------------------------------*/
+/* line 8982, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.faqs .toggle {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+/* line 8988, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.faqs .toggle .togglet,
+.faqs .toggle .toggleta {
+    font-size: 15px;
+}
+
+/* line 8991, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.faqs .toggle .togglet i {
+    top: 1px;
+    font-size: 14px;
+}
+
+/* line 8996, D:/begrand/app/assets/stylesheets/css/style.css.scss */
+.faqs .toggle .togglec {
+    padding-bottom: 10px;
+}

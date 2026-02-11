@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>10 de septiembre del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/septiembre/3.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p> En julio de 2021, trascendió en los medios de comunicación que Fibra MTY había adquirido el
+                        componente corporativo del “Distrito La Perla” en Guadalajara. En este sentido, es importante
+                        considerar que así como se dan ingresos de activos inmobiliarios, también puede haber egresos.
+                        De aquí, la pregunta que surge es: ¿Por qué hay cambios constantes en los portafolios de FIBRAS
+                        inmobiliarias?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>FIBRAS Inmobiliarias: factores que se observan antes de adquirir un inmueble</h2>
+                    <p>Hasta antes de la adquisición de La Perla, Fibra MTY mantenía una distribución de propiedades con
+                        preponderancia en el sector industrial. El 52% de los ingresos provenían de este tipo de
+                        componentes, mientras que el 42% correspondía a oficinas. ¿Esto quiere decir que las FIBRAS
+                        inmobiliarias están observando el mercado y resolviendo que lo mejor es un viraje hacia el
+                        sector corporativo?</p>
+                    <p>No necesariamente. A veces la explicación se encuentra más en las particularidades del inmueble
+                        en cuestión. Factores que entran en juego pueden ser la calidad del activo, el tipo de
+                        transacción posible o el panorama futuro de ese inmueble en particular. </p>
+                    <p>En el caso citado, hablamos de un edificio de oficinas en Guadalajara. Los expertos de Fibra MTY
+                        observaron que el Distrito La Perla demostró un comportamiento muy resiliente durante la
+                        pandemia, probablemente contra algún pronóstico. Es así como incluso aumentó su ocupación,
+                        volviéndose todavía más rentable para las FIBRAS inmobiliarias. </p>
+                    <p>Las causas de este aumento en la ocupación se pueden encontrar todavía en características más
+                        específicas ligadas a la arquitectura del inmueble. En este caso, circulaciones verticales
+                        cortas, gran proporción de zonas verdes y espacios abiertos a la ventilación; aspectos que en
+                        pandemia cobraron bastante valor.</p>
+                    <p>También se pueden encontrar otras causas en los inquilinos: la mayoría provenientes de la
+                        industria tecnológica, cuya actividad recibió un fuerte impulso por un aumento en la demanda de
+                        productos y servicios relacionados a este rubro.</p>
+                    <h2>¿Adquirir o desprenderse de una propiedad?</h2>
+                    <p>Pero estas no son las únicas razones por las que un fideicomiso de bienes raíces decide adquirir
+                        o desprenderse de un inmueble. Otra de ellas puede ser la necesidad de modificar las
+                        distribuciones de efectivo.</p>
+                    <p>En caso de concretarse una venta, la liquidez permite suplir necesidades de las fibras
+                        inmobiliarias como comprar otras propiedades estratégicas, recomprar títulos de la compañía o
+                        incluso liquidar una deuda.</p>
+                    <p>Por lo general, las FIBRAs bien administradas no llegan al punto en que la necesidad de liquidez
+                        las obligue a vender en condiciones desfavorables, lo que en consecuencia, quitaría valor a su
+                        portafolio. </p>
+                    <p>Esto también tiene que ver con la prudencia en los niveles de endeudamiento, así como con los
+                        perfiles de endeudamiento indicados para cuidar la salud financiera del negocio.</p>
+                    <h2>Un mercado en constante movimiento</h2>
+                    <p>El dinamismo del mercado obliga a las FIBRAS inmobiliarias a estar atentas a las tendencias y
+                        necesidades de las empresas para distinguir y aprovechar nuevas y mejores oportunidades. Todo
+                        esto en pos de consolidar el portafolio y asegurar la mejor rentabilidad posible con los
+                        recursos de los que se dispone.</p>
+                    <p>Este tipo de gestión es la que encontrarás con nosotros. Ingresa a nuestro <a
+                            href="{% url 'index' %}">Fibra MTY</a> y descubre
+                        cómo puedes empezar a invertir en el sector inmobiliario.</p>
+                    <p>Síguenos en nuestras redes de <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a>
+                        y <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a>
+                        para recibir actualizaciones sobre nuestro
+                        portafolio y las acciones que tomamos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

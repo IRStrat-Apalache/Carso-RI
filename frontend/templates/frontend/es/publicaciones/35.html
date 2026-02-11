@@ -1,0 +1,81 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>27 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/julio/11.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>El panorama para las FIBRAs en México indica que este instrumento de inversión se mantendrá
+                        estable durante los próximos años ofreciendo grandes réditos para los inversionistas. Sigue
+                        leyendo y conoce todas las acciones que tomó Fibra MTY en la primera mitad del 2021 para
+                        proteger a sus inversionistas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <h2>Segundo trimestre del 2021</h2>
+                    <p>Fibra MTY cerró la primera mitad del 2021 con un portafolio de 59 propiedades de las cuales 19
+                        son para uso de oficinas, 34 para industrial y 6 para comercial. Estos inmuebles suman un total
+                        de 749,564 m<sup>2</sup> de Área Bruta Rentable y cuentan con una tasa de ocupación del 90.5%.</p>
+                    <p>Jorge Avalos Carpinteyro, director general de Fibra MTY, explicó en el <a target="_blank"
+                                                                                                 href="http://cdn.investorcloud.net/fibramty/InformacionFinanciera/ReportesTrimestrales/Reportes/2021-2T21-Reporte-vf.pdf">Reporte
+                        de Resultados del
+                        Segundo Trimestre del 2021</a> que la organización está centrando sus esfuerzos en conseguir un
+                        radio de retención del 83% de los contratos de arrendamiento que cuentan con fecha de
+                        vencimiento menor a un año desde el segundo trimestre del 2020.</p>
+                    <p>Esto quiere decir que en el futuro la tasa de ocupación no se verá perjudicada y la rentabilidad
+                        generada por cada una de las propiedades se mantendrá estable. En este último trimestre, los
+                        ingresos por nuestras Fibras en México sumaron 299,732 millones de pesos mexicanos, lo que
+                        significó un aumento del 16.5% en comparación con el mismo periodo de 2020.
+                    </p>
+
+                    <h2>Administración del portafolio de Fibras en México</h2>
+                    <p>Para garantizar el correcto desarrollo de nuestras operaciones hemos realizado dos acciones
+                        puntuales. La primera es la adquisición del complejo de oficinas clase A “La Perla” en la Ciudad
+                        de Guadalajara. Este inmueble está proyectado para generar un ingreso operativo neto de 133,3
+                        millones de pesos durante los siguientes doce meses.</p>
+                    <p>La segunda fue la venta del inmueble Casona Los Mochis por un monto de 70 millones de pesos. Este
+                        capital tiene como objetivo destinarse a una expansión del portafolio industrial “Providencia”
+                        en Coahuila.</p>
+                    <p>Todas estas acciones tienen como fin depurar el portafolio de la organización y enfocar la
+                        inversión en los mercados primarios del país. Visita <a href="{% url 'escuela-fibra-finn' %}#blog">nuestro blog</a> para mantenerte al tanto
+                        de todo lo que hace Fibra MTY para que tu inversión en Fibras en México sea rentable y ayude al
+                        incremento de riqueza.</p>
+                    <p>No olvides seguirnos en nuestras redes de <a href="https://twitter.com/fibra_mty" target="_blank">Twitter</a> y <a target="_blank" href="https://www.linkedin.com/company/fibramty">LinkedIn</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

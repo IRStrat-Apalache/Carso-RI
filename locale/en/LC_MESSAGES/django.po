@@ -1,0 +1,2112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-07 17:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: rieduca/settings.py:130
+msgid "Spanish"
+msgstr ""
+
+#: rieduca/settings.py:131
+msgid "English"
+msgstr ""
+
+#: frontend/templates/404.html:12
+msgid "Lo sentimos, pero la página que estaba buscando no existe."
+msgstr "Sorry, but the page you were looking for does not exist."
+
+#: frontend/templates/404.html:15
+msgid "Ir al Inicio"
+msgstr "Go to Home"
+
+#: frontend/templates/frontend/en/contacto.html:13
+#: frontend/templates/frontend/es/contacto.html:12
+msgid "Nombre"
+msgstr "Your name"
+
+#: frontend/templates/frontend/en/contacto.html:18
+#: frontend/templates/frontend/es/contacto.html:17
+msgid "Email"
+msgstr "Your email address"
+
+#: frontend/templates/frontend/en/contacto.html:27
+#: frontend/templates/frontend/es/contacto.html:26
+msgid "Tema"
+msgstr "Subject"
+
+#: frontend/templates/frontend/en/contacto.html:34
+#: frontend/templates/frontend/es/contacto.html:33
+msgid "Mensaje"
+msgstr "Message"
+
+#: frontend/templates/frontend/en/contacto.html:62
+#: frontend/templates/frontend/es/contacto.html:61
+msgid "Enviar mensaje"
+msgstr "Send message"
+
+#: frontend/templates/frontend/en/contacto.html:70
+#: frontend/templates/frontend/es/contacto.html:69
+msgid "Queremos escucharle"
+msgstr "We'd Like to hear from you"
+
+#: frontend/templates/frontend/en/contacto.html:71
+#: frontend/templates/frontend/es/contacto.html:70
+msgid ""
+"Si tiene alguna duda o necesita alguna información más específica sobre "
+"nuestra empresa, será un gusto para nosotros responder a sus inquietudes."
+msgstr ""
+"Our team is ready to answer any questions you may have about the company."
+
+#: frontend/templates/frontend/en/contacto.html:76
+#: frontend/templates/frontend/es/contacto.html:75
+msgid "Corporativo"
+msgstr "Corporate headquarters"
+
+#: frontend/templates/frontend/en/contacto.html:77
+#: frontend/templates/frontend/es/contacto.html:76
+msgid "Dirección"
+msgstr "Address"
+
+#: frontend/templates/frontend/en/contacto.html:91
+#: frontend/templates/frontend/es/contacto.html:90
+msgid "Información destacada"
+msgstr "Relevant information"
+
+#: frontend/templates/frontend/en/index.html:429
+#: frontend/templates/frontend/en/inversionistas.html:285
+#: frontend/templates/frontend/en/invertir.html:70
+#: frontend/templates/frontend/en/portafolio/propiedades.html:205
+#: frontend/templates/frontend/es/index.html:444
+#: frontend/templates/frontend/es/inversionistas.html:288
+#: frontend/templates/frontend/es/invertir.html:72
+#: frontend/templates/frontend/es/portafolio/propiedades.html:206
+#: frontend/templates/partials/footer.html:40
+#: frontend/templates/partials/footer_en.html:41
+msgid "Correo electrónico"
+msgstr "E-mail"
+
+#: frontend/templates/frontend/en/index.html:432
+#: frontend/templates/frontend/en/inversionistas.html:288
+#: frontend/templates/frontend/en/invertir.html:73
+#: frontend/templates/frontend/en/portafolio/propiedades.html:208
+#: frontend/templates/frontend/es/index.html:447
+#: frontend/templates/frontend/es/inversionistas.html:291
+#: frontend/templates/frontend/es/invertir.html:75
+#: frontend/templates/frontend/es/portafolio/propiedades.html:209
+msgid "Suscribirse"
+msgstr "Sign Up"
+
+#: frontend/templates/frontend/en/inversionistas.html:224
+#: frontend/templates/frontend/es/inversionistas.html:227
+msgid "Información financiera"
+msgstr "Financial Information"
+
+#: frontend/templates/frontend/en/inversionistas.html:227
+#: frontend/templates/frontend/es/inversionistas.html:230
+#: frontend/templates/layouts/base.html:166
+#: frontend/templates/partials/header.html:127 frontend/views.py:171
+msgid "Fundamentales"
+msgstr "Fundamentals"
+
+#: frontend/templates/frontend/en/inversionistas.html:229
+#: frontend/templates/frontend/es/inversionistas.html:232
+#: frontend/templates/layouts/base.html:169
+#: frontend/templates/partials/header.html:133 frontend/views.py:233
+msgid "Eventos relevantes"
+msgstr "Relevant events"
+
+#: frontend/templates/frontend/en/inversionistas.html:231
+#: frontend/templates/frontend/es/inversionistas.html:234
+#: frontend/templates/layouts/base.html:167
+#: frontend/templates/partials/header.html:129 frontend/views.py:200
+msgid "Reportes BMV"
+msgstr "Regulatory Filings"
+
+#: frontend/templates/frontend/en/inversionistas.html:233
+#: frontend/templates/frontend/es/inversionistas.html:236
+#: frontend/templates/layouts/base.html:168
+#: frontend/templates/partials/header.html:131 frontend/views.py:214
+msgid "Presentaciones"
+msgstr "Presentations"
+
+#: frontend/templates/frontend/en/inversionistas.html:239
+#: frontend/templates/frontend/es/inversionistas.html:242
+msgid "Gobierno corporativo"
+msgstr "Corporate Governance"
+
+#: frontend/templates/partials/header.html:94
+msgid "Estructura del fideicomiso"
+msgstr "Trust Structure"
+
+msgid "Descargar en formato XLS"
+msgstr "Download XLS format"
+
+#: frontend/templates/partials/header.html:94
+msgid "Asambleas"
+msgstr "Meetings"
+
+#: frontend/templates/frontend/en/inversionistas.html:242
+#: frontend/templates/frontend/es/inversionistas.html:245 frontend/views.py:280
+msgid "Comités"
+msgstr "Committees"
+
+#: frontend/templates/frontend/en/inversionistas.html:244
+#: frontend/templates/frontend/es/inversionistas.html:247 frontend/views.py:295
+msgid "Administración de riesgos"
+msgstr "Risk management"
+
+#: frontend/templates/frontend/en/inversionistas.html:246
+#: frontend/templates/frontend/es/inversionistas.html:249
+msgid "Administrador del Fideicomiso"
+msgstr "Trust Manager"
+
+#: frontend/templates/frontend/en/inversionistas.html:248
+#: frontend/templates/frontend/es/inversionistas.html:251 frontend/views.py:324
+msgid "Auditor externo"
+msgstr "External Audit"
+
+#: frontend/templates/frontend/en/inversionistas.html:250
+#: frontend/templates/frontend/es/inversionistas.html:253 frontend/views.py:357
+msgid "Asambleas de Tenedores"
+msgstr "Holders Meetings"
+
+#: frontend/templates/frontend/en/inversionistas.html:254
+#: frontend/templates/frontend/es/inversionistas.html:257
+msgid "Información Bursátil"
+msgstr "Stock Information"
+
+#: frontend/templates/frontend/en/inversionistas.html:258
+#: frontend/templates/frontend/es/inversionistas.html:261 frontend/views.py:396
+msgid "Distribuciones"
+msgstr "Distributions"
+
+#: frontend/templates/frontend/en/inversionistas.html:260
+#: frontend/templates/frontend/es/inversionistas.html:263
+#: frontend/templates/layouts/base.html:171
+#: frontend/templates/partials/header.html:137 frontend/views.py:427
+msgid "Cotización"
+msgstr "Quote"
+
+msgid "Cobertura de analistas"
+msgstr "Analyst Coverage"
+
+msgid "Calificadoras"
+msgstr "Ratings"
+
+msgid "Prospectos"
+msgstr "Offering Memoranda"
+
+msgid "Conozca de forma puntual los eventos más destacados de nuestra Fibra Educa."
+msgstr "Learn about the most relevant events of our Fibra Educa (available only in spanish)."
+
+msgid "Nuestro modelo sostenible"
+msgstr "Sustainable model"
+
+
+
+#: frontend/templates/frontend/en/inversionistas.html:262
+#: frontend/templates/frontend/es/inversionistas.html:265 frontend/views.py:440
+msgid "Precios históricos"
+msgstr "Historical Prices"
+
+#: frontend/templates/frontend/en/inversionistas.html:264
+#: frontend/templates/frontend/es/inversionistas.html:267
+msgid "Analistas"
+msgstr "Analysts"
+
+#: frontend/templates/frontend/en/invertir.html:1069
+#: frontend/templates/frontend/es/invertir.html:1021
+#: frontend/templates/partials/header.html:150 frontend/views.py:249
+msgid "Preguntas frecuentes"
+msgstr "FAQs"
+
+#: frontend/templates/frontend/en/portafolio/propiedades.html:589
+#: frontend/templates/frontend/en/portafolio/propiedades.html:603
+#: frontend/templates/frontend/en/portafolio/propiedades.html:617
+#: frontend/templates/frontend/en/portafolio/propiedades.html:631
+#: frontend/templates/frontend/en/portafolio/propiedades.html:645
+#: frontend/templates/frontend/en/portafolio/propiedades.html:659
+#: frontend/templates/frontend/en/portafolio/propiedades.html:673
+#: frontend/templates/frontend/en/portafolio/propiedades.html:687
+#: frontend/templates/frontend/en/portafolio/propiedades.html:701
+#: frontend/templates/frontend/en/portafolio/propiedades.html:715
+#: frontend/templates/frontend/en/portafolio/propiedades.html:729
+#: frontend/templates/frontend/en/portafolio/propiedades.html:743
+#: frontend/templates/frontend/en/portafolio/propiedades.html:757
+#: frontend/templates/frontend/en/portafolio/propiedades.html:771
+#: frontend/templates/frontend/en/portafolio/propiedades.html:785
+#: frontend/templates/frontend/en/portafolio/propiedades.html:799
+#: frontend/templates/frontend/en/portafolio/propiedades.html:813
+#: frontend/templates/frontend/en/portafolio/propiedades.html:826
+#: frontend/templates/frontend/en/portafolio/propiedades.html:840
+#: frontend/templates/frontend/en/portafolio/propiedades.html:854
+#: frontend/templates/frontend/en/portafolio/propiedades.html:868
+#: frontend/templates/frontend/en/portafolio/propiedades.html:882
+#: frontend/templates/frontend/en/portafolio/propiedades.html:895
+#: frontend/templates/frontend/en/portafolio/propiedades.html:908
+#: frontend/templates/frontend/en/portafolio/propiedades.html:921
+#: frontend/templates/frontend/es/portafolio/propiedades.html:594
+#: frontend/templates/frontend/es/portafolio/propiedades.html:608
+#: frontend/templates/frontend/es/portafolio/propiedades.html:622
+#: frontend/templates/frontend/es/portafolio/propiedades.html:636
+#: frontend/templates/frontend/es/portafolio/propiedades.html:650
+#: frontend/templates/frontend/es/portafolio/propiedades.html:664
+#: frontend/templates/frontend/es/portafolio/propiedades.html:678
+#: frontend/templates/frontend/es/portafolio/propiedades.html:692
+#: frontend/templates/frontend/es/portafolio/propiedades.html:706
+#: frontend/templates/frontend/es/portafolio/propiedades.html:720
+#: frontend/templates/frontend/es/portafolio/propiedades.html:734
+#: frontend/templates/frontend/es/portafolio/propiedades.html:748
+#: frontend/templates/frontend/es/portafolio/propiedades.html:762
+#: frontend/templates/frontend/es/portafolio/propiedades.html:776
+#: frontend/templates/frontend/es/portafolio/propiedades.html:790
+#: frontend/templates/frontend/es/portafolio/propiedades.html:804
+#: frontend/templates/frontend/es/portafolio/propiedades.html:818
+#: frontend/templates/frontend/es/portafolio/propiedades.html:831
+#: frontend/templates/frontend/es/portafolio/propiedades.html:845
+#: frontend/templates/frontend/es/portafolio/propiedades.html:859
+#: frontend/templates/frontend/es/portafolio/propiedades.html:873
+#: frontend/templates/frontend/es/portafolio/propiedades.html:887
+#: frontend/templates/frontend/es/portafolio/propiedades.html:900
+#: frontend/templates/frontend/es/portafolio/propiedades.html:913
+#: frontend/templates/frontend/es/portafolio/propiedades.html:926
+msgid "Ingresos Totales Trimestre Actual"
+msgstr "4Q22 Total Revenue"
+
+#: frontend/templates/frontend/en/portafolio/propiedades.html:590
+#: frontend/templates/frontend/en/portafolio/propiedades.html:604
+#: frontend/templates/frontend/en/portafolio/propiedades.html:618
+#: frontend/templates/frontend/en/portafolio/propiedades.html:632
+#: frontend/templates/frontend/en/portafolio/propiedades.html:646
+#: frontend/templates/frontend/en/portafolio/propiedades.html:660
+#: frontend/templates/frontend/en/portafolio/propiedades.html:674
+#: frontend/templates/frontend/en/portafolio/propiedades.html:688
+#: frontend/templates/frontend/en/portafolio/propiedades.html:702
+#: frontend/templates/frontend/en/portafolio/propiedades.html:716
+#: frontend/templates/frontend/en/portafolio/propiedades.html:730
+#: frontend/templates/frontend/en/portafolio/propiedades.html:744
+#: frontend/templates/frontend/en/portafolio/propiedades.html:758
+#: frontend/templates/frontend/en/portafolio/propiedades.html:772
+#: frontend/templates/frontend/en/portafolio/propiedades.html:786
+#: frontend/templates/frontend/en/portafolio/propiedades.html:800
+#: frontend/templates/frontend/en/portafolio/propiedades.html:814
+#: frontend/templates/frontend/en/portafolio/propiedades.html:827
+#: frontend/templates/frontend/en/portafolio/propiedades.html:841
+#: frontend/templates/frontend/en/portafolio/propiedades.html:855
+#: frontend/templates/frontend/en/portafolio/propiedades.html:869
+#: frontend/templates/frontend/en/portafolio/propiedades.html:883
+#: frontend/templates/frontend/en/portafolio/propiedades.html:896
+#: frontend/templates/frontend/en/portafolio/propiedades.html:909
+#: frontend/templates/frontend/en/portafolio/propiedades.html:922
+#: frontend/templates/frontend/es/portafolio/propiedades.html:595
+#: frontend/templates/frontend/es/portafolio/propiedades.html:609
+#: frontend/templates/frontend/es/portafolio/propiedades.html:623
+#: frontend/templates/frontend/es/portafolio/propiedades.html:637
+#: frontend/templates/frontend/es/portafolio/propiedades.html:651
+#: frontend/templates/frontend/es/portafolio/propiedades.html:665
+#: frontend/templates/frontend/es/portafolio/propiedades.html:679
+#: frontend/templates/frontend/es/portafolio/propiedades.html:693
+#: frontend/templates/frontend/es/portafolio/propiedades.html:707
+#: frontend/templates/frontend/es/portafolio/propiedades.html:721
+#: frontend/templates/frontend/es/portafolio/propiedades.html:735
+#: frontend/templates/frontend/es/portafolio/propiedades.html:749
+#: frontend/templates/frontend/es/portafolio/propiedades.html:763
+#: frontend/templates/frontend/es/portafolio/propiedades.html:777
+#: frontend/templates/frontend/es/portafolio/propiedades.html:791
+#: frontend/templates/frontend/es/portafolio/propiedades.html:805
+#: frontend/templates/frontend/es/portafolio/propiedades.html:819
+#: frontend/templates/frontend/es/portafolio/propiedades.html:832
+#: frontend/templates/frontend/es/portafolio/propiedades.html:846
+#: frontend/templates/frontend/es/portafolio/propiedades.html:860
+#: frontend/templates/frontend/es/portafolio/propiedades.html:874
+#: frontend/templates/frontend/es/portafolio/propiedades.html:888
+#: frontend/templates/frontend/es/portafolio/propiedades.html:901
+#: frontend/templates/frontend/es/portafolio/propiedades.html:914
+#: frontend/templates/frontend/es/portafolio/propiedades.html:927
+msgid "Ingresos Totales Trimestre AsA"
+msgstr "4Q21 Total Revenue"
+
+#: frontend/templates/frontend/en/portafolio/propiedades.html:591
+#: frontend/templates/frontend/en/portafolio/propiedades.html:605
+#: frontend/templates/frontend/en/portafolio/propiedades.html:619
+#: frontend/templates/frontend/en/portafolio/propiedades.html:633
+#: frontend/templates/frontend/en/portafolio/propiedades.html:647
+#: frontend/templates/frontend/en/portafolio/propiedades.html:661
+#: frontend/templates/frontend/en/portafolio/propiedades.html:675
+#: frontend/templates/frontend/en/portafolio/propiedades.html:689
+#: frontend/templates/frontend/en/portafolio/propiedades.html:703
+#: frontend/templates/frontend/en/portafolio/propiedades.html:717
+#: frontend/templates/frontend/en/portafolio/propiedades.html:731
+#: frontend/templates/frontend/en/portafolio/propiedades.html:745
+#: frontend/templates/frontend/en/portafolio/propiedades.html:759
+#: frontend/templates/frontend/en/portafolio/propiedades.html:773
+#: frontend/templates/frontend/en/portafolio/propiedades.html:787
+#: frontend/templates/frontend/en/portafolio/propiedades.html:801
+#: frontend/templates/frontend/en/portafolio/propiedades.html:815
+#: frontend/templates/frontend/en/portafolio/propiedades.html:828
+#: frontend/templates/frontend/en/portafolio/propiedades.html:842
+#: frontend/templates/frontend/en/portafolio/propiedades.html:856
+#: frontend/templates/frontend/en/portafolio/propiedades.html:870
+#: frontend/templates/frontend/en/portafolio/propiedades.html:884
+#: frontend/templates/frontend/en/portafolio/propiedades.html:897
+#: frontend/templates/frontend/en/portafolio/propiedades.html:910
+#: frontend/templates/frontend/en/portafolio/propiedades.html:923
+#: frontend/templates/frontend/es/portafolio/propiedades.html:596
+#: frontend/templates/frontend/es/portafolio/propiedades.html:610
+#: frontend/templates/frontend/es/portafolio/propiedades.html:624
+#: frontend/templates/frontend/es/portafolio/propiedades.html:638
+#: frontend/templates/frontend/es/portafolio/propiedades.html:652
+#: frontend/templates/frontend/es/portafolio/propiedades.html:666
+#: frontend/templates/frontend/es/portafolio/propiedades.html:680
+#: frontend/templates/frontend/es/portafolio/propiedades.html:694
+#: frontend/templates/frontend/es/portafolio/propiedades.html:708
+#: frontend/templates/frontend/es/portafolio/propiedades.html:722
+#: frontend/templates/frontend/es/portafolio/propiedades.html:736
+#: frontend/templates/frontend/es/portafolio/propiedades.html:750
+#: frontend/templates/frontend/es/portafolio/propiedades.html:764
+#: frontend/templates/frontend/es/portafolio/propiedades.html:778
+#: frontend/templates/frontend/es/portafolio/propiedades.html:792
+#: frontend/templates/frontend/es/portafolio/propiedades.html:806
+#: frontend/templates/frontend/es/portafolio/propiedades.html:820
+#: frontend/templates/frontend/es/portafolio/propiedades.html:833
+#: frontend/templates/frontend/es/portafolio/propiedades.html:847
+#: frontend/templates/frontend/es/portafolio/propiedades.html:861
+#: frontend/templates/frontend/es/portafolio/propiedades.html:875
+#: frontend/templates/frontend/es/portafolio/propiedades.html:889
+#: frontend/templates/frontend/es/portafolio/propiedades.html:902
+#: frontend/templates/frontend/es/portafolio/propiedades.html:915
+#: frontend/templates/frontend/es/portafolio/propiedades.html:928
+msgid "Trim Actual vs Trim Asa"
+msgstr "4Q22 vs 4Q21"
+
+#: frontend/templates/frontend/en/portafolio/propiedades.html:592
+#: frontend/templates/frontend/en/portafolio/propiedades.html:606
+#: frontend/templates/frontend/en/portafolio/propiedades.html:620
+#: frontend/templates/frontend/en/portafolio/propiedades.html:634
+#: frontend/templates/frontend/en/portafolio/propiedades.html:648
+#: frontend/templates/frontend/en/portafolio/propiedades.html:662
+#: frontend/templates/frontend/en/portafolio/propiedades.html:676
+#: frontend/templates/frontend/en/portafolio/propiedades.html:690
+#: frontend/templates/frontend/en/portafolio/propiedades.html:704
+#: frontend/templates/frontend/en/portafolio/propiedades.html:718
+#: frontend/templates/frontend/en/portafolio/propiedades.html:732
+#: frontend/templates/frontend/en/portafolio/propiedades.html:746
+#: frontend/templates/frontend/en/portafolio/propiedades.html:760
+#: frontend/templates/frontend/en/portafolio/propiedades.html:774
+#: frontend/templates/frontend/en/portafolio/propiedades.html:788
+#: frontend/templates/frontend/en/portafolio/propiedades.html:802
+#: frontend/templates/frontend/en/portafolio/propiedades.html:816
+#: frontend/templates/frontend/en/portafolio/propiedades.html:829
+#: frontend/templates/frontend/en/portafolio/propiedades.html:843
+#: frontend/templates/frontend/en/portafolio/propiedades.html:857
+#: frontend/templates/frontend/en/portafolio/propiedades.html:871
+#: frontend/templates/frontend/en/portafolio/propiedades.html:885
+#: frontend/templates/frontend/en/portafolio/propiedades.html:898
+#: frontend/templates/frontend/en/portafolio/propiedades.html:911
+#: frontend/templates/frontend/en/portafolio/propiedades.html:924
+#: frontend/templates/frontend/es/portafolio/propiedades.html:597
+#: frontend/templates/frontend/es/portafolio/propiedades.html:611
+#: frontend/templates/frontend/es/portafolio/propiedades.html:625
+#: frontend/templates/frontend/es/portafolio/propiedades.html:639
+#: frontend/templates/frontend/es/portafolio/propiedades.html:653
+#: frontend/templates/frontend/es/portafolio/propiedades.html:667
+#: frontend/templates/frontend/es/portafolio/propiedades.html:681
+#: frontend/templates/frontend/es/portafolio/propiedades.html:695
+#: frontend/templates/frontend/es/portafolio/propiedades.html:709
+#: frontend/templates/frontend/es/portafolio/propiedades.html:723
+#: frontend/templates/frontend/es/portafolio/propiedades.html:737
+#: frontend/templates/frontend/es/portafolio/propiedades.html:751
+#: frontend/templates/frontend/es/portafolio/propiedades.html:765
+#: frontend/templates/frontend/es/portafolio/propiedades.html:779
+#: frontend/templates/frontend/es/portafolio/propiedades.html:793
+#: frontend/templates/frontend/es/portafolio/propiedades.html:807
+#: frontend/templates/frontend/es/portafolio/propiedades.html:821
+#: frontend/templates/frontend/es/portafolio/propiedades.html:834
+#: frontend/templates/frontend/es/portafolio/propiedades.html:848
+#: frontend/templates/frontend/es/portafolio/propiedades.html:862
+#: frontend/templates/frontend/es/portafolio/propiedades.html:876
+#: frontend/templates/frontend/es/portafolio/propiedades.html:890
+#: frontend/templates/frontend/es/portafolio/propiedades.html:903
+#: frontend/templates/frontend/es/portafolio/propiedades.html:916
+#: frontend/templates/frontend/es/portafolio/propiedades.html:929
+msgid "Ingresos Totales Trimestre anterior"
+msgstr "3Q22 Total Revenue"
+
+#: frontend/templates/frontend/en/portafolio/propiedades.html:593
+#: frontend/templates/frontend/en/portafolio/propiedades.html:607
+#: frontend/templates/frontend/en/portafolio/propiedades.html:621
+#: frontend/templates/frontend/en/portafolio/propiedades.html:635
+#: frontend/templates/frontend/en/portafolio/propiedades.html:649
+#: frontend/templates/frontend/en/portafolio/propiedades.html:663
+#: frontend/templates/frontend/en/portafolio/propiedades.html:677
+#: frontend/templates/frontend/en/portafolio/propiedades.html:691
+#: frontend/templates/frontend/en/portafolio/propiedades.html:705
+#: frontend/templates/frontend/en/portafolio/propiedades.html:719
+#: frontend/templates/frontend/en/portafolio/propiedades.html:733
+#: frontend/templates/frontend/en/portafolio/propiedades.html:747
+#: frontend/templates/frontend/en/portafolio/propiedades.html:761
+#: frontend/templates/frontend/en/portafolio/propiedades.html:775
+#: frontend/templates/frontend/en/portafolio/propiedades.html:789
+#: frontend/templates/frontend/en/portafolio/propiedades.html:803
+#: frontend/templates/frontend/en/portafolio/propiedades.html:817
+#: frontend/templates/frontend/en/portafolio/propiedades.html:830
+#: frontend/templates/frontend/en/portafolio/propiedades.html:844
+#: frontend/templates/frontend/en/portafolio/propiedades.html:858
+#: frontend/templates/frontend/en/portafolio/propiedades.html:872
+#: frontend/templates/frontend/en/portafolio/propiedades.html:886
+#: frontend/templates/frontend/en/portafolio/propiedades.html:899
+#: frontend/templates/frontend/en/portafolio/propiedades.html:912
+#: frontend/templates/frontend/en/portafolio/propiedades.html:925
+#: frontend/templates/frontend/es/portafolio/propiedades.html:598
+#: frontend/templates/frontend/es/portafolio/propiedades.html:612
+#: frontend/templates/frontend/es/portafolio/propiedades.html:626
+#: frontend/templates/frontend/es/portafolio/propiedades.html:640
+#: frontend/templates/frontend/es/portafolio/propiedades.html:654
+#: frontend/templates/frontend/es/portafolio/propiedades.html:668
+#: frontend/templates/frontend/es/portafolio/propiedades.html:682
+#: frontend/templates/frontend/es/portafolio/propiedades.html:696
+#: frontend/templates/frontend/es/portafolio/propiedades.html:710
+#: frontend/templates/frontend/es/portafolio/propiedades.html:724
+#: frontend/templates/frontend/es/portafolio/propiedades.html:738
+#: frontend/templates/frontend/es/portafolio/propiedades.html:752
+#: frontend/templates/frontend/es/portafolio/propiedades.html:766
+#: frontend/templates/frontend/es/portafolio/propiedades.html:780
+#: frontend/templates/frontend/es/portafolio/propiedades.html:794
+#: frontend/templates/frontend/es/portafolio/propiedades.html:808
+#: frontend/templates/frontend/es/portafolio/propiedades.html:822
+#: frontend/templates/frontend/es/portafolio/propiedades.html:835
+#: frontend/templates/frontend/es/portafolio/propiedades.html:849
+#: frontend/templates/frontend/es/portafolio/propiedades.html:863
+#: frontend/templates/frontend/es/portafolio/propiedades.html:877
+#: frontend/templates/frontend/es/portafolio/propiedades.html:891
+#: frontend/templates/frontend/es/portafolio/propiedades.html:904
+#: frontend/templates/frontend/es/portafolio/propiedades.html:917
+#: frontend/templates/frontend/es/portafolio/propiedades.html:930
+msgid "Trim Actual vs Trim anterior"
+msgstr "4Q22 vs 3Q22"
+
+#: frontend/templates/frontend/en/sustentabilidad.html:277
+#: frontend/templates/frontend/es/sustentabilidad.html:300
+msgid "Cerrar"
+msgstr "Close"
+
+#: frontend/templates/layouts/base.html:99
+#: frontend/templates/layouts/error.html:66
+msgid "Buscar"
+msgstr "Search"
+
+#: frontend/templates/layouts/base.html:102
+#: frontend/templates/layouts/error.html:69
+msgid "Empiece a escribir y presione \"Enter\" o \"ESC\" para cerrar"
+msgstr "Start typing &amp; press \"Enter\" or \"ESC\" to close"
+
+#: frontend/templates/layouts/base.html:130
+#: frontend/templates/partials/header.html:20
+#: frontend/templates/partials/header.html:76 frontend/views.py:124
+msgid "Nosotros"
+msgstr "About Us"
+
+#: frontend/templates/partials/header.html:76 frontend/views.py:61
+msgid "Quiénes somos"
+msgstr "Who are we"
+
+
+msgid "¿Quiénes somos?"
+msgstr "Who are we?"
+
+#: frontend/views.py:898
+msgid "Centro de reportes"
+msgstr "Regulatory Filings"
+
+#: #: frontend/templates/partials/header.html:124
+msgid "Sostenibilidad"
+msgstr "Sustainability"
+
+#: #: frontend/templates/partials/header.html:124
+msgid "Modelo sostenible"
+msgstr "Sustainable model"
+
+
+
+
+msgid "Responsabilidad social"
+msgstr "Social responsability"
+
+#: #: frontend/templates/partials/header.html:124
+msgid "Gobernanza"
+msgstr "Governance"
+
+#: #: frontend/templates/partials/header.html:124
+msgid "Vinculación con la comunidad"
+msgstr "Community engagement"
+
+
+msgid "Contenido descargable"
+msgstr "Downloadable content"
+
+
+#: frontend/templates/layouts/base.html:134
+#: frontend/templates/layouts/error.html:101
+#: frontend/templates/partials/header.html:79
+msgid "Perfil"
+msgstr "Profile"
+
+#: frontend/templates/layouts/base.html:135
+#: frontend/templates/layouts/error.html:102
+#: frontend/templates/partials/header.html:85
+msgid "Estrategia"
+msgstr "Strategy"
+
+#: frontend/templates/layouts/base.html:136
+#: frontend/templates/layouts/error.html:103
+msgid "En números"
+msgstr ""
+
+#: frontend/templates/layouts/base.html:137
+#: frontend/templates/layouts/error.html:104
+#: frontend/templates/partials/header.html:83
+msgid "Directivos"
+msgstr "Management"
+
+#: frontend/templates/layouts/base.html:138
+#: frontend/templates/layouts/error.html:105
+#: frontend/templates/partials/header.html:87
+msgid "Historia"
+msgstr "History"
+
+#: frontend/templates/layouts/base.html:143
+#: frontend/templates/partials/header.html:23
+#: frontend/templates/partials/header.html:90
+msgid "Portafolio"
+msgstr "Portfolio"
+
+#: frontend/templates/partials/header.html:77
+msgid "Planteles universitarios"
+msgstr "University facilities"
+
+#: frontend/templates/partials/header.html:79
+msgid "Edificios de oficinas"
+msgstr "Office buildings"
+
+#: frontend/templates/partials/header.html:81
+msgid "Centros de aprendizaje"
+msgstr "Educational centers"
+
+#: frontend/templates/partials/header.html:83
+msgid "Sobre el sector educativo"
+msgstr "About the education sector"
+
+
+#: frontend/templates/layouts/base.html:148
+#: frontend/templates/partials/header.html:93
+msgid "Mapa"
+msgstr "Map"
+
+#: frontend/templates/layouts/base.html:149
+#: frontend/templates/layouts/error.html:115
+#: frontend/templates/partials/header.html:95
+msgid "Propiedades"
+msgstr "Properties"
+
+#: frontend/templates/layouts/base.html:150
+#: frontend/templates/partials/header.html:97
+msgid "Indicadores"
+msgstr "KPIs"
+
+#: frontend/templates/layouts/base.html:151
+#: frontend/templates/layouts/error.html:114
+#: frontend/templates/partials/header.html:81
+#: frontend/templates/partials/header.html:99 frontend/views.py:139
+#: frontend/views.py:141
+msgid "Descripción"
+msgstr "Overview"
+
+#: frontend/templates/layouts/base.html:152
+#: frontend/templates/partials/header.html:101
+msgid "Disponibilidad"
+msgstr "Vacancy"
+
+#: frontend/templates/layouts/base.html:157
+#: frontend/templates/layouts/error.html:119
+msgid "Esg"
+msgstr "Esg"
+
+#: frontend/templates/layouts/base.html:160
+#: frontend/templates/layouts/error.html:120
+#: frontend/templates/partials/header.html:28 frontend/views.py:92
+msgid "Inversionistas"
+msgstr "Investors"
+
+#: frontend/templates/partials/header.html:110 
+msgid "Métricas"
+msgstr "Metrics"
+
+#: frontend/templates/partials/header.html:115 
+msgid "Información bursátil"
+msgstr "Stock market"
+
+
+#: frontend/templates/layouts/base.html:165
+#: frontend/templates/partials/header.html:125
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: frontend/templates/layouts/base.html:170
+#: frontend/templates/partials/header.html:135
+msgid "Comité Técnico"
+msgstr "Technical Committee"
+
+#: frontend/templates/layouts/base.html:175
+#: frontend/templates/layouts/error.html:121
+#: frontend/templates/partials/header.html:31
+msgid "Invierte en Finn"
+msgstr "INVEST IN Finn"
+
+#: frontend/templates/layouts/error.html:27
+msgid "Página no encontrada"
+msgstr "Page not found"
+
+#: frontend/templates/partials/footer.html:108
+#: frontend/templates/partials/footer_en.html:104
+msgid "Código de ética"
+msgstr "Code of Ethics"
+
+msgid "Certificaciones sostenibles"
+msgstr "Sustainable certifications"
+
+msgid "Código de conducta"
+msgstr "Code of conduct"
+
+#: frontend/templates/partials/footer.html:127
+#: frontend/templates/partials/footer_en.html:122 frontend/views.py:39
+msgid "Aviso de privacidad"
+msgstr "Privacy Notice"
+
+#: frontend/templates/partials/header.html:26
+#: frontend/templates/partials/header.html:105
+msgid "Sustentabilidad"
+msgstr "Sustainability"
+
+
+#: frontend/templates/partials/header.html:162
+msgid "Fundación"
+msgstr "Foundation"
+
+#: frontend/templates/partials/header.html:60
+#: frontend/templates/partials/header.html:70
+msgid "lastreportfile"
+msgstr "2023-3T23-Reporte-en.pdf"
+
+#: frontend/templates/partials/header.html:71
+msgid "Reporte Trimestral 3T23"
+msgstr "3Q23 Earnings Report"
+
+#: frontend/templates/partials/header.html:108
+msgid "Política de Sustentabilidad"
+msgstr "Sustainability Policy"
+
+#: frontend/templates/partials/header.html:110
+msgid "Pacto Mundial"
+msgstr "Global Pact"
+
+#: frontend/templates/partials/header.html:112
+msgid "Estrategia ante el Cambio Climático"
+msgstr "Climate Change Strategy"
+
+#: frontend/templates/partials/header.html:114
+msgid "Informes de Sustentabilidad"
+msgstr "Sustainability Reports"
+
+#: frontend/templates/partials/header.html:116
+msgid "Reconocimientos"
+msgstr "Awards"
+
+#: frontend/templates/partials/header.html:118
+msgid "Políticas y Lineamientos"
+msgstr "Policies and Guidelines"
+
+#: frontend/templates/partials/header.html:144
+msgid "Incrementa tu riqueza"
+msgstr "Increase your wealth"
+
+#: frontend/templates/partials/header.html:146
+msgid "Invertir"
+msgstr "Invest"
+
+#: frontend/templates/partials/header.html:152 frontend/views.py:261
+#: frontend/views.py:262
+msgid "Glosario"
+msgstr "Glossary"
+
+#: frontend/templates/partials/propiedades.html:8
+msgid "Destacadas"
+msgstr "FEATURED"
+
+#: frontend/templates/partials/propiedades.html:9
+#: frontend/templates/partials/propiedades.html:90
+#: frontend/templates/partials/propiedades.html:136
+#: frontend/templates/partials/propiedades.html:160
+#: frontend/templates/partials/propiedades.html:183
+#: frontend/templates/partials/propiedades.html:229
+#: frontend/templates/partials/propiedades.html:298
+#: frontend/templates/partials/propiedades.html:321
+#: frontend/templates/partials/propiedades.html:367
+#: frontend/templates/partials/propiedades.html:412
+#: frontend/templates/partials/propiedades.html:434
+#: frontend/templates/partials/propiedades.html:501
+#: frontend/templates/partials/propiedades.html:548
+#: frontend/templates/partials/propiedades.html:571
+#: frontend/templates/partials/propiedades.html:594
+#: frontend/templates/partials/propiedades.html:616
+msgid "Industrial"
+msgstr "INDUSTRIAL"
+
+#: frontend/templates/partials/propiedades.html:10
+#: frontend/templates/partials/propiedades.html:43
+#: frontend/templates/partials/propiedades.html:66
+#: frontend/templates/partials/propiedades.html:113
+#: frontend/templates/partials/propiedades.html:275
+#: frontend/templates/partials/propiedades.html:345
+#: frontend/templates/partials/propiedades.html:389
+#: frontend/templates/partials/propiedades.html:456
+#: frontend/templates/partials/propiedades.html:478
+#: frontend/templates/partials/propiedades.html:524
+msgid "Oficinas"
+msgstr "OFFICES"
+
+#: frontend/templates/partials/propiedades.html:11
+#: frontend/templates/partials/propiedades.html:206
+#: frontend/templates/partials/propiedades.html:252
+msgid "Comercial"
+msgstr "RETAIL"
+
+#: frontend/templates/partials/propiedades.html:12
+msgid "Todas"
+msgstr "ALL"
+
+#: frontend/templates/partials/propiedades.html:31
+#: frontend/templates/partials/propiedades.html:54
+#: frontend/templates/partials/propiedades.html:77
+#: frontend/templates/partials/propiedades.html:101
+#: frontend/templates/partials/propiedades.html:124
+#: frontend/templates/partials/propiedades.html:148
+#: frontend/templates/partials/propiedades.html:171
+#: frontend/templates/partials/propiedades.html:194
+#: frontend/templates/partials/propiedades.html:217
+#: frontend/templates/partials/propiedades.html:240
+#: frontend/templates/partials/propiedades.html:263
+#: frontend/templates/partials/propiedades.html:286
+#: frontend/templates/partials/propiedades.html:309
+#: frontend/templates/partials/propiedades.html:333
+#: frontend/templates/partials/propiedades.html:355
+#: frontend/templates/partials/propiedades.html:377
+#: frontend/templates/partials/propiedades.html:399
+#: frontend/templates/partials/propiedades.html:422
+#: frontend/templates/partials/propiedades.html:444
+#: frontend/templates/partials/propiedades.html:466
+#: frontend/templates/partials/propiedades.html:489
+#: frontend/templates/partials/propiedades.html:512
+#: frontend/templates/partials/propiedades.html:536
+#: frontend/templates/partials/propiedades.html:559
+#: frontend/templates/partials/propiedades.html:582
+#: frontend/templates/partials/propiedades.html:604
+msgid "Área Bruta Rentable"
+msgstr "Gross Leasable Area"
+
+#: frontend/views.py:22
+msgid "Inversión en Bienes Raíces con beneficios tangibles | Finn"
+msgstr "Real estate investment with real benefits | Finn"
+
+#: frontend/views.py:24
+msgid ""
+"Fibra Mty es una compañía que promueve la inversión en bienes raíces a largo "
+"plazo y con beneficios tangibles. Entra a nuestro sitio y conoce más."
+msgstr ""
+"Fibra Mty is a company that promotes long-term real estate investment with "
+"tangible benefits. Visit our website to learn more."
+
+#: frontend/views.py:25
+msgid "Inicio"
+msgstr "Home"
+
+#: frontend/views.py:26 frontend/views.py:41 frontend/views.py:94
+#: frontend/views.py:110 frontend/views.py:126 frontend/views.py:143
+#: frontend/views.py:186 frontend/views.py:251 frontend/views.py:264
+#: frontend/views.py:282 frontend/views.py:311 frontend/views.py:338
+#: frontend/views.py:376 frontend/views.py:456
+msgid "Estructura alineada a nuestros inversionistas"
+msgstr "Structure aligned with our investors"
+
+#: frontend/views.py:28 frontend/views.py:43 frontend/views.py:96
+#: frontend/views.py:112 frontend/views.py:128 frontend/views.py:145
+#: frontend/views.py:188 frontend/views.py:253 frontend/views.py:266
+#: frontend/views.py:284 frontend/views.py:313 frontend/views.py:340
+#: frontend/views.py:378 frontend/views.py:458
+msgid ""
+"Fibra MTY nace en el año 2014, con el objetivo de adquirir, administrar y "
+"desarrollar un portafolio de inmuebles corporativos de alta calidad en "
+"México, con un componente preponderante en oficinas."
+msgstr ""
+"Fibra Mty was established in 2014, for the purpose of acquiring, managing, "
+"and developing a high-quality real estate portfolio in Mexico, focused "
+"mainly on office properties."
+
+#: frontend/views.py:36
+msgid "Términos y condiciones de nuestro sitio web | Finn"
+msgstr "Terms and conditions of our website | Finn"
+
+#: frontend/views.py:38
+msgid ""
+"Conoce los términos, condiciones y política de manejo de datos personales de "
+"la página web de Fibra MTY. "
+msgstr ""
+"Learn about the terms, conditions and personal data handling policy on Fibra "
+"Mty's website. We are committed to your privacy."
+
+
+msgid "Noticias"
+msgstr "News"
+
+msgid "Inmuebles"
+msgstr "Properties"
+
+msgid "ABR"
+msgstr "GLA"
+
+msgid "Diversificación geográfica (Inmuebles)"
+msgstr "Geographic diversification (Properties)"
+
+msgid "Diversificación geográfica (ABR)"
+msgstr "Geographic diversification (GLA)"
+
+msgid "Ciudad de México"
+msgstr "Mexico City"
+
+msgid "Estado de México"
+msgstr "State of Mexico"
+
+msgid "Otros*"
+msgstr "Others*"
+
+msgid "Diversificación por segmento (Inmbuebles)"
+msgstr "Diversification by segment (Properties)"
+
+msgid "Diversificación por segmento (ABR)"
+msgstr "Diversification by segment (GLA)"
+
+
+
+#: frontend/views.py:51 frontend/views.py:52 frontend/views.py:53
+msgid "Contacto"
+msgstr "Contact"
+
+msgid "Calendario RI"
+msgstr "IR Calendar"
+
+#: frontend/templates/partials/header.html:188
+msgid "Contacto de Relación<br>con Inversionistas"
+msgstr "Investors Relations Contact"
+
+msgid "Calificación Otorgada por Agencias Calificadoras"
+msgstr "Rating Issued by Rating Agencies"
+
+msgid "Reapertura"
+msgstr "Reopening"
+
+msgid "Certificado"
+msgstr "Certificate"
+
+msgid "Apellidos"
+msgstr "Last name"
+
+
+msgid "Prospecto del Programa de Bono Vinculado a la Sostenibilidad"
+msgstr "Sustainability-Linked Bond Prospectus"
+
+msgid "Emisión inicial"
+msgstr "Initial Issue"
+
+msgid "Prospecto Oferta Pública Inicial"
+msgstr "Public Offering Prospectus Initiate"
+
+msgid "Suplemento 23-2L (Fijo)"
+msgstr "Supplement 23-2L (Fixed)"
+
+msgid "Suplemento 23L (Flotante)"
+msgstr "Supplement 23L (Floating)"
+
+msgid "Suplemento 23UL (Real)"
+msgstr "Supplement 23UL (Actual)"
+
+
+msgid "Relación con inversionistas"
+msgstr "Investors Relations"
+
+#: frontend/templates/partials/header.html:191
+msgid "Expansión"
+msgstr "Expansion"
+
+#: frontend/templates/partials/header.html:193
+msgid "Línea de denuncia"
+msgstr "Complaint Line"
+
+#: frontend/views.py:63
+msgid "Conoce nuestro compromiso con la sustentabilidad | Finn"
+msgstr "Learn about our commitment to sustainability | Finn"
+
+#: frontend/views.py:65
+msgid ""
+"Fibra Mty cree firmemente en la sustentabilidad como parte integral de su "
+"negocio. Entra y conoce nuestra "
+msgstr ""
+"Fibra Mty strongly believes in sustainability as a core element of its "
+"business. Click here to learn more about our environmental, social and "
+"governance strategy."
+
+#: frontend/views.py:67
+msgid "ESG (Ambiental, Social y Gobernanza)"
+msgstr "ESG (Environmental, Social & Governance)"
+
+#: frontend/views.py:69
+msgid "Sustentabilidad, una estrategia permanente"
+msgstr "Sustainability, a lifelong strategy"
+
+#: frontend/views.py:71
+msgid ""
+"Fibra Mty cree firmemente en la sustentabilidad como parte integral de su "
+"estrategia de negocio y de su forma de operar, y es por ello que en 2019 "
+"inició formalmente con la implementación de su estrategia ASG<span class\"d-"
+"block d-sm-none\">.</span> <span class=\"d-none d-sm-block\"> (Ambiental, "
+"Social y Gobernanza, o “ESG” por sus siglas en inglés) tomando en "
+"consideración los más altos criterios y lineamientos en la materia.</span>"
+msgstr ""
+"Fibra Mty firmly believes in sustainability as an integral part of its "
+"business strategy and its operations, reason why in 2019 it formally started "
+"with the implementation of its ESG strategy (Environmental, Social and "
+"Governance) following the highest standards and guidelines on such matters."
+
+#: frontend/views.py:89
+msgid "Información de interés para los inversionistas en Fibras | Finn"
+msgstr "Relevant information for Mexican REIT investors | Finn"
+
+#: frontend/views.py:91
+msgid ""
+"Fibra MTY ha tenido resultados consistentes. Consulta aquí información sobre "
+"distribuciones en efectivo, resultados trimestrales y más."
+msgstr ""
+"Fibra MTY delivers consistent results. Check here for information on cash "
+"distributions, quarterly results and more."
+
+#: frontend/views.py:107 frontend/views.py:108
+msgid "Resultados"
+msgstr ""
+
+#: frontend/views.py:121
+msgid "Fibra MTY, un referente de la Inversión en FIBRAS | Finn"
+msgstr "Fibra MTY, a benchmark for investing in Mexican REITs | Finn"
+
+#: frontend/views.py:123
+msgid ""
+"Fibra MTY nace en 2014 con el objetivo de impulsar el modelo de Inversión en "
+"FIBRAS brindando confianza y solidez a nuestros inversionistas como la "
+"primer fibra administrada internamente en México."
+msgstr ""
+"Fibra MTY was created in 2014 with the objective of promoting investing in "
+"Mexican REITs, providing confidence and solid results to our investors as "
+"the first internally managed Mexican REIT."
+
+#: frontend/views.py:140
+msgid "ZXC"
+msgstr ""
+
+#: frontend/views.py:153
+msgid "Portafolio de Alta Calidad  | FIBRAS México | Finn"
+msgstr "Top-class portfolio | Mexican REITs | Finn"
+
+#: frontend/views.py:155
+msgid ""
+"Conoce nuestro Portafolio de alta calidad. Inmuebles, ubicación, sector, "
+"industria y más. ¡Ingresa ahora!"
+msgstr ""
+"Learn about our top-class portfolio. Properties, location, segment, industry "
+"and more. Click here!"
+
+#: frontend/views.py:156
+msgid "Portafolio de alta calidad"
+msgstr "High-quality Portfolio"
+
+#: frontend/views.py:159
+msgid ""
+"Nuestra propiedades han sido cuidadosamente selecionadas tanto por la "
+"calidad de su construcción, así como por la solidez de la demanda de los "
+"mercados en los que se encuentran."
+msgstr ""
+
+#: frontend/views.py:168
+msgid "Estados financieros de nuestra compañía | Finn"
+msgstr "Fibra MTY's financial statements | Finn"
+
+#: frontend/views.py:170
+msgid ""
+"Conozca datos sobre nuestros resultados, situación financiera, rentabilidad, "
+"razones financieras e indicadores operativos en nuestro sitio web."
+msgstr ""
+"Learn more about our results, financial situation, profitability, financial "
+"ratios and operating metrics on our website."
+
+#: frontend/views.py:173
+msgid "Conozca nuestros números finacieros más destacados"
+msgstr "Have a look at our financial highlights"
+
+#: frontend/views.py:182 frontend/views.py:183 frontend/views.py:184
+msgid "Resultados trimestrales"
+msgstr ""
+
+#: frontend/views.py:196
+msgid "Inversión en Fibras - Reportes BMV"
+msgstr ""
+
+#: frontend/views.py:197
+msgid "Accede a los reportes financieros de Fibra MTY | Finn"
+msgstr "Read Fibra MTY's financial reports | Finn"
+
+#: frontend/views.py:199
+msgid ""
+"Accede a todos nuestros reportes en la Bolsa Mexicana de Valores desde el "
+"inicio de nuestras operaciones."
+msgstr ""
+"Access all our filings on the Mexican Stock Exchange since we started "
+"operations."
+
+#: frontend/views.py:202
+msgid ""
+"Acceda a nuestros documentos financieros desde el inicio de nuestras "
+"operaciones."
+msgstr "Access our financial documents since the beginning of our operations."
+
+#: frontend/views.py:211
+msgid "Conoce información única en nuestras presentaciones | Finn"
+msgstr "Get exclusive insight in our presentations |Finn "
+
+#: frontend/views.py:213
+msgid ""
+"Encuentra archivos descargables de las presentaciones con información "
+"importante para proveedores, colaboradoradores y clientes de Fibra MTY  "
+"¡Conoce más! "
+msgstr ""
+"Download presentations with a wealth of information for suppliers, "
+"collaborators and clients of Fibra MTY. Learn more!"
+
+#: frontend/views.py:230
+msgid "Mejora tu Inversión en Fibras | Eventos relevantes | Finn"
+msgstr "Invest smarter in Mexican REITs | Outstanding developments | Finn"
+
+#: frontend/views.py:232
+msgid ""
+"En Fibra MTY tenemos un fuerte compromiso con nuestros inversionistas. Entra "
+"y conoce los eventos más destacados sobre Inversión en Fibras. "
+msgstr ""
+"We are fully committed to our investors. Click here and learn about the most "
+"relevant developments on Mexican REITs Investment."
+
+#: frontend/views.py:238
+msgid "Conozca de forma puntual los eventos más destacados de nuestra Fibra."
+msgstr "Stay tuned for the most important developments of our REIT."
+
+#: frontend/views.py:246
+msgid "Preguntas Frecuentes sobre la Inversión en Fibras | Finn"
+msgstr "FAQs about investing in Mexican REITs | Finn"
+
+#: frontend/views.py:248
+msgid ""
+"Todo lo que necesitas saber sobre la Inversión en Fibras inmobiliarias en un "
+"solo lugar. Nuestra sección de Preguntas Frecuentes resolverá tus dudas."
+msgstr ""
+"Everything you need to know about investing in Mexican REITs in one place. "
+"Our FAQs section will address your questions."
+
+#: frontend/views.py:277
+msgid "Conoce las Funciones e Integrantes de cada comité | Finn"
+msgstr "Learn about the duties and composition of each comittee | Finn"
+
+#: frontend/views.py:279
+msgid ""
+"Conoce cómo están integrados los Comités de Fibra MTY y cuáles son sus "
+"funciones. Conservamos una estructura alineada con los intereses de nuestros "
+"inversionistas."
+msgstr ""
+"Learn about the structure and functions of Fibra MTY's Committees. We uphold "
+"a structure aligned with our investors' interests."
+
+#: frontend/views.py:292
+msgid "Administración de riesgos de Inversión en FIBRAS | Finn"
+msgstr "Investment Risk Management in Mexican REITs | Finn"
+
+#: frontend/views.py:294
+msgid ""
+"Fibra MTY es una empresa que sigue los estándares internacionales más "
+"exigentes y que enfoca gran parte de sus recursos en la Administración de "
+"Riesgos. "
+msgstr ""
+"Fibra MTY is a company in line with the most rigorous international "
+"standards and devotes substantial resources towards risk management. "
+
+#: frontend/views.py:306
+msgid "Administrador de Propiedades | Finn"
+msgstr "Corporate real estate manager in Mexico City |Finn "
+
+#: frontend/views.py:308
+msgid ""
+"Nuestro Administrador encarga de proponer, desarrollar y ejecutar estragias "
+"que aumente la rentabiildad de Fibra Mty. Conoce más sobre su metodología de "
+"trabajo aquí."
+msgstr ""
+"Our Administrator is in charge of proposing, developing and executing "
+"strategies aimed at enhancing Fibra MTY's profitability. Learn more about "
+"its operational model here."
+
+#: frontend/views.py:309
+msgid "Administrador"
+msgstr "Internal Manager"
+
+#: frontend/views.py:321
+msgid "Auditor Externo | Finn"
+msgstr "Finn - Independent Auditor"
+
+
+msgid "Auditores Externos"
+msgstr "External Auditors"
+
+#: frontend/views.py:323
+msgid ""
+"La Auditoría Externa de FIBRA Mty es realizada por uno de las firmas de "
+"Auditoría más prestigiosa a nivel mundial. Más información aquí."
+msgstr ""
+"Fibra MTY's external audit is performed by one of the most renowned auditing "
+"firms in the world. Click here for more information."
+
+#: frontend/views.py:335 frontend/views.py:336
+msgid "Plan de compensación"
+msgstr ""
+
+#: frontend/views.py:354
+msgid "Asambleas de Tenedores | Finn"
+msgstr "Certificate Holders' Meeting | Finn"
+
+#: frontend/views.py:356
+msgid ""
+"Estas son las decisiones que se toman sobre la gestión de tus Fibras "
+"Inmobiliarias en Finn. Conoce nuestras asambleas y todos los reportes."
+msgstr ""
+"These are the decisions taken on the management of Fibra MTY. Follow our "
+"Certificate Holders' Meetings and the resolutions adopted at each one."
+
+#: frontend/views.py:373 frontend/views.py:374
+msgid "Acuerdos y Asambleas"
+msgstr "Shareholders Meetings"
+
+#: frontend/views.py:393
+msgid "Distribuciones de efectivo | Finn"
+msgstr "Cash Distributions | Finn"
+
+#: frontend/views.py:395
+msgid ""
+"La Ley de Impuestos Sobre la Renta exige que una FIBRA distribuya un "
+"porcentaje de su ingreso anual, en Fibra MTY realizamos distribuciones de "
+"manera mensual. Conoce tus rendimientos aquí."
+msgstr ""
+"The Mexican Income Tax Law requires all REITs in the country to distribute a "
+"percentage of their annual income, we make distributions on a monthly basis. "
+"Calculate your yields here. "
+
+#: frontend/views.py:402
+#, python-format
+msgid ""
+"La Ley del Impuesto Sobre la Renta requiere que una FIBRA distribuya "
+"anualmente al menos el 95% de su Resultado Fiscal, que es calculado conforme "
+"a lo dispuesto en la misma Ley, considerando los ingresos acumulables "
+"obtenidos durante el ejercicio fiscal y restando las deducciones autorizadas "
+"a la utilidad."
+msgstr ""
+"In compliance with Mexican Income Tax Law, Mexican REITS are required to "
+"annually distribute at least 95% of their taxable income. This is calculated "
+"in pursuance to the provisions of the aforementioned law, considering the "
+"taxable income earned during the fiscal year and subtracting the authorized "
+"deductions."
+
+#: frontend/views.py:410
+msgid "Cobertura de analistas| Finn"
+msgstr "Analyst Coverage | Finn"
+
+#: frontend/views.py:412
+msgid ""
+"¿Quieres saber la opinión de los expertos en FIBRAS de México? Conoce la "
+"lista de analistas institucionales que hacen de Fibra MTY."
+msgstr ""
+"Do you want to know the opinion of Mexican REITs? Meet the institutional "
+"analysts who follow Fibra MTY."
+
+#: frontend/views.py:413
+msgid "Cobertura de Analistas"
+msgstr "Analyst Coverage"
+
+#: frontend/views.py:417
+msgid ""
+"Actualmente una base amplia de analistas institucionales cubren el desempeño "
+"de nuestros CBFIs, lo que permite a nuestra base de inversionistas accedar a "
+"una opinión independiente y objetiva."
+msgstr ""
+"We currently have a broad base of institutional analysts covering the "
+"performance of our certificates, which allows our investors to access "
+"independent and objective opinion."
+
+#: frontend/views.py:424
+msgid "Cotización de Fibra MTY en la BMV | Finn"
+msgstr "Fibra MTY's quote prices | Finn"
+
+#: frontend/views.py:426
+msgid ""
+"Aquí encontrarás información sobre el comportamiento histórico de Finn14 en "
+"la Bolsa Mexicana de Valores desde el 2014 hasta hoy."
+msgstr ""
+"Here you will find information about Finn14's historical performance on the "
+"Mexican Stock Exchange from 2014 to date."
+
+#: frontend/views.py:429
+msgid "BMV: Finn14"
+msgstr ""
+
+#: frontend/views.py:437
+msgid "Precios Históricos | Finn"
+msgstr "Historical Prices | Finn"
+
+#: frontend/views.py:439
+msgid ""
+"Entérate de la evolución de Fibra MTY. Conoce los precios históricos de "
+"nuestros titulos accionarios. ¡Siempre en constante crecimiento!"
+msgstr ""
+"Learn about the evolution of Fibra MTY. Follow the historical prices of our "
+"certificates, always in constant growth! "
+
+#: frontend/views.py:451
+msgid "FIBRAs, la mejor opción de Inversión en Bienes Raíces | Finn"
+msgstr "Mexican REITs, the best real estate investment | Finn"
+
+#: frontend/views.py:453
+msgid ""
+"Nuestro objetivo es simplificar tu Inversión en Bienes Raíces a través de "
+"las FIBRAS. Aprende a invertir con Fibra MTY e incrementa tu riqueza "
+"¡Ingresa!"
+msgstr ""
+"Our goal is to help you invest in real estate. Learn how to invest with "
+"Fibra MTY and build your wealth."
+
+#: frontend/views.py:454
+msgid "Invierte en Fibra Mty"
+msgstr "Invest in Fibra Mty"
+
+#: frontend/views.py:466 frontend/views.py:467 frontend/views.py:480
+#: frontend/views.py:494 frontend/views.py:508 frontend/views.py:522
+#: frontend/views.py:536 frontend/views.py:550 frontend/views.py:564
+#: frontend/views.py:578 frontend/views.py:592 frontend/views.py:606
+#: frontend/views.py:621 frontend/views.py:637 frontend/views.py:653
+#: frontend/views.py:669 frontend/views.py:684 frontend/views.py:699
+#: frontend/views.py:714 frontend/views.py:729 frontend/views.py:744
+#: frontend/views.py:759 frontend/views.py:774 frontend/views.py:789
+#: frontend/views.py:804 frontend/views.py:819 frontend/views.py:834
+#: frontend/views.py:849 frontend/views.py:864 frontend/views.py:879
+#: frontend/views.py:894 frontend/views.py:909 frontend/views.py:924
+#: frontend/views.py:939 frontend/views.py:954 frontend/views.py:969
+#: frontend/views.py:984 frontend/views.py:999 frontend/views.py:1014
+#: frontend/views.py:1029 frontend/views.py:1044 frontend/views.py:1059
+#: frontend/views.py:1075 frontend/views.py:1090 frontend/views.py:1105
+#: frontend/views.py:1120 frontend/views.py:1135 frontend/views.py:1150
+#: frontend/views.py:1167 frontend/views.py:1182 frontend/views.py:1197
+#: frontend/views.py:1212 frontend/views.py:1227 frontend/views.py:1242
+msgid "Blog"
+msgstr ""
+
+#: frontend/views.py:469
+msgid "Conocimiento para la toma de decisiones de inversión"
+msgstr ""
+
+#: frontend/views.py:471
+msgid ""
+"Le invitamos a que explore nuestra seleccion de artículos sobre inversiones "
+"y fibras"
+msgstr ""
+
+#: frontend/views.py:481
+msgid "Accede al mercado inmobiliario y comienza a Invertir en Fibras | Finn"
+msgstr ""
+"Venture into the real estate market and start investing in Mexican REITs"
+
+#: frontend/views.py:483
+msgid ""
+"¿Incertidumbre financiera? Comienza a Invertir en FIBRAs inmobiliarias y "
+"acércate a un método de inversión con rendimientos constantes, defensivo y "
+"rentable. En Fibra MTY te explicamos."
+msgstr ""
+"Financial uncertainty? Start investing in Mexican REITs and benefit from an "
+"investment vehicle with constant, defensive, and profitable returns. Fibra "
+"MTY tells you how."
+
+#: frontend/views.py:485 frontend/views.py:499 frontend/views.py:513
+#: frontend/views.py:527 frontend/views.py:541 frontend/views.py:555
+#: frontend/views.py:569 frontend/views.py:583 frontend/views.py:597
+#: frontend/views.py:611 frontend/views.py:627 frontend/views.py:643
+#: frontend/views.py:659 frontend/views.py:674 frontend/views.py:689
+#: frontend/views.py:704 frontend/views.py:719 frontend/views.py:734
+#: frontend/views.py:749 frontend/views.py:764 frontend/views.py:779
+#: frontend/views.py:794 frontend/views.py:809 frontend/views.py:824
+#: frontend/views.py:839 frontend/views.py:854 frontend/views.py:869
+#: frontend/views.py:884 frontend/views.py:899 frontend/views.py:914
+#: frontend/views.py:929 frontend/views.py:944 frontend/views.py:959
+#: frontend/views.py:974 frontend/views.py:989 frontend/views.py:1004
+#: frontend/views.py:1019 frontend/views.py:1034 frontend/views.py:1049
+#: frontend/views.py:1064 frontend/views.py:1080 frontend/views.py:1095
+#: frontend/views.py:1110 frontend/views.py:1125 frontend/views.py:1140
+#: frontend/views.py:1155 frontend/views.py:1172 frontend/views.py:1187
+#: frontend/views.py:1202 frontend/views.py:1217 frontend/views.py:1232
+#: frontend/views.py:1247
+msgid ""
+"Conoce a través de nuestros post el atractivo funcionamiento de las FIBRAS"
+msgstr "Learn about the attractive operation of FIBRAS through our posts"
+
+#: frontend/views.py:495
+msgid "FIBRA, un nuevo modelo de Inversión en Bienes Raíces | Finn"
+msgstr "Mexican REITs, a new real estate investment model | Finn"
+
+#: frontend/views.py:497
+msgid ""
+"Descubre los nuevos proyectos de Inversión en Bienes Raíces que una FIBRA "
+"propone dentro del mercado bursátil ¡Comienza a recibir más por tu inversión!"
+msgstr ""
+"Discover the new real estate investment projects that Mexican REITs brings "
+"to the stock market. Start getting more for your investment!"
+
+#: frontend/views.py:509
+msgid "Ventajas de tu Inversión en Bienes Raíces | Finn"
+msgstr "Benefits of investing in Mexican REITs | Finn"
+
+#: frontend/views.py:511
+msgid ""
+"Visita nuestro blog y nútrete de contenidos sobre la coyuntura del mercado "
+"inmobiliario, con información útil para tu Inversión en Bienes Raíces."
+msgstr ""
+"Visit our blog and stay up to date on the real estate market, with useful "
+"information for your real estate investment."
+
+#: frontend/views.py:523
+msgid "Instrumentos de Inversión en el sector inmobiliario | Finn"
+msgstr "Real estate investment instruments | Finn"
+
+#: frontend/views.py:525
+msgid ""
+"¿Quieres comenzar a invertir en el sector inmobiliario? Conoce en cuáles "
+"Instrumentos de Inversión puedes poner a trabajar tu dinero. ¡Entra ahora!"
+msgstr ""
+"Do you want to start investing in the real estate sector? Find out which "
+"Investment Instruments you can use to put your money to work, start "
+"investing!"
+
+#: frontend/views.py:537
+msgid "Invierte en grandes propiedades | Fibras Inmobiliarias | Finn"
+msgstr "Invest in large-scale properties | Mexican REITs"
+
+#: frontend/views.py:539
+msgid ""
+"Da el próximo paso en tus inversiones. Con las Fibras Inmobiliarias podrás "
+"generar una mayor rentabilidad en el financiamiento de inmuebles de gran "
+"escala."
+msgstr ""
+"Take your investments to the next level. With Mexican REITs you will be able "
+"to generate greater profitability by investing in large-scale real estate.."
+
+#: frontend/views.py:551
+msgid "¿Qué son las FIBRAs Inmobiliarias? | Inversiones de bajo riesgo | Finn"
+msgstr "What are Mexican REITs? | Low-risk Investments"
+
+#: frontend/views.py:553
+msgid ""
+"Las FIBRAs Inmobiliarias son la mejor forma de invertir en el mercado de "
+"bienes raíces con un bajo riesgo y grandes beneficios financieros ¡Infórmate!"
+msgstr ""
+"Mexican REITs are the best way to invest in the real estate market with a "
+"low risk and great financial benefits. Find out!"
+
+#: frontend/views.py:565
+msgid "Invertir en FIBRAs | ¿Buscas qué hacer con ese dinero extra? | Finn"
+msgstr ""
+"Investing in Mexican REITs | Wondering what to do with that extra cash?"
+
+#: frontend/views.py:567
+msgid ""
+"Al Invertir en FIBRAs podrás aumentar tu riqueza mientras estás respaldado "
+"por uno de los mercados más estables de México ¿Qué estás esperando?"
+msgstr ""
+"By investing in Mexican REITs you can increase your wealth while being "
+"backed by one of the most stable markets in Mexico. What are you waiting for?"
+
+#: frontend/views.py:579
+msgid "¿Cómo definirías a los Instrumentos de Inversión? | Finn"
+msgstr "What is an Investment Instrument? | Finn"
+
+#: frontend/views.py:581
+msgid ""
+"¿Sabes cuál es la diferencia entre invertir en oro, acciones o bienes "
+"raíces? Conoce aquí cuáles son los mejores Instrumentos de Inversión."
+msgstr ""
+"Do you know the difference between investing in gold, stocks, or real "
+"estate? Find out here which are the best Investment Instruments."
+
+#: frontend/views.py:593
+msgid "FIBRAs en México | Invierte en propiedades de gran escala | Finn"
+msgstr "Mexican REITs | Invest in large-scale property portfolios"
+
+#: frontend/views.py:595
+msgid ""
+"Las FIBRAs en México son instrumentos de inversión innovadores y seguros que "
+"ofrecen grandes beneficios a los inversionistas ¡Conoce más!"
+msgstr ""
+"Mexican REITs are innovative and safe investment instruments that offer "
+"great benefits to investors. Learn more!"
+
+#: frontend/views.py:607
+msgid "Inversión en Bienes Raíces a montos accesibles | Finn"
+msgstr "Real estate investment in the reach of all pockets | Finn"
+
+#: frontend/views.py:609
+msgid ""
+"Te contamos acerca de la FIBRA: una inversión en bienes raíces rentable y "
+"transparente que se diferencia de la compra y venta tradicional de inmuebles."
+msgstr ""
+"Let us tell you more about Mexican REITs: a profitable and transparent real "
+"estate investment unlike traditional purchase and sale transactions."
+
+#: frontend/views.py:622
+msgid "¿Qué son los Certificados Bursátiles Fiduciarios Inmobiliarios? | Finn"
+msgstr ""
+
+#: frontend/views.py:624
+msgid ""
+"Entra y descubre qué son los Certificados Bursátiles Fiduciarios "
+"Inmobiliarios y por qué son importantes si quieres aumentar tus inversiones."
+msgstr ""
+
+#: frontend/views.py:638
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "3 motivos para realizar una Inversión en FIBRAs | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:640
+msgid ""
+"Realizar una Inversión en FIBRAs resulta beneficioso para aquellos "
+"inversionistas que deseen accesibilidad, seguridad, confianza y "
+"diversificación."
+msgstr ""
+
+#: frontend/views.py:654
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "¿Conoces los beneficios de una Inversión en Bienes Raíces? | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:656
+msgid ""
+"Estas son las ventajas de hacer una Inversión en Bienes Raíces con una de "
+"las empresas más sólidas y transparentes del rubro en México."
+msgstr ""
+
+#: frontend/views.py:670
+msgid "Consejos para invertir en FIBRAs sin que tu dinero corra peligro | Finn"
+msgstr ""
+
+#: frontend/views.py:672
+msgid ""
+"Invertir en FIBRAs es la mejor forma de diversificar tus inversiones sin que "
+"tu capital esté en riesgo ¡Conoce cómo sacarle el máximo provecho!"
+msgstr ""
+
+#: frontend/views.py:685
+msgid "Invertir en Fibras: ¿Por qué elegir un negocio sustentable? | Finn"
+msgstr ""
+
+#: frontend/views.py:687
+msgid ""
+"Te contamos la importancia de Invertir en FIBRAs con una empresa abocada a "
+"la sustentabilidad. Conoce nuestra estrategia ASG y sus ventajas."
+msgstr ""
+
+#: frontend/views.py:700
+msgid "Guía rápida para entender la Bolsa Mexicana de Valores | Finn"
+msgstr ""
+
+#: frontend/views.py:702
+msgid ""
+"Fibra MTY te cuenta todo lo que necesitas saber para entender la Bolsa "
+"Mexicana de Valores y empezar a aumentar tu capital desde el día de hoy."
+msgstr ""
+
+#: frontend/views.py:715
+msgid ""
+"Instrumentos de Inversión: opciones para poner a trabajar tu dinero | Finn"
+msgstr "Real Estate Investment Instruments"
+
+#: frontend/views.py:717
+msgid ""
+"Explora los distintos Instrumentos de Inversión a los que puedes acceder "
+"para poner a trabajar tu dinero y aprovecharlo al máximo."
+msgstr ""
+
+#: frontend/views.py:730
+msgid ""
+"Garantías que te ofrece una Inversión en Bienes Raíces con Fibras | Finn"
+msgstr "Mexican REITs, a new real estate investment model"
+
+#: frontend/views.py:732
+msgid ""
+"Hacer una Inversión en Bienes Raíces implica conocer las garantías que "
+"ofrece en cuanto a seguridad, confiabilidad y rentabilidad. ¡Conoce más!"
+msgstr ""
+
+#: frontend/views.py:745
+msgid ""
+"FIBRAs en México: democratizando las inversiones en bienes raíces | Finn"
+msgstr "Mexican REITs, a new real estate investment model"
+
+#: frontend/views.py:747
+msgid ""
+"Cuando se habla de FIBRAs en México, también se habla de la democratización "
+"del mercado inmobiliario. ¿Por qué? ¡Entérate a continuación!"
+msgstr ""
+
+#: frontend/views.py:760
+msgid ""
+"10 beneficios de Invertir en FIBRAs sobre otro tipo de inversiones | Finn"
+msgstr ""
+
+#: frontend/views.py:762
+msgid ""
+"Invertir en FIBRAs es la mejor forma de entrar al mundo de los bienes raíces "
+"y hoy te contaremos cómo sacarle el máximo provecho ¡Entra ya!"
+msgstr ""
+
+#: frontend/views.py:775
+msgid "¿Cómo saber cuánto ganaré al invertir en FIBRAs inmobiliarias? | Finn"
+msgstr ""
+
+#: frontend/views.py:777
+msgid ""
+"Mientras con un banco obtienes una tasa del 2%, al invertir en FIBRAs "
+"inmobiliarias tienes rendimientos de aproximadamente 8% anual y recibes "
+"distribuciones mensuales."
+msgstr ""
+
+#: frontend/views.py:790
+msgid ""
+"Conoce la opción estrella para tu primera Inversión en Bienes Raíces | Finn"
+msgstr "Mexican REITs, a new real estate investment model"
+
+#: frontend/views.py:792
+msgid ""
+"En este artículo te presentamos las opciones tradicionales y la alternativa "
+"estrella para que realices tu primera Inversión en Bienes Raíces."
+msgstr ""
+
+#: frontend/views.py:805
+msgid "El mercado emergente de las FIBRAs en México | Finn"
+msgstr ""
+
+#: frontend/views.py:807
+msgid ""
+"Las FIBRAs en México son un instrumento de inversión relativamente nuevo que "
+"ofrece grandes beneficios a pequeños y grandes inversionistas."
+msgstr ""
+"Mexican REITs are innovative and safe investment instruments that offer "
+"great benefits to investors. Learn more!"
+
+#: frontend/views.py:820
+msgid "¿Cómo se originó la Inversión en FIBRAs inmobiliarias? | Finn"
+msgstr "Real Estate Investment Instruments | Finn"
+
+#: frontend/views.py:822
+msgid ""
+"¿Sabías que la Inversión en FIBRAs inmobiliarias nace a partir de los REIT "
+"de Estados Unidos? ¡Entra y conoce la historia de este modelo de inversión!"
+msgstr ""
+
+#: frontend/views.py:835
+msgid ""
+"¿Inversión a 5, 10 o 20 años? Te contamos cuál es la mejor opción | Finn"
+msgstr ""
+
+#: frontend/views.py:837
+msgid ""
+"¿No sabes cuál inversión a largo plazo escoger? ¡Te contamos por qué las "
+"Fibras Inmobiliarias son la mejor opción para aumentar tu capital!"
+msgstr ""
+
+#: frontend/views.py:850
+#, fuzzy
+#| msgid ""
+#| "Instrumentos de Inversión: opciones para poner a trabajar tu dinero | Finn"
+msgid "Instrumentos de Inversión atractivos para este 2021 | Finn"
+msgstr "Real Estate Investment Instruments"
+
+#: frontend/views.py:852
+msgid ""
+"En vista de la transformación que sufrió el mundo en 2020, estos son los "
+"Instrumentos de Inversión más destacados para el 2021. Conoce tus "
+"alternativas."
+msgstr ""
+
+#: frontend/views.py:865
+msgid "¿Qué impuestos pago al Invertir en FIBRAs? | Beneficios fiscales | Finn"
+msgstr ""
+
+#: frontend/views.py:867
+msgid ""
+"¿Sabías que al Invertir en FIBRAs cuentas con beneficios fiscales que ningún "
+"otro instrumento de inversión te ofrece? ¡Entra para conocer más!"
+msgstr ""
+
+#: frontend/views.py:880
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "¿Cómo obtener el máximo rédito de tu Inversión en Bienes Raíces? | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:882
+msgid ""
+"Con Fibra MTY los rendimientos de tu inversión en Bienes Raíces crecerán "
+"exponencialmente conforme pase el tiempo. ¡Entra y conoce más!"
+msgstr ""
+
+#: frontend/views.py:895
+msgid "Fibras en México, 10 años de impulsar al mercado inmobiliario | Finn"
+msgstr ""
+
+#: frontend/views.py:897
+#, fuzzy
+#| msgid ""
+#| "Las FIBRAs en México son instrumentos de inversión innovadores y seguros "
+#| "que ofrecen grandes beneficios a los inversionistas ¡Conoce más!"
+msgid ""
+"Las FIBRAs en México se han convertido en un instrumento de inversión "
+"rentable, seguro y sobre todo, estable para los inversionistas. ¡Conoce más!"
+msgstr ""
+"Mexican REITs are innovative and safe investment instruments that offer "
+"great benefits to investors. Learn more!"
+
+#: frontend/views.py:910
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "¿Cómo generar Dividendos en Bienes Raíces con FIBRAs? | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:912
+msgid ""
+"Desde la llegada de las FIBRAs, el mercado inmobiliario es más accesible "
+"para los inversionistas. Descubre cómo obtener Dividendos en Bienes Raíces."
+msgstr ""
+
+#: frontend/views.py:925
+msgid "FIBRAs Inmobiliarias: Reactivación y Reapertura Económica  | Finn"
+msgstr ""
+
+#: frontend/views.py:927
+msgid ""
+"Como todo, las FIBRAs Inmobiliarias tuvieron un impacto negativo en 2020. "
+"Pero la reactivación económica pinta un panorama favorable a la inversión."
+msgstr ""
+
+#: frontend/views.py:940
+#, fuzzy
+#| msgid "Invierte en grandes propiedades | Fibras Inmobiliarias | Finn"
+msgid ""
+"¿En qué tipo de propiedades invierto con las Fibras Inmobiliarias? | Finn"
+msgstr "Invest in large-scale properties | Mexican REITs"
+
+#: frontend/views.py:942
+msgid ""
+"Tu inversión en Fibras Inmobiliarias está respaldada por 59 propiedades de "
+"alta calidad distribuidas en todo el territorio mexicano con ocupación del "
+"90%."
+msgstr ""
+
+#: frontend/views.py:955
+#, fuzzy
+#| msgid "¿Cómo se originó la Inversión en FIBRAs inmobiliarias? | Finn"
+msgid "Diversifica tu portafolio, Invierte en FIBRAs inmobiliarias | Finn"
+msgstr "Real Estate Investment Instruments | Finn"
+
+#: frontend/views.py:957
+msgid ""
+"Diversificar no es solo probar con nuevos instrumentos financieros. Con "
+"FIBRAs inmobiliarias puedes adaptarte y proteger tu patrimonio en varios "
+"niveles."
+msgstr ""
+
+#: frontend/views.py:970
+#, fuzzy
+#| msgid "¿Cómo se originó la Inversión en FIBRAs inmobiliarias? | Finn"
+msgid ""
+"¿A qué se refiere la tasa de ocupación en las FIBRAs Inmobiliarias? | Finn"
+msgstr "Real Estate Investment Instruments | Finn"
+
+#: frontend/views.py:972
+msgid ""
+"La tasa de ocupación es una cifra clave para entender la rentabilidad de las "
+"FIBRAs Inmobiliarias. Entra para conocer todo sobre este concepto."
+msgstr ""
+
+#: frontend/views.py:985
+#, fuzzy
+#| msgid ""
+#| "FIBRAs en México: democratizando las inversiones en bienes raíces | Finn"
+msgid "Fibras en México | ¿Hacia dónde va la inversión de Fibra MTY? | Finn"
+msgstr "Mexican REITs, a new real estate investment model"
+
+#: frontend/views.py:987
+msgid ""
+"Conoce cómo Fibra MTY trabaja constantemente para que tu inversión en Fibras "
+"en México siga siendo rentable y genere riqueza. ¡Entra ya!"
+msgstr ""
+
+#: frontend/views.py:1000
+#, fuzzy
+#| msgid "Fibra MTY, un referente de la Inversión en FIBRAS | Finn"
+msgid "¿Por qué Fibra Mty es tu aliado ideal para Invertir en FIBRAS? | Finn"
+msgstr "Fibra MTY, a benchmark for investing in Mexican REITs | Finn"
+
+#: frontend/views.py:1002
+msgid ""
+"Gracias a nuestro gobierno corporativo, portafolio diversificado y "
+"proyección a futuro somos tu aliado ideal para Invertir en FIBRAs. ¡Conoce "
+"más!"
+msgstr ""
+
+#: frontend/views.py:1015
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "¿Cuál es el futuro de la Inversión en Bienes Raíces? | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:1017
+msgid ""
+"¿Sabes por qué las FIBRAs son el instrumento de moda de la Inversión en "
+"Bienes Raíces en México? Conoce en profundidad el negocio del futuro."
+msgstr ""
+
+#: frontend/views.py:1030
+msgid "Conceptos clave para entender cómo invertir en Fibras | Finn"
+msgstr ""
+
+#: frontend/views.py:1032
+msgid ""
+"Hay términos del mundo financiero que son un poco difíciles de entender. "
+"Aquí encontrarás algunos conceptos clave sobre las Fibras inmobiliarias."
+msgstr ""
+
+#: frontend/views.py:1045
+#, fuzzy
+#| msgid "Inversión en Bienes Raíces con beneficios tangibles | Finn"
+msgid "Inversión en Bienes Raíces vs Inversión en la Bolsa de Valores | Finn"
+msgstr "Real estate investment with real benefits | Finn"
+
+#: frontend/views.py:1047
+msgid ""
+"Elegir entre una Inversión en Bienes Raíces y una en la Bolsa de Valores "
+"puede resultar difícil. Afortunadamente existen las FIBRAs ¡Conoce más!"
+msgstr ""
+
+#: frontend/views.py:1060
+msgid ""
+"¿Puedo invertir en FIBRAs aún si no tengo experiencia en el mercado? | Finn"
+msgstr ""
+
+#: frontend/views.py:1062
+msgid ""
+"¿Sabías que sin importar cuál es tu experiencia como inversionista puedes "
+"invertir en FIBRAs? Conoce los detalles de este modelo aquí. "
+msgstr ""
+
+#: frontend/views.py:1076
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "¿Qué es el nivel de endeudamiento en la Inversión en Fibras? | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:1078
+msgid ""
+"Fibra MTY se caracteriza por manejar bajos niveles de endeudamiento y "
+"amplias garantías para quienes desean hacer una inversión en Fibras."
+msgstr ""
+
+#: frontend/views.py:1091
+#, fuzzy
+#| msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+msgid "Obtén Dividendos en Bienes Raíces con poco dinero | Finn"
+msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#: frontend/views.py:1093
+msgid ""
+"Actualmente ya es posible obtener dividendos en bienes raíces sin adquirir o "
+"gestionar una propiedad. Entérate por qué Fibra MTY es tu mejor opción."
+msgstr ""
+
+#: frontend/views.py:1106
+#, fuzzy
+#| msgid "Invierte en grandes propiedades | Fibras Inmobiliarias | Finn"
+msgid ""
+"¿Por qué ocurren cambios en el portafolio de Fibras Inmobiliarias? | Finn"
+msgstr "Invest in large-scale properties | Mexican REITs"
+
+#: frontend/views.py:1108
+msgid ""
+"¿Has observado los últimos cambios en el portafolio de Fibra MTY? El cambio "
+"en las fibras inmobiliarias obedece a decisiones correctamente estudiadas."
+msgstr ""
+
+#: frontend/views.py:1121
+msgid "Diferencias entre los REITs y las FIBRAs en México | Finn"
+msgstr ""
+
+#: frontend/views.py:1123
+msgid ""
+"¿Sabías que aunque los REITs son el gran antecedente de las FIBRAs en "
+"México, estos modelos no son lo mismo? Consulta todos los detalles aquí."
+msgstr ""
+
+#: frontend/views.py:1136
+#, fuzzy
+#| msgid "Inversión en Bienes Raíces a montos accesibles | Finn"
+msgid "Inversión en Bienes Raíces para principiantes: Conceptos Clave | Finn"
+msgstr "Real estate investment in the reach of all pockets | Finn"
+
+#: frontend/views.py:1138
+msgid ""
+"Conoce todo lo que necesitas saber sobre las inversiones en Bienes Raíces a "
+"través de las Fibras Inmobiliarias. ¡Inversiones seguras e informadas!"
+msgstr ""
+
+#: frontend/views.py:1151
+#, fuzzy
+#| msgid ""
+#| "Instrumentos de Inversión: opciones para poner a trabajar tu dinero | Finn"
+msgid "Instrumentos de Inversión Híbridos: Renta Fija y Renta Variable | Finn"
+msgstr "Real Estate Investment Instruments"
+
+#: frontend/views.py:1153
+msgid ""
+"Aprendiendo a utilizar los instrumentos de inversión, tanto de renta fija "
+"como variable, abrirás tu mundo a un nuevo paradigma de ahorro."
+msgstr ""
+
+#: frontend/views.py:1168
+#, fuzzy
+#| msgid ""
+#| "Instrumentos de Inversión: opciones para poner a trabajar tu dinero | Finn"
+msgid "Los Instrumentos de Inversión con mejor proyección para el 2022 | Finn"
+msgstr "Real Estate Investment Instruments"
+
+#: frontend/views.py:1170
+msgid ""
+"Si tu proyecto para 2022 es seguir aumentando tu riqueza y encontrar los "
+"Instrumentos de Inversión acertados, sigue leyendo este artículo."
+msgstr ""
+
+#: frontend/views.py:1183
+#, fuzzy
+#| msgid "¿Cómo se originó la Inversión en FIBRAs inmobiliarias? | Finn"
+msgid ""
+"¿Cómo afecta la inflación a mi inversión en FIBRAs Inmobiliarias? | Finn"
+msgstr "Real Estate Investment Instruments | Finn"
+
+#: frontend/views.py:1185
+msgid ""
+"Con Fibra MTY no tendrás que preocuparte por que la inflación afecte a tu "
+"inversión en FIBRAs Inmobiliarias. Entra y conoce cómo lo hacemos posible."
+msgstr ""
+
+#: frontend/views.py:1198
+#, fuzzy
+#| msgid ""
+#| "Instrumentos de Inversión: opciones para poner a trabajar tu dinero | Finn"
+msgid "Instrumentos de Inversión | Tips para invertir desde joven | Finn"
+msgstr "Real Estate Investment Instruments"
+
+#: frontend/views.py:1200
+msgid ""
+"Estos son los instrumentos de inversión más recomendados para capitalizar "
+"desde joven. Conoce qué los hace tan llamativos y cómo acceder a estos."
+msgstr ""
+
+#: frontend/views.py:1213
+msgid "Aprende a invertir en FIBRAS en sólo 5 pasos | Finn"
+msgstr ""
+
+#: frontend/views.py:1215
+msgid ""
+"En Fibra MTY te damos las claves para invertir en FIBRAs. Desde generar "
+"capital hasta recibir distribuciones aquí aprenderás todo lo que necesitas."
+msgstr ""
+
+#: frontend/views.py:1228
+#, fuzzy
+#| msgid "Ventajas de tu Inversión en Bienes Raíces | Finn"
+msgid "Los mejores estados para Inversión en Bienes Raíces | Finn"
+msgstr "Benefits of investing in Mexican REITs | Finn"
+
+#: frontend/views.py:1230
+msgid ""
+"¿Cuáles son los estados de México más propicios para tu inversión en bienes "
+"raíces? Desarrollo, urbanización e innovación, todo en el mismo lugar.  "
+msgstr ""
+
+#: frontend/views.py:1243
+#, fuzzy
+#| msgid "¿Cómo definirías a los Instrumentos de Inversión? | Finn"
+msgid "¿Cómo distribuye Fibra MTY los Dividendos en Inversión? | Finn"
+msgstr "What is an Investment Instrument? | Finn"
+
+#: frontend/views.py:1245
+msgid ""
+"Distribuir los dividendos en Inversión y ampliar nuestro portafolio de "
+"propiedades es la prioridad #1 en Fibra MTY. ¡El crecimiento es nuestra meta!"
+msgstr ""
+
+#~ msgid "Informe de Sustentabilidad"
+#~ msgstr "2021 Sustainability Reports"
+
+#~ msgid "Denuncia anónima"
+#~ msgstr "Confidential Complaint"
+
+#~ msgid "¿Ya conoces las ventajas de hacer una Inversión en FIBRAs?"
+#~ msgstr "Are you familiar with the advantages of investing in Mexican REITS?"
+
+#~ msgid ""
+#~ "Conoce cómo tu Inversión en FIBRAs te permitirá participar en el gran "
+#~ "mercado de los bienes raíces a través del mercado de valores. ¡Una "
+#~ "inversión simple y rentable!"
+#~ msgstr ""
+#~ "Learn how your investment in Mexican REITs will allow you to participate "
+#~ "in the great real estate market through the stock market. A simple and "
+#~ "profitable investment!"
+
+#~ msgid "Los beneficios fiscales de invertir en FIBRAs"
+#~ msgstr "The tax benefits of investing in REITS"
+
+msgid "Teléfono"
+msgstr "Phone"
+
+msgid "Subir archivo"
+msgstr "Upload file"
+
+msgid "Sin archivos seleccionados"
+msgstr "No files selected"
+
+#~ msgid "Preguntas frecuentes Footer"
+#~ msgstr "FAQs"
+
+#~ msgid "¿Cómo invertir en <br>Finn?"
+#~ msgstr "INVEST IN Finn"
+
+#~ msgid "Ir"
+#~ msgstr "Go"
+
+#, fuzzy
+#~| msgid "Nosotros"
+#~ msgid "Nosotros integrado"
+#~ msgstr "About Us"
+
+
+msgid "Sobre Fibra Educa"
+msgstr "About Fibra Educa"
+
+
+#SUBMENUS NOSOTROS
+msgid "Contacto área de capital humano"
+msgstr "Contact human capital area."
+
+msgid "Misión y visión"
+msgstr "Mission and vision"
+
+msgid "Valores"
+msgstr "Values"
+
+msgid "Nuestro equipo"
+msgstr "Our team"
+
+msgid "Contáctanos"
+msgstr "Contact us"
+
+#TITULOS PESTAÑAS DE SECCIONES 
+
+msgid "Consumo de electricidad"
+msgstr "Electricity consumption"
+
+msgid "Grupos de Interés"
+msgstr "Stakeholders"
+
+msgid "Materialidad y Estrategia Sostenible"
+msgstr "Materiality and Sustainable Strategy"
+
+msgid "Medio ambiente"
+msgstr "Environment"
+
+msgid "Medio Ambiente"
+msgstr "Environment"
+
+msgid "Energía"
+msgstr "Energy"
+
+msgid "Emisiones"
+msgstr "Emissions"
+
+msgid "Agua"
+msgstr "Water"
+
+msgid "Contribución a los ODS"
+msgstr "SDG contribution"
+
+msgid "Equipo de trabajo"
+msgstr "Work team"
+
+msgid "Promoción de la diversidad y equidad de oportunidades"
+msgstr "Promotion of diversity and equal opportunities"
+
+msgid "Capacitación y desarrollo"
+msgstr "Training & development"
+
+msgid "Salud y seguridad ocupacional"
+msgstr "Occupational health and safety"
+
+msgid "Asamblea de Tenedores"
+msgstr "Shareholder's meeting"
+
+msgid "Comités Intermedios"
+msgstr "Intermediary committees"
+
+msgid "Ciberseguridad"
+msgstr "Cybersecurity"
+
+#~ msgid "Mapa del sitio"
+#~ msgstr "Site map"

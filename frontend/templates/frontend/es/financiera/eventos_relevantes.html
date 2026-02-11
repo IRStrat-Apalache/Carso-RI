@@ -1,0 +1,172 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block otherstyles %}
+
+    <style>
+        .border-bottom{
+            border-bottom: 1px solid #dee2e6 !important;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+    <section id="eventos">
+        <div class="content-wrap" style="padding: 50px 0 80px;">
+            <div class="container clearfix">
+                <div class="d-flex justify-content-end align-items-center mb-5">
+                    <div class="form-inline">
+                        <h4 class="mb-2 mr-3 font-weight-bold text-black">Año</h4>
+                        <select class="form-control form-control-sm" name="select_anno" id="select_anno">
+                            <option value="all">Todo</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="events-list">
+                    {% for event in events2 %}
+{#                        <article class="event-item all {{ event.date|slice:4 }} border-bottom show-event">#}
+                        <article class="event-item all border-bottom show-event" data-date="{{ event.date }}">
+                            <span class="event-date">
+                                {{ event.date }}
+                            </span>
+                            <h4 class="mb-0 uppercase">
+                                <a target="_blank"
+                                   href="{{ event.url }}">
+                                    {{ event.title }}
+                                </a>
+                            </h4>
+                            <p class="description">
+                                 {{ event.description }}
+                            </p>
+                        </article>
+                    {% endfor %}
+                    <article id="no-event" class="event-item border-bottom hide-event">
+                        <h4 class="mb-0 uppercase">
+                            No hay noticias.
+                        </h4>
+                    </article>
+                </div>
+                <div id="paginationholder" class="mb-3 mb-lg-0 d-flex justify-content-end">
+                    <ul id="pagination" class="pagination-lg"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block otherscripts %}
+<script src="{% static 'js/jquery.twbsPagination.min.js' %}"></script>
+<script>
+    const step = 5;
+
+    // Inicializamos la selección con "all"
+    filterSelection("all", '', 1, step);
+
+    // Evento para el cambio del selector de año
+    $('#select_anno').change(function () {
+        filterSelection($(this).val(), '', 1, step);
+    });
+
+    function filterSelection(c, search = '', page = 1, step = step) {
+        let elements = 0;
+        let x = document.getElementsByClassName("event-item");
+
+        // Convertimos la lista de elementos en un array para poder ordenarla
+        
+        let xArray = Array.from(x);
+
+        
+
+        
+
+        // Aplicamos la lógica de filtrado
+        let filteredItems = xArray.filter(item => {
+            let xi = $(item);
+            let itemDate = xi.data('date') ? xi.data('date').split('-')[0] : null;
+
+            // Filtramos por la clase o por año específico
+            return xi.hasClass(c) || (itemDate && itemDate === c) || c === 'all';
+        });
+
+        // Ocultamos todos los elementos primero
+        xArray.forEach(item => {
+            CardRemoveClass(item, "show-event");
+            CardAddClass(item, "hide-event");
+        });
+
+        // Mostramos solo los elementos filtrados y paginados
+        filteredItems.forEach((item, index) => {
+            if (index >= (page - 1) * step && index < page * step) {
+                CardAddClass(item, "show-event");
+                CardRemoveClass(item, "hide-event");
+            }
+        });
+
+        // Si no hay elementos visibles, mostramos el mensaje de "No events"
+        if (filteredItems.length === 0) {
+            let n = $('#no-event');
+            n.removeClass('hide-event');
+            n.addClass('show-event');
+        } else {
+            $('#no-event').removeClass('show-event').addClass('hide-event');
+        }
+
+        if (page === 1) {
+            drawPagination(c, search, filteredItems.length, page, step);
+        }
+    }
+
+    function CardAddClass(element, name) {
+        var arr1 = element.className.split(" ");
+        var arr2 = name.split(" ");
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) === -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    function CardRemoveClass(element, name) {
+        var arr1 = element.className.split(" ");
+        var arr2 = name.split(" ");
+        for (var i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    function drawPagination(c, search, elements, page, step) {
+        let paginationholder = $('#paginationholder');
+        paginationholder.html('');
+        paginationholder.html('<ul id="pagination"></ul>');
+        let total = Math.ceil(elements / step);
+
+        if (total > 0) {
+            $('#pagination').twbsPagination({
+                totalPages: total,
+                prev: '<i class="fa fa-arrow-left"></i>',
+                next: '<i class="fa fa-arrow-right"></i>',
+                pageClass: 'page-item',
+                anchorClass: 'page-link',
+                hideOnlyOnePage: true,
+                first: null,
+                last: null,
+                initiateStartPageClick: false,
+                onPageClick: function (event, num) {
+                    filterSelection(c, search, num, step);
+                }
+            });
+        }
+    }
+</script>
+{% endblock %}

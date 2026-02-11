@@ -1,0 +1,804 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+
+    <style>
+        .link-subrayado {
+            text-decoration: none; /* Quita el subrayado por defecto */
+            color: white; /* Color del enlace, puedes cambiarlo */
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .link-subrayado:hover {
+            text-decoration: underline; /* Agrega subrayado al pasar el mouse */
+            color: white; /* Cambia de color al hacer hover */
+        }
+        
+        .pregunta {
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 8px;
+            text-align: left;
+            font-size:20px;
+        }
+
+        .pregunta::after {
+            content: "";
+            display: block;
+            width: 80%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .columna {            
+            color: white;
+            padding: 20px;
+            text-align:left;
+            
+        }
+        .image-container2 {
+            width: 100%; /* Ajusta según el tamaño necesario */
+            overflow: hidden; /* Evita que la imagen crezca fuera del contenedor */
+            position: relative;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: auto;
+            transition: transform 1s ease-in-out;
+        }
+        
+        .image-container2:hover .main-image {
+            transform: scale(1.1); /* Hace zoom en la imagen principal */
+        }
+
+        .image-container2.animate-on-scroll .main-image {
+            transform: scale(1.1); /* Hace zoom en la imagen principal */
+        }
+
+        .position-relative {
+            position: relative;
+            display: inline-block;
+        }
+        
+        
+        
+        .overlay-image {
+            position: absolute;
+            top: 78%; /* Ajusta la posición en la imagen principal */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra la imagen superpuesta */
+           
+            height: auto;
+            
+        }
+        
+        .custom-card {
+            background: white;
+            border-radius: 0 0 20px 20px; 
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+        .custom-card img {
+            width: 150px; /* Ajusta el tamaño del icono */
+            margin-bottom: 10px;
+        }
+        .custom-card p {
+            color: #23356B;
+            font-size:25px;
+            text-align:left;
+        }
+        .background-container {
+            background-image: url('{% static "images/Educafeb-03.png" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height:80vh; /* Hace que el div tenga al menos la altura de la pantalla */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
+            justify-content: center; /* Centra el contenido horizontalmente */
+        }
+        .background-container2 {
+            background-image: url('{% static "images/Educafeb-02.png" %}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height:80vh; /* Hace que el div tenga al menos la altura de la pantalla */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
+            justify-content: center; /* Centra el contenido horizontalmente */
+        }
+        
+        .title {
+            color: #59A971;
+            font-weight: bold;
+
+        }
+        .subtitle {
+            color: white;            
+            width: 50%;  
+        }
+        
+        
+        .owl-carousel .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        
+        .nav-tabs {
+            display: flex;
+            justify-content: space-between; /* Espaciado uniforme */
+            flex-wrap: nowrap; /* Evita que los elementos se vayan a otra línea */
+        }
+        .nav-tabs li {
+            flex-grow: 1; /* Hace que los elementos ocupen el mismo ancho */
+            text-align: center; /* Centra el texto */
+        }
+        
+
+        #directivos_section {
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+
+        .d_cargo{
+            color:#fff;
+        }
+
+        .consejo-administracion img {
+            border-radius: 50%;
+        }
+
+        .consejo-administracion .linkedin {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #005598;
+            border-radius: 50%;
+            display: none;
+            transition: all .5s;
+        }
+
+        .consejo-administracion .linkedin i {
+            font-size: 20px;
+        }
+
+       
+
+        .consejo-administracion .miembro:hover .linkedin {
+            display: block;
+        }
+
+        .consejo-administracion .mas {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background-color: #005598;
+            transition: all .2s;
+        }
+
+        .consejo-administracion .miembro:hover .mas {
+            top: 0;
+        }
+
+        .modal-header {
+            background-color: #005598;
+        }
+
+        .modal-title {
+            color: white;
+        }
+
+        .containclass {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mb-0.mr-2.text-center {
+            color: #005598;
+        }
+
+        .s-block{
+            padding: 10px  0px!important; 
+        }
+
+        .team-member-details img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+        }
+
+        .panel-group.accordion-style-03 .panel {
+            padding-left: 32px;
+            padding-right: 32px;
+            margin-bottom: 22px !important;
+            border-radius: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .panel-group.accordion-style-03 .panel .panel-heading {
+            padding: 10px 10px 10px 0;
+            position: relative;
+        }
+
+        .accordion-style-03 .panel .panel-heading i {
+            position: absolute;
+            top: 33%;
+            right: 0;
+            font-size: 19px;
+            font-weight: 900;
+            color: black;
+        }
+
+        .estra-link.active span {
+            color: #232323;
+            font-weight: 700;
+        }
+
+        .estra-info {
+            position: absolute !important;
+            top: 30% !important;
+            padding: 40px !important;
+            color: white !important;
+        }
+
+       
+
+       #panel-head {
+            transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+        }
+
+        /* Cambia el fondo del panel-heading al hacer hover */
+        #panel-head:hover {
+            background-color: #23356B !important; /* Color de fondo deseado al hacer hover */
+            color: white !important;
+        }
+
+        /* Cambia el color del texto del enlace en estado normal */
+        #panel-head > h4 > a {
+            color: #23356B; /* Color del texto normal del enlace */
+            text-decoration: none; /* Opcional: elimina el subrayado */
+        }
+
+        /* Cambia el color del texto del enlace al hacer hover */
+        #panel-head > h4 > a:hover {
+            color: white !important; /* Color del texto al hacer hover en el enlace */
+        }
+
+        /* Mantiene el texto blanco al hacer hover en el panel-heading */
+        #panel-head:hover > h4 > a {
+            color: white !important; /* Mantiene el texto blanco al hacer hover */
+        }
+
+        .panel-headingA.active {
+            background-color: #23356B !important; /* Color de fondo del panel activo */
+            color: white !important; /* Color del texto del panel activo */
+        }
+        .panel-headingA {
+           cursor:pointer;
+           padding: 8px 20px;
+        }
+        .panel-headingA.active > h4 > a {
+            
+            color: white !important; /* Color del texto del panel activo */
+        }
+
+        
+
+         .team h6, .team p {
+            transition: transform 1s ease-in-out;
+        }
+
+        
+
+        .team:hover h6, .team:hover p {
+            transform: scale(1.1); /* Aumenta el tamaño del texto al 110% */
+            color:#23356B;
+        }
+
+        .directivo-perfil {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinear contenido en la parte superior */
+            padding-top: 150px; /* Desplazamiento desde la parte superior para evitar cortar el header */
+            z-index: 9999;
+            overflow: auto;
+        }
+
+        .directivo-perfil .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cerrar-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .d_nombre {
+            color: #23356B; /* Color personalizado para el nombre */
+        }
+
+        .d-none {
+            display: none;
+        }
+
+
+        .directivo-perfil {
+            z-index: 1000; /* Mayor que el header */
+        }
+
+        .image-container {
+            position: relative;
+        }
+        
+        .image-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 999; /* Asegura que la imagen esté sobre otros elementos */
+        }
+        
+        .owl-nav {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        
+        .owl-nav .owl-prev, .owl-nav .owl-next {
+            background-color: #28a745; /* Color verde para los botones */
+            color: #fff;
+            padding: 30px 40px;            
+            font-size: 40px !important;
+            text-align: center;
+            outline:none;           
+        }
+        
+        .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover {
+            background-color: #218838; /* Color verde oscuro al hacer hover */
+        }
+        
+        .owl-nav .owl-prev {
+            left: 0;
+            position: absolute;
+        }
+        
+        .owl-nav .owl-next {
+            right: 0;
+            position: absolute;
+        }
+        
+
+
+    </style>
+{% endblock %}
+
+
+
+{% block content %}
+
+    <section id="sobre">
+        <div class="container">
+            <br>
+            <div class="row mt-5">
+                <br>
+                <div class="col-md-6">
+                    <br>
+                    <h2 style="color:#59A971"><b>We invest in<br> real estate<br> opportunities</b> that<br> enhance the education<br> sector.
+                    </h2>
+                </div>
+                <div class="col-md-6">
+                    <p style="color:#23356B; font-weight:bold; font-size:18px;">Our business model focuses on the<br> strategic acquisition of<br> predominantly educational real estate.
+                    </p>
+                    <p style="color:#23356B; font-size:18px;">Our experience and knowledge allow us to identify and acquire properties with high long-term value-added potential. We also focus our operations on optimizing financial returns, seeking to maximize financial returns on each investment. This approach is reinforced by excellent corporate governance that provides confidence and protection to our stakeholders, supporting our commitment to ethical decision making.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="mision">
+        <div class="background-container">
+            <div class="container">
+                <br><br><br><br>
+                <h2 class="title wow fadeInUp">Mission</h2>
+                <br>
+                <h4 class="subtitle wow fadeInUp">To offer value to investors through distributions and long-term sustainable growth, through the active management of portfolios predominantly linked to the provision of educational services.
+                </h4> 
+            </div>
+        </div>
+        <div class="background-container2">
+            <div class="container">
+                <br><br><br><br>
+                <h2 class="title wow fadeInUp text-right">Vision</h2>
+                <br>
+                <div class="d-flex justify-content-end">
+                    <h4 class="subtitle wow fadeInUp text-right">
+                        To be the world-class real estate investment vehicle with the best practices, responding predominantly to the needs of the education sector, serving stakeholders and contributing to the sustainable development of the country.
+                    </h4>
+                </div>                 
+            </div>
+        </div>
+    </section>    
+   
+    <section id="valores">
+        <div style="background-color: #23356B">
+            <div class="container">
+                <br>
+                <h2 style="color:#59A971"><b>First and only REIT in <br>Mexico and the world </b> to<br> invest in real estate in<br> the education sector.
+                </h2>
+                <h2 class="text-white text-center font-weight-bold m-5">Values</h2>
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="custom-card p-3 shadow">
+                            <div class="text-center">
+                                <img src="{% static 'images/Educaiconoss-17.png' %}" alt="Icono 1">
+                            </div>
+                            <p>Permanent focus on results and profitability.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="custom-card p-3 shadow">
+                            <div class="text-center">
+                                <img src="{% static 'images/Educaiconoss-18.png' %}" alt="Icono 2">
+                            </div>
+                            <p>Integrity and transparency in our decision making.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="custom-card p-3 shadow">
+                            <div class="text-center">
+                                <img src="{% static 'images/Educaiconoss-19.png' %}" alt="Icono 3">
+                            </div>
+                            <p>Adherence to best practices in Corporate Governance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="custom-card p-3 shadow">
+                            <div class="text-center">
+                                <img src="{% static 'images/Educaiconoss-20.png' %}" alt="Icono 4">
+                            </div>
+                            <p>Active engagement with a vision of sustainability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br><br>
+    </section>
+
+    <section id="directivos_section" class="py-5">
+        <div class="container directivos">
+            <div class=" my-5">
+                <h1 class="wow slideInLeft" style="color: #23356B; padding-top:0px !important; font-weight:bold;">
+                   Meet our team.
+                </h1>
+                <h2 style="color:#59A971" class="wow slideInUp">
+                   A history of work, trust and growth.
+                </h2>
+                <div class="text-right wow slideInRight" >
+                    <img style="width:650px" src="{% static 'images/Educainfo-05.png' %}">
+                </div>
+            </div>
+            <!-- Directivos Principales -->
+            <div class="row">
+                {% for directivo in directivos_principales %}
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-4 d-flex justify-content-center">
+                        <a href="#"
+                           class="team d-flex flex-column justify-content-center align-items-center text-center"
+                           data-item="{{ forloop.counter }}"
+                           data-imagen="{{ directivo.imagen }}"
+                           data-nombre="{{ directivo.nombre }}"
+                           data-cargo="{{ directivo.cargo }}"
+                           data-resumen="{{ directivo.resumen }}"
+                           data-url="{{ directivo.url }}"> 
+                           <div class="position-relative image-container2">
+                                <!-- Imagen principal -->
+                                <img class="img-fluid d-flex main-image" src="{% static directivo.imagen %}" alt="{{ directivo.nombre }}">
+                                
+                                <!-- Imagen superpuesta -->
+                                <img class="overlay-image" src="{% static directivo.puesto %}" alt="Imagen superpuesta">
+                            </div>
+                        
+                            <h6 class="mb-0 mt-3 text-black font-weight-bold">{{ directivo.nombre }}</h6>
+                            <p class="mb-0">{{ directivo.cargo | safe }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            
+
+            
+
+            <!-- Perfil de Directivo -->
+            <article id="directivo-perfil" class="d-none directivo-perfil pt-5 pb-5 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="cerrar-info">
+                                <i class="fa fa-times fa-2x"></i>
+                            </div>
+                            <h3 class="mt-2 mb-0 d_nombre"></h3>
+                            <div class="mb-4">
+                                <em class="d_cargo"></em>
+                            </div>
+                            <p class="d_resumen text-justify"></p>
+                            <div class="icono-img image-container position-relative">                                
+                                <a href="#" class="image-link position-absolute d-imagen" target="_blank" style="bottom:0px; right:0px;"><img src="{% static 'images/Linkedin-08.png' %}" alt="" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div style="background-color:#9A9A9A">
+            <div class="container">
+                <br><br>
+                <h2 class="text-white font-weight-bold">Where there is education, there is a future.</h2>
+                <h3 class="text-white">Join our team.</h3>
+                <br><br>
+                <p class="text-white">We don't just build spaces, we build futures.<br>
+                    Be part of the mission that is redefining education and creating sustainable value.
+                    </p>
+                <p class="text-right text-white">Contact our <span ><a class="link-subrayado" style="text-decoration:underline" href="{% url 'contacto-cap' %}">human capital area.</a></span>
+                </p>                
+                <br>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div style="position: relative;">
+            <!-- Imagen de fondo transparente -->
+            <div style="position: absolute; top: 60%; left: 0; width: 100%; height:40%;
+                background-image: url('{% static "images/Transparencia.png" %}');
+                background-size: cover; background-position: bottom; background-repeat: no-repeat; z-index: 2;">
+            </div>
+    
+            <!-- Imagen principal -->
+            <div style="position: relative; display: inline-block; width: 100%;">
+                <img src="{% static 'images/img-noso.jpg' %}" style="width: 100%; display: block;">                              
+                <div style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 3;">
+                    <h2 class="text-white font-weight-bold text-center">For more information</h2>
+                <h2 class="text-white text-center">Contact us.</h2>
+                </div>  
+            </div>           
+            <!-- Contenido de texto -->
+             <div style=" background-color:#23356B">
+                <div class="container" style="position: relative; z-index: 3; ">
+                    <br>                
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 columna">
+                            <p class="pregunta">Are you an investor?</p>
+                            <p><a href="{% url 'contacto' %}" class="link-subrayado">Contact the IR Department</a></p>
+                        </div>
+                        <div class="col-md-4 columna">
+                            <p class="pregunta">Do you want to sell a property?</p>
+                            <p><a href="{% url 'contacto-exp' %}" class="link-subrayado">Contact the Expansion Department</a></p>
+                        </div>
+                        <div class="col-md-4 columna">
+                            <p class="pregunta">Do you have more questions?</p>
+                            <p><a href="{% url 'faqs' %}" class="link-subrayado">Check our frequently asked questions</a></p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="contacto" >
+    </div>
+    
+   
+{% endblock %}
+
+{% block otherscripts %}
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ site_key }}&trustedtypes=true"></script>
+    <script>
+        let site_key = "{{ site_key }}";
+        let url_alert_email = "{% url 'send-alerta-email' %}";
+    </script>
+    <script src="{% static 'js/nosotros.min.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const containers = document.querySelectorAll(".image-container2");
+        
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-on-scroll");
+                    } else {
+                        entry.target.classList.remove("animate-on-scroll"); // Si quieres que se quite al salir
+                    }
+                });
+            }, { threshold: 0.5 }); // Detecta cuando el 50% del contenedor es visible
+        
+            containers.forEach(container => {
+                observer.observe(container);
+            });
+        });       
+         
+    </script>
+    <script>
+
+        $(".team").click(function (e) {
+            e.preventDefault();
+            let target = $(e.currentTarget);
+        
+            // Ocultar el modal antes de actualizarlo
+            $("#directivo-perfil").hide();
+        
+            // Actualizar el contenido del modal
+            $("#directivo-perfil .d_cargo").text(target.data('cargo'));
+            $("#directivo-perfil .d_nombre").text(target.data('nombre'));
+        
+            // Formatear el resumen
+            let resumenFormatted = target.data('resumen').replace(/\n/g, '<br>');
+            $("#directivo-perfil .d_resumen").html(resumenFormatted);
+        
+            // Actualizar la imagen
+            $("#directivo-perfil .d-imagen").attr("src", target.data('imagen'));
+        
+            // Actualizar el enlace al perfil
+            let profileUrl = target.data('url'); // Supone que el dato 'url' contiene el enlace
+            
+            // Verificar si profileUrl es válido
+            if (profileUrl) {
+                // Aquí es donde debes actualizar el href de la clase .image-link
+                $("#directivo-perfil .image-link").attr("href", profileUrl).show(); 
+            } else {
+                $("#directivo-perfil .icono-img").hide();  // Ocultar el enlace si no hay URL
+            }
+        
+            // Mostrar el modal con una animación
+            $("#directivo-perfil").fadeIn().removeClass("d-none");
+        
+            // Hacer scroll hacia el modal
+            $("html, body").animate({
+                scrollTop: $("#directivo-perfil").offset().top - 80
+            }, 1000);
+        });
+        
+        
+        // Cerrar el modal al hacer clic en el icono de cierre
+        $(".cerrar-info i").on("click", function () {
+            $("#directivo-perfil").fadeOut().addClass("d-none");
+        });
+        
+
+
+    </script>
+     <script>
+        $(document).ready(function () {
+            var counter = 1,
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000);
+            $('#n-estrategia .outside-box-right').mouseover(function () {
+                clearInterval(interval)
+            });
+
+            $('#n-estrategia .outside-box-right').mouseleave(function () {
+                interval = setInterval(function () {
+                    var elemento = $("#n-estrategia").find(".estra-link ")[counter];
+                    $(elemento).click();
+                    if (counter === 3) {
+                        counter = 0;
+                    } else {
+                        counter++;
+                    }
+                }, 5000)
+            });
+
+            $(".estra-link").on('click', function (event) {
+                var $this = $(this);
+                var item = $this.data('item');
+                $(".estra-item").addClass('d-none');
+                $(".estra-link").removeClass('active');
+                $this.addClass('active');
+                $('.estra-item.' + item).removeClass("d-none");
+
+            });
+
+        });
+    </script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const panels = document.querySelectorAll('.estra-link');
+            const contents = document.querySelectorAll('.estra-content');
+
+            panels.forEach(panel => {
+                panel.addEventListener('click', function() {
+                    const selectedItem = this.getAttribute('data-item');
+
+                    // Ocultar todos los contenidos
+                    contents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Mostrar el contenido correspondiente al panel seleccionado
+                    const activeContent = document.querySelector('.' + selectedItem);
+                    if (activeContent) {
+                        activeContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+     $(document).ready(function () {
+        // Al hacer clic en el encabezado del panel
+        $('.panel-headingA').on('click', function () {
+            // Alternar la clase 'active' al encabezado
+            $(this).toggleClass('active');
+        });
+
+        $('.panel-collapse').on('shown.bs.collapse', function () {
+            var $panelHead = $(this).prev('.panel-headingA');
+            $panelHead.addClass('active'); // Agrega la clase active al panel-heading
+        });
+
+        $('.panel-collapse').on('hidden.bs.collapse', function () {
+            var $panelHead = $(this).prev('.panel-headingA');
+            $panelHead.removeClass('active'); // Quita la clase active al panel-heading
+        });
+    });
+
+
+    </script>
+{% endblock %}

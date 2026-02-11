@@ -1,0 +1,161 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/style_custom.css' %}">
+
+    .image_wrapper {
+        flex: 0 0 20%; /* 5 columnas en total, 100% / 5 = 20% */
+    }
+
+    .image_wrapper img {
+        width: calc(100% + 20px); /* Ajusta el valor para el ancho deseado */
+        margin-left: -10px; /* Mitiga el espacio que se agrega en cada lado */
+        margin-right:0px; /* Mitiga el espacio que se agrega en cada lado */
+    }
+    
+{% endblock %}
+
+{% block content %}
+   <section>
+        <div class="container">
+            
+            <section id= "codigo_conducta" >
+                <div class="container py-5">
+                    <h1 class="text-center tc-blue">Code of Conduct</h1>
+                    <p class="text-justify">
+                        It defines the ethical principles and corporate culture to which all our employees, managers, customers, suppliers and members of the governing bodies must adhere. In this sense, it is crucial that all members of our team are familiar with and comply with the guidelines established in the Code in all their interactions and responsibilities.
+                    </p>
+                    <p class="text-justify">The central topics covered are:</p>
+
+                    <div id="over-effect-group" class="row my-3 d-flex flex-wrap justify-content-between">
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_aderencia_leyes.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Adherence to laws, regulations and policies of Fibra Educa
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_grupo_interes.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Interaction with stakeholders
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_diversidad.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Appreciation of diversity and rejection of any form of discrimination
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_conflicto_intereses.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Prevention of institutional conflicts of interest
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_comunicacion_asertiva.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Reporting of concerns and suspected violations
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="over-effect-group" class="row my-3 d-flex flex-wrap justify-content-between">
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_reclutamiento.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Hiring practices
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_seguridad_servicios.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Security of services
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_medio_ambiente.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Care for the environment
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_anticorrupcion_transparencia.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Anti-corruption plan
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-2 image_wrapper">
+                            <img class="img-fluid" src="{% static 'images/gobernanza/educa_confidencialidad.jpg' %}">
+                            <div class="overlay">
+                                <div class="overlay_2">
+                                    <h4 class="text-white">
+                                        Protection of personal data and confidential information
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-justify">
+                        In addition, we have a whistleblower system on our website, through which any internal or external stakeholder can report possible violations of the Code, our values or cases of corruption.
+                    </p>
+                    <div class="row">                        
+                        <div class=" col-md-6 col-12 d-flex flex-row justify-content-center align-items-center">
+                            <a class="btn btn-primary" href="https://investorcloud.s3.amazonaws.com/Educa/codigo_de_conducta.pdf">
+                                Get to know our Code of Conduct
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-12 d-flex flex-row justify-content-center align-items-center mt-2">
+                            <a class="btn btn-primary" href="{% url 'denuncia' %}">
+                                Make a complaint
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>        
+            
+            
+        </div>
+   </section>
+{% endblock %}
+
+

@@ -1,0 +1,82 @@
+[
+    {
+      "principales": [
+        {
+          "imagen": "images/equipo/carlos.png",
+          "puesto":"images/Triangulos-01.png",
+          "nombre": "Carlos Caraveo",
+          "cargo": "Director General",
+          "resumen": " Maestro en Administración por el ITAM y Miembro de la American Association. Se ha desempeñado en diversos cargos, entre ellos:\n Director Comercial y de Mercadotecnia en Afore XXI\n Director Comercial y CEO de Mexicana de Becas\n Director General de Nacer-Global",
+          "url":"https://www.linkedin.com/posts/raul-martinezsolares-pi%C3%B1a-6802248_mergers-and-acquisitions-raul-patricio-activity-7001944891639406594-osLM"
+        },
+        {
+          "imagen": "images/equipo/Tania.png",
+          "puesto":"images/ESP-03.png",
+          "nombre": "Tania Anaya",
+          "cargo": "Directora de Inversión Responsable",
+          "resumen": " Contador Público por la EBC, y cuenta con una Maestría en Finanzas por el Instituto de Especialización de ejecutivos.  Se ha desempeñado en diversos cargos, entre ellos:\n Coordinador General de Tesorería y Contralor en Universidad ICEL\n Contralor General del Grupo",
+          "url":""
+        },
+        {
+          "imagen": "images/equipo/Moises.png",
+          "puesto":"images/ESP-03.png",
+          "nombre": "Moisés Macías",
+          "cargo": "Director de Inversiones",
+          "resumen": "Contador Público por la UNAM. Se ha desempeñado en diversos cargos, entre ellos:\n Auditor Externo de PWC \n Auditor Interno dentro del Grupo",
+          "url":"https://www.linkedin.com/in/tomas-moctezuma-174677136?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BiP%2BomC%2FnT8W34UXdWr7qyA%3D%3D"
+        },
+        {
+          "imagen": "images/equipo/Jose.png",
+          "puesto":"images/Triangulos-02.png",
+          "nombre": "José Manuel Villaseñor",
+          "cargo": "Director de Administración y Finanzas",
+          "resumen": "Licenciada en Derecho de la UNAM con un Diplomado en Finanzas Inmobiliarias por el ITAM y Maestra en Derecho de las Tecnologías de la Información y Comunicación. Se ha desempeñado en diversos cargos, entre ellos:\n Responsable de la operación, control y cumplimiento de empresas públicas ante la BMV y CNBV.\n Manejo y control de fideicomisos neutros y de compliance ante la SEC (Securities and Exchange Comission).\n\n",
+          "url":"https://www.linkedin.com/in/laura-montes-bracchini?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BBkFpfSf1QxSBpNIfQMtTjg%3D%3D"
+        },
+        {
+          "imagen": "images/equipo/Jacqueline.png",
+          "puesto":"images/ESP-03.png",
+          "nombre": "Jacqueline Paniagua",
+          "cargo": "Directora de Operaciones",
+          "resumen": "Licenciada en economía por la UNAM, con especialidad en Política Monetaria y Financiera por la misma institución y estudios en el Chicago Booth y el National Investor Relations Institute. Actualmente cursa la maestría en Finanzas Corporativas y Bursátiles en la Universidad Anáhuac. Durante su carrera profesional se ha enfocado en promover las mejores prácticas en el ejercicio de la política económica y la divulgación de la información en distintos sectores de la actividad económica.\n\n",
+          "url":"https://www.linkedin.com/in/angie-ramos-8494a7291?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfBQOPYnCTdO3fU9y%2FiRbGQ%3D%3D"
+        },
+        {
+          "imagen": "images/equipo/Luz.png",
+          "puesto":"images/ESP-03.png",
+          "nombre": "Luz María Pineda",
+          "cargo": "Directora de Cumplimiento y Riesgos",
+          "resumen": "Ingeniero Arquitecto egresado de la Escuela Superior de Ingeniería y Arquitectura del IPN. Se ha desempeñado en diversos cargos, entre ellos:\n Vicerrector de Infraestructura en Nacer-Global",
+          "url":"https://www.linkedin.com/in/jos%C3%A9-luis-ju%C3%A1rez-olvera-836771215?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1kcGLOvUQVaHbol95JbthQ%3D%3D"
+        }
+      ]
+    },
+    {
+      "resto": [
+        {
+          "imagen": "images/Imagen1.19.png",
+          "nombre": "Enrique Dulanto",
+          "cargo": "Director de Tecnología y Seguridad",
+          "resumen": "Aporta una perspectiva integral al unir su formación en Finanzas y Banca con su experiencia práctica en tecnología y ciberseguridad. Con un enfoque en identificar y mitigar riesgos financieros y digitales, Enrique lidera el desarrollo y la implementación de estrategias de seguridad de datos y sistemas. Su habilidad para equilibrar consideraciones financieras con requerimientos técnicos ha sido clave en la creación de soluciones de seguridad robustas y eficientes. Bajo su gestión, Vigilante ha fortalecido sus protocolos de seguridad y su infraestructura tecnológica, asegurando una defensa efectiva contra amenazas cibernéticas y protegiendo los activos digitales de la empresa."
+        },
+        {
+          "imagen": "images/Imagen1.19.png",
+          "nombre": "Pablo Domínguez",
+          "cargo": "Director Financiero",
+          "resumen": "Aporta una sólida base en economía para liderar la gestión financiera de la empresa. Con su título en Economía, Pablo tiene una aguda comprensión de los mercados financieros y las estrategias de gestión de riesgos. Su enfoque se centra en asegurar la salud financiera de Vigilante, optimizando el flujo de caja y supervisando la planificación financiera y los presupuestos. Su habilidad para analizar tendencias económicas y datos financieros ha sido fundamental en el desarrollo de estrategias que impulsan el crecimiento sostenible y la estabilidad financiera de la empresa. Pablo juega un rol crucial en la toma de decisiones estratégicas, proporcionando análisis financieros que apoyan la expansión y la innovación en Vigilante."
+        },
+        {
+          "imagen": "images/Imagen1.19.png",
+          "nombre": "Diego Cortazar",
+          "cargo": "Director de Responsabilidad Social y ESG",
+          "resumen": "Aporta una valiosa perspectiva económica al mundo de la sostenibilidad y la ética empresarial. Graduado en Economía, Diego combina su comprensión de los mercados y las finanzas con una pasión por las prácticas empresariales responsables y sostenibles. Su rol implica el desarrollo e implementación de estrategias ESG que no solo están alineadas con los objetivos financieros de la empresa, sino que también promueven un impacto positivo en la sociedad y el medio ambiente. Diego lidera iniciativas para mejorar la sostenibilidad, la inclusión social y la ética en los negocios, asegurando que Vigilante no solo cumpla con las regulaciones y expectativas del mercado, sino que también establezca nuevos estándares en responsabilidad corporativa. Su enfoque equilibrado asegura que las decisiones de la empresa generen valor tanto para los accionistas como para la comunidad en general."
+        },
+        {
+          "imagen": "images/Imagen1.19.png",
+          "nombre": "Russell Arcila",
+          "cargo": "Director de IT y Sistemas",
+          "resumen": "aprovecha su experiencia en ingeniería de desarrollo de tecnología y software para liderar la infraestructura de TI de la empresa. Graduado en Ingeniería en Desarrollo de Tecnología y Software, Russell se especializa en la implementación y gestión de sistemas de información avanzados, asegurando que la infraestructura de IT de Vigilante sea segura, eficiente y escalable. Su enfoque se centra en integrar las últimas tecnologías para mejorar los procesos internos, facilitar la colaboración y fortalecer la seguridad de los datos. Bajo su liderazgo, el departamento de IT y Sistemas se ha convertido en un pilar fundamental para el funcionamiento óptimo de la empresa, garantizando que Vigilante esté siempre a la vanguardia en cuanto a tecnología y sistemas de información."
+        }
+      ]
+    }
+  ]

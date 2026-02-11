@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>5 de Julio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/junio-05.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Al momento de decidir hacer una inversión a largo plazo es muy importante conocer los beneficios
+                        y riesgos de las opciones del mercado. De esta manera con el paso del tiempo nuestro dinero
+                        rendirá frutos de una manera ordenada y estudiada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>Es muy importante recordar que todos los instrumentos de inversión cuentan con un determinado
+                        nivel de riesgo ya que el futuro es impredecible y nadie puede saber a ciencia cierta cómo se
+                        van a comportar los mercados. Sin embargo, las proyecciones para cada instrumento se realizan a
+                        partir del comportamiento histórico y anual de rentabilidad. </p>
+
+
+                    <h2>Una buena opción de inversión para el largo plazo</h2>
+                    <p>La mejor opción para invertir pensando en el largo plazo son las <a href="{% url 'index' %}">FIBRAs
+                        inmobiliarias</a>. Este
+                        mecanismo consiste en invertir en un Fideicomisos de Inversión en Bienes Raíces con el objetivo
+                        de que este adquiera un bien inmueble de gran valor y genere rentabilidad a partir de las
+                        ganancias obtenidas por la administración de la propiedad.</p>
+                    <p>Históricamente el mercado inmobiliario es uno de los más estables en México, y por esta razón
+                        Fibra MTY ha beneficiado con rendimientos anuales de aproximadamente 8% a sus inversionistas.
+                        Para otro tipo de inversiones el rendimiento no supera el 5% y con los bancos es de un 2%.</p>
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar:</strong>
+                            <a href="{% url 'noticia_8' %}">¿Qué son los Instrumentos de Inversión?</a>
+                        </li>
+                    </ul>
+                    <h2>El mejor escenario</h2>
+                    <p>En el caso de que invirtieras $1,000,000 a un plazo de 5 años con Fibra MTY, al finalizar este
+                        periodo tu capital sería de $1,469,328. Con ese mismo monto de inversión inicial en 10 años
+                        recibirías $2,158,925 y en 20 $4,660,957. </p>
+                    <p>En cambio, si en un banco realizas una inversión con el mismo monto tu capital al cabo de 5 años
+                        será de $1,104,081, $1,218,994 en 10 años y $1,485,947 en 20 años. ¡La diferencia es
+                        abismal!</p>
+                    <p>En Fibra MTY podrás construir tu futuro con alta rentabilidad y poco riesgo gracias al mercado de
+                        los bienes raíces. Visita ya mismo nuestra <a href="{% url 'index' %}">página web</a> y conoce
+                        cómo puedes empezar a aumentar tu
+                        capital desde montos accesibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'layouts/base.html' %}
+{% load static i18n %}
+{% block otherstyles %}
+    <link rel="stylesheet" href="{% static 'css/single.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class=" single pb-0 overflow-visible position-relative bg-light-gray padding-eleven-lr lg-padding-four-lr">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-6 order-2 z-index-1 padding-10-rem-left padding-60px-bottom lg-padding-3-rem-left md-padding-15px-left">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <h3 class="alt-font font-weight-500 letter-spacing-minus-1px text-extra-dark-gray ">{{ title_meta }}</h3>
+                        <span class="alt-font d-block margin-15px-tb">Por César Rubalcava<br>
+                            <p>28 de Junio del 2021</p></span>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 px-0 order-1 align-self-end md-margin-60px-bottom">
+                    <img class="overlap-image md-no-margin-bottom"
+                         alt="Inversion-en-bienes-raices-a-montos-accesibles"
+                         src="{% static 'images/post/junio-04.jpg' %}"/>
+                </div>
+                <div class="col-12 col-lg-6 padding-9-rem-left overflow-hidden alt-font font-weight-600 text-white text-overlap-style-01 d-none d-md-block">
+                    Blog
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single padding-70px-top sm-padding-50px-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-12 col-xl-5 col-lg-6 last-paragraph-no-margin padding-3-half-rem-left md-padding-15px-left">
+                    <p>Los conocedores del mundo financiero saben que la inversión en FIBRAs inmobiliarias es una de las
+                        mejores alternativas para todos los pequeños inversores que están buscando aumentar su capital
+                        con rentabilidad en el largo plazo y con poco riesgo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="single pt-0  lg-no-margin-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 ">
+                    <p>A pesar de ser un mecanismo de inversión relativamente joven en México, desde hace más de 60 años
+                        la existencia de las FIBRAs (Fideicomisos de inversión en Bienes Raíces) alrededor del mundo ha
+                        permitido democratizar el mercado de los bienes raíces logrando que miles de personas aumenten
+                        su capital sin necesidad de contar con grandes sumas de dinero.</p>
+                    <h2>REITs</h2>
+                    <p>El origen de la inversión en FIBRAs se remonta a la década de los 60 en Estados Unidos. Durante
+                        esa época, el entonces presidente <a href="https://es.wikipedia.org/wiki/Dwight_D._Eisenhower"
+                                                             target="_blank">Dwight D. Eisenhower</a> firmó la
+                        legislación que permitió la
+                        creación de los Real Estate Investment Trust (REIT), en español Fondo de Inversión de Activos
+                        Inmobiliarios, con el objetivo de impulsar la inversión en el sector inmobiliario.</p>
+                    <p>Un REIT es una compañía que se encarga de comprar y administrar inmuebles de gran tamaño con el
+                        dinero que recibe de los inversionistas para que todas las partes involucradas obtengan
+                        beneficios económicos.</p>
+
+
+                    <ul class="ls-disc">
+                        <li><strong>Te puede interesar</strong>
+                            <a href="{% url 'noticia_6' %}">¿Qué son las FIBRAs Inmobiliarias? Inversiones de bajo
+                                riesgo</a>
+                        </li>
+                    </ul>
+                    <p>Con los REITs se consiguió que miles de personas accedieran al mercado de las inversiones
+                        inmobiliarias gracias a dos aspectos fundamentales. En primer lugar, con este mecanismo la
+                        inversión en bienes raíces se volvió más accesible para todo el público ya que no era un
+                        privilegio del que solo gozaban los más adinerados.</p>
+                    <p>En segundo lugar, al tercerizar la administración del inmueble, más inversionistas se vieron
+                        motivados a participar ya que por lo único que debían preocuparse era por recibir el retorno de
+                        su inversión en el momento adecuado sin los costos que requiere mantener en funcionamiento
+                        cualquier tipo de propiedad.</p>
+                    <h2>Popular en todo el mundo</h2>
+                    <p>En la actualidad se conoce con distintos nombres alrededor del mundo a la inversión en FIBRAs
+                        inmobiliarias. Sin embargo, este mismo instrumento, tal y como lo conocemos en México, se
+                        utiliza en Holanda, Australia, España, Francia, Belgica, Canadá, Brasil, Turquía, Singapur,
+                        Japón, Malasia, Israel, Taiwán, Corea, Reino Unido, Hong Kong, Alemania, Colombia e Italia,
+                        entre otros.</p>
+                    <p>Aunque este modelo de negocio ya se encontraba en México, el debut de <a
+                            href="{% url 'index' %}">Fibra MTY</a> en la <a href="https://www.bmv.com.mx/"
+                                                                            target="_blank">Bolsa
+                        Mexicana de Valores</a> revolucionó por completo el mercado hasta tal punto que en la actualidad
+                        es
+                        la emisora con más colocaciones en los últimos años manteniendo siempre sus altos niveles de
+                        rentabilidad.</p>
+                    <p>Visita nuestra <a href="{% url 'index' %}">página web</a> y conoce cómo puedes empezar a invertir
+                        con nosotros.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
